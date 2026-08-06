@@ -16,7 +16,7 @@ except ModuleNotFoundError:
     Page = Any
     sync_playwright = None
 
-from .config import SunatConfig
+from .config import SunatConfig, SunatSelectors
 from .errors import AuthenticationError, ExtractionError, NavigationError, NoRecordsFound
 from .models import Company, ManifestRecord
 
@@ -151,11 +151,10 @@ class SunatClient:
 
     def _navigate_to_query(self, page: Page) -> None:
         try:
+            self._wait_for_menu_ready(page)
             self._open_menu_tree(page)
             self._click_menu_option(page, MENU_TREE[-1], timeout_ms=15000)
-            LOGGER.info("Consulta Manifiesto Desconsolidado abierta; esperando 10 segundos.")
-            sleep(10)
-            page.wait_for_load_state("domcontentloaded")
+            self._wait_for_query_form(page)
         except (PlaywrightError, PlaywrightTimeoutError) as exc:
             LOGGER.error("Opciones de menú visibles: %s", self._visible_menu_options(page))
             raise NavigationError(
@@ -173,23 +172,52 @@ class SunatClient:
         PRADIVO), donde el árbol queda desplazado a la derecha.
         """
         for index in range(len(MENU_TREE) - 1):
-            if self._menu_option_visible(page, MENU_TREE[index + 1], timeout_ms=2000):
+            child_labels = MENU_TREE[index + 1]
+            if self._menu_option_visible(page, child_labels):
                 continue
             LOGGER.info("Expandiendo el nivel del menú: %s", MENU_TREE[index][0])
-            self._click_menu_option(page, MENU_TREE[index], timeout_ms=15000)
-            sleep(2)
+            self._click_menu_option(page, MENU_TREE[index], timeout_ms=10000)
+            self._wait_for_menu_option(page, child_labels, timeout_ms=8000)
 
-    def _menu_option_visible(self, page: Page, labels: tuple[str, ...], timeout_ms: int) -> bool:
+    def _wait_for_menu_ready(self, page: Page, timeout_ms: int = 15000) -> None:
+        """Espera a que el menú SOL esté cargado para no desperdiciar tiempo fijo."""
+        deadline = _monotonic_ms() + timeout_ms
+        while _monotonic_ms() < deadline:
+            if self._menu_option_visible(page, MENU_TREE[0]):
+                return
+            sleep(0.3)
+        raise PlaywrightTimeoutError("No se cargó el menú SOL")
+
+    def _wait_for_menu_option(self, page: Page, labels: tuple[str, ...], timeout_ms: int) -> None:
+        deadline = _monotonic_ms() + timeout_ms
+        while _monotonic_ms() < deadline:
+            if self._menu_option_visible(page, labels):
+                return
+            sleep(0.2)
+        LOGGER.warning("La opción del menú no apareció: %s", " / ".join(labels))
+
+    def _wait_for_query_form(self, page: Page, timeout_ms: int = 30000) -> None:
+        """Espera el formulario de la consulta y vuelve apenas esté visible."""
+        deadline = _monotonic_ms() + timeout_ms
+        while _monotonic_ms() < deadline:
+            for scope in _page_scopes(_active_page(page)):
+                try:
+                    if scope.locator("#tipoBusquedaFechaNumeracionDesconsolidado:visible").count() > 0:
+                        LOGGER.info("Formulario de Consulta Manifiesto Desconsolidado cargado.")
+                        return
+                except PlaywrightError:
+                    continue
+            sleep(0.2)
+        raise PlaywrightTimeoutError("No se cargó el formulario de Consulta Manifiesto Desconsolidado")
+
+    def _menu_option_visible(self, page: Page, labels: tuple[str, ...]) -> bool:
         for scope in _page_scopes(_active_page(page)):
             for label in labels:
                 try:
                     exact_label = re.compile(rf"^\s*{re.escape(label)}\s*$", re.IGNORECASE)
-                    scope.locator("span.spanNivelDescripcion:visible", has_text=exact_label).first.wait_for(
-                        state="visible",
-                        timeout=timeout_ms,
-                    )
-                    return True
-                except (PlaywrightError, PlaywrightTimeoutError):
+                    if scope.locator("span.spanNivelDescripcion:visible", has_text=exact_label).first.count() > 0:
+                        return True
+                except PlaywrightError:
                     continue
         return False
 
@@ -198,16 +226,44 @@ class SunatClient:
         self._select_fecha_numeracion_desconsolidado(page)
         self._fill_date_range(page, start_date, end_date)
         self._click_first_available(page, selectors.search_button)
-        page.wait_for_load_state("networkidle")
+        try:
+            page.wait_for_load_state("networkidle", timeout=8000)
+        except PlaywrightTimeoutError:
+            LOGGER.info("La red de SUNAT no quedó inactiva; esperando los resultados directamente.")
+        return self._wait_for_results(page, selectors, timeout_ms=45000)
 
-        if self._text_visible(page, selectors.no_records_text, timeout_ms=3000):
-            raise NoRecordsFound("La consulta no devolvió registros.")
+    def _wait_for_results(
+        self,
+        page: Page,
+        selectors: SunatSelectors,
+        timeout_ms: int,
+    ) -> list[ManifestRecord]:
+        deadline = _monotonic_ms() + timeout_ms
+        while _monotonic_ms() < deadline:
+            if self._table_has_rows(page, selectors.result_table):
+                rows = self._extract_table_rows(page, selectors.result_table)
+                records = [self._row_to_record(row) for row in rows]
+                if records:
+                    return records
+            if self._text_visible(page, selectors.no_records_text, timeout_ms=300):
+                raise NoRecordsFound("La consulta no devolvió registros.")
+            sleep(0.4)
+        raise NoRecordsFound("La consulta no devolvió registros en el tiempo esperado.")
 
-        rows = self._extract_table_rows(page, selectors.result_table)
-        records = [self._row_to_record(row) for row in rows]
-        if not records:
-            raise NoRecordsFound("La tabla de resultados no contiene registros.")
-        return records
+    def _table_has_rows(self, page: Page, table_selector: str) -> bool:
+        for scope in _page_scopes(_active_page(page)):
+            for selector in [item.strip() for item in table_selector.split("|") if item.strip()]:
+                try:
+                    table = scope.locator(selector).first
+                    if table.count() == 0:
+                        continue
+                    if table.locator("tbody tr").count() > 0:
+                        return True
+                    if table.locator("thead tr th").count() > 0 and table.locator("tr").count() > 1:
+                        return True
+                except PlaywrightError:
+                    continue
+        return False
 
     def _select_fecha_numeracion_desconsolidado(self, page: Page) -> None:
         target = "Fecha de Numeración de Manifiesto Desconsolidado"
@@ -245,8 +301,8 @@ class SunatClient:
         selectors = self.config.selectors
         start_value = start_date.strftime("%d/%m/%Y")
         end_value = end_date.strftime("%d/%m/%Y")
-        start_input = self._fill_first_available(page, selectors.date_from_input, start_value)
-        end_input = self._fill_first_available(page, selectors.date_to_input, end_value)
+        start_input = self._fill_first_available(page, selectors.date_from_input, start_value, timeout_ms=8000)
+        end_input = self._fill_first_available(page, selectors.date_to_input, end_value, timeout_ms=8000)
         if start_input.input_value() != start_value or end_input.input_value() != end_value:
             raise NavigationError("SUNAT no conservó el rango de fechas ingresado.")
         LOGGER.info("Rango mensual cargado: %s a %s", start_value, end_value)
@@ -350,8 +406,8 @@ class SunatClient:
                 continue
         return False
 
-    def _fill_first_available(self, page: Page, selector_list: str, value: str):
-        locator = self._first_available_locator(page, selector_list)
+    def _fill_first_available(self, page: Page, selector_list: str, value: str, timeout_ms: int | None = None):
+        locator = self._first_available_locator(page, selector_list, timeout_ms=timeout_ms)
         locator.fill(value)
         return locator
 

@@ -283,3 +283,124 @@ Traceback (most recent call last):
 playwright._impl._errors.Error: SUNAT cerró la pestaña de la sesión.
 2026-08-06 17:00:20,668 | WARNING | sunat_multas.cli | HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C. | UNKNOWN | SUNAT cerró la pestaña de la sesión.
 2026-08-06 17:00:20,669 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 0 | Incidencias: 1
+2026-08-06 17:13:14,482 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-06 17:13:14,548 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-06 17:13:14,548 | INFO | sunat_multas.cli | Procesando HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C. | RUC 20538424961
+2026-08-06 17:13:15,841 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20538424961
+2026-08-06 17:13:17,113 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20538424961 | Usuario MINHETRU | Clave ************
+2026-08-06 17:13:26,913 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-06 17:13:27,112 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-06 17:13:34,536 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-06 17:13:39,102 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-06 17:14:18,075 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-06 17:14:25,212 | ERROR | sunat_multas.cli | Error no controlado procesando HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C.
+Traceback (most recent call last):
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\cli.py", line 96, in process_company
+    records = client.fetch_records(company, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 118, in fetch_records
+    records = self._query_and_extract(page, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 232, in _query_and_extract
+    self._click_first_available(page, selectors.search_button)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 419, in _click_first_available
+    locator = self._first_available_locator(page, selector_list, timeout_ms=timeout_ms)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 429, in _first_available_locator
+    for scope in _page_scopes(_active_page(page)):
+                              ~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 565, in _active_page
+    raise PlaywrightError("SUNAT cerró la pestaña de la sesión.")
+playwright._impl._errors.Error: SUNAT cerró la pestaña de la sesión.
+2026-08-06 17:14:25,223 | WARNING | sunat_multas.cli | HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C. | UNKNOWN | SUNAT cerró la pestaña de la sesión.
+2026-08-06 17:14:25,223 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 0 | Incidencias: 1
+2026-08-06 17:19:39,226 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-06 17:19:39,285 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-06 17:19:39,285 | INFO | sunat_multas.cli | Procesando HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C. | RUC 20538424961
+2026-08-06 17:19:40,491 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20538424961
+2026-08-06 17:19:41,739 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20538424961 | Usuario MINHETRU | Clave ************
+2026-08-06 17:19:42,769 | WARNING | sunat_multas.cli | HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C. | AUTH | SUNAT rechazó las credenciales o solicitó validación adicional.
+2026-08-06 17:19:42,769 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 0 | Incidencias: 1
+2026-08-06 17:20:06,682 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-06 17:20:06,747 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-06 17:20:06,747 | INFO | sunat_multas.cli | Procesando PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-06 17:20:07,717 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-06 17:20:08,981 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-06 17:20:10,045 | WARNING | sunat_multas.cli | PRADIVO WORLD COMPANY 1096 | AUTH | SUNAT rechazó las credenciales o solicitó validación adicional.
+2026-08-06 17:20:10,046 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 0 | Incidencias: 1
+2026-08-06 17:22:41,590 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-06 17:22:41,663 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-06 17:22:41,663 | INFO | sunat_multas.cli | Procesando PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-06 17:22:42,833 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-06 17:22:44,204 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-06 17:22:54,048 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-06 17:22:54,281 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-06 17:23:01,078 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-06 17:23:05,675 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-06 17:23:44,674 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-06 17:24:05,094 | ERROR | sunat_multas.cli | Error no controlado procesando PRADIVO WORLD COMPANY 1096
+Traceback (most recent call last):
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\cli.py", line 96, in process_company
+    records = client.fetch_records(company, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 118, in fetch_records
+    records = self._query_and_extract(page, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 228, in _query_and_extract
+    self._click_first_available(page, selectors.search_button)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 415, in _click_first_available
+    locator = self._first_available_locator(page, selector_list, timeout_ms=timeout_ms)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 425, in _first_available_locator
+    for scope in _page_scopes(_active_page(page)):
+                              ~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 561, in _active_page
+    raise PlaywrightError("SUNAT cerró la pestaña de la sesión.")
+playwright._impl._errors.Error: SUNAT cerró la pestaña de la sesión.
+2026-08-06 17:24:05,103 | WARNING | sunat_multas.cli | PRADIVO WORLD COMPANY 1096 | UNKNOWN | SUNAT cerró la pestaña de la sesión.
+2026-08-06 17:24:05,104 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 0 | Incidencias: 1
+2026-08-06 17:26:45,337 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-06 17:26:45,396 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-06 17:26:45,396 | INFO | sunat_multas.cli | Procesando PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-06 17:26:46,400 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-06 17:26:47,655 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-06 17:26:57,442 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-06 17:26:57,666 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-06 17:27:20,885 | ERROR | sunat_multas.sunat_client | Opciones de menú visibles: []
+2026-08-06 17:27:21,165 | WARNING | sunat_multas.cli | PRADIVO WORLD COMPANY 1096 | SCRAPING | No se pudo abrir Consulta Manifiesto Desconsolidado desde el menú SUNAT. Verifica que la opción exista para este usuario.
+2026-08-06 17:27:21,165 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 0 | Incidencias: 1
+2026-08-06 17:28:26,113 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-06 17:28:26,176 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-06 17:28:26,177 | INFO | sunat_multas.cli | Procesando PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-06 17:28:27,043 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-06 17:28:28,274 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-06 17:28:38,035 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-06 17:28:38,238 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-06 17:28:54,628 | ERROR | sunat_multas.sunat_client | Opciones de menú visibles: []
+2026-08-06 17:28:54,904 | WARNING | sunat_multas.cli | PRADIVO WORLD COMPANY 1096 | SCRAPING | No se pudo abrir Consulta Manifiesto Desconsolidado desde el menú SUNAT. Verifica que la opción exista para este usuario.
+2026-08-06 17:28:54,904 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 0 | Incidencias: 1
+2026-08-06 17:28:59,528 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-06 17:28:59,591 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-06 17:28:59,591 | INFO | sunat_multas.cli | Procesando ANICAM | RUC 20544648609
+2026-08-06 17:29:00,482 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20544648609
+2026-08-06 17:29:01,720 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20544648609 | Usuario ANICAM23 | Clave **********
+2026-08-06 17:29:14,211 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-06 17:29:14,379 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-06 17:29:21,276 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-06 17:29:25,837 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-06 17:30:04,808 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-06 17:30:09,499 | ERROR | sunat_multas.cli | Error no controlado procesando ANICAM
+Traceback (most recent call last):
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\cli.py", line 96, in process_company
+    records = client.fetch_records(company, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 118, in fetch_records
+    records = self._query_and_extract(page, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 228, in _query_and_extract
+    self._click_first_available(page, selectors.search_button)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 415, in _click_first_available
+    locator = self._first_available_locator(page, selector_list, timeout_ms=timeout_ms)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 425, in _first_available_locator
+    for scope in _page_scopes(_active_page(page)):
+                              ~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 561, in _active_page
+    raise PlaywrightError("SUNAT cerró la pestaña de la sesión.")
+playwright._impl._errors.Error: SUNAT cerró la pestaña de la sesión.
+2026-08-06 17:30:09,513 | WARNING | sunat_multas.cli | ANICAM | UNKNOWN | SUNAT cerró la pestaña de la sesión.
+2026-08-06 17:30:09,514 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 0 | Incidencias: 1
