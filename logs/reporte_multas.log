@@ -1,0 +1,171 @@
+2026-08-05 12:33:42,335 | INFO | sunat_multas.cli | Empresas por procesar: 12
+2026-08-05 12:33:42,336 | INFO | sunat_multas.cli | Procesando PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-05 12:33:42,337 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\PRADIVO WORLD COMPANY 1096.xlsx
+2026-08-05 12:33:42,337 | INFO | sunat_multas.cli | Procesando EMO LOGISTICS PERU S.A.C. | RUC 20604081964
+2026-08-05 12:33:42,341 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\EMO LOGISTICS PERU S.A.C..xlsx
+2026-08-05 12:33:42,341 | INFO | sunat_multas.cli | Procesando HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C. | RUC 20538424961
+2026-08-05 12:33:42,343 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C..xlsx
+2026-08-05 12:33:42,343 | INFO | sunat_multas.cli | Procesando ANICAM | RUC 20544648609
+2026-08-05 12:33:42,344 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\ANICAM.xlsx
+2026-08-05 12:33:42,344 | INFO | sunat_multas.cli | Procesando ATIQ GRUPO LOGISTICS | RUC 20606354704
+2026-08-05 12:33:42,346 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\ATIQ GRUPO LOGISTICS.xlsx
+2026-08-05 12:33:42,346 | INFO | sunat_multas.cli | Procesando UNIEX PERU | RUC 20505937547
+2026-08-05 12:33:42,349 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\UNIEX PERU.xlsx
+2026-08-05 12:33:42,349 | INFO | sunat_multas.cli | Procesando CARGO COMPASS | RUC 20512845348
+2026-08-05 12:33:42,351 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\CARGO COMPASS.xlsx
+2026-08-05 12:33:42,351 | INFO | sunat_multas.cli | Procesando FYR | RUC 20537193761
+2026-08-05 12:33:42,352 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\FYR.xlsx
+2026-08-05 12:33:42,352 | INFO | sunat_multas.cli | Procesando EUROPARTNERS | RUC 20601419697
+2026-08-05 12:33:42,355 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\EUROPARTNERS.xlsx
+2026-08-05 12:33:42,355 | INFO | sunat_multas.cli | Procesando PRIME CARGO | RUC 20603012616
+2026-08-05 12:33:42,357 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\PRIME CARGO.xlsx
+2026-08-05 12:33:42,357 | INFO | sunat_multas.cli | Procesando SPEED OCEAN LINE | RUC 20508943807
+2026-08-05 12:33:42,359 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\SPEED OCEAN LINE.xlsx
+2026-08-05 12:33:42,359 | INFO | sunat_multas.cli | Procesando DP WORLD LOGISTICS S.R.L. | RUC 20100010217
+2026-08-05 12:33:42,360 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\DP WORLD LOGISTICS S.R.L..xlsx
+2026-08-05 12:33:42,360 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 12 | Incidencias: 0
+2026-08-05 12:34:25,750 | INFO | sunat_multas.cli | Empresas por procesar: 12
+2026-08-05 12:34:25,751 | INFO | sunat_multas.cli | Procesando PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-05 12:34:25,752 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\PRADIVO WORLD COMPANY 1096.xlsx
+2026-08-05 12:34:25,752 | INFO | sunat_multas.cli | Procesando EMO LOGISTICS PERU S.A.C. | RUC 20604081964
+2026-08-05 12:34:25,752 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\EMO LOGISTICS PERU S.A.C..xlsx
+2026-08-05 12:34:25,752 | INFO | sunat_multas.cli | Procesando HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C. | RUC 20538424961
+2026-08-05 12:34:25,752 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C..xlsx
+2026-08-05 12:34:25,752 | INFO | sunat_multas.cli | Procesando ANICAM | RUC 20544648609
+2026-08-05 12:34:25,753 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\ANICAM.xlsx
+2026-08-05 12:34:25,753 | INFO | sunat_multas.cli | Procesando ATIQ GRUPO LOGISTICS | RUC 20606354704
+2026-08-05 12:34:25,753 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\ATIQ GRUPO LOGISTICS.xlsx
+2026-08-05 12:34:25,753 | INFO | sunat_multas.cli | Procesando UNIEX PERU | RUC 20505937547
+2026-08-05 12:34:25,753 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\UNIEX PERU.xlsx
+2026-08-05 12:34:25,753 | INFO | sunat_multas.cli | Procesando CARGO COMPASS | RUC 20512845348
+2026-08-05 12:34:25,753 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\CARGO COMPASS.xlsx
+2026-08-05 12:34:25,753 | INFO | sunat_multas.cli | Procesando FYR | RUC 20537193761
+2026-08-05 12:34:25,754 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\FYR.xlsx
+2026-08-05 12:34:25,754 | INFO | sunat_multas.cli | Procesando EUROPARTNERS | RUC 20601419697
+2026-08-05 12:34:25,754 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\EUROPARTNERS.xlsx
+2026-08-05 12:34:25,754 | INFO | sunat_multas.cli | Procesando PRIME CARGO | RUC 20603012616
+2026-08-05 12:34:25,754 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\PRIME CARGO.xlsx
+2026-08-05 12:34:25,754 | INFO | sunat_multas.cli | Procesando SPEED OCEAN LINE | RUC 20508943807
+2026-08-05 12:34:25,754 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\SPEED OCEAN LINE.xlsx
+2026-08-05 12:34:25,755 | INFO | sunat_multas.cli | Procesando DP WORLD LOGISTICS S.R.L. | RUC 20100010217
+2026-08-05 12:34:25,755 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\DP WORLD LOGISTICS S.R.L..xlsx
+2026-08-05 12:34:25,755 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 12 | Incidencias: 0
+2026-08-05 14:53:13,953 | INFO | sunat_multas.cli | Empresas por procesar: 12
+2026-08-05 14:53:13,956 | INFO | sunat_multas.cli | Procesando PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-05 14:53:13,957 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\PRADIVO WORLD COMPANY 1096.xlsx
+2026-08-05 14:53:13,957 | INFO | sunat_multas.cli | Procesando EMO LOGISTICS PERU S.A.C. | RUC 20604081964
+2026-08-05 14:53:13,958 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\EMO LOGISTICS PERU S.A.C..xlsx
+2026-08-05 14:53:13,958 | INFO | sunat_multas.cli | Procesando HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C. | RUC 20538424961
+2026-08-05 14:53:13,959 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C..xlsx
+2026-08-05 14:53:13,959 | INFO | sunat_multas.cli | Procesando ANICAM | RUC 20544648609
+2026-08-05 14:53:13,960 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\ANICAM.xlsx
+2026-08-05 14:53:13,960 | INFO | sunat_multas.cli | Procesando ATIQ GRUPO LOGISTICS | RUC 20606354704
+2026-08-05 14:53:13,960 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\ATIQ GRUPO LOGISTICS.xlsx
+2026-08-05 14:53:13,960 | INFO | sunat_multas.cli | Procesando UNIEX PERU | RUC 20505937547
+2026-08-05 14:53:13,961 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\UNIEX PERU.xlsx
+2026-08-05 14:53:13,961 | INFO | sunat_multas.cli | Procesando CARGO COMPASS | RUC 20512845348
+2026-08-05 14:53:13,963 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\CARGO COMPASS.xlsx
+2026-08-05 14:53:13,963 | INFO | sunat_multas.cli | Procesando FYR | RUC 20537193761
+2026-08-05 14:53:13,964 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\FYR.xlsx
+2026-08-05 14:53:13,964 | INFO | sunat_multas.cli | Procesando EUROPARTNERS | RUC 20601419697
+2026-08-05 14:53:13,965 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\EUROPARTNERS.xlsx
+2026-08-05 14:53:13,965 | INFO | sunat_multas.cli | Procesando PRIME CARGO | RUC 20603012616
+2026-08-05 14:53:13,966 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\PRIME CARGO.xlsx
+2026-08-05 14:53:13,966 | INFO | sunat_multas.cli | Procesando SPEED OCEAN LINE | RUC 20508943807
+2026-08-05 14:53:13,966 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\SPEED OCEAN LINE.xlsx
+2026-08-05 14:53:13,967 | INFO | sunat_multas.cli | Procesando DP WORLD LOGISTICS S.R.L. | RUC 20100010217
+2026-08-05 14:53:13,967 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\DP WORLD LOGISTICS S.R.L..xlsx
+2026-08-05 14:53:13,967 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 12 | Incidencias: 0
+2026-08-05 14:58:04,966 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-05 14:58:04,966 | INFO | sunat_multas.cli | Procesando PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-05 14:58:04,967 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\PRADIVO WORLD COMPANY 1096.xlsx
+2026-08-05 14:58:04,967 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 1 | Incidencias: 0
+2026-08-05 14:59:10,653 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-05 14:59:10,654 | INFO | sunat_multas.cli | Procesando PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-05 14:59:10,655 | INFO | sunat_multas.cli | Dry-run: archivo preparado en output\PRADIVO WORLD COMPANY 1096.xlsx
+2026-08-05 14:59:10,655 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 1 | Incidencias: 0
+2026-08-05 15:01:01,957 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-05 15:01:01,958 | INFO | sunat_multas.cli | Procesando PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-05 15:01:03,632 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-05 15:01:20,296 | ERROR | sunat_multas.cli | Error no controlado procesando PRADIVO WORLD COMPANY 1096
+Traceback (most recent call last):
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 183, in _first_available_locator
+    locator.wait_for(state="visible", timeout=timeout_ms or self.config.timeout_ms)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 20539, in wait_for
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.wait_for(timeout=to_milliseconds(timeout), state=state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 748, in wait_for
+    await self._frame.wait_for_selector(
+        self._selector, strict=True, timeout=timeout, state=state
+    )
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 394, in wait_for_selector
+    await self._channel.send(
+        "waitForSelector", self._timeout, locals_to_params(locals())
+    )
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Locator.wait_for: Target page, context or browser has been closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\cli.py", line 75, in process_company
+    records = client.fetch_records(company, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 62, in fetch_records
+    self._login(page, company)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 80, in _login
+    self._fill_first_available(page, selectors.ruc_input, company.ruc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 169, in _fill_first_available
+    locator = self._first_available_locator(page, selector_list)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 187, in _first_available_locator
+    raise PlaywrightTimeoutError(f"No se encontró selector: {selector_list}") from last_error
+playwright._impl._errors.TimeoutError: No se encontró selector: input[name='ruc']|input#txtRuc|input[placeholder*='RUC']
+2026-08-05 15:01:20,329 | WARNING | sunat_multas.cli | PRADIVO WORLD COMPANY 1096 | UNKNOWN | No se encontró selector: input[name='ruc']|input#txtRuc|input[placeholder*='RUC']
+2026-08-05 15:01:20,330 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 0 | Incidencias: 1
+2026-08-05 15:02:20,265 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-05 15:02:20,266 | INFO | sunat_multas.cli | Procesando PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-05 15:02:21,340 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-05 15:04:25,962 | WARNING | sunat_multas.cli | PRADIVO WORLD COMPANY 1096 | SCRAPING | No se pudo abrir Consulta Manifiesto Desconsolidado. Actualiza los selectores en config.yaml para inspeccionar la pantalla real.
+2026-08-05 15:04:25,963 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 0 | Incidencias: 1
+2026-08-05 15:12:21,106 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-05 15:12:23,200 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-05 15:38:36,094 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-05 15:38:39,059 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-05 15:39:40,440 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-05 15:39:43,696 | INFO | sunat_multas.sunat_client | Login enviado para PRADIVO WORLD COMPANY 1096. Manteniendo ventana 30 segundos.
+2026-08-05 15:40:14,081 | INFO | sunat_multas.cli | Prueba de login finalizada.
+2026-08-05 15:42:57,315 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-05 15:42:58,313 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-05 15:42:59,510 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-05 15:43:02,678 | INFO | sunat_multas.sunat_client | Login enviado para PRADIVO WORLD COMPANY 1096. Manteniendo ventana 30 segundos.
+2026-08-05 15:43:32,920 | INFO | sunat_multas.cli | Prueba de login finalizada.
+2026-08-05 15:53:07,038 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-05 15:53:07,837 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-05 15:53:09,032 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-05 15:53:18,786 | INFO | sunat_multas.sunat_client | Login enviado para PRADIVO WORLD COMPANY 1096. Manteniendo ventana 40 segundos.
+2026-08-05 15:53:58,990 | INFO | sunat_multas.cli | Prueba de login finalizada.
+2026-08-05 16:03:48,623 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-05 16:03:49,474 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-05 16:03:50,709 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-05 16:04:00,536 | INFO | sunat_multas.sunat_client | Login enviado para PRADIVO WORLD COMPANY 1096. Manteniendo ventana 40 segundos.
+2026-08-05 16:04:34,182 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-05 16:04:35,128 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-05 16:04:36,352 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-05 16:04:46,093 | INFO | sunat_multas.sunat_client | Login enviado para PRADIVO WORLD COMPANY 1096. Manteniendo ventana 40 segundos.
+2026-08-05 16:05:26,392 | INFO | sunat_multas.cli | Prueba de login finalizada.

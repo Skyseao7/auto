@@ -1,0 +1,29 @@
+﻿list_path: lista_reporte_de_multas_sector_b.xlsx
+template_path: Base.xlsx
+output_dir: output
+log_dir: logs
+keep_existing_outputs: true
+
+sunat:
+  login_url: "https://api-seguridad.sunat.gob.pe/v1/clientessol/4f3b88b3-d9d6-402a-b85d-6a0bc857746a/oauth2/loginMenuSol?lang=es-PE&showDni=true&showLanguages=false&originalUrl=https://e-menu.sunat.gob.pe/cl-ti-itmenu/AutenticaMenuInternet.htm&state=rO0ABXNyABFqYXZhLnV0aWwuSGFzaE1hcAUH2sHDFmDRAwACRgAKbG9hZEZhY3RvckkACXRocmVzaG9sZHhwP0AAAAAAAAx3CAAAABAAAAADdAADZXhlcHQABnBhcmFtc3QASyomKiYvY2wtdGktaXRtZW51L01lbnVJbnRlcm5ldC5odG0mYjY0ZDI2YThiNWFmMDkxOTIzYjIzYjY0MDdhMWMxZGI0MWU3MzNhNnQABGV4ZWNweA=="
+  headless: false
+  slow_mo_ms: 80
+  timeout_ms: 30000
+  selectors:
+    ruc_mode_button: "button:has-text('RUC')|text=RUC|#btnPorRuc"
+    ruc_input: "input[placeholder='RUC']|input[placeholder*='RUC']|input[name='ruc']|input#txtRuc|input[id*='Ruc']|input[id*='ruc']|input[formcontrolname*='ruc']"
+    user_input: "input[placeholder='Usuario']|input[placeholder*='Usuario']|input[name='usuario']|input#txtUsuario|input[id*='Usuario']|input[id*='usuario']|input[formcontrolname*='usuario']"
+    password_input: "input[placeholder='Contraseña']|input[placeholder*='Contraseña']|input[type='password']|input#txtContrasena|input[id*='Clave']|input[id*='clave']|input[formcontrolname*='clave']|input[placeholder*='Clave']"
+    login_button: "button:has-text('Iniciar sesión')|button:has-text('Iniciar')|button:has-text('Ingresar')|input[type='submit']|button[type='submit']|#btnAceptar|#btnLogin"
+    logout_link: "text=Cerrar sesiÃ³n|text=Salir"
+    menu_search_input: "input[placeholder*='Buscar']|input[type='search']"
+    menu_option_text: "Consulta Manifiesto Desconsolidado"
+    date_from_input: "input[name*='fecIni']|input[placeholder*='Desde']|input[aria-label*='Desde']"
+    date_to_input: "input[name*='fecFin']|input[placeholder*='Hasta']|input[aria-label*='Hasta']"
+    search_button: "button:has-text('Consultar')|button:has-text('Buscar')|input[value*='Consultar']"
+    result_table: "table"
+    no_records_text: "no se encontraron|sin registros|no existen registros"
+    auth_error_text: "clave incorrecta|usuario incorrecto|credenciales|captcha|verificaciÃ³n"
+
+
+

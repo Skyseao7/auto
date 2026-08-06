@@ -1,0 +1,3 @@
+﻿item,nombre,ruc,tipo,detalle
+"1","PRADIVO WORLD COMPANY 1096","20602733808","UNKNOWN","No se encontró selector: input[name='ruc']|input#txtRuc|input[placeholder*='RUC']"
+"1","PRADIVO WORLD COMPANY 1096","20602733808","SCRAPING","No se pudo abrir Consulta Manifiesto Desconsolidado. Actualiza los selectores en config.yaml para inspeccionar la pantalla real."
