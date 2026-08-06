@@ -96,6 +96,7 @@ class SunatClient:
                 self._navigate_to_query(page)
                 self._select_fecha_numeracion_desconsolidado(page)
                 self._fill_date_range(page, start_date, end_date)
+                self._fill_agente_carga_ruc(page, company.ruc)
                 LOGGER.info("Consulta Manifiesto Desconsolidado abierta. Manteniendo ventana %s segundos.", pause_seconds)
                 sleep(pause_seconds)
             finally:
@@ -115,7 +116,7 @@ class SunatClient:
             try:
                 self._login(page, company)
                 self._navigate_to_query(page)
-                records = self._query_and_extract(page, start_date, end_date)
+                records = self._query_and_extract(page, company.ruc, start_date, end_date)
                 self._logout(page)
                 return records
             finally:
@@ -221,10 +222,11 @@ class SunatClient:
                     continue
         return False
 
-    def _query_and_extract(self, page: Page, start_date: date, end_date: date) -> list[ManifestRecord]:
+    def _query_and_extract(self, page: Page, ruc: str, start_date: date, end_date: date) -> list[ManifestRecord]:
         selectors = self.config.selectors
         self._select_fecha_numeracion_desconsolidado(page)
         self._fill_date_range(page, start_date, end_date)
+        self._fill_agente_carga_ruc(page, ruc)
         self._click_first_available(page, selectors.search_button)
         try:
             page.wait_for_load_state("networkidle", timeout=8000)
@@ -328,6 +330,31 @@ class SunatClient:
                         last_error = exc
             sleep(0.1)
         raise PlaywrightTimeoutError(f"No se encontró selector: {selector_list}") from last_error
+
+    def _fill_agente_carga_ruc(self, page: Page, ruc: str) -> None:
+        """Marca el checkbox RUC del Agente de Carga y escribe el RUC de la empresa."""
+        self._check_agente_carga_box(page)
+        ruc_input = self._find_visible_quick(page, "#numeroRucAgenteCarga", timeout_ms=8000)
+        ruc_input.fill(ruc)
+        LOGGER.info("RUC del agente de carga cargado: %s", ruc)
+
+    def _check_agente_carga_box(self, page: Page) -> None:
+        """Marca el checkbox sin desmarcarlo si ya estaba marcado (.check() es idempotente)."""
+        for scope in _page_scopes(_active_page(page)):
+            try:
+                scope.locator("#tipoBusquedaAgenteCarga").first.check(timeout=3000)
+                LOGGER.info("Checkbox RUC del Agente de Carga marcado.")
+                return
+            except (PlaywrightError, PlaywrightTimeoutError):
+                continue
+        for scope in _page_scopes(_active_page(page)):
+            try:
+                if scope.evaluate(_set_checkbox_script(), "tipoBusquedaAgenteCarga"):
+                    LOGGER.info("Checkbox RUC del Agente de Carga marcado mediante DOM.")
+                    return
+            except PlaywrightError:
+                continue
+        LOGGER.warning("No se encontró el checkbox RUC del Agente de Carga.")
     def _logout(self, page: Page) -> None:
         try:
             self._click_first_available(page, self.config.selectors.logout_link, timeout_ms=5000)
@@ -507,6 +534,19 @@ class SunatClient:
 
 def _monotonic_ms() -> int:
     return int(monotonic() * 1000)
+
+def _set_checkbox_script() -> str:
+    return r"""
+    (id) => {
+        const el = document.getElementById(id);
+        if (!el) return false;
+        if (!el.checked) {
+            el.checked = true;
+            el.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+        return true;
+    }
+    """
 
 def _click_menu_item_script() -> str:
     return r"""
