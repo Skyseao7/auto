@@ -64,7 +64,13 @@ class SunatClient:
                 context.close()
                 browser.close()
 
-    def navigate_only(self, company: Company, pause_seconds: int = 30) -> None:
+    def navigate_only(
+        self,
+        company: Company,
+        start_date: date,
+        end_date: date,
+        pause_seconds: int = 30,
+    ) -> None:
         if sync_playwright is None:
             raise RuntimeError("Playwright no está instalado. Ejecuta: pip install -r requirements.txt")
         with sync_playwright() as playwright:
@@ -75,6 +81,8 @@ class SunatClient:
             try:
                 self._login(page, company)
                 self._navigate_to_query(page)
+                self._select_fecha_numeracion_desconsolidado(page)
+                self._fill_date_range(page, start_date, end_date)
                 LOGGER.info("Consulta Manifiesto Desconsolidado abierta. Manteniendo ventana %s segundos.", pause_seconds)
                 sleep(pause_seconds)
             finally:
@@ -165,8 +173,7 @@ class SunatClient:
     def _query_and_extract(self, page: Page, start_date: date, end_date: date) -> list[ManifestRecord]:
         selectors = self.config.selectors
         self._select_fecha_numeracion_desconsolidado(page)
-        self._fill_first_available(page, selectors.date_from_input, start_date.strftime("%d/%m/%Y"))
-        self._fill_first_available(page, selectors.date_to_input, end_date.strftime("%d/%m/%Y"))
+        self._fill_date_range(page, start_date, end_date)
         self._click_first_available(page, selectors.search_button)
         page.wait_for_load_state("networkidle")
 
@@ -183,21 +190,43 @@ class SunatClient:
         target = "Fecha de Numeración de Manifiesto Desconsolidado"
         for scope in _page_scopes(page):
             try:
-                scope.get_by_label(re.compile(target, re.IGNORECASE)).check(timeout=3000)
+                scope.locator("#tipoBusquedaFechaNumeracionDesconsolidado").check(timeout=1000)
+                LOGGER.info("Filtro de fecha seleccionado por ID.")
                 return
             except (PlaywrightError, PlaywrightTimeoutError):
                 pass
+        for scope in _page_scopes(page):
             try:
-                scope.get_by_text(re.compile(r"Fecha\s+de\s+Numeraci[oó]n\s+de\s+Manifiesto\s+Desconsolidado", re.IGNORECASE)).click(timeout=3000)
+                scope.get_by_label(re.compile(r"Fecha de Numeración.*Desconsolidado", re.IGNORECASE)).check(timeout=1000)
+                LOGGER.info("Filtro de fecha seleccionado por etiqueta.")
                 return
             except (PlaywrightError, PlaywrightTimeoutError):
                 pass
+        for scope in _page_scopes(page):
+            try:
+                scope.get_by_text(re.compile(r"Fecha\s+de\s+Numeraci[oó]n\s+de\s+Manifiesto\s+Desconsolidado", re.IGNORECASE)).click(timeout=1000)
+                LOGGER.info("Filtro de fecha seleccionado por texto.")
+                return
+            except (PlaywrightError, PlaywrightTimeoutError):
+                pass
+        for scope in _page_scopes(page):
             try:
                 if scope.evaluate(_radio_by_text_script(), target):
+                    LOGGER.info("Filtro de fecha seleccionado mediante el DOM.")
                     return
             except PlaywrightError:
                 continue
         raise PlaywrightTimeoutError("No se pudo seleccionar Fecha de Numeración de Manifiesto Desconsolidado")
+
+    def _fill_date_range(self, page: Page, start_date: date, end_date: date) -> None:
+        selectors = self.config.selectors
+        start_value = start_date.strftime("%d/%m/%Y")
+        end_value = end_date.strftime("%d/%m/%Y")
+        start_input = self._fill_first_available(page, selectors.date_from_input, start_value)
+        end_input = self._fill_first_available(page, selectors.date_to_input, end_value)
+        if start_input.input_value() != start_value or end_input.input_value() != end_value:
+            raise NavigationError("SUNAT no conservó el rango de fechas ingresado.")
+        LOGGER.info("Rango mensual cargado: %s a %s", start_value, end_value)
     def _logout(self, page: Page) -> None:
         try:
             self._click_first_available(page, self.config.selectors.logout_link, timeout_ms=5000)
@@ -298,9 +327,10 @@ class SunatClient:
                 continue
         return False
 
-    def _fill_first_available(self, page: Page, selector_list: str, value: str) -> None:
+    def _fill_first_available(self, page: Page, selector_list: str, value: str):
         locator = self._first_available_locator(page, selector_list)
         locator.fill(value)
+        return locator
 
     def _click_first_available(self, page: Page, selector_list: str, timeout_ms: int | None = None) -> None:
         locator = self._first_available_locator(page, selector_list, timeout_ms=timeout_ms)

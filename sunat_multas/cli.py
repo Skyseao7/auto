@@ -2,6 +2,7 @@
 
 import argparse
 import logging
+from calendar import monthrange
 from datetime import date, datetime
 from pathlib import Path
 
@@ -21,10 +22,7 @@ def main() -> None:
     config = load_config(args.config)
     configure_logging(config.log_dir)
 
-    start_date = parse_date(args.desde)
-    end_date = parse_date(args.hasta)
-    if start_date > end_date:
-        raise ValueError("--desde no puede ser posterior a --hasta")
+    start_date, end_date = resolve_date_range(args)
 
     companies = filter_companies(
         read_companies(config.list_path),
@@ -44,7 +42,7 @@ def main() -> None:
             client.login_only(companies[0], pause_seconds=args.pausa_login)
             LOGGER.info("Prueba de login finalizada.")
         else:
-            client.navigate_only(companies[0], pause_seconds=args.pausa_login)
+            client.navigate_only(companies[0], start_date, end_date, pause_seconds=args.pausa_login)
             LOGGER.info("Prueba de navegación finalizada.")
         return
 
@@ -60,8 +58,10 @@ def main() -> None:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Automatiza reportes de multas SUNAT por empresa.")
     parser.add_argument("--config", type=Path, default=Path("config.yaml"), help="Ruta del archivo de configuración.")
-    parser.add_argument("--desde", required=True, help="Fecha inicial de consulta en formato YYYY-MM-DD.")
-    parser.add_argument("--hasta", required=True, help="Fecha final de consulta en formato YYYY-MM-DD.")
+    parser.add_argument("--desde", help="Fecha inicial de consulta en formato YYYY-MM-DD.")
+    parser.add_argument("--hasta", help="Fecha final de consulta en formato YYYY-MM-DD.")
+    parser.add_argument("--mes", type=int, help="Mes de la consulta (1 a 12). Si se omite, se solicita al iniciar.")
+    parser.add_argument("--anio", type=int, default=date.today().year, help="Año de la consulta mensual.")
     parser.add_argument("--dry-run", action="store_true", help="Crea/copias libros sin ingresar a SUNAT.")
     parser.add_argument("--solo-login", action="store_true", help="Solo abre SUNAT, llena credenciales y envía login para una empresa.")
     parser.add_argument("--solo-navegar", action="store_true", help="Ingresa y abre Consulta Manifiesto Desconsolidado para verificar la navegación.")
@@ -122,6 +122,38 @@ def record_incident(
 
 def parse_date(value: str) -> date:
     return datetime.strptime(value, "%Y-%m-%d").date()
+
+
+def resolve_date_range(args: argparse.Namespace) -> tuple[date, date]:
+    if args.desde or args.hasta:
+        if not (args.desde and args.hasta):
+            raise ValueError("Indica ambas fechas con --desde y --hasta, o usa la consulta mensual.")
+        start_date = parse_date(args.desde)
+        end_date = parse_date(args.hasta)
+        if start_date > end_date:
+            raise ValueError("--desde no puede ser posterior a --hasta")
+        return start_date, end_date
+
+    month = args.mes if args.mes is not None else prompt_month()
+    if not 1 <= month <= 12:
+        raise ValueError("--mes debe estar entre 1 y 12.")
+    start_date = date(args.anio, month, 1)
+    end_date = date(args.anio, month, monthrange(args.anio, month)[1])
+    LOGGER.info("Consulta mensual seleccionada: %s a %s", start_date, end_date)
+    return start_date, end_date
+
+
+def prompt_month() -> int:
+    while True:
+        value = input("Mes de consulta (1-12): ").strip()
+        try:
+            month = int(value)
+        except ValueError:
+            print("Ingresa un número de mes entre 1 y 12.")
+            continue
+        if 1 <= month <= 12:
+            return month
+        print("Ingresa un número de mes entre 1 y 12.")
 
 
 def filter_companies(companies, item: str | None, ruc: str | None, name: str | None):

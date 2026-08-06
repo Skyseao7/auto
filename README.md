@@ -41,14 +41,16 @@ playwright install chromium
 Primero prueba sin abrir SUNAT:
 
 ```powershell
-python main.py --desde 2026-08-01 --hasta 2026-08-31 --dry-run
+python main.py --mes 8 --anio 2026 --dry-run
 ```
 
 Luego ejecuta el flujo completo:
 
 ```powershell
-python main.py --desde 2026-08-01 --hasta 2026-08-31
+python main.py --mes 8 --anio 2026
 ```
+
+Si no indicas `--mes`, el programa solicita el número del mes al iniciar. Para el mes `07` del año `2026`, consulta desde `01/07/2026` hasta `31/07/2026`.
 
 ## Ajuste necesario de SUNAT
 
