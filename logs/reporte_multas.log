@@ -616,3 +616,48 @@ playwright._impl._errors.TimeoutError: No se encontró selector: button:has-text
 2026-08-06 18:16:03,840 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
 2026-08-06 18:16:04,176 | INFO | sunat_multas.cli | Registros insertados para PRADIVO WORLD COMPANY 1096: 4
 2026-08-06 18:16:04,176 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 1 | Incidencias: 0
+2026-08-06 18:25:18,179 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-06 18:25:18,233 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-06 18:25:18,233 | INFO | sunat_multas.cli | Procesando PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-06 18:25:19,041 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-06 18:25:20,267 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-06 18:25:30,022 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-06 18:25:30,232 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-06 18:26:14,838 | ERROR | sunat_multas.sunat_client | Opciones de menú visibles: ['OPERACIONES DE COMERCIO EXTERIOR', 'Recursos Impugnatorios Aduaneros', 'Manifiesto de Carga de Ingreso', 'Trámites', 'Trámites', 'Consultas', 'Consulta Trazabilidad Manifiesto Carga', 'Consulta del Manifiesto Desconsolidado Previo', 'Consulta Manifesto Desconsolidado', 'Recursos Impugnatorios Aduaneros', 'Manifiesto de Carga de Ingreso', 'Manifiesto de Carga de Salida', 'Regímenes Especiales', 'Ingreso y Salida de Mercancías', 'Despacho Aduanero de Ingreso', 'Despacho aduanero de salida', 'Destinación Aduanera de Mercancías', 'Trazabilidad y Control de Embarque', 'Avisos Electrónicos', 'Despacho Garantizado', 'Drawback', 'Exporta Fácil', 'Importa Fácil', 'Control Aduanero', 'Documentos Aduaneros', 'Control Aduanero', 'Recaudación', 'Transbordo', 'Tránsito Aduanero']
+2026-08-06 18:26:15,127 | WARNING | sunat_multas.cli | PRADIVO WORLD COMPANY 1096 | SCRAPING | No se pudo abrir Consulta Manifiesto Desconsolidado desde el menú SUNAT. Verifica que la opción exista para este usuario.
+2026-08-06 18:26:15,127 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 0 | Incidencias: 1
+2026-08-06 18:26:18,830 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-06 18:26:18,889 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-06 18:26:18,889 | INFO | sunat_multas.cli | Procesando PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-06 18:26:19,739 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-06 18:26:20,964 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-06 18:26:30,724 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-06 18:26:30,945 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-06 18:26:36,347 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-06 18:26:40,835 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-06 18:26:41,146 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-06 18:26:53,645 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-06 18:26:53,753 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20602733808
+2026-08-06 18:27:00,661 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-06 18:27:08,675 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-06 18:27:09,869 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 4
+2026-08-06 18:27:24,321 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
+2026-08-06 18:27:24,659 | INFO | sunat_multas.cli | Registros insertados para PRADIVO WORLD COMPANY 1096: 4
+2026-08-06 18:27:24,660 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 1 | Incidencias: 0
+2026-08-06 18:33:09,135 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-06 18:33:09,191 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-06 18:33:09,191 | INFO | sunat_multas.cli | Procesando PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-06 18:33:09,964 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-06 18:33:11,145 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-06 18:33:20,849 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-06 18:33:21,052 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-06 18:33:51,355 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-06 18:33:55,859 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-06 18:33:56,151 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-06 18:34:08,625 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-06 18:34:08,727 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20602733808
+2026-08-06 18:34:15,587 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-06 18:34:19,958 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 4
+2026-08-06 18:34:34,379 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
+2026-08-06 18:34:34,725 | INFO | sunat_multas.cli | Registros insertados para PRADIVO WORLD COMPANY 1096: 4
+2026-08-06 18:34:34,725 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 1 | Incidencias: 0

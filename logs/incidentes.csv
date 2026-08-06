@@ -14,3 +14,4 @@
 "6","UNIEX PERU","20505937547","UNKNOWN","No se encontró selector: button:has-text('Consultar')|button:has-text('Buscar')|input[value*='Consultar']"
 "9","EUROPARTNERS","20601419697","SCRAPING","No se pudo leer la tabla de resultados de SUNAT."
 "1","PRADIVO WORLD COMPANY 1096","20602733808","SCRAPING","No se pudo leer la tabla de resultados de SUNAT."
+"1","PRADIVO WORLD COMPANY 1096","20602733808","SCRAPING","No se pudo abrir Consulta Manifiesto Desconsolidado desde el menú SUNAT. Verifica que la opción exista para este usuario."

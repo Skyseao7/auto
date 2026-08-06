@@ -131,6 +131,8 @@ def append_records(workbook_path: Path, records: list[ManifestRecord]) -> int:
 
 def append_manifest_sheet(workbook_path: Path, company_name: str, rows: list[list[str]]) -> int:
     workbook = load_workbook(workbook_path)
+    if "IMPO118" not in workbook.sheetnames:
+        raise ValueError("La plantilla no contiene la hoja IMPO118")
     sheet_title = company_name.strip()[:31] or "SIN_NOMBRE"
     if sheet_title in workbook.sheetnames:
         del workbook[sheet_title]
@@ -138,8 +140,33 @@ def append_manifest_sheet(workbook_path: Path, company_name: str, rows: list[lis
     sheet.append(MANIFEST_SHEET_COLUMNS)
     for row in rows:
         sheet.append((row + [None] * 9)[:9])
+
+    copy_manifiestos_to_impo118(workbook, sheet_title)
+
     workbook.save(workbook_path)
     return len(rows)
+
+
+def copy_manifiestos_to_impo118(workbook, source_title: str) -> int:
+    source = workbook[source_title]
+    destination = workbook["IMPO118"]
+    target_row = _next_empty_column_row(destination, column=4)
+    copied = 0
+    for row in range(2, source.max_row + 1):
+        manifiesto = source.cell(row, 1).value
+        if manifiesto is not None and str(manifiesto).strip():
+            destination.cell(target_row, 4, manifiesto)
+            target_row += 1
+            copied += 1
+    return copied
+
+
+def _next_empty_column_row(sheet, column: int) -> int:
+    for row in range(2, sheet.max_row + 1):
+        value = sheet.cell(row, column).value
+        if value is None or str(value).strip() == "":
+            return row
+    return max(2, sheet.max_row + 1)
 
 
 def classify_sheet(record: ManifestRecord) -> str:
