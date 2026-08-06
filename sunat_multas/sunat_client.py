@@ -75,8 +75,7 @@ class SunatClient:
             try:
                 self._login(page, company)
                 self._navigate_to_query(page)
-                self._select_fecha_numeracion_desconsolidado(page)
-                LOGGER.info("Consulta abierta y radio de fecha seleccionado. Manteniendo ventana %s segundos.", pause_seconds)
+                LOGGER.info("Consulta Manifiesto Desconsolidado abierta. Manteniendo ventana %s segundos.", pause_seconds)
                 sleep(pause_seconds)
             finally:
                 context.close()
@@ -131,17 +130,37 @@ class SunatClient:
 
     def _navigate_to_query(self, page: Page) -> None:
         try:
-            self._click_text_first_available(page, "Operaciones de Comercio Exterior", timeout_ms=15000)
-            self._click_text_first_available(page, "Manifiesto de Carga de Ingreso", timeout_ms=15000)
-            self._click_text_first_available(page, "Consultas", timeout_ms=15000)
-            self._click_text_first_available(page, "Consulta Manifiesto Desconsolidado", timeout_ms=15000)
-            sleep(5)
+            self._open_foreign_trade_operator_menu(page)
+            self._click_menu_option(page, ("Manifiesto de Carga de Ingreso",), timeout_ms=15000)
+            sleep(2)
+            self._click_menu_option(page, ("Consultas",), timeout_ms=15000)
+            sleep(2)
+            self._click_menu_option(
+                page,
+                (
+                    "Consulta Manifiesto Desconsolidado",
+                    "Consulta del Manifiesto Desconsolidado",
+                    "Consulta de Manifiesto Desconsolidado",
+                    "Consulta Manifesto Desconsolidado",
+                ),
+                timeout_ms=15000,
+            )
+            LOGGER.info("Consulta Manifiesto Desconsolidado abierta; esperando 10 segundos.")
+            sleep(10)
             page.wait_for_load_state("domcontentloaded")
         except (PlaywrightError, PlaywrightTimeoutError) as exc:
+            LOGGER.error("Opciones de menú visibles: %s", self._visible_menu_options(page))
             raise NavigationError(
                 "No se pudo abrir Consulta Manifiesto Desconsolidado desde el menú SUNAT. "
                 "Verifica que la opción exista para este usuario."
             ) from exc
+
+    def _open_foreign_trade_operator_menu(self, page: Page) -> None:
+        if self._text_visible(page, "Manifiesto de Carga de Ingreso", timeout_ms=3000):
+            return
+        LOGGER.info("Activando el menú Operador de Comercio Exterior.")
+        self._click_menu_option(page, ("Operador de Comercio Exterior",), timeout_ms=15000)
+        sleep(2)
 
     def _query_and_extract(self, page: Page, start_date: date, end_date: date) -> list[ManifestRecord]:
         selectors = self.config.selectors
@@ -294,7 +313,7 @@ class SunatClient:
         deadline_timeout = timeout_ms or self.config.timeout_ms
         started_ms = _monotonic_ms()
         while _monotonic_ms() - started_ms < deadline_timeout:
-            for scope in _page_scopes(page):
+            for scope in _page_scopes(_active_page(page)):
                 for selector in selectors:
                     try:
                         locator = scope.locator(selector).first
@@ -304,15 +323,36 @@ class SunatClient:
                         last_error = exc
         raise PlaywrightTimeoutError(f"No se encontró selector: {selector_list}") from last_error
 
-    def _click_text_first_available(self, page: Page, text: str, timeout_ms: int) -> None:
+    def _click_menu_option(self, page: Page, labels: tuple[str, ...], timeout_ms: int) -> None:
         last_error: Exception | None = None
-        for scope in _page_scopes(page):
-            try:
-                scope.get_by_text(text, exact=False).click(timeout=timeout_ms)
-                return
-            except (PlaywrightError, PlaywrightTimeoutError) as exc:
-                last_error = exc
-        raise PlaywrightTimeoutError(f"No se encontró texto: {text}") from last_error
+        deadline = _monotonic_ms() + timeout_ms
+        while _monotonic_ms() < deadline:
+            for scope in _page_scopes(_active_page(page)):
+                for label in labels:
+                    try:
+                        exact_label = re.compile(rf"^\s*{re.escape(label)}\s*$", re.IGNORECASE)
+                        menu_option = scope.locator("span.spanNivelDescripcion:visible", has_text=exact_label).first
+                        menu_option.click(timeout=750)
+                        return
+                    except (PlaywrightError, PlaywrightTimeoutError) as exc:
+                        last_error = exc
+                    try:
+                        scope.get_by_text(label, exact=True).click(timeout=750)
+                        return
+                    except (PlaywrightError, PlaywrightTimeoutError) as exc:
+                        last_error = exc
+        option_list = " / ".join(labels)
+        raise PlaywrightTimeoutError(f"No se encontró la opción del menú: {option_list}") from last_error
+
+    def _visible_menu_options(self, page: Page) -> list[str]:
+        options: list[str] = []
+        try:
+            for scope in _page_scopes(_active_page(page)):
+                menu_options = scope.locator("span.spanNivelDescripcion:visible").all_inner_texts()
+                options.extend(_clean_text(option) for option in menu_options if _clean_text(option))
+        except PlaywrightError:
+            return options
+        return options
 
     def _text_visible(self, page: Page, text_or_regex: str, timeout_ms: int) -> bool:
         if not text_or_regex:
@@ -330,7 +370,7 @@ def _monotonic_ms() -> int:
     return int(monotonic() * 1000)
 
 def _radio_by_text_script() -> str:
-    return """
+    return r"""
     (targetText) => {
         const normalize = (text) => (text || '')
             .toLowerCase()
@@ -371,6 +411,13 @@ def _page_scopes(page: Page):
     except Exception:
         pass
     return scopes
+
+
+def _active_page(page: Page) -> Page:
+    open_pages = [candidate for candidate in page.context.pages if not candidate.is_closed()]
+    if not open_pages:
+        raise PlaywrightError("SUNAT cerró la pestaña de la sesión.")
+    return open_pages[-1]
 
 
 def _find_value(normalized_row: dict[str, str], aliases: tuple[str, ...]) -> str:

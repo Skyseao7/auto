@@ -19,12 +19,13 @@ Proyecto Python para generar un Excel independiente por empresa, consultar SUNAT
 2. Valida que existan `ITEM`, `NOMBRE`, `RUC`, `USUARIO` y `CLAVE`.
 3. Copia `Base.xlsx` a `output/<NOMBRE EMPRESA>.xlsx`.
 4. Ingresa a SUNAT con RUC, usuario y clave.
-5. Busca la opciÃ³n `Consulta Manifiesto Desconsolidado`.
-6. Consulta por rango de fechas.
-7. Extrae la tabla de resultados.
-8. Clasifica registros en `IMPO118`, `IMPO235`, `EXPO118` o `EXPO235`.
-9. Inserta solo valores en las columnas existentes.
-10. Registra incidencias y continÃºa con la siguiente empresa.
+5. Navega por `Manifiesto de Carga de Ingreso` -> `Consultas` -> `Consulta Manifiesto Desconsolidado`.
+6. Espera 10 segundos para que la consulta termine de cargar.
+7. Consulta por rango de fechas.
+8. Extrae la tabla de resultados.
+9. Clasifica registros en `IMPO118`, `IMPO235`, `EXPO118` o `EXPO235`.
+10. Inserta solo valores en las columnas existentes.
+11. Registra incidencias y continÃºa con la siguiente empresa.
 
 ## InstalaciÃ³n
 

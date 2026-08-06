@@ -64,7 +64,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--hasta", required=True, help="Fecha final de consulta en formato YYYY-MM-DD.")
     parser.add_argument("--dry-run", action="store_true", help="Crea/copias libros sin ingresar a SUNAT.")
     parser.add_argument("--solo-login", action="store_true", help="Solo abre SUNAT, llena credenciales y envía login para una empresa.")
-    parser.add_argument("--solo-navegar", action="store_true", help="Ingresa, abre Consulta Manifiesto Desconsolidado y selecciona búsqueda por fecha.")
+    parser.add_argument("--solo-navegar", action="store_true", help="Ingresa y abre Consulta Manifiesto Desconsolidado para verificar la navegación.")
     parser.add_argument("--pausa-login", type=int, default=20, help="Segundos que mantiene abierta la ventana tras login en modo --solo-login.")
     parser.add_argument("--item", help="Procesa solo la empresa con este ITEM de la hoja LISTA.")
     parser.add_argument("--ruc", help="Procesa solo la empresa con este RUC de la hoja LISTA.")
@@ -72,7 +72,14 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def process_company(config, client: SunatClient, company, start_date: date, end_date: date, dry_run: bool) -> CompanyResult:
+def process_company(
+    config,
+    client: SunatClient,
+    company,
+    start_date: date,
+    end_date: date,
+    dry_run: bool,
+) -> CompanyResult:
     LOGGER.info("Procesando %s | RUC %s", company.name, company.ruc)
     output_path: Path | None = None
     try:
