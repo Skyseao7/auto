@@ -102,7 +102,7 @@ class SunatClient:
             finally:
                 context.close()
                 browser.close()
-    def fetch_records(self, company: Company, start_date: date, end_date: date) -> list[ManifestRecord]:
+    def fetch_records(self, company: Company, start_date: date, end_date: date) -> list[list[str]]:
         if sync_playwright is None:
             raise RuntimeError("Playwright no está instalado. Ejecuta: pip install -r requirements.txt")
         with sync_playwright() as playwright:
@@ -243,7 +243,7 @@ class SunatClient:
             sleep(0.2)
         self._click_first_available(page, self.config.selectors.search_button)
 
-    def _query_and_extract(self, page: Page, ruc: str, start_date: date, end_date: date) -> list[ManifestRecord]:
+    def _query_and_extract(self, page: Page, ruc: str, start_date: date, end_date: date) -> list[list[str]]:
         selectors = self.config.selectors
         self._select_fecha_numeracion_desconsolidado(page)
         self._fill_date_range(page, start_date, end_date)
@@ -253,40 +253,81 @@ class SunatClient:
             page.wait_for_load_state("networkidle", timeout=8000)
         except PlaywrightTimeoutError:
             LOGGER.info("La red de SUNAT no quedó inactiva; esperando los resultados directamente.")
-        return self._wait_for_results(page, selectors, timeout_ms=45000)
+        rows = self._wait_for_manifest_grid(page)
+        if not rows:
+            raise NoRecordsFound("La consulta no devolvió registros.")
+        LOGGER.info("Manifiestos extraídos del grid: %s", len(rows))
+        return rows
 
-    def _wait_for_results(
-        self,
-        page: Page,
-        selectors: SunatSelectors,
-        timeout_ms: int,
-    ) -> list[ManifestRecord]:
+    def _wait_for_manifest_grid(self, page: Page, timeout_ms: int = 45000) -> list[list[str]]:
+        selectors = self.config.selectors
         deadline = _monotonic_ms() + timeout_ms
         while _monotonic_ms() < deadline:
-            if self._table_has_rows(page, selectors.result_table):
-                rows = self._extract_table_rows(page, selectors.result_table)
-                records = [self._row_to_record(row) for row in rows]
-                if records:
-                    return records
+            if self._grid_has_rows(page):
+                return self._extract_manifest_grid(page)
             if self._text_visible(page, selectors.no_records_text, timeout_ms=300):
-                raise NoRecordsFound("La consulta no devolvió registros.")
+                break
             sleep(0.4)
-        raise NoRecordsFound("La consulta no devolvió registros en el tiempo esperado.")
+        return []
 
-    def _table_has_rows(self, page: Page, table_selector: str) -> bool:
+    def _grid_has_rows(self, page: Page) -> bool:
+        scope = self._find_grid_scope(page)
+        if scope is None:
+            return False
+        try:
+            return scope.locator("#gridManifiestoCarga .dojoxGridRow").count() > 0
+        except PlaywrightError:
+            return False
+
+    def _find_grid_scope(self, page: Page):
         for scope in _page_scopes(_active_page(page)):
-            for selector in [item.strip() for item in table_selector.split("|") if item.strip()]:
-                try:
-                    table = scope.locator(selector).first
-                    if table.count() == 0:
-                        continue
-                    if table.locator("tbody tr").count() > 0:
-                        return True
-                    if table.locator("thead tr th").count() > 0 and table.locator("tr").count() > 1:
-                        return True
-                except PlaywrightError:
-                    continue
-        return False
+            try:
+                if scope.locator("#gridManifiestoCarga").count() > 0:
+                    return scope
+            except PlaywrightError:
+                continue
+        return None
+
+    def _extract_manifest_grid(self, page: Page) -> list[list[str]]:
+        scope = self._find_grid_scope(page)
+        if scope is None:
+            return []
+        rows: list[list[str]] = []
+        seen_first: set[tuple[str, ...]] = set()
+        for _ in range(50):
+            row_locator = scope.locator("#gridManifiestoCarga .dojoxGridRow")
+            count = row_locator.count()
+            if count == 0:
+                break
+            page_rows: list[list[str]] = []
+            for index in range(count):
+                cells = [_clean_text(cell) for cell in row_locator.nth(index).locator("td").all_inner_texts()]
+                if any(cells):
+                    page_rows.append(cells[:9])
+            if not page_rows:
+                break
+            first_key = tuple(page_rows[0])
+            if first_key in seen_first:
+                break
+            seen_first.add(first_key)
+            rows.extend(page_rows)
+            if not self._next_grid_page(scope):
+                break
+            sleep(1)
+        return rows
+
+    def _next_grid_page(self, scope) -> bool:
+        try:
+            next_button = scope.locator('[title="Página siguiente"]').first
+            if next_button.count() == 0:
+                return False
+            classes = (next_button.get_attribute("class") or "") + " " + (next_button.get_attribute("aria-disabled") or "")
+            if "disabled" in classes.lower():
+                return False
+            next_button.click(timeout=3000)
+            return True
+        except (PlaywrightError, PlaywrightTimeoutError):
+            return False
 
     def _select_fecha_numeracion_desconsolidado(self, page: Page) -> None:
         target = "Fecha de Numeración de Manifiesto Desconsolidado"

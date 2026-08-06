@@ -12,6 +12,18 @@ from .models import Company, ManifestRecord
 REQUIRED_LIST_COLUMNS = {"ITEM", "NOMBRE", "RUC", "USUARIO", "CLAVE"}
 TARGET_SHEETS = ("IMPO118", "IMPO235", "EXPO118", "EXPO235")
 
+MANIFEST_SHEET_COLUMNS = [
+    "Manifiesto de Carga",
+    "Fecha del Manifiesto de Carga",
+    "Manifiesto Desconsolidado",
+    "Fecha del Manifiesto Desconsolidado",
+    "Agente de Carga RUC",
+    "Número de Ticket",
+    "Fecha de Llegada",
+    "Fecha de Término de la Descarga",
+    "Estado del Manifiesto Desconsolidado",
+]
+
 
 def safe_filename(value: str) -> str:
     cleaned = re.sub(r'[<>:"/\\|?*]+', " ", value).strip()
@@ -115,6 +127,19 @@ def append_records(workbook_path: Path, records: list[ManifestRecord]) -> int:
 
     workbook.save(workbook_path)
     return inserted
+
+
+def append_manifest_sheet(workbook_path: Path, company_name: str, rows: list[list[str]]) -> int:
+    workbook = load_workbook(workbook_path)
+    sheet_title = company_name.strip()[:31] or "SIN_NOMBRE"
+    if sheet_title in workbook.sheetnames:
+        del workbook[sheet_title]
+    sheet = workbook.create_sheet(title=sheet_title)
+    sheet.append(MANIFEST_SHEET_COLUMNS)
+    for row in rows:
+        sheet.append((row + [None] * 9)[:9])
+    workbook.save(workbook_path)
+    return len(rows)
 
 
 def classify_sheet(record: ManifestRecord) -> str:

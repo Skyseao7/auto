@@ -8,7 +8,7 @@ from pathlib import Path
 
 from .config import load_config
 from .errors import AuthenticationError, ExtractionError, NavigationError, NoRecordsFound
-from .excel_io import append_records, create_company_workbook, read_companies
+from .excel_io import append_manifest_sheet, create_company_workbook, read_companies
 from .logging_setup import append_incident, configure_logging
 from .models import CompanyResult, IncidentType
 from .sunat_client import SunatClient
@@ -93,8 +93,8 @@ def process_company(
             LOGGER.info("Dry-run: archivo preparado en %s", output_path)
             return CompanyResult(company, output_path, 0)
 
-        records = client.fetch_records(company, start_date, end_date)
-        inserted = append_records(output_path, records)
+        rows = client.fetch_records(company, start_date, end_date)
+        inserted = append_manifest_sheet(output_path, company.name, rows)
         LOGGER.info("Registros insertados para %s: %s", company.name, inserted)
         return CompanyResult(company, output_path, inserted)
     except AuthenticationError as exc:

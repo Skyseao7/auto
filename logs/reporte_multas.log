@@ -563,3 +563,56 @@ playwright._impl._errors.TimeoutError: No se encontró selector: button:has-text
 2026-08-06 17:48:08,465 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
 2026-08-06 17:48:33,275 | WARNING | sunat_multas.cli | PRADIVO WORLD COMPANY 1096 | SCRAPING | No se pudo leer la tabla de resultados de SUNAT.
 2026-08-06 17:48:33,275 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 0 | Incidencias: 1
+2026-08-06 17:59:58,737 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-06 17:59:58,800 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-06 17:59:58,801 | INFO | sunat_multas.cli | Procesando UNIEX PERU | RUC 20505937547
+2026-08-06 17:59:59,710 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20505937547
+2026-08-06 18:00:00,978 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20505937547 | Usuario UNIEXPE3 | Clave ********
+2026-08-06 18:00:13,404 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-06 18:00:13,583 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-06 18:00:20,797 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-06 18:00:25,361 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-06 18:00:25,661 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-06 18:00:38,226 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-06 18:00:38,351 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20505937547
+2026-08-06 18:00:45,371 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-06 18:00:53,388 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-06 18:00:59,217 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 8
+2026-08-06 18:01:13,732 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
+2026-08-06 18:01:14,152 | INFO | sunat_multas.cli | Registros insertados para UNIEX PERU: 8
+2026-08-06 18:01:14,153 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 1 | Incidencias: 0
+2026-08-06 18:09:25,453 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-06 18:09:25,511 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-06 18:09:25,511 | INFO | sunat_multas.cli | Procesando UNIEX PERU | RUC 20505937547
+2026-08-06 18:09:26,483 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20505937547
+2026-08-06 18:09:27,725 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20505937547 | Usuario UNIEXPE3 | Clave ********
+2026-08-06 18:09:40,105 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-06 18:09:40,259 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-06 18:09:47,092 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-06 18:09:51,647 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-06 18:09:51,932 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-06 18:10:04,463 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-06 18:10:04,573 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20505937547
+2026-08-06 18:10:11,520 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-06 18:10:19,530 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-06 18:10:25,317 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 8
+2026-08-06 18:10:39,837 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
+2026-08-06 18:10:40,265 | INFO | sunat_multas.cli | Registros insertados para UNIEX PERU: 8
+2026-08-06 18:10:40,266 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 1 | Incidencias: 0
+2026-08-06 18:14:59,069 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-06 18:14:59,123 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-06 18:14:59,124 | INFO | sunat_multas.cli | Procesando PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-06 18:14:59,997 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-06 18:15:01,184 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-06 18:15:10,908 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-06 18:15:11,094 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-06 18:15:21,512 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-06 18:15:26,008 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-06 18:15:26,284 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-06 18:15:38,774 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-06 18:15:38,876 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20602733808
+2026-08-06 18:15:45,745 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-06 18:15:49,406 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 4
+2026-08-06 18:16:03,840 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
+2026-08-06 18:16:04,176 | INFO | sunat_multas.cli | Registros insertados para PRADIVO WORLD COMPANY 1096: 4
+2026-08-06 18:16:04,176 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 1 | Incidencias: 0
