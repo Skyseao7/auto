@@ -150,14 +150,35 @@ def append_manifest_sheet(workbook_path: Path, company_name: str, rows: list[lis
 def copy_manifiestos_to_impo118(workbook, source_title: str) -> int:
     source = workbook[source_title]
     destination = workbook["IMPO118"]
+    existing: set[str] = set()
+    for row in range(2, destination.max_row + 1):
+        value = destination.cell(row, 4).value
+        if value is not None and str(value).strip():
+            existing.add(str(value).strip())
     target_row = _next_empty_column_row(destination, column=4)
     copied = 0
     for row in range(2, source.max_row + 1):
         manifiesto = source.cell(row, 1).value
-        if manifiesto is not None and str(manifiesto).strip():
-            destination.cell(target_row, 4, manifiesto)
-            target_row += 1
-            copied += 1
+        if manifiesto is None or not str(manifiesto).strip():
+            continue
+        key = str(manifiesto).strip()
+        if key in existing:
+            continue
+        destination.cell(target_row, 4, manifiesto)
+        target_row += 1
+        copied += 1
+        existing.add(key)
+    return copied
+
+
+def process_manifiestos_excel(workbook_path: Path, source_title: str) -> int:
+    workbook = load_workbook(workbook_path)
+    if source_title not in workbook.sheetnames:
+        raise ValueError(f"No existe la hoja {source_title!r} en {workbook_path}")
+    if "IMPO118" not in workbook.sheetnames:
+        raise ValueError(f"No existe la hoja IMPO118 en {workbook_path}")
+    copied = copy_manifiestos_to_impo118(workbook, source_title)
+    workbook.save(workbook_path)
     return copied
 
 

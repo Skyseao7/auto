@@ -661,3 +661,9 @@ playwright._impl._errors.TimeoutError: No se encontró selector: button:has-text
 2026-08-06 18:34:34,379 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
 2026-08-06 18:34:34,725 | INFO | sunat_multas.cli | Registros insertados para PRADIVO WORLD COMPANY 1096: 4
 2026-08-06 18:34:34,725 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 1 | Incidencias: 0
+2026-08-06 18:40:43,407 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-06 18:40:43,460 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-06 18:40:43,515 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'PRADIVO WORLD COMPANY 1096' en output\PRADIVO WORLD COMPANY 1096.xlsx: 0
+2026-08-06 18:43:36,847 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'PRADIVO WORLD COMPANY 1096' en output\PRADIVO WORLD COMPANY 1096.xlsx: 4
+2026-08-06 18:43:57,403 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'PRADIVO WORLD COMPANY 1096' en output\PRADIVO WORLD COMPANY 1096.xlsx: 0
+2026-08-06 18:44:33,475 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'PRADIVO WORLD COMPANY 1096' en output\PRADIVO WORLD COMPANY 1096.xlsx: 4

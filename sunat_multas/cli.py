@@ -8,7 +8,7 @@ from pathlib import Path
 
 from .config import load_config
 from .errors import AuthenticationError, ExtractionError, NavigationError, NoRecordsFound
-from .excel_io import append_manifest_sheet, create_company_workbook, read_companies
+from .excel_io import append_manifest_sheet, create_company_workbook, process_manifiestos_excel, read_companies, safe_filename
 from .logging_setup import append_incident, configure_logging
 from .models import CompanyResult, IncidentType
 from .sunat_client import SunatClient
@@ -21,6 +21,18 @@ def main() -> None:
     args = parse_args()
     config = load_config(args.config)
     configure_logging(config.log_dir)
+
+    if args.solo_excel:
+        companies = filter_companies(
+            read_companies(config.list_path),
+            item=args.item,
+            ruc=args.ruc,
+            name=args.nombre,
+        )
+        if not companies:
+            raise ValueError("No se encontró ninguna empresa con los filtros indicados.")
+        run_excel_only(config, companies, args)
+        return
 
     start_date, end_date = resolve_date_range(args)
 
@@ -55,6 +67,28 @@ def main() -> None:
     LOGGER.info("Proceso finalizado. Correctas: %s | Incidencias: %s", successful, incidents)
 
 
+def run_excel_only(config, companies, args) -> None:
+    if args.archivo:
+        file_path = Path(args.archivo)
+    else:
+        if len(companies) != 1:
+            raise ValueError("Para --solo-excel indica --archivo o selecciona una sola empresa con --item, --ruc o --nombre.")
+        company = companies[0]
+        file_path = config.output_dir / f"{safe_filename(company.name)}.xlsx"
+    if not file_path.exists():
+        raise ValueError(f"No existe el archivo: {file_path}")
+
+    if args.hoja:
+        source_title = args.hoja
+    elif len(companies) == 1:
+        source_title = companies[0].name.strip()[:31]
+    else:
+        raise ValueError("Indica --hoja con el nombre de la hoja de datos cuando usas --archivo.")
+
+    copied = process_manifiestos_excel(file_path, source_title)
+    LOGGER.info("Manifiestos copiados a IMPO118 desde %r en %s: %s", source_title, file_path, copied)
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Automatiza reportes de multas SUNAT por empresa.")
     parser.add_argument("--config", type=Path, default=Path("config.yaml"), help="Ruta del archivo de configuración.")
@@ -65,6 +99,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--dry-run", action="store_true", help="Crea/copias libros sin ingresar a SUNAT.")
     parser.add_argument("--solo-login", action="store_true", help="Solo abre SUNAT, llena credenciales y envía login para una empresa.")
     parser.add_argument("--solo-navegar", action="store_true", help="Ingresa y abre Consulta Manifiesto Desconsolidado para verificar la navegación.")
+    parser.add_argument("--solo-excel", action="store_true", help="Solo copia los manifiestos de la hoja de la empresa a IMPO118 en un Excel existente.")
+    parser.add_argument("--archivo", type=Path, help="Ruta de un Excel existente para usar con --solo-excel.")
+    parser.add_argument("--hoja", help="Nombre de la hoja de datos para usar con --solo-excel (por defecto, el nombre de la empresa).")
     parser.add_argument("--pausa-login", type=int, default=20, help="Segundos que mantiene abierta la ventana tras login en modo --solo-login.")
     parser.add_argument("--item", help="Procesa solo la empresa con este ITEM de la hoja LISTA.")
     parser.add_argument("--ruc", help="Procesa solo la empresa con este RUC de la hoja LISTA.")
