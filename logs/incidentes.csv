@@ -10,3 +10,4 @@
 "1","PRADIVO WORLD COMPANY 1096","20602733808","SCRAPING","No se pudo abrir Consulta Manifiesto Desconsolidado desde el menú SUNAT. Verifica que la opción exista para este usuario."
 "1","PRADIVO WORLD COMPANY 1096","20602733808","SCRAPING","No se pudo abrir Consulta Manifiesto Desconsolidado desde el menú SUNAT. Verifica que la opción exista para este usuario."
 "4","ANICAM","20544648609","UNKNOWN","SUNAT cerró la pestaña de la sesión."
+"4","ANICAM","20544648609","UNKNOWN","No se encontró selector: button:has-text('Consultar')|button:has-text('Buscar')|input[value*='Consultar']"

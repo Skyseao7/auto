@@ -301,11 +301,33 @@ class SunatClient:
         selectors = self.config.selectors
         start_value = start_date.strftime("%d/%m/%Y")
         end_value = end_date.strftime("%d/%m/%Y")
-        start_input = self._fill_first_available(page, selectors.date_from_input, start_value, timeout_ms=8000)
-        end_input = self._fill_first_available(page, selectors.date_to_input, end_value, timeout_ms=8000)
+        start_input = self._fill_date_plain(page, selectors.date_from_input, start_value)
+        end_input = self._fill_date_plain(page, selectors.date_to_input, end_value)
         if start_input.input_value() != start_value or end_input.input_value() != end_value:
             raise NavigationError("SUNAT no conservó el rango de fechas ingresado.")
         LOGGER.info("Rango mensual cargado: %s a %s", start_value, end_value)
+
+    def _fill_date_plain(self, page: Page, selector_list: str, value: str) -> Any:
+        locator = self._find_visible_quick(page, selector_list, timeout_ms=8000)
+        locator.fill(value)
+        return locator
+
+    def _find_visible_quick(self, page: Page, selector_list: str, timeout_ms: int) -> Any:
+        """Busca el primer selector visible con sondeo rápido, sin bloquear por scope."""
+        selectors = [item.strip() for item in selector_list.split("|") if item.strip()]
+        deadline = _monotonic_ms() + timeout_ms
+        last_error: Exception | None = None
+        while _monotonic_ms() < deadline:
+            for scope in _page_scopes(_active_page(page)):
+                for selector in selectors:
+                    try:
+                        locator = scope.locator(f"{selector}:visible").first
+                        if locator.count() > 0:
+                            return locator
+                    except PlaywrightError as exc:
+                        last_error = exc
+            sleep(0.1)
+        raise PlaywrightTimeoutError(f"No se encontró selector: {selector_list}") from last_error
     def _logout(self, page: Page) -> None:
         try:
             self._click_first_available(page, self.config.selectors.logout_link, timeout_ms=5000)
