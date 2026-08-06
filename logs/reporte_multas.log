@@ -190,3 +190,96 @@ playwright._impl._errors.TimeoutError: No se encontró selector: input[name='ruc
 2026-08-06 15:44:35,278 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
 2026-08-06 15:45:14,184 | INFO | sunat_multas.sunat_client | Consulta Manifiesto Desconsolidado abierta. Manteniendo ventana 10 segundos.
 2026-08-06 15:45:24,496 | INFO | sunat_multas.cli | Prueba de navegación finalizada.
+2026-08-06 16:56:11,126 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-06 16:56:11,189 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-06 16:56:11,189 | INFO | sunat_multas.cli | Procesando PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-06 16:56:12,294 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-06 16:56:13,543 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-06 16:56:31,307 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-06 16:57:05,531 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-06 16:57:12,882 | INFO | sunat_multas.sunat_client | Consulta Manifiesto Desconsolidado abierta; esperando 10 segundos.
+2026-08-06 16:57:27,423 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-06 16:58:06,400 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-06 16:58:43,309 | ERROR | sunat_multas.cli | Error no controlado procesando PRADIVO WORLD COMPANY 1096
+Traceback (most recent call last):
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 373, in _first_available_locator
+    locator.wait_for(state="visible", timeout=per_selector_timeout)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 20539, in wait_for
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.wait_for(timeout=to_milliseconds(timeout), state=state)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_locator.py", line 748, in wait_for
+    await self._frame.wait_for_selector(
+        self._selector, strict=True, timeout=timeout, state=state
+    )
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 394, in wait_for_selector
+    await self._channel.send(
+        "waitForSelector", self._timeout, locals_to_params(locals())
+    )
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.wait_for: Timeout 1200ms exceeded.
+Call log:
+  - waiting for locator("input[value*='Consultar']").first to be visible
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\cli.py", line 96, in process_company
+    records = client.fetch_records(company, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 118, in fetch_records
+    records = self._query_and_extract(page, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 200, in _query_and_extract
+    self._click_first_available(page, selectors.search_button)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 359, in _click_first_available
+    locator = self._first_available_locator(page, selector_list, timeout_ms=timeout_ms)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 377, in _first_available_locator
+    raise PlaywrightTimeoutError(f"No se encontró selector: {selector_list}") from last_error
+playwright._impl._errors.TimeoutError: No se encontró selector: button:has-text('Consultar')|button:has-text('Buscar')|input[value*='Consultar']
+2026-08-06 16:58:43,319 | WARNING | sunat_multas.cli | PRADIVO WORLD COMPANY 1096 | UNKNOWN | No se encontró selector: button:has-text('Consultar')|button:has-text('Buscar')|input[value*='Consultar']
+2026-08-06 16:58:43,320 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 0 | Incidencias: 1
+2026-08-06 16:58:54,629 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-06 16:58:54,680 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-06 16:58:54,681 | INFO | sunat_multas.cli | Procesando HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C. | RUC 20538424961
+2026-08-06 16:58:55,640 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20538424961
+2026-08-06 16:58:56,880 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20538424961 | Usuario MINHETRU | Clave ************
+2026-08-06 16:59:14,639 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-06 16:59:48,873 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-06 16:59:56,213 | INFO | sunat_multas.sunat_client | Consulta Manifiesto Desconsolidado abierta; esperando 10 segundos.
+2026-08-06 17:00:10,780 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-06 17:00:20,664 | ERROR | sunat_multas.cli | Error no controlado procesando HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C.
+Traceback (most recent call last):
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\cli.py", line 96, in process_company
+    records = client.fetch_records(company, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 118, in fetch_records
+    records = self._query_and_extract(page, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 199, in _query_and_extract
+    self._fill_date_range(page, start_date, end_date)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 248, in _fill_date_range
+    start_input = self._fill_first_available(page, selectors.date_from_input, start_value)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 354, in _fill_first_available
+    locator = self._first_available_locator(page, selector_list)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 369, in _first_available_locator
+    for scope in _page_scopes(_active_page(page)):
+                              ~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 505, in _active_page
+    raise PlaywrightError("SUNAT cerró la pestaña de la sesión.")
+playwright._impl._errors.Error: SUNAT cerró la pestaña de la sesión.
+2026-08-06 17:00:20,668 | WARNING | sunat_multas.cli | HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C. | UNKNOWN | SUNAT cerró la pestaña de la sesión.
+2026-08-06 17:00:20,669 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 0 | Incidencias: 1

@@ -44,6 +44,19 @@ FIELD_ALIASES = {
 }
 
 
+MENU_TREE = (
+    ("Operaciones de Comercio Exterior", "Operador de Comercio Exterior"),
+    ("Manifiesto de Carga de Ingreso",),
+    ("Consultas",),
+    (
+        "Consulta Manifiesto Desconsolidado",
+        "Consulta del Manifiesto Desconsolidado",
+        "Consulta de Manifiesto Desconsolidado",
+        "Consulta Manifesto Desconsolidado",
+    ),
+)
+
+
 class SunatClient:
     def __init__(self, config: SunatConfig) -> None:
         self.config = config
@@ -138,21 +151,8 @@ class SunatClient:
 
     def _navigate_to_query(self, page: Page) -> None:
         try:
-            self._open_foreign_trade_operator_menu(page)
-            self._click_menu_option(page, ("Manifiesto de Carga de Ingreso",), timeout_ms=15000)
-            sleep(2)
-            self._click_menu_option(page, ("Consultas",), timeout_ms=15000)
-            sleep(2)
-            self._click_menu_option(
-                page,
-                (
-                    "Consulta Manifiesto Desconsolidado",
-                    "Consulta del Manifiesto Desconsolidado",
-                    "Consulta de Manifiesto Desconsolidado",
-                    "Consulta Manifesto Desconsolidado",
-                ),
-                timeout_ms=15000,
-            )
+            self._open_menu_tree(page)
+            self._click_menu_option(page, MENU_TREE[-1], timeout_ms=15000)
             LOGGER.info("Consulta Manifiesto Desconsolidado abierta; esperando 10 segundos.")
             sleep(10)
             page.wait_for_load_state("domcontentloaded")
@@ -163,12 +163,35 @@ class SunatClient:
                 "Verifica que la opción exista para este usuario."
             ) from exc
 
-    def _open_foreign_trade_operator_menu(self, page: Page) -> None:
-        if self._text_visible(page, "Manifiesto de Carga de Ingreso", timeout_ms=3000):
-            return
-        LOGGER.info("Activando el menú Operador de Comercio Exterior.")
-        self._click_menu_option(page, ("Operador de Comercio Exterior",), timeout_ms=15000)
-        sleep(2)
+    def _open_menu_tree(self, page: Page) -> None:
+        """Expande cada nivel del árbol SOL solo si su hijo aún no es visible.
+
+        No depende de la posición de los paneles (izquierda o derecha) ni de que el
+        texto exista en cualquier parte de la página: verifica los elementos del menú
+        directamente (span.spanNivelDescripcion). Así funciona igual para empresas cuyo
+        menú ya está expandido y para las que tienen los paneles del medio (p. ej.
+        PRADIVO), donde el árbol queda desplazado a la derecha.
+        """
+        for index in range(len(MENU_TREE) - 1):
+            if self._menu_option_visible(page, MENU_TREE[index + 1], timeout_ms=2000):
+                continue
+            LOGGER.info("Expandiendo el nivel del menú: %s", MENU_TREE[index][0])
+            self._click_menu_option(page, MENU_TREE[index], timeout_ms=15000)
+            sleep(2)
+
+    def _menu_option_visible(self, page: Page, labels: tuple[str, ...], timeout_ms: int) -> bool:
+        for scope in _page_scopes(_active_page(page)):
+            for label in labels:
+                try:
+                    exact_label = re.compile(rf"^\s*{re.escape(label)}\s*$", re.IGNORECASE)
+                    scope.locator("span.spanNivelDescripcion:visible", has_text=exact_label).first.wait_for(
+                        state="visible",
+                        timeout=timeout_ms,
+                    )
+                    return True
+                except (PlaywrightError, PlaywrightTimeoutError):
+                    continue
+        return False
 
     def _query_and_extract(self, page: Page, start_date: date, end_date: date) -> list[ManifestRecord]:
         selectors = self.config.selectors
@@ -367,9 +390,17 @@ class SunatClient:
                     except (PlaywrightError, PlaywrightTimeoutError) as exc:
                         last_error = exc
                     try:
-                        scope.get_by_text(label, exact=True).click(timeout=750)
+                        scope.get_by_text(label, exact=True).first.click(timeout=750)
                         return
                     except (PlaywrightError, PlaywrightTimeoutError) as exc:
+                        last_error = exc
+            for scope in _page_scopes(_active_page(page)):
+                for label in labels:
+                    try:
+                        if scope.evaluate(_click_menu_item_script(), {"label": label}):
+                            LOGGER.info("Opción del menú activada mediante DOM: %s", label)
+                            return
+                    except PlaywrightError as exc:
                         last_error = exc
         option_list = " / ".join(labels)
         raise PlaywrightTimeoutError(f"No se encontró la opción del menú: {option_list}") from last_error
@@ -398,6 +429,31 @@ class SunatClient:
 
 def _monotonic_ms() -> int:
     return int(monotonic() * 1000)
+
+def _click_menu_item_script() -> str:
+    return r"""
+    ({ label }) => {
+        const normalize = (text) => (text || '')
+            .toLowerCase()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .replace(/\s+/g, ' ')
+            .trim();
+        const target = normalize(label);
+        const isVisible = (node) => {
+            const rect = node.getBoundingClientRect();
+            return node.offsetParent !== null && rect.width > 0 && rect.height > 0;
+        };
+        const items = Array.from(document.querySelectorAll('span.spanNivelDescripcion'))
+            .filter((item) => normalize(item.innerText || item.textContent) === target)
+            .sort((a, b) => (isVisible(b) ? 1 : 0) - (isVisible(a) ? 1 : 0));
+        const item = items[0];
+        if (!item) return false;
+        item.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+        item.click();
+        return true;
+    }
+    """
 
 def _radio_by_text_script() -> str:
     return r"""
