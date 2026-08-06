@@ -222,12 +222,33 @@ class SunatClient:
                     continue
         return False
 
+    def _click_consultar(self, page: Page) -> None:
+        """Presiona el botón Consultar con los selectores recomendados, con fallback."""
+        deadline = _monotonic_ms() + 10000
+        last_error: Exception | None = None
+        while _monotonic_ms() < deadline:
+            for scope in _page_scopes(_active_page(page)):
+                try:
+                    scope.get_by_text("Consultar", exact=True).first.click(timeout=750)
+                    LOGGER.info("Botón Consultar presionado por texto.")
+                    return
+                except (PlaywrightError, PlaywrightTimeoutError) as exc:
+                    last_error = exc
+                try:
+                    scope.locator("#accion5_label:visible").first.click(timeout=750)
+                    LOGGER.info("Botón Consultar presionado por id accion5_label.")
+                    return
+                except (PlaywrightError, PlaywrightTimeoutError) as exc:
+                    last_error = exc
+            sleep(0.2)
+        self._click_first_available(page, self.config.selectors.search_button)
+
     def _query_and_extract(self, page: Page, ruc: str, start_date: date, end_date: date) -> list[ManifestRecord]:
         selectors = self.config.selectors
         self._select_fecha_numeracion_desconsolidado(page)
         self._fill_date_range(page, start_date, end_date)
         self._fill_agente_carga_ruc(page, ruc)
-        self._click_first_available(page, selectors.search_button)
+        self._click_consultar(page)
         try:
             page.wait_for_load_state("networkidle", timeout=8000)
         except PlaywrightTimeoutError:

@@ -532,3 +532,34 @@ Traceback (most recent call last):
 playwright._impl._errors.TimeoutError: No se encontró selector: button:has-text('Consultar')|button:has-text('Buscar')|input[value*='Consultar']
 2026-08-06 17:42:58,188 | WARNING | sunat_multas.cli | UNIEX PERU | UNKNOWN | No se encontró selector: button:has-text('Consultar')|button:has-text('Buscar')|input[value*='Consultar']
 2026-08-06 17:42:58,188 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 0 | Incidencias: 1
+2026-08-06 17:45:47,181 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-06 17:45:47,245 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-06 17:45:47,245 | INFO | sunat_multas.cli | Procesando EUROPARTNERS | RUC 20601419697
+2026-08-06 17:45:49,457 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20601419697
+2026-08-06 17:45:50,791 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20601419697 | Usuario PARTNERS | Clave ********
+2026-08-06 17:46:00,783 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-06 17:46:00,994 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-06 17:46:18,097 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-06 17:46:22,662 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-06 17:46:22,980 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-06 17:46:35,520 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-06 17:46:35,630 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20601419697
+2026-08-06 17:46:42,609 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-06 17:46:50,612 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-06 17:47:08,016 | WARNING | sunat_multas.cli | EUROPARTNERS | SCRAPING | No se pudo leer la tabla de resultados de SUNAT.
+2026-08-06 17:47:08,016 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 0 | Incidencias: 1
+2026-08-06 17:47:20,678 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-06 17:47:20,743 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-06 17:47:20,743 | INFO | sunat_multas.cli | Procesando PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-06 17:47:21,679 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-06 17:47:22,946 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-06 17:47:32,705 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-06 17:47:32,918 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-06 17:47:43,986 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-06 17:47:48,544 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-06 17:47:48,843 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-06 17:48:01,398 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-06 17:48:01,506 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20602733808
+2026-08-06 17:48:08,465 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-06 17:48:33,275 | WARNING | sunat_multas.cli | PRADIVO WORLD COMPANY 1096 | SCRAPING | No se pudo leer la tabla de resultados de SUNAT.
+2026-08-06 17:48:33,275 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 0 | Incidencias: 1
