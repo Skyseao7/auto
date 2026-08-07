@@ -30,6 +30,8 @@ DESCONS_SOURCE_COLUMN = 3
 DESCONS_DEST_COLUMN = 3
 CARGA_SOURCE_COLUMN = 1
 CARGA_DEST_COLUMN = 4
+LLEGADA_SOURCE_COLUMN = 7
+LLEGADA_DEST_COLUMN = 12
 
 
 def safe_filename(value: str) -> str:
@@ -158,18 +160,27 @@ def copy_manifiestos_to_impo118(workbook, source_title: str = MANIFEST_SOURCE_SH
     destination = workbook[MANIFEST_DEST_SHEET]
     copied = 0
 
-    segments = []
-    for row in range(2, source.max_row + 1):
-        raw = source.cell(row, DESCONS_SOURCE_COLUMN).value
-        if raw is None or not str(raw).strip():
-            continue
-        segment = _ultimo_segmento(str(raw))
-        if segment:
-            segments.append(segment)
-    _clear_column(destination, DESCONS_DEST_COLUMN)
-    for index, value in enumerate(segments):
-        destination.cell(2 + index, DESCONS_DEST_COLUMN, value)
-    copied += len(segments)
+    recompute_mappings = (
+        (DESCONS_SOURCE_COLUMN, DESCONS_DEST_COLUMN, True),
+        (LLEGADA_SOURCE_COLUMN, LLEGADA_DEST_COLUMN, False),
+    )
+    for src_col, dst_col, transform in recompute_mappings:
+        values: list[object] = []
+        for row in range(2, source.max_row + 1):
+            raw = source.cell(row, src_col).value
+            if raw is None or not str(raw).strip():
+                continue
+            if transform:
+                segment = _ultimo_segmento(str(raw))
+                if not segment:
+                    continue
+                values.append(segment)
+            else:
+                values.append(raw)
+        _clear_column(destination, dst_col)
+        for index, value in enumerate(values):
+            destination.cell(2 + index, dst_col, value)
+        copied += len(values)
 
     existing = _column_values(destination, CARGA_DEST_COLUMN)
     target = _next_empty_column_row(destination, CARGA_DEST_COLUMN)
@@ -184,7 +195,22 @@ def copy_manifiestos_to_impo118(workbook, source_title: str = MANIFEST_SOURCE_SH
         existing.add(key)
         target += 1
         copied += 1
+
+    _number_impo118_rows(destination)
     return copied
+
+
+def _number_impo118_rows(destination) -> None:
+    data_columns = (CARGA_DEST_COLUMN, DESCONS_DEST_COLUMN, LLEGADA_DEST_COLUMN)
+    count = 0
+    for row in range(2, destination.max_row + 1):
+        if any(destination.cell(row, col).value not in (None, "") for col in data_columns):
+            count += 1
+        else:
+            break
+    _clear_column(destination, 1)
+    for index in range(count):
+        destination.cell(2 + index, 1, index + 1)
 
 
 def _ultimo_segmento(value: str) -> str:
