@@ -265,10 +265,26 @@ class SunatClient:
         while _monotonic_ms() < deadline:
             if self._grid_has_rows(page):
                 return self._extract_manifest_grid(page)
+            if self._grid_has_no_records(page):
+                return []
             if self._text_visible(page, selectors.no_records_text, timeout_ms=300):
                 break
             sleep(0.4)
         return []
+
+    def _grid_has_no_records(self, page: Page) -> bool:
+        selector = self.config.selectors.no_records_selector
+        if not selector:
+            return False
+        pattern = re.compile(r"no existe|sin registros|no se encontraron|no existen registros", re.IGNORECASE)
+        for scope in _page_scopes(_active_page(page)):
+            try:
+                node = scope.locator(selector).filter(has_text=pattern).first
+                if node.count() > 0 and node.is_visible():
+                    return True
+            except (PlaywrightError, PlaywrightTimeoutError):
+                continue
+        return False
 
     def _grid_has_rows(self, page: Page) -> bool:
         scope = self._find_grid_scope(page)

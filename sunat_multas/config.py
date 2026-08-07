@@ -26,6 +26,7 @@ class SunatSelectors:
     no_records_text: str
     auth_error_text: str
     ruc_mode_button: str = ""
+    no_records_selector: str = ""
 
 
 @dataclass(frozen=True)

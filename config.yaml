@@ -22,7 +22,8 @@ sunat:
     date_to_input: "#fechaFinal|input[name*='fecFin']|input[placeholder*='Hasta']|input[aria-label*='Hasta']"
     search_button: "#accion5_label|text=Consultar|button:has-text('Consultar')|button:has-text('Buscar')|input[value*='Consultar']"
     result_table: "table"
-    no_records_text: "no se encontraron|sin registros|no existen registros"
+    no_records_text: "no existe manifiesto|no se encontraron|sin registros|no existen registros"
+    no_records_selector: "div.dojoxGridMasterMessages"
     auth_error_text: "clave incorrecta|usuario incorrecto|credenciales|captcha|verificaciÃ³n"
 
 
