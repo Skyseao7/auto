@@ -667,3 +667,7 @@ playwright._impl._errors.TimeoutError: No se encontró selector: button:has-text
 2026-08-06 18:43:36,847 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'PRADIVO WORLD COMPANY 1096' en output\PRADIVO WORLD COMPANY 1096.xlsx: 4
 2026-08-06 18:43:57,403 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'PRADIVO WORLD COMPANY 1096' en output\PRADIVO WORLD COMPANY 1096.xlsx: 0
 2026-08-06 18:44:33,475 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'PRADIVO WORLD COMPANY 1096' en output\PRADIVO WORLD COMPANY 1096.xlsx: 4
+2026-08-06 18:53:28,393 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'IMPO118-Transmisiones' en output\PRADIVO WORLD COMPANY 1096.xlsx: 4
+2026-08-06 18:54:07,429 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'IMPO118-Transmisiones' en output\PRADIVO WORLD COMPANY 1096.xlsx: 0
+2026-08-06 18:58:22,340 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'IMPO118-Transmisiones' en output\PRADIVO WORLD COMPANY 1096.xlsx: 8
+2026-08-06 19:03:35,370 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'IMPO118-Transmisiones' en output\PRADIVO WORLD COMPANY 1096.xlsx: 8

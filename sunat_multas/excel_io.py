@@ -24,6 +24,13 @@ MANIFEST_SHEET_COLUMNS = [
     "Estado del Manifiesto Desconsolidado",
 ]
 
+MANIFEST_SOURCE_SHEET = "IMPO118-Transmisiones"
+MANIFEST_DEST_SHEET = "IMPO118"
+DESCONS_SOURCE_COLUMN = 3
+DESCONS_DEST_COLUMN = 3
+CARGA_SOURCE_COLUMN = 1
+CARGA_DEST_COLUMN = 4
+
 
 def safe_filename(value: str) -> str:
     cleaned = re.sub(r'[<>:"/\\|?*]+', " ", value).strip()
@@ -129,54 +136,87 @@ def append_records(workbook_path: Path, records: list[ManifestRecord]) -> int:
     return inserted
 
 
-def append_manifest_sheet(workbook_path: Path, company_name: str, rows: list[list[str]]) -> int:
+def append_manifest_sheet(workbook_path: Path, rows: list[list[str]]) -> int:
     workbook = load_workbook(workbook_path)
-    if "IMPO118" not in workbook.sheetnames:
-        raise ValueError("La plantilla no contiene la hoja IMPO118")
-    sheet_title = company_name.strip()[:31] or "SIN_NOMBRE"
-    if sheet_title in workbook.sheetnames:
-        del workbook[sheet_title]
-    sheet = workbook.create_sheet(title=sheet_title)
+    if MANIFEST_DEST_SHEET not in workbook.sheetnames:
+        raise ValueError(f"La plantilla no contiene la hoja {MANIFEST_DEST_SHEET}")
+    if MANIFEST_SOURCE_SHEET in workbook.sheetnames:
+        del workbook[MANIFEST_SOURCE_SHEET]
+    sheet = workbook.create_sheet(title=MANIFEST_SOURCE_SHEET)
     sheet.append(MANIFEST_SHEET_COLUMNS)
     for row in rows:
         sheet.append((row + [None] * 9)[:9])
 
-    copy_manifiestos_to_impo118(workbook, sheet_title)
+    copy_manifiestos_to_impo118(workbook)
 
     workbook.save(workbook_path)
     return len(rows)
 
 
-def copy_manifiestos_to_impo118(workbook, source_title: str) -> int:
+def copy_manifiestos_to_impo118(workbook, source_title: str = MANIFEST_SOURCE_SHEET) -> int:
     source = workbook[source_title]
-    destination = workbook["IMPO118"]
-    existing: set[str] = set()
-    for row in range(2, destination.max_row + 1):
-        value = destination.cell(row, 4).value
-        if value is not None and str(value).strip():
-            existing.add(str(value).strip())
-    target_row = _next_empty_column_row(destination, column=4)
+    destination = workbook[MANIFEST_DEST_SHEET]
     copied = 0
+
+    segments = []
     for row in range(2, source.max_row + 1):
-        manifiesto = source.cell(row, 1).value
-        if manifiesto is None or not str(manifiesto).strip():
+        raw = source.cell(row, DESCONS_SOURCE_COLUMN).value
+        if raw is None or not str(raw).strip():
             continue
-        key = str(manifiesto).strip()
+        segment = _ultimo_segmento(str(raw))
+        if segment:
+            segments.append(segment)
+    _clear_column(destination, DESCONS_DEST_COLUMN)
+    for index, value in enumerate(segments):
+        destination.cell(2 + index, DESCONS_DEST_COLUMN, value)
+    copied += len(segments)
+
+    existing = _column_values(destination, CARGA_DEST_COLUMN)
+    target = _next_empty_column_row(destination, CARGA_DEST_COLUMN)
+    for row in range(2, source.max_row + 1):
+        raw = source.cell(row, CARGA_SOURCE_COLUMN).value
+        if raw is None or not str(raw).strip():
+            continue
+        key = str(raw).strip()
         if key in existing:
             continue
-        destination.cell(target_row, 4, manifiesto)
-        target_row += 1
-        copied += 1
+        destination.cell(target, CARGA_DEST_COLUMN, raw)
         existing.add(key)
+        target += 1
+        copied += 1
     return copied
 
 
-def process_manifiestos_excel(workbook_path: Path, source_title: str) -> int:
+def _ultimo_segmento(value: str) -> str:
+    text = value.strip()
+    if "-" in text:
+        return text.rsplit("-", 1)[-1].strip()
+    return text
+
+
+def _column_values(sheet, column: int) -> set[str]:
+    values: set[str] = set()
+    for row in range(2, sheet.max_row + 1):
+        value = sheet.cell(row, column).value
+        if value is not None and str(value).strip():
+            values.add(str(value).strip())
+    return values
+
+
+def _clear_column(sheet, column: int) -> None:
+    for row in range(2, sheet.max_row + 1):
+        sheet.cell(row, column).value = None
+
+
+def process_manifiestos_excel(
+    workbook_path: Path,
+    source_title: str = MANIFEST_SOURCE_SHEET,
+) -> int:
     workbook = load_workbook(workbook_path)
     if source_title not in workbook.sheetnames:
         raise ValueError(f"No existe la hoja {source_title!r} en {workbook_path}")
-    if "IMPO118" not in workbook.sheetnames:
-        raise ValueError(f"No existe la hoja IMPO118 en {workbook_path}")
+    if MANIFEST_DEST_SHEET not in workbook.sheetnames:
+        raise ValueError(f"No existe la hoja {MANIFEST_DEST_SHEET} en {workbook_path}")
     copied = copy_manifiestos_to_impo118(workbook, source_title)
     workbook.save(workbook_path)
     return copied
