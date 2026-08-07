@@ -1263,3 +1263,80 @@ task: <Task cancelling name='Task-175' coro=<Locator.wait_for() done, defined at
 2026-08-07 16:33:43,221 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 15
 2026-08-07 16:33:57,740 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
 2026-08-07 16:33:58,143 | INFO | sunat_multas.cli | Detalle finalizado para EIRL ADVANCED LOGISTICS GROUP (ALG). Procesadas: 11.
+2026-08-07 16:39:22,206 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-07 16:39:24,083 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-07 16:39:24,084 | INFO | sunat_multas.cli | Consultando SUNAT para EIRL ADVANCED LOGISTICS GROUP (ALG) | RUC 20511032114
+2026-08-07 16:39:25,396 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20511032114
+2026-08-07 16:39:26,646 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20511032114 | Usuario ADVANC55 | Clave ************
+2026-08-07 16:39:36,642 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 16:39:36,899 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 16:39:43,662 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 16:39:48,224 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 16:39:48,509 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 16:40:01,120 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 16:40:01,228 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20511032114
+2026-08-07 16:40:08,216 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 16:40:16,231 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 16:40:38,101 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 15
+2026-08-07 16:40:52,637 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
+2026-08-07 16:40:53,132 | INFO | sunat_multas.cli | Hoja IMPO118-Transmisiones actualizada para EIRL ADVANCED LOGISTICS GROUP (ALG): 15 transmisiones.
+2026-08-07 16:40:53,207 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'IMPO118-Transmisiones' en output\EIRL ADVANCED LOGISTICS GROUP (ALG).xlsx: 45
+2026-08-07 16:40:53,231 | INFO | sunat_multas.cli | Transmisiones por procesar para EIRL ADVANCED LOGISTICS GROUP (ALG): 11 de 11.
+2026-08-07 16:40:54,262 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20511032114
+2026-08-07 16:40:55,543 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20511032114 | Usuario ADVANC55 | Clave ************
+2026-08-07 16:41:05,567 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 16:41:05,819 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 16:41:13,020 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 16:41:17,582 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 16:41:17,869 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 16:41:30,422 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 16:41:30,532 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20511032114
+2026-08-07 16:41:37,513 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 16:41:45,517 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 16:41:46,849 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 15
+2026-08-07 16:41:46,849 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 31145 (fila grilla 0, 3 documento(s)).
+2026-08-07 16:41:52,877 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 3 documento(s).
+2026-08-07 16:41:52,925 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 31145 procesada (3 documento(s)).
+2026-08-07 16:41:52,943 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 16:41:53,477 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 31549 (fila grilla 3, 2 documento(s)).
+2026-08-07 16:42:00,135 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 2 documento(s).
+2026-08-07 16:42:00,181 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 31549 procesada (2 documento(s)).
+2026-08-07 16:42:00,196 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 16:42:00,702 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 32328 (fila grilla 5, 1 documento(s)).
+2026-08-07 16:42:07,194 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 16:42:07,238 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 32328 procesada (1 documento(s)).
+2026-08-07 16:42:07,259 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 16:42:07,766 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 32346 (fila grilla 6, 1 documento(s)).
+2026-08-07 16:42:14,265 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 16:42:14,312 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 32346 procesada (1 documento(s)).
+2026-08-07 16:42:14,330 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 16:42:14,841 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 32624 (fila grilla 7, 1 documento(s)).
+2026-08-07 16:42:21,329 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 16:42:21,373 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 32624 procesada (1 documento(s)).
+2026-08-07 16:42:21,391 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 16:42:21,887 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 32908 (fila grilla 8, 1 documento(s)).
+2026-08-07 16:42:28,711 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 3 documento(s).
+2026-08-07 16:42:28,750 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 32908 procesada (1 documento(s)).
+2026-08-07 16:42:28,768 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 16:42:29,293 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 33752 (fila grilla 9, 1 documento(s)).
+2026-08-07 16:42:35,754 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 16:42:35,795 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 33752 procesada (1 documento(s)).
+2026-08-07 16:42:35,813 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 16:42:36,327 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 34851 (fila grilla 10, 2 documento(s)).
+2026-08-07 16:42:42,977 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 2 documento(s).
+2026-08-07 16:42:43,042 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 34851 procesada (2 documento(s)).
+2026-08-07 16:42:43,060 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 16:42:43,558 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 35335 (fila grilla 12, 1 documento(s)).
+2026-08-07 16:42:50,034 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 16:42:50,087 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 35335 procesada (1 documento(s)).
+2026-08-07 16:42:50,105 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 16:42:50,669 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 35924 (fila grilla 13, 1 documento(s)).
+2026-08-07 16:42:57,147 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 16:42:57,199 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 35924 procesada (1 documento(s)).
+2026-08-07 16:42:57,214 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 16:42:57,730 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 36421 (fila grilla 14, 1 documento(s)).
+2026-08-07 16:43:04,178 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 16:43:04,227 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 36421 procesada (1 documento(s)).
+2026-08-07 16:43:04,246 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 16:43:19,278 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
+2026-08-07 16:43:19,623 | INFO | sunat_multas.cli | Detalle finalizado para EIRL ADVANCED LOGISTICS GROUP (ALG). Procesadas: 11.

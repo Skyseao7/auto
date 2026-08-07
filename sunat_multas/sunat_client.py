@@ -479,15 +479,36 @@ class SunatClient:
                 active.close()
         except PlaywrightError:
             pass
-        if self._grid_has_rows(page):
-            return
+
+        for scope in _page_scopes(_active_page(page)):
+            try:
+                if scope.locator("#gridDocumentosTransporte").count() == 0:
+                    continue
+                regresar = scope.locator('[id="toolbar1.accion1_label"]').first
+                if regresar.count() > 0:
+                    LOGGER.info("Usando el botón Regresar del detalle.")
+                    regresar.click(timeout=3000)
+                    if self._wait_for_grid_rows(page, timeout_ms=15000):
+                        return
+            except (PlaywrightError, PlaywrightTimeoutError):
+                continue
+
+        LOGGER.warning("No se encontró el botón Regresar; usando el botón atrás del navegador.")
         try:
             page.go_back(wait_until="domcontentloaded")
         except (PlaywrightError, PlaywrightTimeoutError):
             LOGGER.warning("No se pudo volver con el botón atrás; re-consultando la grilla.")
-        if self._grid_has_rows(page):
+        if self._wait_for_grid_rows(page, timeout_ms=15000):
             return
         self._query_and_extract(page, ruc, start_date, end_date)
+
+    def _wait_for_grid_rows(self, page: Page, timeout_ms: int) -> bool:
+        deadline = _monotonic_ms() + timeout_ms
+        while _monotonic_ms() < deadline:
+            if self._grid_has_rows(page):
+                return True
+            sleep(0.4)
+        return False
 
     def _select_fecha_numeracion_desconsolidado(self, page: Page) -> None:
         target = "Fecha de Numeración de Manifiesto Desconsolidado"
