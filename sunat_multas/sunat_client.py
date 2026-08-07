@@ -329,6 +329,166 @@ class SunatClient:
         except (PlaywrightError, PlaywrightTimeoutError):
             return False
 
+    def procesar_detalle(self, company: Company, start_date: date, end_date: date, groups, on_group) -> None:
+        if sync_playwright is None:
+            raise RuntimeError("Playwright no está instalado. Ejecuta: pip install -r requirements.txt")
+        with sync_playwright() as playwright:
+            browser = playwright.chromium.launch(
+                headless=self.config.headless,
+                slow_mo=self.config.slow_mo_ms,
+            )
+            context = browser.new_context(accept_downloads=True)
+            page = context.new_page()
+            page.set_default_timeout(self.config.timeout_ms)
+            try:
+                self._login(page, company)
+                self._navigate_to_query(page)
+                self._query_and_extract(page, company.ruc, start_date, end_date)
+                for group in groups:
+                    self._procesar_grupo_detalle(page, company.ruc, start_date, end_date, group, on_group)
+                self._logout(page)
+            finally:
+                context.close()
+                browser.close()
+
+    def _procesar_grupo_detalle(self, page, ruc, start_date, end_date, group, on_group) -> None:
+        LOGGER.info(
+            "Procesando transmisión %s (fila grilla %s, %s documento(s)).",
+            group["code"],
+            group["grid_start"],
+            group["count"],
+        )
+        self._click_manifiesto_link(page, group["grid_start"])
+        page.wait_for_timeout(5000)
+        listado = self._extraer_listado_documentos(page)
+        data_list: list[dict] = []
+        for offset in range(group["count"]):
+            if offset < len(listado):
+                data_list.append(listado[offset])
+            else:
+                LOGGER.warning(
+                    "Transmisión %s: el listado trajo %s documento(s), se esperaban %s.",
+                    group["code"],
+                    len(listado),
+                    group["count"],
+                )
+                data_list.append({})
+        on_group(group, data_list)
+        self._regresar_a_grilla(page, ruc, start_date, end_date)
+
+    def _click_manifiesto_link(self, page: Page, row_index: int) -> None:
+        scope = self._find_grid_scope(page)
+        if scope is None:
+            raise NavigationError("No se encontró la grilla de manifiestos para abrir el detalle.")
+        remaining = row_index
+        for _ in range(100):
+            rows = scope.locator("#gridManifiestoCarga .dojoxGridRow")
+            count = rows.count()
+            if remaining < count:
+                row = rows.nth(remaining)
+                link = row.locator("a.link").first
+                if link.count() == 0:
+                    link = row.locator("td").nth(2).locator("a").first
+                if link.count() == 0:
+                    link = row.locator("td").nth(2)
+                link.scroll_into_view_if_needed(timeout=3000)
+                link.click(timeout=5000)
+                return
+            if not self._next_grid_page(scope):
+                break
+            remaining -= count
+            sleep(1)
+        raise NavigationError(f"No se encontró la fila {row_index} en la grilla de manifiestos.")
+
+    def _extraer_listado_documentos(self, page: Page) -> list[dict[str, str]]:
+        scope = None
+        for candidate in _page_scopes(_active_page(page)):
+            try:
+                if candidate.locator("#gridDocumentosTransporte").count() > 0:
+                    scope = candidate
+                    break
+            except PlaywrightError:
+                continue
+        if scope is None:
+            raise ExtractionError("No se encontró LISTADO DE DOCUMENTOS DE TRANSPORTE.")
+        try:
+            scope.locator("#gridDocumentosTransporte").scroll_into_view_if_needed(timeout=5000)
+        except (PlaywrightError, PlaywrightTimeoutError):
+            pass
+        rows: list[dict[int, str]] = []
+        seen_first: set[tuple] = set()
+        for _ in range(50):
+            grid_rows = scope.locator("#gridDocumentosTransporte .dojoxGridRow")
+            count = grid_rows.count()
+            if count == 0:
+                break
+            page_rows: list[dict[int, str]] = []
+            for index in range(count):
+                data: dict[int, str] = {}
+                cells = grid_rows.nth(index).locator("td.dojoxGridCell")
+                cell_count = cells.count()
+                for cell_index in range(cell_count):
+                    idx = cells.nth(cell_index).get_attribute("idx")
+                    if idx is not None:
+                        text = _clean_text(cells.nth(cell_index).inner_text())
+                        if text:
+                            data[int(idx)] = text
+                if data:
+                    page_rows.append(data)
+            if not page_rows:
+                break
+            first_key = tuple(sorted(page_rows[0].items()))
+            if first_key in seen_first:
+                break
+            seen_first.add(first_key)
+            rows.extend(page_rows)
+            if not self._next_dojo_page(scope, "#gridDocumentosTransporte"):
+                break
+            sleep(1)
+        result: list[dict[str, str]] = []
+        for data in rows:
+            doc = {
+                "master": data.get(6, ""),
+                "fecha_hijo": data.get(3, ""),
+                "fecha_master": data.get(7, ""),
+                "fecha_info": data.get(8, ""),
+                "puerto_embarque": data.get(9, ""),
+            }
+            if any(doc.values()):
+                result.append(doc)
+        LOGGER.info("Listado de documentos extraído: %s documento(s).", len(result))
+        return result
+
+    def _next_dojo_page(self, scope, grid_selector: str) -> bool:
+        try:
+            next_button = scope.locator(f'{grid_selector} [title="Página siguiente"]').first
+            if next_button.count() == 0:
+                return False
+            classes = (next_button.get_attribute("class") or "") + " " + (next_button.get_attribute("aria-disabled") or "")
+            if "disable" in classes.lower():
+                return False
+            next_button.click(timeout=3000)
+            return True
+        except (PlaywrightError, PlaywrightTimeoutError):
+            return False
+
+    def _regresar_a_grilla(self, page: Page, ruc: str, start_date: date, end_date: date) -> None:
+        try:
+            active = _active_page(page)
+            if active is not page:
+                active.close()
+        except PlaywrightError:
+            pass
+        if self._grid_has_rows(page):
+            return
+        try:
+            page.go_back(wait_until="domcontentloaded")
+        except (PlaywrightError, PlaywrightTimeoutError):
+            LOGGER.warning("No se pudo volver con el botón atrás; re-consultando la grilla.")
+        if self._grid_has_rows(page):
+            return
+        self._query_and_extract(page, ruc, start_date, end_date)
+
     def _select_fecha_numeracion_desconsolidado(self, page: Page) -> None:
         target = "Fecha de Numeración de Manifiesto Desconsolidado"
         for scope in _page_scopes(page):

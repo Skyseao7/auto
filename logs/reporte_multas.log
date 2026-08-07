@@ -692,3 +692,511 @@ playwright._impl._errors.TimeoutError: No se encontró selector: button:has-text
 2026-08-06 19:15:55,161 | INFO | sunat_multas.cli | Registros insertados para EMO LOGISTICS PERU S.A.C.: 16
 2026-08-06 19:15:55,161 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 1 | Incidencias: 0
 2026-08-06 19:22:02,286 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'IMPO118-Transmisiones' en output\EMO LOGISTICS PERU S.A.C..xlsx: 48
+2026-08-06 20:01:52,823 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'IMPO118-Transmisiones' en output\EMO LOGISTICS PERU S.A.C..xlsx: 48
+2026-08-06 20:11:27,213 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-06 20:11:27,275 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'IMPO118-Transmisiones' en output\PRADIVO WORLD COMPANY 1096.xlsx: 12
+2026-08-06 20:13:29,553 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-06 20:13:33,131 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-06 20:13:33,131 | INFO | sunat_multas.cli | Consultando SUNAT para FYR | RUC 20537193761
+2026-08-06 20:13:34,366 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20537193761
+2026-08-06 20:13:35,619 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20537193761 | Usuario FYRIG123 | Clave *********
+2026-08-06 20:13:46,667 | ERROR | sunat_multas.sunat_client | Opciones de menú visibles: []
+2026-08-06 20:14:18,937 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-06 20:14:26,464 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-06 20:14:26,464 | INFO | sunat_multas.cli | Consultando SUNAT para ATIQ GRUPO LOGISTICS | RUC 20606354704
+2026-08-06 20:14:27,408 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20606354704
+2026-08-06 20:14:28,756 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20606354704 | Usuario JOHNMEDI | Clave **********
+2026-08-06 20:14:41,235 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-06 20:14:41,398 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-06 20:14:48,044 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-06 20:14:52,598 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-06 20:14:52,868 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-06 20:15:05,405 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-06 20:15:05,514 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20606354704
+2026-08-06 20:15:12,473 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-06 20:15:20,489 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-06 20:15:22,913 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 27
+2026-08-06 20:15:37,440 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
+2026-08-06 20:15:37,790 | INFO | sunat_multas.cli | Hoja IMPO118-Transmisiones actualizada para ATIQ GRUPO LOGISTICS: 27 transmisiones.
+2026-08-06 20:37:44,442 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-06 20:37:44,501 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'IMPO118-Transmisiones' en output\EMO LOGISTICS PERU S.A.C..xlsx: 48
+2026-08-07 00:31:13,192 | INFO | sunat_multas.cli | Empresas por procesar: 12
+2026-08-07 00:31:32,890 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-07 00:31:32,891 | INFO | sunat_multas.cli | Consultando SUNAT para PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-07 00:31:36,421 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-07 00:31:37,890 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-07 00:31:47,919 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 00:31:48,195 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 00:31:54,998 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 00:31:59,557 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 00:31:59,858 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 00:32:12,374 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 00:32:12,498 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20602733808
+2026-08-07 00:32:19,487 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 00:32:27,497 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 00:32:28,801 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 4
+2026-08-07 00:32:43,344 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
+2026-08-07 00:32:43,815 | INFO | sunat_multas.cli | Hoja IMPO118-Transmisiones actualizada para PRADIVO WORLD COMPANY 1096: 4 transmisiones.
+2026-08-07 00:32:43,815 | INFO | sunat_multas.cli | Consultando SUNAT para EMO LOGISTICS PERU S.A.C. | RUC 20604081964
+2026-08-07 00:32:44,971 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20604081964
+2026-08-07 00:32:46,206 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20604081964 | Usuario EVERAV20 | Clave *********
+2026-08-07 00:32:58,660 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 00:32:58,838 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 00:33:06,457 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 00:33:11,034 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 00:33:11,318 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 00:33:23,869 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 00:33:23,980 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-07 00:33:30,931 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 00:33:38,938 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 00:33:40,251 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 16
+2026-08-07 00:33:54,766 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
+2026-08-07 00:33:55,183 | INFO | sunat_multas.cli | Hoja IMPO118-Transmisiones actualizada para EMO LOGISTICS PERU S.A.C.: 16 transmisiones.
+2026-08-07 00:33:55,183 | INFO | sunat_multas.cli | Consultando SUNAT para HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C. | RUC 20538424961
+2026-08-07 00:33:56,144 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20538424961
+2026-08-07 00:33:57,387 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20538424961 | Usuario MINHETRU | Clave ************
+2026-08-07 00:34:07,387 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 00:34:14,187 | INFO | sunat_multas.sunat_client | Opción del menú activada mediante DOM: Manifiesto de Carga de Ingreso
+2026-08-07 00:34:14,282 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 00:34:20,907 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 00:34:25,456 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 00:34:25,742 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 00:34:38,273 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 00:34:38,381 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20538424961
+2026-08-07 00:34:45,330 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 00:34:53,335 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 00:34:54,530 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 1
+2026-08-07 00:35:09,052 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
+2026-08-07 00:35:09,455 | INFO | sunat_multas.cli | Hoja IMPO118-Transmisiones actualizada para HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C.: 1 transmisiones.
+2026-08-07 00:35:09,455 | INFO | sunat_multas.cli | Consultando SUNAT para ANICAM | RUC 20544648609
+2026-08-07 00:35:10,425 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20544648609
+2026-08-07 00:35:11,666 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20544648609 | Usuario ANICAM23 | Clave **********
+2026-08-07 00:35:24,183 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 00:35:24,362 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 00:35:29,736 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 00:35:34,264 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 00:35:34,552 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 00:35:47,107 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 00:35:47,215 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20544648609
+2026-08-07 00:35:54,176 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 00:36:02,192 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 00:36:05,680 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 4
+2026-08-07 00:36:20,232 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
+2026-08-07 00:36:20,800 | INFO | sunat_multas.cli | Hoja IMPO118-Transmisiones actualizada para ANICAM: 4 transmisiones.
+2026-08-07 00:36:20,800 | INFO | sunat_multas.cli | Consultando SUNAT para ATIQ GRUPO LOGISTICS | RUC 20606354704
+2026-08-07 00:36:21,707 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20606354704
+2026-08-07 00:36:23,032 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20606354704 | Usuario JOHNMEDI | Clave **********
+2026-08-07 00:36:35,465 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 00:36:35,647 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 00:36:42,220 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 00:36:46,766 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 00:36:47,053 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 00:36:59,590 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 00:36:59,699 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20606354704
+2026-08-07 00:37:06,648 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 00:37:14,667 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 00:37:17,120 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 27
+2026-08-07 00:37:31,622 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
+2026-08-07 00:37:32,010 | INFO | sunat_multas.cli | Hoja IMPO118-Transmisiones actualizada para ATIQ GRUPO LOGISTICS: 27 transmisiones.
+2026-08-07 00:37:32,010 | INFO | sunat_multas.cli | Consultando SUNAT para UNIEX PERU | RUC 20505937547
+2026-08-07 00:37:32,904 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20505937547
+2026-08-07 00:37:34,135 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20505937547 | Usuario UNIEXPE3 | Clave ********
+2026-08-07 00:37:46,571 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 00:37:46,752 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 00:37:53,346 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 00:37:57,903 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 00:37:58,206 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 00:38:10,721 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 00:38:10,829 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20505937547
+2026-08-07 00:38:17,800 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 00:38:25,806 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 00:38:27,059 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 8
+2026-08-07 00:38:41,590 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
+2026-08-07 00:38:41,964 | INFO | sunat_multas.cli | Hoja IMPO118-Transmisiones actualizada para UNIEX PERU: 8 transmisiones.
+2026-08-07 00:38:41,965 | INFO | sunat_multas.cli | Consultando SUNAT para CARGO COMPASS | RUC 20512845348
+2026-08-07 00:38:42,938 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20512845348
+2026-08-07 00:38:44,196 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20512845348 | Usuario JCAYCHO1 | Clave *********
+2026-08-07 00:38:56,646 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 00:38:56,822 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 00:39:03,526 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 00:39:08,075 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 00:39:08,362 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 00:39:20,895 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 00:39:21,004 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20512845348
+2026-08-07 00:39:27,975 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 00:39:35,981 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 00:40:21,727 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 41
+2026-08-07 00:40:36,248 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
+2026-08-07 00:40:36,635 | INFO | sunat_multas.cli | Hoja IMPO118-Transmisiones actualizada para CARGO COMPASS: 41 transmisiones.
+2026-08-07 00:40:36,635 | INFO | sunat_multas.cli | Consultando SUNAT para FYR | RUC 20537193761
+2026-08-07 00:40:37,533 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20537193761
+2026-08-07 00:40:38,773 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20537193761 | Usuario FYRIG123 | Clave *********
+2026-08-07 00:40:51,304 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 00:40:51,476 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 00:40:58,099 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 00:41:02,641 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 00:41:02,927 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 00:41:15,466 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 00:41:15,578 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20537193761
+2026-08-07 00:41:22,545 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 00:41:30,561 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 00:41:31,805 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 6
+2026-08-07 00:41:46,314 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
+2026-08-07 00:41:46,693 | INFO | sunat_multas.cli | Hoja IMPO118-Transmisiones actualizada para FYR: 6 transmisiones.
+2026-08-07 00:41:46,693 | INFO | sunat_multas.cli | Consultando SUNAT para EUROPARTNERS | RUC 20601419697
+2026-08-07 00:41:47,609 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20601419697
+2026-08-07 00:41:48,904 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20601419697 | Usuario PARTNERS | Clave ********
+2026-08-07 00:41:58,689 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 00:41:58,899 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 00:42:05,527 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 00:42:10,093 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 00:42:10,382 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 00:42:22,910 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 00:42:23,018 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20601419697
+2026-08-07 00:42:29,975 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 00:42:37,989 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 00:45:13,952 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-07 00:45:17,606 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-07 00:45:17,607 | INFO | sunat_multas.cli | Consultando SUNAT para PRIME CARGO | RUC 20603012616
+2026-08-07 00:45:18,565 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20603012616
+2026-08-07 00:45:19,848 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20603012616 | Usuario JLOZADAL | Clave ***********
+2026-08-07 00:45:32,307 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 00:45:32,493 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 00:45:39,204 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 00:45:43,759 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 00:45:44,047 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 00:45:56,594 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 00:45:56,703 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20603012616
+2026-08-07 00:46:03,692 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 00:46:11,695 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 00:46:12,972 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 11
+2026-08-07 00:47:19,292 | ERROR | asyncio | Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2026-08-07 00:47:19,293 | ERROR | asyncio | Task was destroyed but it is pending!
+task: <Task cancelling name='Task-176' coro=<BrowserContext.close() done, defined at C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_browser_context.py:575> wait_for=<Future finished result=None> cb=[SyncBase._sync.<locals>.<lambda>() at C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py:111]>
+2026-08-07 00:47:19,293 | ERROR | asyncio | Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2026-08-07 00:47:19,294 | ERROR | asyncio | Task was destroyed but it is pending!
+task: <Task cancelling name='Task-175' coro=<Locator.wait_for() done, defined at C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py:743> wait_for=<Future finished result=None> cb=[SyncBase._sync.<locals>.<lambda>() at C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py:111]>
+2026-08-07 00:47:23,764 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-07 00:47:34,834 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-07 00:47:34,834 | INFO | sunat_multas.cli | Consultando SUNAT para PRIME CARGO | RUC 20603012616
+2026-08-07 00:47:35,813 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20603012616
+2026-08-07 00:47:37,065 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20603012616 | Usuario JLOZADAL | Clave ***********
+2026-08-07 00:47:49,503 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 00:47:49,683 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 00:47:56,323 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 00:48:00,872 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 00:48:01,157 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 00:48:13,700 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 00:48:13,824 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20603012616
+2026-08-07 00:48:20,797 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 00:48:28,800 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 00:48:30,106 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 11
+2026-08-07 00:48:44,630 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
+2026-08-07 00:48:45,015 | INFO | sunat_multas.cli | Hoja IMPO118-Transmisiones actualizada para PRIME CARGO: 11 transmisiones.
+2026-08-07 00:49:16,850 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-07 00:49:19,111 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-07 00:49:19,111 | INFO | sunat_multas.cli | Consultando SUNAT para SPEED OCEAN LINE | RUC 20508943807
+2026-08-07 00:49:20,174 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20508943807
+2026-08-07 00:49:21,422 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20508943807 | Usuario LINE2014 | Clave *********
+2026-08-07 00:49:31,261 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 00:49:31,469 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 00:49:38,457 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 00:49:43,032 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 00:49:43,320 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 00:49:55,860 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 00:49:55,967 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20508943807
+2026-08-07 00:50:02,905 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 00:50:10,912 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 00:50:30,970 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 106
+2026-08-07 00:50:45,482 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
+2026-08-07 00:50:46,123 | INFO | sunat_multas.cli | Hoja IMPO118-Transmisiones actualizada para SPEED OCEAN LINE: 106 transmisiones.
+2026-08-07 01:00:40,590 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-07 01:00:44,376 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-07 01:00:44,376 | INFO | sunat_multas.cli | Consultando SUNAT para DP WORLD LOGISTICS S.R.L. | RUC 20100010217
+2026-08-07 01:00:45,454 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20100010217
+2026-08-07 01:00:46,766 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20100010217 | Usuario RENRA126 | Clave ************
+2026-08-07 01:00:59,228 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 01:00:59,419 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 01:01:06,580 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 01:01:11,150 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 01:01:11,464 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 01:01:23,989 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 01:01:24,098 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20100010217
+2026-08-07 01:01:31,069 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 01:01:39,073 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 15:41:34,684 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-07 15:41:34,784 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'IMPO118-Transmisiones' en output\EMO LOGISTICS PERU S.A.C..xlsx: 48
+2026-08-07 15:42:43,229 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-07 15:43:02,234 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-07 15:43:02,244 | INFO | sunat_multas.cli | Transmisiones por procesar para EMO LOGISTICS PERU S.A.C.: 15 de 15.
+2026-08-07 15:43:05,233 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20604081964
+2026-08-07 15:43:06,563 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20604081964 | Usuario EVERAV20 | Clave *********
+2026-08-07 15:43:18,989 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 15:43:19,170 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 15:43:24,493 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 15:43:29,014 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 15:43:29,291 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 15:43:41,812 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 15:43:41,915 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-07 15:43:48,786 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 15:43:56,791 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 15:44:00,352 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 16
+2026-08-07 15:44:00,352 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 30444 (fila grilla 0, 1 documento(s)).
+2026-08-07 15:44:05,966 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 15:44:06,030 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 30444 procesada (1 documento(s)).
+2026-08-07 15:44:36,149 | WARNING | sunat_multas.sunat_client | No se pudo volver con el botón atrás; re-consultando la grilla.
+2026-08-07 15:44:40,893 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 15:44:41,248 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 15:44:53,736 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 15:44:53,838 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-07 15:45:00,707 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 15:45:08,712 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 15:45:10,013 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 16
+2026-08-07 15:45:10,014 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 31718 (fila grilla 1, 1 documento(s)).
+2026-08-07 15:45:15,564 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 15:45:15,617 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 31718 procesada (1 documento(s)).
+2026-08-07 15:45:45,746 | WARNING | sunat_multas.sunat_client | No se pudo volver con el botón atrás; re-consultando la grilla.
+2026-08-07 15:45:50,292 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 15:45:50,581 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 15:46:03,086 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 15:46:03,195 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-07 15:46:10,062 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 15:46:18,071 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 15:46:19,385 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 16
+2026-08-07 15:46:19,385 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 31993 (fila grilla 2, 1 documento(s)).
+2026-08-07 15:46:25,015 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 15:46:25,070 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 31993 procesada (1 documento(s)).
+2026-08-07 15:46:55,198 | WARNING | sunat_multas.sunat_client | No se pudo volver con el botón atrás; re-consultando la grilla.
+2026-08-07 15:46:59,770 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 15:47:00,090 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 15:47:12,646 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 15:47:12,770 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-07 15:47:19,735 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 15:47:27,752 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 15:47:29,167 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 16
+2026-08-07 15:47:29,167 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 32218 (fila grilla 3, 2 documento(s)).
+2026-08-07 15:47:35,221 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 2 documento(s).
+2026-08-07 15:47:35,301 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 32218 procesada (2 documento(s)).
+2026-08-07 15:48:05,448 | WARNING | sunat_multas.sunat_client | No se pudo volver con el botón atrás; re-consultando la grilla.
+2026-08-07 15:48:10,015 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 15:48:10,334 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 15:48:22,896 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 15:48:23,006 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-07 15:48:30,016 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 15:48:38,022 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 15:48:39,387 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 16
+2026-08-07 15:48:39,387 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 33117 (fila grilla 5, 1 documento(s)).
+2026-08-07 15:48:45,099 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 15:48:45,170 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 33117 procesada (1 documento(s)).
+2026-08-07 15:49:15,311 | WARNING | sunat_multas.sunat_client | No se pudo volver con el botón atrás; re-consultando la grilla.
+2026-08-07 15:49:19,906 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 15:49:20,225 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 15:49:32,757 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 15:49:32,866 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-07 15:49:39,815 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 15:49:47,821 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 15:49:49,174 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 16
+2026-08-07 15:49:49,174 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 33305 (fila grilla 6, 1 documento(s)).
+2026-08-07 15:49:54,829 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 15:49:54,902 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 33305 procesada (1 documento(s)).
+2026-08-07 15:50:25,034 | WARNING | sunat_multas.sunat_client | No se pudo volver con el botón atrás; re-consultando la grilla.
+2026-08-07 15:50:29,638 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 15:50:29,954 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 15:50:42,512 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 15:50:42,638 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-07 15:50:49,625 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 15:50:57,629 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 15:50:59,010 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 16
+2026-08-07 15:50:59,010 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 33498 (fila grilla 7, 1 documento(s)).
+2026-08-07 15:51:04,702 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 15:51:04,771 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 33498 procesada (1 documento(s)).
+2026-08-07 15:51:34,908 | WARNING | sunat_multas.sunat_client | No se pudo volver con el botón atrás; re-consultando la grilla.
+2026-08-07 15:51:39,493 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 15:51:39,794 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 15:51:52,346 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 15:51:52,472 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-07 15:51:59,427 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 15:52:07,443 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 15:52:08,802 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 16
+2026-08-07 15:52:08,802 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 34506 (fila grilla 8, 1 documento(s)).
+2026-08-07 15:52:14,458 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 15:52:14,528 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 34506 procesada (1 documento(s)).
+2026-08-07 15:52:44,656 | WARNING | sunat_multas.sunat_client | No se pudo volver con el botón atrás; re-consultando la grilla.
+2026-08-07 15:52:49,248 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 15:52:49,554 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 15:53:02,072 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 15:53:02,181 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-07 15:53:09,148 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 15:53:17,164 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 15:53:18,479 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 16
+2026-08-07 15:53:18,479 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 34891 (fila grilla 9, 1 documento(s)).
+2026-08-07 15:53:24,117 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 15:53:24,180 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 34891 procesada (1 documento(s)).
+2026-08-07 15:53:54,317 | WARNING | sunat_multas.sunat_client | No se pudo volver con el botón atrás; re-consultando la grilla.
+2026-08-07 15:53:58,895 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 15:53:59,215 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 15:54:11,778 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 15:54:11,886 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-07 15:54:18,843 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 15:54:26,859 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 15:54:28,200 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 16
+2026-08-07 15:54:28,200 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 35017 (fila grilla 10, 1 documento(s)).
+2026-08-07 15:54:33,826 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 15:54:33,886 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 35017 procesada (1 documento(s)).
+2026-08-07 15:55:04,018 | WARNING | sunat_multas.sunat_client | No se pudo volver con el botón atrás; re-consultando la grilla.
+2026-08-07 15:55:08,591 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 15:55:08,878 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 15:55:21,417 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 15:55:21,540 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-07 15:55:28,492 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 15:55:36,497 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 15:55:37,804 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 16
+2026-08-07 15:55:37,804 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 35264 (fila grilla 11, 1 documento(s)).
+2026-08-07 15:55:43,406 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 15:55:43,469 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 35264 procesada (1 documento(s)).
+2026-08-07 15:56:13,598 | WARNING | sunat_multas.sunat_client | No se pudo volver con el botón atrás; re-consultando la grilla.
+2026-08-07 15:56:18,194 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 15:56:18,484 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 15:56:31,031 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 15:56:31,138 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-07 15:56:38,083 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 15:56:46,086 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 15:56:47,409 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 16
+2026-08-07 15:56:47,409 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 35486 (fila grilla 12, 1 documento(s)).
+2026-08-07 15:56:53,014 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 15:56:53,083 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 35486 procesada (1 documento(s)).
+2026-08-07 15:57:23,215 | WARNING | sunat_multas.sunat_client | No se pudo volver con el botón atrás; re-consultando la grilla.
+2026-08-07 15:57:27,829 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 15:57:28,136 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 15:57:40,680 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 15:57:40,790 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-07 15:57:47,756 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 15:57:55,759 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 15:57:57,061 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 16
+2026-08-07 15:57:57,061 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 35686 (fila grilla 13, 1 documento(s)).
+2026-08-07 15:58:02,672 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 15:58:02,731 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 35686 procesada (1 documento(s)).
+2026-08-07 15:58:32,864 | WARNING | sunat_multas.sunat_client | No se pudo volver con el botón atrás; re-consultando la grilla.
+2026-08-07 15:58:37,452 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 15:58:37,737 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 15:58:50,291 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 15:58:50,399 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-07 15:58:57,367 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 15:59:05,373 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 15:59:06,698 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 16
+2026-08-07 15:59:06,698 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 35866 (fila grilla 14, 1 documento(s)).
+2026-08-07 15:59:12,340 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 15:59:12,409 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 35866 procesada (1 documento(s)).
+2026-08-07 15:59:42,554 | WARNING | sunat_multas.sunat_client | No se pudo volver con el botón atrás; re-consultando la grilla.
+2026-08-07 15:59:47,109 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 15:59:47,409 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 15:59:59,961 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 16:00:00,069 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-07 16:00:07,070 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 16:00:15,083 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 16:00:16,442 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 16
+2026-08-07 16:00:16,442 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 35938 (fila grilla 15, 1 documento(s)).
+2026-08-07 16:00:22,096 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 16:00:22,156 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 35938 procesada (1 documento(s)).
+2026-08-07 16:00:52,283 | WARNING | sunat_multas.sunat_client | No se pudo volver con el botón atrás; re-consultando la grilla.
+2026-08-07 16:00:56,888 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 16:00:57,190 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 16:01:10,972 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 16:01:11,097 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-07 16:02:02,189 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 16:02:05,805 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 16
+2026-08-07 16:02:20,311 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
+2026-08-07 16:02:20,741 | INFO | sunat_multas.cli | Detalle finalizado para EMO LOGISTICS PERU S.A.C.. Procesadas: 15.
+2026-08-07 16:16:09,218 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-07 16:16:11,283 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-07 16:16:11,284 | INFO | sunat_multas.cli | Consultando SUNAT para EIRL ADVANCED LOGISTICS GROUP (ALG) | RUC 20511032114
+2026-08-07 16:16:12,559 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20511032114
+2026-08-07 16:16:14,054 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20511032114 | Usuario ADVANC55 | Clave ************
+2026-08-07 16:16:23,992 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 16:16:24,205 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 16:16:31,058 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 16:16:35,631 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 16:16:35,918 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 16:16:48,485 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 16:16:48,608 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20511032114
+2026-08-07 16:16:55,576 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 16:17:03,593 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 16:17:04,907 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 15
+2026-08-07 16:17:19,416 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
+2026-08-07 16:17:19,888 | INFO | sunat_multas.cli | Hoja IMPO118-Transmisiones actualizada para EIRL ADVANCED LOGISTICS GROUP (ALG): 15 transmisiones.
+2026-08-07 16:17:19,970 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'IMPO118-Transmisiones' en output\EIRL ADVANCED LOGISTICS GROUP (ALG).xlsx: 45
+2026-08-07 16:17:19,999 | INFO | sunat_multas.cli | Transmisiones por procesar para EIRL ADVANCED LOGISTICS GROUP (ALG): 11 de 11.
+2026-08-07 16:17:21,013 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20511032114
+2026-08-07 16:17:22,271 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20511032114 | Usuario ADVANC55 | Clave ************
+2026-08-07 16:17:32,249 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 16:17:32,491 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 16:17:39,397 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 16:17:43,967 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 16:17:44,253 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 16:17:56,788 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 16:17:56,913 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20511032114
+2026-08-07 16:18:03,884 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 16:18:11,893 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 16:18:24,655 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 15
+2026-08-07 16:18:24,655 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 31145 (fila grilla 0, 3 documento(s)).
+2026-08-07 16:18:30,623 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 3 documento(s).
+2026-08-07 16:18:30,675 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 31145 procesada (3 documento(s)).
+2026-08-07 16:19:00,813 | WARNING | sunat_multas.sunat_client | No se pudo volver con el botón atrás; re-consultando la grilla.
+2026-08-07 16:19:05,417 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 16:19:05,751 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 16:19:18,297 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 16:19:18,421 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20511032114
+2026-08-07 16:19:25,387 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 16:19:33,396 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 16:19:34,741 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 15
+2026-08-07 16:19:34,741 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 31549 (fila grilla 3, 2 documento(s)).
+2026-08-07 16:19:40,774 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 2 documento(s).
+2026-08-07 16:19:40,860 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 31549 procesada (2 documento(s)).
+2026-08-07 16:20:11,008 | WARNING | sunat_multas.sunat_client | No se pudo volver con el botón atrás; re-consultando la grilla.
+2026-08-07 16:20:15,603 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 16:20:15,916 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 16:20:28,456 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 16:20:28,581 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20511032114
+2026-08-07 16:20:35,551 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 16:20:43,562 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 16:20:44,859 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 15
+2026-08-07 16:20:44,859 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 32328 (fila grilla 5, 1 documento(s)).
+2026-08-07 16:20:50,641 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 16:20:50,737 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 32328 procesada (1 documento(s)).
+2026-08-07 16:21:20,872 | WARNING | sunat_multas.sunat_client | No se pudo volver con el botón atrás; re-consultando la grilla.
+2026-08-07 16:21:25,446 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 16:21:25,728 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 16:21:38,268 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 16:21:38,392 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20511032114
+2026-08-07 16:21:45,340 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 16:21:53,352 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 16:21:54,628 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 15
+2026-08-07 16:21:54,628 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 32346 (fila grilla 6, 1 documento(s)).
+2026-08-07 16:22:00,297 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 16:22:00,363 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 32346 procesada (1 documento(s)).
+2026-08-07 16:22:30,503 | WARNING | sunat_multas.sunat_client | No se pudo volver con el botón atrás; re-consultando la grilla.
+2026-08-07 16:22:35,088 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 16:22:35,391 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 16:22:47,922 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 16:22:48,047 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20511032114
+2026-08-07 16:22:54,981 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 16:23:02,988 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 16:23:04,263 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 15
+2026-08-07 16:23:04,264 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 32624 (fila grilla 7, 1 documento(s)).
+2026-08-07 16:23:09,839 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 16:23:09,900 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 32624 procesada (1 documento(s)).
+2026-08-07 16:23:40,038 | WARNING | sunat_multas.sunat_client | No se pudo volver con el botón atrás; re-consultando la grilla.
+2026-08-07 16:23:44,615 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 16:23:44,904 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 16:23:57,432 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 16:23:57,540 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20511032114
+2026-08-07 16:24:04,497 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 16:24:12,512 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 16:24:13,788 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 15
+2026-08-07 16:24:13,788 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 32908 (fila grilla 8, 1 documento(s)).
+2026-08-07 16:24:19,746 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 3 documento(s).
+2026-08-07 16:24:19,803 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 32908 procesada (1 documento(s)).

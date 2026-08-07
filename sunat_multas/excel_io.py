@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import re
 import shutil
 from pathlib import Path
@@ -32,6 +33,14 @@ CARGA_SOURCE_COLUMN = 1
 CARGA_DEST_COLUMN = 4
 LLEGADA_SOURCE_COLUMN = 7
 LLEGADA_DEST_COLUMN = 12
+
+DETALLE_COLUMNS = {
+    "master": 2,
+    "puerto_embarque": 5,
+    "fecha_hijo": 9,
+    "fecha_master": 10,
+    "fecha_info": 11,
+}
 
 
 def safe_filename(value: str) -> str:
@@ -138,8 +147,7 @@ def append_records(workbook_path: Path, records: list[ManifestRecord]) -> int:
     return inserted
 
 
-def append_manifest_sheet(workbook_path: Path, rows: list[list[str]]) -> int:
-    workbook = load_workbook(workbook_path)
+def _crear_hoja_transmisiones(workbook, rows: list[list[str]]) -> None:
     if MANIFEST_DEST_SHEET not in workbook.sheetnames:
         raise ValueError(f"La plantilla no contiene la hoja {MANIFEST_DEST_SHEET}")
     if MANIFEST_SOURCE_SHEET in workbook.sheetnames:
@@ -149,10 +157,58 @@ def append_manifest_sheet(workbook_path: Path, rows: list[list[str]]) -> int:
     for row in rows:
         sheet.append((row + [None] * 9)[:9])
 
-    copy_manifiestos_to_impo118(workbook)
 
+def escribir_hoja_transmisiones(workbook_path: Path, rows: list[list[str]]) -> int:
+    workbook = load_workbook(workbook_path)
+    _crear_hoja_transmisiones(workbook, rows)
     workbook.save(workbook_path)
     return len(rows)
+
+
+def append_manifest_sheet(workbook_path: Path, rows: list[list[str]]) -> int:
+    workbook = load_workbook(workbook_path)
+    _crear_hoja_transmisiones(workbook, rows)
+    copy_manifiestos_to_impo118(workbook)
+    workbook.save(workbook_path)
+    return len(rows)
+
+
+def read_transmisiones(workbook_path: Path, source_title: str = MANIFEST_SOURCE_SHEET) -> list[str]:
+    workbook = load_workbook(workbook_path, data_only=True)
+    if source_title not in workbook.sheetnames:
+        raise ValueError(f"No existe la hoja {source_title!r} en {workbook_path}")
+    sheet = workbook[source_title]
+    codes: list[str] = []
+    for row in range(2, sheet.max_row + 1):
+        value = sheet.cell(row, DESCONS_SOURCE_COLUMN).value
+        codes.append(str(value).strip() if value is not None else "")
+    return codes
+
+
+def aplicar_detalle_filas(workbook, updates: list[tuple[int, dict]]) -> None:
+    sheet = workbook[MANIFEST_DEST_SHEET]
+    for fila, datos in updates:
+        for key, column in DETALLE_COLUMNS.items():
+            value = datos.get(key)
+            if value:
+                sheet.cell(fila, column, value)
+
+
+def load_procesados(path: Path) -> set[str]:
+    if not path.exists():
+        return set()
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        return set(data.get("procesados", []))
+    except (json.JSONDecodeError, OSError):
+        return set()
+
+
+def save_procesados(path: Path, codes: set[str]) -> None:
+    path.write_text(
+        json.dumps({"procesados": sorted(codes)}, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
 
 
 def copy_manifiestos_to_impo118(workbook, source_title: str = MANIFEST_SOURCE_SHEET) -> int:

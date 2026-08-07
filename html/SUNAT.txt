@@ -1,0 +1,1533 @@
+<body class="tundra">
+<div id="preloader" style="opacity: 0; display: none;"></div>
+<div class="dijit dijitToolbar" role="toolbar" tabindex="0" data-dojo-attach-point="containerNode" id="toolbar1" widgetid="toolbar1">
+	<span class="dijit dijitReset dijitInline dijitButton" role="presentation" widgetid="toolbar1.accion1"><span class="dijitReset dijitInline dijitButtonNode" data-dojo-attach-event="ondijitclick:__onClick" role="presentation"><span class="dijitReset dijitStretch dijitButtonContents" data-dojo-attach-point="titleNode,focusNode" role="button" aria-labelledby="toolbar1.accion1_label" tabindex="-1" id="toolbar1.accion1" style="user-select: none;"><span class="dijitReset dijitInline dijitIcon dijitNoIcon" data-dojo-attach-point="iconNode"></span><span class="dijitReset dijitToggleButtonIconChar">●</span><span class="dijitReset dijitInline dijitButtonText" id="toolbar1.accion1_label" data-dojo-attach-point="containerNode">Regresar</span></span></span><input type="button" value="" class="dijitOffScreen" data-dojo-attach-event="onclick:_onClick" tabindex="-1" role="presentation" data-dojo-attach-point="valueNode"></span>
+</div>
+<form data-dojo-attach-point="containerNode" data-dojo-attach-event="onreset:_onReset,onsubmit:_onSubmit" name="formularioGenerico" action="" method="POST" id="formularioGenerico" widgetid="formularioGenerico">
+</form>
+<div class="appTitle" align="center"><h1>Consulta Datos del Manifiesto Desconsolidado</h1></div>
+<br>
+<table>
+	<tbody><tr>
+		<td><b>Parámetros de Consulta:</b></td>
+		<td><b>&nbsp;Tipo de manifiesto/Aduana/Vía de transporte/Año/Número de manifiesto Desconsolidado:</b></td>
+		<td>&nbsp;01-118-1-2026-32218</td>
+	</tr>
+</tbody></table>
+<table width="60%" align="center" class="form-table">
+<tbody>
+   <tr>
+   <td>
+	<table width="99%" class="form-table" style="border-collapse:collapse;margin-left:3px" border="1" cellpadding="0" cellspacing="0">
+	<tbody>
+	<tr>
+		<td width="25%"><b><span id="sum_message">Manifiesto Desconsolidado</span></b></td>
+		<td width="25%">01-118-1-2026-32218</td>
+		<td width="25%"><b><span id="sum_message">Fecha de Transmisión del MD</span></b></td>
+		<td width="25%">25/06/2026 18:20:24</td>
+	</tr>
+	<tr>
+		<td><b><span id="sum_message">Agente de Carga</span></b></td>		
+		<td>20604081964 - EMO LOGISTICS PERU S.A.C.</td>
+		<td><b><span id="sum_message">Nro. De Bultos del MD</span></b></td>
+		<td>142</td>
+	</tr>
+	<tr>
+		<td><b><span id="sum_message">Manifiesto de Carga</span></b></td>
+		<td>01-118-1-2026-  1812</td>
+		<td><b><span id="sum_message">Peso Bruto del MD</span></b></td>
+		<td>118790</td>
+	</tr>
+	<tr>
+		<td><b><span id="sum_message">Empresa de Transporte o representante</span></b></td>
+		<td>20259814210 - MEDITERRANEAN SHIPPING COMPANY DEL PERU SAC</td>
+		<td><b><span id="sum_message">Lugar Descarga</span></b></td>
+		<td> APM TERMINALS CALLAO SOCIEDAD ANONIMA</td>
+	</tr>
+	<tr>
+		<td><b><span id="sum_message">Nombre de la Nave</span></b></td>
+		<td>
+		MSC EMILIA
+		</td>
+		<td><b><span id="sum_message">Operador Portuario</span></b></td>
+		<td>
+		20543083888- APM TERMINALS CALLAO SOCIEDAD ANONIMA
+		
+		</td>
+	</tr>
+	
+	<tr>
+		<td><b><span id="sum_message">Identificación de la Nave</span></b></td>
+		<td>1013183</td>
+		<td valign="center"><b>Estado</b></td>
+		
+		<td>Numerado</td>
+		
+	</tr>
+	
+	
+	<tr>
+		<td valign="top" rowspan="2"><b><span id="sum_message">Vía de Transporte</span></b></td>
+		<td valign="top" rowspan="2">1-MARÍTIMO
+		
+		<br><img src="/a/imagenes/sigad/icon_maritimo.jpg" alt="" width="90" height="61" border="0">
+		
+		</td>
+		
+	</tr>
+	</tbody>
+	</table>
+	</td>
+	</tr>
+</tbody>
+</table>
+<br>
+		<div id="summary" align="center">
+			<table width="99%" align="center" class="form-table">
+			<tbody>
+				<tr>
+				<td align="center">
+				
+				<table class="dijit dijitReset dijitSliderH dijitSlider dijitSliderReadOnly dijitReadOnly" cellspacing="0" cellpadding="0" border="0" rules="none" data-dojo-attach-event="onkeydown:_onKeyDown, onkeyup:_onKeyUp" role="presentation" id="slider1" widgetid="slider1" style="width: 80%; font-size: 12px;"><tbody><tr class="dijitReset"><td class="dijitReset" colspan="2"></td><td data-dojo-attach-point="topDecoration" class="dijitReset dijitSliderDecoration dijitSliderDecorationT dijitSliderDecorationH"><div class="dijitRuleContainer dijitRuleContainerH dijitRuleLabelsContainer dijitRuleLabelsContainerH" id="dijit_form_HorizontalRuleLabels_0" widgetid="dijit_form_HorizontalRuleLabels_0" style="height: 1.2em; font-size: 100%; color: gray;"><div class="dijitRuleLabelContainer dijitRuleLabelContainerH" style="left:0%;"><div class="dijitRuleLabel dijitRuleLabelH"><div id="divTextTopBar1" style="color: blue;">04/07/2026 08:54</div></div></div><div class="dijitRuleLabelContainer dijitRuleLabelContainerH" style="left:33.333333333333336%;"><div class="dijitRuleLabel dijitRuleLabelH"><div id="divTextTopBar2" style="color: blue;">16/07/2026 22:00</div></div></div><div class="dijitRuleLabelContainer dijitRuleLabelContainerH" style="left:66.66666666666667%;"><div class="dijitRuleLabel dijitRuleLabelH"><div id="divTextTopBar3" style="color: blue;">17/07/2026 15:27</div></div></div><div class="dijitRuleLabelContainer dijitRuleLabelContainerH" style="left:100%;"><div class="dijitRuleLabel dijitRuleLabelH"><div id="divTextTopBar4" style="color: gray;">17/08/2026</div></div></div></div><div class="dijitRuleContainer dijitRuleContainerH" id="dijit_form_HorizontalRule_0" widgetid="dijit_form_HorizontalRule_0" style="height: 10px;"><div class="dijitRuleMark dijitRuleMarkH" style="left:0%;color: Teal;"></div><div class="dijitRuleMark dijitRuleMarkH" style="left:33.333333333333336%;color: Teal;"></div><div class="dijitRuleMark dijitRuleMarkH" style="left:66.66666666666667%;color: Teal;"></div><div class="dijitRuleMark dijitRuleMarkH" style="left:100%;color: Teal;"></div></div></td><td class="dijitReset" colspan="2"></td></tr><tr class="dijitReset"><td class="dijitReset dijitSliderButtonContainer dijitSliderButtonContainerH"><div class="dijitSliderDecrementIconH" style="display:none" data-dojo-attach-point="decrementButton"><span class="dijitSliderButtonInner">-</span></div></td><td class="dijitReset"><div class="dijitSliderBar dijitSliderBumper dijitSliderBumperH dijitSliderLeftBumper" data-dojo-attach-event="press:_onClkDecBumper"></div></td><td class="dijitReset"><input data-dojo-attach-point="valueNode" type="hidden" name="horizontal1" value="66.7"><div class="dijitReset dijitSliderBarContainerH" role="presentation" data-dojo-attach-point="sliderBarContainer"><div role="presentation" data-dojo-attach-point="progressBar" class="dijitSliderBar dijitSliderBarH dijitSliderProgressBar dijitSliderProgressBarH" data-dojo-attach-event="press:_onBarClick" style="width: 66.7%;"><div class="dijitSliderMoveable dijitSliderMoveableH"><div data-dojo-attach-point="sliderHandle,focusNode" class="dijitSliderImageHandle dijitSliderImageHandleH" data-dojo-attach-event="press:_onHandleClick" role="slider" aria-valuemin="0" aria-valuemax="100" tabindex="0" aria-valuenow="66.7"></div></div></div><div role="presentation" data-dojo-attach-point="remainingBar" class="dijitSliderBar dijitSliderBarH dijitSliderRemainingBar dijitSliderRemainingBarH" data-dojo-attach-event="press:_onBarClick" style="width: 33.3%;"></div></div></td><td class="dijitReset"><div class="dijitSliderBar dijitSliderBumper dijitSliderBumperH dijitSliderRightBumper" data-dojo-attach-event="press:_onClkIncBumper"></div></td><td class="dijitReset dijitSliderButtonContainer dijitSliderButtonContainerH"><div class="dijitSliderIncrementIconH" style="display:none" data-dojo-attach-point="incrementButton"><span class="dijitSliderButtonInner">+</span></div></td></tr><tr class="dijitReset"><td class="dijitReset" colspan="2"></td><td data-dojo-attach-point="containerNode,bottomDecoration" class="dijitReset dijitSliderDecoration dijitSliderDecorationB dijitSliderDecorationH">
+				
+				
+				<div class="dijitRuleContainer dijitRuleContainerH" id="dijit_form_HorizontalRule_1" widgetid="dijit_form_HorizontalRule_1" style="height: 10px;"><div class="dijitRuleMark dijitRuleMarkH" style="left:0%;color: Teal;"></div><div class="dijitRuleMark dijitRuleMarkH" style="left:33.333333333333336%;color: Teal;"></div><div class="dijitRuleMark dijitRuleMarkH" style="left:66.66666666666667%;color: Teal;"></div><div class="dijitRuleMark dijitRuleMarkH" style="left:100%;color: Teal;"></div></div>
+				<div class="dijitRuleContainer dijitRuleContainerH dijitRuleLabelsContainer dijitRuleLabelsContainerH" id="dijit_form_HorizontalRuleLabels_1" widgetid="dijit_form_HorizontalRuleLabels_1" style="height: 3.2em; font-size: 100%; color: gray;"><div class="dijitRuleLabelContainer dijitRuleLabelContainerH" style="left:0%;"><div class="dijitRuleLabel dijitRuleLabelH"><div id="divTextBottomBar1" style="color: blue;">Numeración</div></div></div><div class="dijitRuleLabelContainer dijitRuleLabelContainerH" style="left:33.333333333333336%;"><div class="dijitRuleLabel dijitRuleLabelH"><div id="divTextBottomBar2" style="color: blue;">LLegada de la Nave</div></div></div><div class="dijitRuleLabelContainer dijitRuleLabelContainerH" style="left:66.66666666666667%;"><div class="dijitRuleLabel dijitRuleLabelH"><div id="divTextBottomBar3" style="color: blue;">Término de Descarga</div></div></div><div class="dijitRuleLabelContainer dijitRuleLabelContainerH" style="left:100%;"><div class="dijitRuleLabel dijitRuleLabelH"><div id="divTextBottomBar4" style="width: 150px; color: gray;" align="left">Abandono Legal sin destinación aduanera</div></div></div></div>
+				</td><td class="dijitReset" colspan="2"></td></tr></tbody></table>
+				
+				<br>
+				</td>
+				</tr>
+			</tbody>
+			</table>
+		</div>
+		<br>
+
+<div id="divBorderContainerDocumentosDeTransporte" dojotype="dijit.layout.BorderContainer" style="height: 350px; padding: 0px;" class="dijitBorderContainer dijitContainer dijitLayoutContainer" widgetid="divBorderContainerDocumentosDeTransporte">
+	<div id="divContainerDocumentosTransporteTitulo" dojotype="dijit.layout.ContentPane" region="top" style="width: 468.182px; left: 5px; top: 5px; position: absolute;" overflow:auto"="" class="dijitContentPane dijitBorderContainer-child dijitBorderContainer-dijitContentPane dijitBorderContainerPane dijitAlignTop" widgetid="divContainerDocumentosTransporteTitulo">
+		<b>LISTADO DE DOCUMENTOS DE TRANSPORTE :</b>
+	</div><div class="dijitGutter dijitGutterH dijitAlignTop" role="presentation" id="divContainerDocumentosTransporteTitulo_splitter" widgetid="divContainerDocumentosTransporteTitulo_splitter" style="left: 5px; top: 30px; position: absolute; width: 480px;"></div>
+	<div id="divContainerDocumentosTransporteParametros" dojotype="dijit.layout.ContentPane" region="top" style="width: 468.182px; left: 5px; top: 35px; position: absolute;" overflow:auto"="" class="dijitContentPane dijitBorderContainer-child dijitBorderContainer-dijitContentPane dijitBorderContainerPane dijitAlignTop dijitContentPaneSingleChild" widgetid="divContainerDocumentosTransporteParametros">
+		<form data-dojo-attach-point="containerNode" data-dojo-attach-event="onreset:_onReset,onsubmit:_onSubmit" name="frm_busqDocuTrans" action="" method="post" id="frm_busqDocuTrans" widgetid="frm_busqDocuTrans" style="width: 468.182px; height: 47.1818px;">
+			<input type="hidden" id="codAduana" name="codAduana" value="118">
+			<input type="hidden" id="codViaTransporte" name="codViaTransporte" value="1">
+			<div id="searchDocumentosDeTransporte">
+			<table cellpadding="0" cellspacing="0" border="0">
+				<tbody><tr>					
+					<td width="100%"><label>Documento de Transporte Máster</label></td>					
+					<td>
+				 <div class="dijit dijitReset dijitInline dijitLeft dijitTextBox dijitComboBox dijitValidationTextBox" id="widget_opcionDocumentoMaster" role="combobox" aria-haspopup="true" data-dojo-attach-point="_popupStateNode" widgetid="opcionDocumentoMaster" style="font-size: 13px; width: 300px;"><div class="dijitReset dijitRight dijitButtonNode dijitArrowButton dijitDownArrowButton dijitArrowButtonContainer" data-dojo-attach-point="_buttonNode" role="presentation"><input class="dijitReset dijitInputField dijitArrowButtonInner" value="▼ " type="text" tabindex="-1" readonly="readonly" role="button presentation" aria-hidden="true"></div><div class="dijitReset dijitValidationContainer"><input class="dijitReset dijitInputField dijitValidationIcon dijitValidationInner" value="Χ " type="text" tabindex="-1" readonly="readonly" role="presentation"></div><div class="dijitReset dijitInputField dijitInputContainer"><input class="dijitReset dijitInputInner" type="text" autocomplete="off" data-dojo-attach-point="textbox,focusNode" role="textbox" tabindex="0" id="opcionDocumentoMaster" aria-required="true" value="Número de Detalle" aria-invalid="false"><input type="hidden" name="opcionDocumentoMaster" value="1"></div></div>
+                </td>
+				<td align="left">
+				
+				<div class="dijit dijitReset dijitInline dijitLeft dijitTextBox dijitValidationTextBox" id="widget_numeroDocumentoTransporteMaster" role="presentation" widgetid="numeroDocumentoTransporteMaster" style="font-size: 13px; width: 200px;"><div class="dijitReset dijitValidationContainer"><input class="dijitReset dijitInputField dijitValidationIcon dijitValidationInner" value="Χ " type="text" tabindex="-1" readonly="readonly" role="presentation"></div><div class="dijitReset dijitInputField dijitInputContainer"><input class="dijitReset dijitInputInner" data-dojo-attach-point="textbox,focusNode" autocomplete="off" name="numeroDocumentoTransporteMaster" type="text" tabindex="0" id="numeroDocumentoTransporteMaster" value="" aria-invalid="false"></div></div>
+				</td>
+				<td valign="bottom" colspan="3">
+				<span class="dijit dijitReset dijitInline dijitButton" role="presentation" widgetid="accion4"><span class="dijitReset dijitInline dijitButtonNode" data-dojo-attach-event="ondijitclick:__onClick" role="presentation"><span class="dijitReset dijitStretch dijitButtonContents" data-dojo-attach-point="titleNode,focusNode" role="button" aria-labelledby="accion4_label" tabindex="0" id="accion4" style="user-select: none;"><span class="dijitReset dijitInline dijitIcon iconSearchIcon" data-dojo-attach-point="iconNode"></span><span class="dijitReset dijitToggleButtonIconChar">●</span><span class="dijitReset dijitInline dijitButtonText" id="accion4_label" data-dojo-attach-point="containerNode">Buscar</span></span></span><input type="button" value="" class="dijitOffScreen" data-dojo-attach-event="onclick:_onClick" tabindex="-1" role="presentation" data-dojo-attach-point="valueNode"></span>
+				</td>
+			</tr>
+				<tr>
+					<td width="35%"><label>Documento de Transporte Hijo</label></td>
+					<td>
+				 <div class="dijit dijitReset dijitInline dijitLeft dijitTextBox dijitComboBox dijitValidationTextBox" id="widget_opcionDocumentoHijo" role="combobox" aria-haspopup="true" data-dojo-attach-point="_popupStateNode" widgetid="opcionDocumentoHijo" style="font-size: 13px; width: 300px;"><div class="dijitReset dijitRight dijitButtonNode dijitArrowButton dijitDownArrowButton dijitArrowButtonContainer" data-dojo-attach-point="_buttonNode" role="presentation"><input class="dijitReset dijitInputField dijitArrowButtonInner" value="▼ " type="text" tabindex="-1" readonly="readonly" role="button presentation" aria-hidden="true"></div><div class="dijitReset dijitValidationContainer"><input class="dijitReset dijitInputField dijitValidationIcon dijitValidationInner" value="Χ " type="text" tabindex="-1" readonly="readonly" role="presentation"></div><div class="dijitReset dijitInputField dijitInputContainer"><input class="dijitReset dijitInputInner" type="text" autocomplete="off" data-dojo-attach-point="textbox,focusNode" role="textbox" tabindex="0" id="opcionDocumentoHijo" aria-required="true" value="Número de Detalle" aria-invalid="false"><input type="hidden" name="opcionDocumentoHijo" value="1"></div></div>
+                </td>
+				<td align="left">
+				<div class="dijit dijitReset dijitInline dijitLeft dijitTextBox dijitValidationTextBox" id="widget_numeroDocumentoTransporteHijo" role="presentation" widgetid="numeroDocumentoTransporteHijo" style="font-size: 13px; width: 200px;"><div class="dijitReset dijitValidationContainer"><input class="dijitReset dijitInputField dijitValidationIcon dijitValidationInner" value="Χ " type="text" tabindex="-1" readonly="readonly" role="presentation"></div><div class="dijitReset dijitInputField dijitInputContainer"><input class="dijitReset dijitInputInner" data-dojo-attach-point="textbox,focusNode" autocomplete="off" name="numeroDocumentoTransporteHijo" type="text" tabindex="0" id="numeroDocumentoTransporteHijo" value="" aria-invalid="false"></div></div>
+				</td>
+				<td valign="bottom" colspan="3">
+				<span class="dijit dijitReset dijitInline dijitButton" role="presentation" widgetid="accion5"><span class="dijitReset dijitInline dijitButtonNode" data-dojo-attach-event="ondijitclick:__onClick" role="presentation"><span class="dijitReset dijitStretch dijitButtonContents" data-dojo-attach-point="titleNode,focusNode" role="button" aria-labelledby="accion5_label" tabindex="0" id="accion5" style="user-select: none;"><span class="dijitReset dijitInline dijitIcon iconSearchIcon" data-dojo-attach-point="iconNode"></span><span class="dijitReset dijitToggleButtonIconChar">●</span><span class="dijitReset dijitInline dijitButtonText" id="accion5_label" data-dojo-attach-point="containerNode">Buscar</span></span></span><input type="button" value="" class="dijitOffScreen" data-dojo-attach-event="onclick:_onClick" tabindex="-1" role="presentation" data-dojo-attach-point="valueNode"></span>
+				</td>
+			</tr>
+			</tbody></table>
+			</div>
+		</form>
+	</div><div class="dijitGutter dijitGutterH dijitAlignTop" role="presentation" id="divContainerDocumentosTransporteParametros_splitter" widgetid="divContainerDocumentosTransporteParametros_splitter" style="left: 5px; top: 94px; position: absolute; width: 480px;"></div>
+	<div id="divResultadoBusquedaContainerDocumentosTransporte" dojotype="dijit.layout.ContentPane" region="center" style="height: 234.182px; width: 468.182px; left: 5px; top: 99px; position: absolute;" class="dijitContentPane dijitBorderContainer-child dijitBorderContainer-dijitContentPane dijitBorderContainerPane dijitAlignCenter dijitContentPaneSingleChild" widgetid="divResultadoBusquedaContainerDocumentosTransporte">
+	<div hidefocus="hidefocus" role="grid" dojoattachevent="onmouseout:_mouseOut" tabindex="0" aria-multiselectable="true" class="dojoxGrid" id="gridDocumentosTransporte" align="left" widgetid="gridDocumentosTransporte" aria-readonly="true" aria-activedescendant="gridDocumentosTransporteHdr9" style="width: 466.364px; height: 232.364px;">
+	<div class="dojoxGridMasterHeader" dojoattachpoint="viewsHeaderNode" role="presentation" style="display: block; height: 42px;"><div class="dojoxGridHeader" dojoattachpoint="headerNode" role="presentation" style="visibility: hidden; width: 20px; left: 1px; top: 0px;">
+		<div dojoattachpoint="headerNodeContainer" style="width:9000em" role="presentation">
+			<div dojoattachpoint="headerContentNode" role="row"></div>
+		</div>
+	</div><div class="dojoxGridHeader" dojoattachpoint="headerNode" role="presentation" style="width: 445px; left: 21px; top: 0px;">
+		<div dojoattachpoint="headerNodeContainer" style="width:9000em" role="presentation">
+			<div dojoattachpoint="headerContentNode" role="row"><table class="dojoxGridRowTable" border="0" cellspacing="0" cellpadding="0" role="presentation"><tbody><tr><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr0" class="dojoxGridCell dojoDndItem " idx="0" style="text-align: center;width:70px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">Ver datos Doc. Transp. Hijo</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr1" class="dojoxGridCell dojoDndItem " idx="1" style="width:60px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">Detalle Hijo</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr2" class="dojoxGridCell dojoDndItem " idx="2" style="text-align: center;width:120px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">Doc. de Transporte Hijo</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr3" class="dojoxGridCell dojoDndItem " idx="3" style="text-align: center;width:130px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">Fecha del Documento de Transporte Hijo</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr4" class="dojoxGridCell dojoDndItem " idx="4" style="text-align: center;width:130px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">Estado del Documento de Transporte Hijo</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr5" class="dojoxGridCell dojoDndItem " idx="5" style="width:60px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">Detalle Master</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr6" class="dojoxGridCell dojoDndItem " idx="6" style="text-align: center;width:120px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">Doc. De Transporte Master</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr7" class="dojoxGridCell dojoDndItem " idx="7" style="text-align: center;width:130px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">Fecha del Documento de Transporte Master</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr8" class="dojoxGridCell dojoDndItem " idx="8" style="text-align: center;width:130px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">Fecha de Información  Complementaria</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr9" class="dojoxGridCell dojoDndItem  dojoxGridCellFocus" idx="9" style="text-align: center;width:70px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">Pto. Embarque</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr10" class="dojoxGridCell dojoDndItem " idx="10" style="text-align: center;width:70px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">Pto. Descarga</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr11" class="dojoxGridCell dojoDndItem " idx="11" style="text-align: center;width:70px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">Pto. Final</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr12" class="dojoxGridCell dojoDndItem " idx="12" style="text-align: center;width:80px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">Peso</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr13" class="dojoxGridCell dojoDndItem " idx="13" style="text-align: center;width:80px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">Bultos</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr14" class="dojoxGridCell dojoDndItem " idx="14" style="text-align: center;width:130px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">Tarja al Detalle</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr15" class="dojoxGridCell dojoDndItem " idx="15" style="text-align: center;width:80px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">A la Orden</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr16" class="dojoxGridCell dojoDndItem " idx="16" style="text-align: center;width:250px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">Consignatario</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr17" class="dojoxGridCell dojoDndItem " idx="17" style="text-align: center;width:250px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">Embarcador</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr18" class="dojoxGridCell dojoDndItem " idx="18" style="text-align: center;width:70px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">Carga Peligrosa</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr19" class="dojoxGridCell dojoDndItem " idx="19" style="text-align: center;width:70px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">Depósito Temporal</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr20" class="dojoxGridCell dojoDndItem " idx="20" style="text-align: center;width:120px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">Número del Manifiesto Desconsolidado Previo</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr21" class="dojoxGridCell dojoDndItem " idx="21" style="text-align: center;width:130px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">Fecha del Manifiesto Desconsolidado Previo</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr22" class="dojoxGridCell dojoDndItem " idx="22" style="text-align: center;width:70px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">Datado</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridDocumentosTransporteHdr23" class="dojoxGridCell dojoDndItem " idx="23" style="text-align: center;width:130px;" dndtype="gridColumn_gridDocumentosTransporte"><div class="dojoxGridSortNode">Operación Asociada al Manifiesto</div></th></tr></tbody></table></div>
+		</div>
+	</div></div>
+	<div class="dojoxGridMasterView" dojoattachpoint="viewsNode" role="presentation" style="height: 166.818px;"><div class="dojoxGridView" role="presentation" id="dojox_grid__RowSelector_1" widgetid="dojox_grid__RowSelector_1" style="width: 20px; height: 166.818px; left: 1px; top: 0px;">
+	
+	<input type="checkbox" class="dojoxGridHiddenFocus" dojoattachpoint="hiddenFocusNode" role="presentation">
+	<input type="checkbox" class="dojoxGridHiddenFocus" role="presentation">
+	<div class="dojoxGridScrollbox" dojoattachpoint="scrollboxNode" role="presentation" style="overflow: hidden; height: 151.818px;">
+		<div class="dojoxGridContent" dojoattachpoint="contentNode" hidefocus="hidefocus" role="presentation" style="height: 42px;"><div role="presentation" style="position: absolute; left: 0px; top: 0px;"><div class="dojoxGridRowbar dojoxGridNonNormalizedCell dojoxGridRowbarSelected" role="presentation"><table class="dojoxGridRowbarTable" style="width: 18px; height: 21px;" border="0" cellspacing="0" cellpadding="0" role="presentation"><tbody><tr><td class="dojoxGridRowbarInner">&nbsp;</td></tr></tbody></table></div><div class="dojoxGridRowbar dojoxGridNonNormalizedCell" role="presentation"><table class="dojoxGridRowbarTable" style="width: 18px; height: 21px;" border="0" cellspacing="0" cellpadding="0" role="presentation"><tbody><tr><td class="dojoxGridRowbarInner">&nbsp;</td></tr></tbody></table></div></div></div>
+	</div>
+</div><div class="dojoxGridView" role="presentation" id="dojox_grid__View_1" widgetid="dojox_grid__View_1" style="width: 445px; height: 166.818px; left: 21px; top: 0px;">
+	
+	<input type="checkbox" class="dojoxGridHiddenFocus" dojoattachpoint="hiddenFocusNode" role="presentation">
+	<input type="checkbox" class="dojoxGridHiddenFocus" role="presentation">
+	<div class="dojoxGridScrollbox" dojoattachpoint="scrollboxNode" role="presentation" style="height: 166.818px;">
+		<div class="dojoxGridContent" dojoattachpoint="contentNode" hidefocus="hidefocus" role="presentation" style="height: 42px; width: 2664px;"><div role="presentation" style="position: absolute; left: 0px; top: 0px;"><div class="dojoxGridRow dojoxGridRowSelected" role="row" aria-selected="false" style=""><table class="dojoxGridRowTable" border="0" cellspacing="0" cellpadding="0" role="presentation"><tbody><tr><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="0" style="text-align: center;width:70px;">&nbsp;<a class="link" href="JavaScript:verDocumentoDeTransporte('1202','BWIS00373388');" onclick=""><img src="/a/imagenes/ver.gif" alt="Ver Documento" border="0"></a>&nbsp;</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="1" style="width:60px;">1202</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="2" style="text-align: center;width:120px;">BWIS00373388</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="3" style="text-align: center;width:130px;">25/06/2026 18:20:24</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="4" style="text-align: center;width:130px;">Numerado</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="5" style="width:60px;">1098</td><td tabindex="-1" role="gridcell" class="dojoxGridCell" idx="6" style="text-align: center;width:120px;">MEDUXX532997</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="7" style="text-align: center;width:130px;">13/07/2026 06:59:02</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="8" style="text-align: center;width:130px;">13/07/2026 07:13:45</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="9" style="text-align: center;width:70px;">USBAL</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="10" style="text-align: center;width:70px;">PECLL</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="11" style="text-align: center;width:70px;">PECLL</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="12" style="text-align: center;width:80px;">933</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="13" style="text-align: center;width:80px;">2</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="14" style="text-align: center;width:130px;">...</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="15" style="text-align: center;width:80px;">NO</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="16" style="text-align: center;width:250px;">20259829594 - REFINERIA LA PAMPILLA S.A.A</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="17" style="text-align: center;width:250px;">GRACE DAVISON W.R. GRACE &amp; CO CONN</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="18" style="text-align: center;width:70px;">NO</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="19" style="text-align: center;width:70px;">...</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="20" style="text-align: center;width:120px;">41450627</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="21" style="text-align: center;width:130px;">25/06/2026 18:20:24</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="22" style="text-align: center;width:70px;">&nbsp;<a class="link" href="javascript:buscaListaDatadoItem('1202','BWIS00373388');" onclick=""><img src="/a/imagenes/ver.gif" alt="Ver Datado" border="0"></a>&nbsp;</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="23" style="text-align: center;width:130px;">&nbsp;<a class="link" href="javascript:buscaListaOperacionesAsociadas('1202','BWIS00373388');" onclick=""><img src="/a/imagenes/ver.gif" alt="Ver Operaciones Asociadas al Manifiesto" border="0"></a>&nbsp;</td></tr></tbody></table></div><div class="dojoxGridRow dojoxGridRowOdd" role="row" aria-selected="false" style=""><table class="dojoxGridRowTable" border="0" cellspacing="0" cellpadding="0" role="presentation"><tbody><tr><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="0" style="text-align: center;width:70px;">&nbsp;<a class="link" href="JavaScript:verDocumentoDeTransporte('1204','BWIS00381191');" onclick=""><img src="/a/imagenes/ver.gif" alt="Ver Documento" border="0"></a>&nbsp;</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="1" style="width:60px;">1204</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="2" style="text-align: center;width:120px;">BWIS00381191</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="3" style="text-align: center;width:130px;">03/07/2026 14:27:22</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="4" style="text-align: center;width:130px;">Numerado</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="5" style="width:60px;">689</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="6" style="text-align: center;width:120px;">MEDUB2911262</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="7" style="text-align: center;width:130px;">13/07/2026 06:59:02</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="8" style="text-align: center;width:130px;">13/07/2026 07:13:47</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="9" style="text-align: center;width:70px;">USHOU</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="10" style="text-align: center;width:70px;">PECLL</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="11" style="text-align: center;width:70px;">PECLL</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="12" style="text-align: center;width:80px;">117857</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="13" style="text-align: center;width:80px;">140</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="14" style="text-align: center;width:130px;">...</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="15" style="text-align: center;width:80px;">NO</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="16" style="text-align: center;width:250px;">20259829594 - REFINERIA LA PAMPILLA S.A.A</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="17" style="text-align: center;width:250px;">GRACE DAVISON W.R. GRACE &amp; CO CONN</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="18" style="text-align: center;width:70px;">NO</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="19" style="text-align: center;width:70px;">...</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="20" style="text-align: center;width:120px;">43188658</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="21" style="text-align: center;width:130px;">03/07/2026 14:27:22</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="22" style="text-align: center;width:70px;">&nbsp;<a class="link" href="javascript:buscaListaDatadoItem('1204','BWIS00381191');" onclick=""><img src="/a/imagenes/ver.gif" alt="Ver Datado" border="0"></a>&nbsp;</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="23" style="text-align: center;width:130px;">&nbsp;<a class="link" href="javascript:buscaListaOperacionesAsociadas('1204','BWIS00381191');" onclick=""><img src="/a/imagenes/ver.gif" alt="Ver Operaciones Asociadas al Manifiesto" border="0"></a>&nbsp;</td></tr></tbody></table></div></div></div>
+	</div>
+</div></div><div dojoattachpoint="paginatorBar" id="dojox_grid_enhanced_plugins__Paginator_0" widgetid="dojox_grid_enhanced_plugins__Paginator_0"><table cellpadding="0" cellspacing="0" class="dojoxGridPaginator"><tbody><tr><td dojoattachpoint="descriptionTd" class="dojoxGridDescriptionTd"><div dojoattachpoint="descriptionDiv" class="dojoxGridDescription">1 - 2 de 2 elementos</div></td><td dojoattachpoint="sizeSwitchTd"><span title="10 elementos por página" tabindex="-1" aria-label="10 elementos por página" class="dojoxGridInactiveSwitch">10</span><span class="dojoxGridSeparator">|</span><span title="15 elementos por página" tabindex="-1" aria-label="15 elementos por página" class="dojoxGridInactiveSwitch">15</span><span class="dojoxGridSeparator">|</span><span title="20 elementos por página" tabindex="-1" aria-label="20 elementos por página" class="dojoxGridInactiveSwitch">20</span><span class="dojoxGridSeparator">|</span><span title="25 elementos por página" aria-label="25 elementos por página" class="dojoxGridActivedSwitch">25</span><span class="dojoxGridSeparator">|</span><span title="30 elementos por página" tabindex="-1" aria-label="30 elementos por página" class="dojoxGridInactiveSwitch">30</span><span class="dojoxGridSeparator">|</span><span title="35 elementos por página" tabindex="-1" aria-label="35 elementos por página" class="dojoxGridInactiveSwitch">35</span><span class="dojoxGridSeparator">|</span><span title="40 elementos por página" tabindex="-1" aria-label="40 elementos por página" class="dojoxGridInactiveSwitch">40</span></td><td dojoattachpoint="pageStepperTd" class="dojoxGridPaginatorFastStep"><div dojoattachpoint="pageStepperDiv" class="dojoxGridPaginatorStep"><div title="Primera página" aria-label="Primera página" class="dojoxGridWardButton dojoxGridfirstPageBtnDisable"><span title="Primera página" class="dojoxGridWardButtonInner">«</span></div><div title="Página anterior" aria-label="Página anterior" class="dojoxGridWardButton dojoxGridprevPageBtnDisable"><span title="Página anterior" class="dojoxGridWardButtonInner">&lt;</span></div><div title="Página 1" aria-label="Página 1" class="dojoxGridActived">1</div><div title="Página 2" aria-label="Página 2" style="display: none;" class="dojoxGridActived">2</div><div title="Página 3" aria-label="Página 3" style="display: none;" class="dojoxGridActived">3</div><div title="Página 4" aria-label="Página 4" style="display: none;" class="dojoxGridActived">4</div><div title="Página 5" aria-label="Página 5" style="display: none;" class="dojoxGridActived">5</div><div title="Página 6" aria-label="Página 6" style="display: none;" class="dojoxGridActived">6</div><div title="Página 7" aria-label="Página 7" style="display: none;" class="dojoxGridActived">7</div><div title="Página siguiente" aria-label="Página siguiente" class="dojoxGridWardButton dojoxGridnextPageBtnDisable"><span title="Página siguiente" class="dojoxGridWardButtonInner">&gt;</span></div><div title="Última página" aria-label="Última página" class="dojoxGridWardButton dojoxGridlastPageBtnDisable"><span title="Última página" class="dojoxGridWardButtonInner">»</span></div></div></td><td dojoattachpoint="gotoPageTd" class="dojoxGridPaginatorGotoTd"><div dojoattachpoint="gotoPageDiv" class="dojoxGridPaginatorGotoDiv dojoxGridPaginatorGotoDivDisabled" dojoattachevent="onclick:_openGotopageDialog, onkeydown:_openGotopageDialog" title="Ir a una página específica"><span class="dojoxGridWardButtonInner">⊥</span></div></td></tr></tbody></table></div>
+	<div class="dojoxGridMasterMessages" style="position: absolute; top: 42px; width: 466px; height: 166.818px; display: none;" dojoattachpoint="messagesNode"></div>
+	<span dojoattachpoint="lastFocusNode" tabindex="0"></span>
+</div></div>
+</div>
+<br>
+
+
+<div id="divBorderContainerEquipamientos" dojotype="dijit.layout.BorderContainer" style="height: 300px; padding: 0px;" class="dijitBorderContainer dijitContainer dijitLayoutContainer" widgetid="divBorderContainerEquipamientos">
+	<div id="divContainerEquipamientosTitulo" dojotype="dijit.layout.ContentPane" region="top" style="width: 468.182px; overflow: auto; left: 5px; top: 5px; position: absolute;" class="dijitContentPane dijitBorderContainer-child dijitBorderContainer-dijitContentPane dijitBorderContainerPane dijitAlignTop" widgetid="divContainerEquipamientosTitulo">
+		<b>LISTADO DE CONTENEDORES :</b>
+	</div><div class="dijitGutter dijitGutterH dijitAlignTop" role="presentation" id="divContainerEquipamientosTitulo_splitter" widgetid="divContainerEquipamientosTitulo_splitter" style="left: 5px; top: 30px; position: absolute; width: 480px;"></div>
+	<div id="divContainerEquipamientosParametros" dojotype="dijit.layout.ContentPane" region="top" style="width: 468.182px; overflow: auto; left: 5px; top: 35px; position: absolute;" class="dijitContentPane dijitBorderContainer-child dijitBorderContainer-dijitContentPane dijitBorderContainerPane dijitAlignTop dijitContentPaneSingleChild" widgetid="divContainerEquipamientosParametros">
+		<form data-dojo-attach-point="containerNode" data-dojo-attach-event="onreset:_onReset,onsubmit:_onSubmit" name="frm_busqCont" action="" method="post" id="frm_busqCont" widgetid="frm_busqCont" style="width: 468.182px; height: 45.1818px;">
+		<div id="searchUnidadDeCarga">
+		<table cellpadding="0" cellspacing="0" border="0">
+		<tbody><tr>
+			<td>
+				<label for="txt_fecasig_desde">Nro. de Contenedor</label><br>
+				<div class="dijit dijitReset dijitInline dijitLeft dijitTextBox" id="widget_numeroEquipamiento" role="presentation" widgetid="numeroEquipamiento" style="font-size: 13px; width: 150px;"><div class="dijitReset dijitInputField dijitInputContainer"><input class="dijitReset dijitInputInner" data-dojo-attach-point="textbox,focusNode" autocomplete="off" name="numeroEquipamiento" type="text" tabindex="0" id="numeroEquipamiento" value=""></div></div>
+			</td>
+				<td valign="bottom" colspan="2">
+				<span class="dijit dijitReset dijitInline dijitButton" role="presentation" widgetid="accion6"><span class="dijitReset dijitInline dijitButtonNode" data-dojo-attach-event="ondijitclick:__onClick" role="presentation"><span class="dijitReset dijitStretch dijitButtonContents" data-dojo-attach-point="titleNode,focusNode" role="button" aria-labelledby="accion6_label" tabindex="0" id="accion6" style="user-select: none;"><span class="dijitReset dijitInline dijitIcon iconSearchIcon" data-dojo-attach-point="iconNode"></span><span class="dijitReset dijitToggleButtonIconChar">●</span><span class="dijitReset dijitInline dijitButtonText" id="accion6_label" data-dojo-attach-point="containerNode">Buscar</span></span></span><input type="button" value="" class="dijitOffScreen" data-dojo-attach-event="onclick:_onClick" tabindex="-1" role="presentation" data-dojo-attach-point="valueNode"></span>
+			</td>
+		</tr>
+		</tbody></table>
+		</div>
+        </form>
+	</div><div class="dijitGutter dijitGutterH dijitAlignTop" role="presentation" id="divContainerEquipamientosParametros_splitter" widgetid="divContainerEquipamientosParametros_splitter" style="left: 5px; top: 92px; position: absolute; width: 480px;"></div>
+	<div id="divResultadoBusquedaContainerEquipamientos" dojotype="dijit.layout.ContentPane" region="center" style="height: 186.182px; width: 468.182px; left: 5px; top: 97px; position: absolute;" class="dijitContentPane dijitBorderContainer-child dijitBorderContainer-dijitContentPane dijitBorderContainerPane dijitAlignCenter dijitContentPaneSingleChild" widgetid="divResultadoBusquedaContainerEquipamientos">
+	<div hidefocus="hidefocus" role="grid" dojoattachevent="onmouseout:_mouseOut" tabindex="0" aria-multiselectable="true" class="dojoxGrid" id="gridEquipamientos" align="left" widgetid="gridEquipamientos" aria-readonly="true" style="width: 466.364px; height: 184.364px;">
+	<div class="dojoxGridMasterHeader" dojoattachpoint="viewsHeaderNode" role="presentation" style="display: block; height: 31px;"><div class="dojoxGridHeader" dojoattachpoint="headerNode" role="presentation" style="visibility: hidden; width: 20px; left: 1px; top: 0px;">
+		<div dojoattachpoint="headerNodeContainer" style="width:9000em" role="presentation">
+			<div dojoattachpoint="headerContentNode" role="row"></div>
+		</div>
+	</div><div class="dojoxGridHeader" dojoattachpoint="headerNode" role="presentation" style="width: 445px; left: 21px; top: 0px;">
+		<div dojoattachpoint="headerNodeContainer" style="width:9000em" role="presentation">
+			<div dojoattachpoint="headerContentNode" role="row"><table class="dojoxGridRowTable" border="0" cellspacing="0" cellpadding="0" role="presentation"><tbody><tr><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridEquipamientosHdr0" class="dojoxGridCell dojoDndItem " idx="0" style="text-align: center;width:100px;" dndtype="gridColumn_gridEquipamientos"><div class="dojoxGridSortNode">Precintos</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridEquipamientosHdr1" class="dojoxGridCell dojoDndItem " idx="1" style="text-align: center;width:150px;" dndtype="gridColumn_gridEquipamientos"><div class="dojoxGridSortNode">Nro. de Contenedor</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridEquipamientosHdr2" class="dojoxGridCell dojoDndItem " idx="2" style="text-align: center;width:150px;" dndtype="gridColumn_gridEquipamientos"><div class="dojoxGridSortNode">Fecha de Tarja</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridEquipamientosHdr3" class="dojoxGridCell dojoDndItem " idx="3" style="width:200px;" dndtype="gridColumn_gridEquipamientos"><div class="dojoxGridSortNode">Tipo Contenedor</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridEquipamientosHdr4" class="dojoxGridCell dojoDndItem " idx="4" style="text-align: center;width:300px;" dndtype="gridColumn_gridEquipamientos"><div class="dojoxGridSortNode">Tamaño Contenedor</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridEquipamientosHdr5" class="dojoxGridCell dojoDndItem " idx="5" style="text-align: center;width:200px;" dndtype="gridColumn_gridEquipamientos"><div class="dojoxGridSortNode">Tipo de Llenado</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridEquipamientosHdr6" class="dojoxGridCell dojoDndItem " idx="6" style="text-align: center;width:200px;" dndtype="gridColumn_gridEquipamientos"><div class="dojoxGridSortNode">Tipo de Movimiento</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridEquipamientosHdr7" class="dojoxGridCell dojoDndItem " idx="7" style="text-align: center;width:120px;" dndtype="gridColumn_gridEquipamientos"><div class="dojoxGridSortNode">Peso Total</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridEquipamientosHdr8" class="dojoxGridCell dojoDndItem " idx="8" style="text-align: center;width:100px;" dndtype="gridColumn_gridEquipamientos"><div class="dojoxGridSortNode">Tara</div></th><th tabindex="-1" aria-readonly="true" role="columnheader" id="gridEquipamientosHdr9" class="dojoxGridCell dojoDndItem " idx="9" style="text-align: center;width:150px;" dndtype="gridColumn_gridEquipamientos"><div class="dojoxGridSortNode">Documentos de Transporte Asociados</div></th></tr></tbody></table></div>
+		</div>
+	</div></div>
+	<div class="dojoxGridMasterView" dojoattachpoint="viewsNode" role="presentation" style="height: 129.818px;"><div class="dojoxGridView" role="presentation" id="dojox_grid__RowSelector_3" widgetid="dojox_grid__RowSelector_3" style="width: 20px; height: 129.818px; left: 1px; top: 0px;">
+	
+	<input type="checkbox" class="dojoxGridHiddenFocus" dojoattachpoint="hiddenFocusNode" role="presentation">
+	<input type="checkbox" class="dojoxGridHiddenFocus" role="presentation">
+	<div class="dojoxGridScrollbox" dojoattachpoint="scrollboxNode" role="presentation" style="overflow: hidden; height: 114.818px;">
+		<div class="dojoxGridContent" dojoattachpoint="contentNode" hidefocus="hidefocus" role="presentation" style="height: 168px;"><div role="presentation" style="position: absolute; left: 0px; top: 0px;"><div class="dojoxGridRowbar dojoxGridNonNormalizedCell" role="presentation"><table class="dojoxGridRowbarTable" style="width: 18px; height: 21px;" border="0" cellspacing="0" cellpadding="0" role="presentation"><tbody><tr><td class="dojoxGridRowbarInner">&nbsp;</td></tr></tbody></table></div><div class="dojoxGridRowbar dojoxGridNonNormalizedCell" role="presentation"><table class="dojoxGridRowbarTable" style="width: 18px; height: 21px;" border="0" cellspacing="0" cellpadding="0" role="presentation"><tbody><tr><td class="dojoxGridRowbarInner">&nbsp;</td></tr></tbody></table></div><div class="dojoxGridRowbar dojoxGridNonNormalizedCell" role="presentation"><table class="dojoxGridRowbarTable" style="width: 18px; height: 21px;" border="0" cellspacing="0" cellpadding="0" role="presentation"><tbody><tr><td class="dojoxGridRowbarInner">&nbsp;</td></tr></tbody></table></div><div class="dojoxGridRowbar dojoxGridNonNormalizedCell" role="presentation"><table class="dojoxGridRowbarTable" style="width: 18px; height: 21px;" border="0" cellspacing="0" cellpadding="0" role="presentation"><tbody><tr><td class="dojoxGridRowbarInner">&nbsp;</td></tr></tbody></table></div><div class="dojoxGridRowbar dojoxGridNonNormalizedCell" role="presentation"><table class="dojoxGridRowbarTable" style="width: 18px; height: 21px;" border="0" cellspacing="0" cellpadding="0" role="presentation"><tbody><tr><td class="dojoxGridRowbarInner">&nbsp;</td></tr></tbody></table></div><div class="dojoxGridRowbar dojoxGridNonNormalizedCell" role="presentation"><table class="dojoxGridRowbarTable" style="width: 18px; height: 21px;" border="0" cellspacing="0" cellpadding="0" role="presentation"><tbody><tr><td class="dojoxGridRowbarInner">&nbsp;</td></tr></tbody></table></div><div class="dojoxGridRowbar dojoxGridNonNormalizedCell" role="presentation"><table class="dojoxGridRowbarTable" style="width: 18px; height: 21px;" border="0" cellspacing="0" cellpadding="0" role="presentation"><tbody><tr><td class="dojoxGridRowbarInner">&nbsp;</td></tr></tbody></table></div><div class="dojoxGridRowbar dojoxGridNonNormalizedCell" role="presentation"><table class="dojoxGridRowbarTable" style="width: 18px; height: 21px;" border="0" cellspacing="0" cellpadding="0" role="presentation"><tbody><tr><td class="dojoxGridRowbarInner">&nbsp;</td></tr></tbody></table></div></div></div>
+	</div>
+</div><div class="dojoxGridView" role="presentation" id="dojox_grid__View_3" widgetid="dojox_grid__View_3" style="width: 445px; height: 129.818px; left: 21px; top: 0px;">
+	
+	<input type="checkbox" class="dojoxGridHiddenFocus" dojoattachpoint="hiddenFocusNode" role="presentation">
+	<input type="checkbox" class="dojoxGridHiddenFocus" role="presentation">
+	<div class="dojoxGridScrollbox" dojoattachpoint="scrollboxNode" role="presentation" style="height: 129.818px;">
+		<div class="dojoxGridContent" dojoattachpoint="contentNode" hidefocus="hidefocus" role="presentation" style="height: 168px; width: 1688px;"><div role="presentation" style="position: absolute; left: 0px; top: 0px;"><div class="dojoxGridRow" role="row" aria-selected="false" style=""><table class="dojoxGridRowTable" border="0" cellspacing="0" cellpadding="0" role="presentation"><tbody><tr><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="0" style="text-align: center;width:100px;">&nbsp;<a class="link" href="JavaScript:buscaListaPrecintoDeEquipamiento('FCIU4523421');" onclick=""><img src="/a/imagenes/ver.gif" alt="Ver Precintos" border="0"></a>&nbsp;</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="1" style="text-align: center;width:150px;">FCIU4523421</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="2" style="text-align: center;width:150px;">17/07/2026 06:11:36</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="3" style="width:200px;">21 CONTENEDOR IC 20 PIES</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="4" style="text-align: center;width:300px;">20GP 20x8 General Purpose, Non-Vented</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="5" style="text-align: center;width:200px;">8 LLENO CARGA UNICA FCL</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="6" style="text-align: center;width:200px;">3 FCL/FCL</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="7" style="text-align: center;width:120px;">19277</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="8" style="text-align: center;width:100px;">2180</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="9" style="text-align: center;width:150px;">&nbsp;<a class="link" href="JavaScript:verDTAsociadosContenedor('FCIU4523421');" onclick=""><img src="/a/imagenes/ver.gif" alt="Ver Precintos" border="0"></a>&nbsp;</td></tr></tbody></table></div><div class="dojoxGridRow dojoxGridRowOdd" role="row" aria-selected="false" style=""><table class="dojoxGridRowTable" border="0" cellspacing="0" cellpadding="0" role="presentation"><tbody><tr><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="0" style="text-align: center;width:100px;">&nbsp;<a class="link" href="JavaScript:buscaListaPrecintoDeEquipamiento('MEDU5334390');" onclick=""><img src="/a/imagenes/ver.gif" alt="Ver Precintos" border="0"></a>&nbsp;</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="1" style="text-align: center;width:150px;">MEDU5334390</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="2" style="text-align: center;width:150px;">17/07/2026 08:36:08</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="3" style="width:200px;">21 CONTENEDOR IC 20 PIES</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="4" style="text-align: center;width:300px;">20GP 20x8 General Purpose, Non-Vented</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="5" style="text-align: center;width:200px;">8 LLENO CARGA UNICA FCL</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="6" style="text-align: center;width:200px;">3 FCL/FCL</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="7" style="text-align: center;width:120px;">19184</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="8" style="text-align: center;width:100px;">2220</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="9" style="text-align: center;width:150px;">&nbsp;<a class="link" href="JavaScript:verDTAsociadosContenedor('MEDU5334390');" onclick=""><img src="/a/imagenes/ver.gif" alt="Ver Precintos" border="0"></a>&nbsp;</td></tr></tbody></table></div><div class="dojoxGridRow" role="row" aria-selected="false" style=""><table class="dojoxGridRowTable" border="0" cellspacing="0" cellpadding="0" role="presentation"><tbody><tr><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="0" style="text-align: center;width:100px;">&nbsp;<a class="link" href="JavaScript:buscaListaPrecintoDeEquipamiento('MSMU2293265');" onclick=""><img src="/a/imagenes/ver.gif" alt="Ver Precintos" border="0"></a>&nbsp;</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="1" style="text-align: center;width:150px;">MSMU2293265</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="2" style="text-align: center;width:150px;">17/07/2026 08:41:37</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="3" style="width:200px;">21 CONTENEDOR IC 20 PIES</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="4" style="text-align: center;width:300px;">20GP 20x8 General Purpose, Non-Vented</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="5" style="text-align: center;width:200px;">8 LLENO CARGA UNICA FCL</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="6" style="text-align: center;width:200px;">3 FCL/FCL</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="7" style="text-align: center;width:120px;">3153</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="8" style="text-align: center;width:100px;">2220</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="9" style="text-align: center;width:150px;">&nbsp;<a class="link" href="JavaScript:verDTAsociadosContenedor('MSMU2293265');" onclick=""><img src="/a/imagenes/ver.gif" alt="Ver Precintos" border="0"></a>&nbsp;</td></tr></tbody></table></div><div class="dojoxGridRow dojoxGridRowOdd" role="row" aria-selected="false" style=""><table class="dojoxGridRowTable" border="0" cellspacing="0" cellpadding="0" role="presentation"><tbody><tr><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="0" style="text-align: center;width:100px;">&nbsp;<a class="link" href="JavaScript:buscaListaPrecintoDeEquipamiento('MSMU3875701');" onclick=""><img src="/a/imagenes/ver.gif" alt="Ver Precintos" border="0"></a>&nbsp;</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="1" style="text-align: center;width:150px;">MSMU3875701</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="2" style="text-align: center;width:150px;">17/07/2026 08:46:08</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="3" style="width:200px;">21 CONTENEDOR IC 20 PIES</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="4" style="text-align: center;width:300px;">20GP 20x8 General Purpose, Non-Vented</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="5" style="text-align: center;width:200px;">8 LLENO CARGA UNICA FCL</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="6" style="text-align: center;width:200px;">3 FCL/FCL</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="7" style="text-align: center;width:120px;">18996</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="8" style="text-align: center;width:100px;">2100</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="9" style="text-align: center;width:150px;">&nbsp;<a class="link" href="JavaScript:verDTAsociadosContenedor('MSMU3875701');" onclick=""><img src="/a/imagenes/ver.gif" alt="Ver Precintos" border="0"></a>&nbsp;</td></tr></tbody></table></div><div class="dojoxGridRow" role="row" aria-selected="false" style=""><table class="dojoxGridRowTable" border="0" cellspacing="0" cellpadding="0" role="presentation"><tbody><tr><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="0" style="text-align: center;width:100px;">&nbsp;<a class="link" href="JavaScript:buscaListaPrecintoDeEquipamiento('MSNU3099480');" onclick=""><img src="/a/imagenes/ver.gif" alt="Ver Precintos" border="0"></a>&nbsp;</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="1" style="text-align: center;width:150px;">MSNU3099480</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="2" style="text-align: center;width:150px;">17/07/2026 08:36:07</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="3" style="width:200px;">21 CONTENEDOR IC 20 PIES</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="4" style="text-align: center;width:300px;">20GP 20x8 General Purpose, Non-Vented</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="5" style="text-align: center;width:200px;">8 LLENO CARGA UNICA FCL</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="6" style="text-align: center;width:200px;">3 FCL/FCL</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="7" style="text-align: center;width:120px;">18887</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="8" style="text-align: center;width:100px;">2100</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="9" style="text-align: center;width:150px;">&nbsp;<a class="link" href="JavaScript:verDTAsociadosContenedor('MSNU3099480');" onclick=""><img src="/a/imagenes/ver.gif" alt="Ver Precintos" border="0"></a>&nbsp;</td></tr></tbody></table></div><div class="dojoxGridRow dojoxGridRowOdd" role="row" aria-selected="false" style=""><table class="dojoxGridRowTable" border="0" cellspacing="0" cellpadding="0" role="presentation"><tbody><tr><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="0" style="text-align: center;width:100px;">&nbsp;<a class="link" href="JavaScript:buscaListaPrecintoDeEquipamiento('MSNU3626657');" onclick=""><img src="/a/imagenes/ver.gif" alt="Ver Precintos" border="0"></a>&nbsp;</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="1" style="text-align: center;width:150px;">MSNU3626657</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="2" style="text-align: center;width:150px;">17/07/2026 08:41:39</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="3" style="width:200px;">21 CONTENEDOR IC 20 PIES</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="4" style="text-align: center;width:300px;">20GP 20x8 General Purpose, Non-Vented</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="5" style="text-align: center;width:200px;">8 LLENO CARGA UNICA FCL</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="6" style="text-align: center;width:200px;">3 FCL/FCL</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="7" style="text-align: center;width:120px;">18831</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="8" style="text-align: center;width:100px;">2100</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="9" style="text-align: center;width:150px;">&nbsp;<a class="link" href="JavaScript:verDTAsociadosContenedor('MSNU3626657');" onclick=""><img src="/a/imagenes/ver.gif" alt="Ver Precintos" border="0"></a>&nbsp;</td></tr></tbody></table></div><div class="dojoxGridRow" role="row" aria-selected="false" style=""><table class="dojoxGridRowTable" border="0" cellspacing="0" cellpadding="0" role="presentation"><tbody><tr><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="0" style="text-align: center;width:100px;">&nbsp;<a class="link" href="JavaScript:buscaListaPrecintoDeEquipamiento('UETU3139603');" onclick=""><img src="/a/imagenes/ver.gif" alt="Ver Precintos" border="0"></a>&nbsp;</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="1" style="text-align: center;width:150px;">UETU3139603</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="2" style="text-align: center;width:150px;">17/07/2026 08:41:38</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="3" style="width:200px;">21 CONTENEDOR IC 20 PIES</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="4" style="text-align: center;width:300px;">20GP 20x8 General Purpose, Non-Vented</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="5" style="text-align: center;width:200px;">8 LLENO CARGA UNICA FCL</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="6" style="text-align: center;width:200px;">3 FCL/FCL</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="7" style="text-align: center;width:120px;">18643</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="8" style="text-align: center;width:100px;">2100</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="9" style="text-align: center;width:150px;">&nbsp;<a class="link" href="JavaScript:verDTAsociadosContenedor('UETU3139603');" onclick=""><img src="/a/imagenes/ver.gif" alt="Ver Precintos" border="0"></a>&nbsp;</td></tr></tbody></table></div><div class="dojoxGridRow dojoxGridRowOdd" role="row" aria-selected="false" style=""><table class="dojoxGridRowTable" border="0" cellspacing="0" cellpadding="0" role="presentation"><tbody><tr><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="0" style="text-align: center;width:100px;">&nbsp;<a class="link" href="JavaScript:buscaListaPrecintoDeEquipamiento('XHCU2461964');" onclick=""><img src="/a/imagenes/ver.gif" alt="Ver Precintos" border="0"></a>&nbsp;</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="1" style="text-align: center;width:150px;">XHCU2461964</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="2" style="text-align: center;width:150px;">17/07/2026 08:31:10</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="3" style="width:200px;">21 CONTENEDOR IC 20 PIES</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="4" style="text-align: center;width:300px;">20GP 20x8 General Purpose, Non-Vented</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="5" style="text-align: center;width:200px;">8 LLENO CARGA UNICA FCL</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="6" style="text-align: center;width:200px;">3 FCL/FCL</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="7" style="text-align: center;width:120px;">18939</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="8" style="text-align: center;width:100px;">2100</td><td tabindex="-1" role="gridcell" class="dojoxGridCell " idx="9" style="text-align: center;width:150px;">&nbsp;<a class="link" href="JavaScript:verDTAsociadosContenedor('XHCU2461964');" onclick=""><img src="/a/imagenes/ver.gif" alt="Ver Precintos" border="0"></a>&nbsp;</td></tr></tbody></table></div></div></div>
+	</div>
+</div></div><div dojoattachpoint="paginatorBar" id="dojox_grid_enhanced_plugins__Paginator_1" widgetid="dojox_grid_enhanced_plugins__Paginator_1"><table cellpadding="0" cellspacing="0" class="dojoxGridPaginator"><tbody><tr><td dojoattachpoint="descriptionTd" class="dojoxGridDescriptionTd"><div dojoattachpoint="descriptionDiv" class="dojoxGridDescription">1 - 8 de 8 elementos</div></td><td dojoattachpoint="sizeSwitchTd"><span title="10 elementos por página" tabindex="-1" aria-label="10 elementos por página" class="dojoxGridInactiveSwitch">10</span><span class="dojoxGridSeparator">|</span><span title="15 elementos por página" tabindex="-1" aria-label="15 elementos por página" class="dojoxGridInactiveSwitch">15</span><span class="dojoxGridSeparator">|</span><span title="20 elementos por página" tabindex="-1" aria-label="20 elementos por página" class="dojoxGridInactiveSwitch">20</span><span class="dojoxGridSeparator">|</span><span title="25 elementos por página" aria-label="25 elementos por página" class="dojoxGridActivedSwitch">25</span><span class="dojoxGridSeparator">|</span><span title="30 elementos por página" tabindex="-1" aria-label="30 elementos por página" class="dojoxGridInactiveSwitch">30</span><span class="dojoxGridSeparator">|</span><span title="35 elementos por página" tabindex="-1" aria-label="35 elementos por página" class="dojoxGridInactiveSwitch">35</span><span class="dojoxGridSeparator">|</span><span title="40 elementos por página" tabindex="-1" aria-label="40 elementos por página" class="dojoxGridInactiveSwitch">40</span></td><td dojoattachpoint="pageStepperTd" class="dojoxGridPaginatorFastStep"><div dojoattachpoint="pageStepperDiv" class="dojoxGridPaginatorStep"><div title="Primera página" aria-label="Primera página" class="dojoxGridWardButton dojoxGridfirstPageBtnDisable"><span title="Primera página" class="dojoxGridWardButtonInner">«</span></div><div title="Página anterior" aria-label="Página anterior" class="dojoxGridWardButton dojoxGridprevPageBtnDisable"><span title="Página anterior" class="dojoxGridWardButtonInner">&lt;</span></div><div title="Página 1" aria-label="Página 1" class="dojoxGridActived">1</div><div title="Página 2" aria-label="Página 2" style="display: none;" class="dojoxGridActived">2</div><div title="Página 3" aria-label="Página 3" style="display: none;" class="dojoxGridActived">3</div><div title="Página 4" aria-label="Página 4" style="display: none;" class="dojoxGridActived">4</div><div title="Página 5" aria-label="Página 5" style="display: none;" class="dojoxGridActived">5</div><div title="Página 6" aria-label="Página 6" style="display: none;" class="dojoxGridActived">6</div><div title="Página 7" aria-label="Página 7" style="display: none;" class="dojoxGridActived">7</div><div title="Página siguiente" aria-label="Página siguiente" class="dojoxGridWardButton dojoxGridnextPageBtnDisable"><span title="Página siguiente" class="dojoxGridWardButtonInner">&gt;</span></div><div title="Última página" aria-label="Última página" class="dojoxGridWardButton dojoxGridlastPageBtnDisable"><span title="Última página" class="dojoxGridWardButtonInner">»</span></div></div></td><td dojoattachpoint="gotoPageTd" class="dojoxGridPaginatorGotoTd"><div dojoattachpoint="gotoPageDiv" class="dojoxGridPaginatorGotoDiv dojoxGridPaginatorGotoDivDisabled" dojoattachevent="onclick:_openGotopageDialog, onkeydown:_openGotopageDialog" title="Ir a una página específica"><span class="dojoxGridWardButtonInner">⊥</span></div></td></tr></tbody></table></div>
+	<div class="dojoxGridMasterMessages" style="position: absolute; top: 31px; width: 466px; height: 129.818px; display: none;" dojoattachpoint="messagesNode"></div>
+	<span dojoattachpoint="lastFocusNode" tabindex="0"></span>
+</div></div>
+</div>
+
+
+
+<!-- Ventana emergente con la informacion de las operaciones asociadas al manifiesto -->
+
+
+<!-- Ventana emergente con la información de las rectificaciones de las operaciones asociadas al manifiesto -->
+
+
+<!-- Ventana emergente con la información de los expedientes del DT  -->
+
+
+<!-- Ventana emergente con la información de los expedientes del DT  -->
+
+
+<!-- Ventana emergente con la información de los Resoluciones del DT  -->
+
+
+<!-- Ventana emergente con la información de los LC del DT  -->
+
+
+<!-- Ventana emergente con la información de los ACE del DT  -->
+
+
+<!-- Ventana emergente con la información de los ACE del DT  -->
+
+
+<!-- Ventana emergente con la información de los ACE del DT  -->
+
+
+
+
+
+
+<!-- Ventana emergente con la información de las operaciones asociadas al manifiesto -->
+
+
+<!-- Ventana emergente con la información de los contenedores de las operaciones asociadas al manifiesto -->
+
+
+<!-- Ventana emergente con la información de los precintos de los contenedores de las operaciones asociadas al manifiesto -->
+
+
+<!-- Ventana emergente con la información de los precintos de los contenedores de las operaciones asociadas al manifiesto -->
+
+
+<!-- Ventana emergente con la información de los precintos de los contenedores de las operaciones asociadas al manifiesto -->
+
+
+
+
+
+
+	
+<!-- Ventana emergente con la información del detalle de mercancía de un documento de transporte -->
+
+
+<!-- Ventana emergente con la información de los participantes de un documento de transporte -->
+
+
+<!-- Ventana emergente con la información de los contenedores de un documento de transporte -->
+
+
+<!-- Ventana emergente con la información de la carga peligrosa de un documento de transporte -->
+
+
+<!-- Ventana emergente con la información de los fletes de un documento de transporte -->
+
+
+<!-- Ventana emergente con la información de los puertos intermedios de un documento de transporte -->
+
+
+<!-- Ventana emergente con la información de los puertos intermedios de un documento de transporte -->
+
+
+<!-- Ventana emergente con la información de los puertos intermedios de un manifiesto de carga -->
+
+
+<!-- Ventana emergente con la información de los puertos intermedios de un manifiesto de carga -->
+
+
+
+
+<!-- Ventana emergente con la información de los Vehiculos de un manifiesto de carga -->
+
+
+
+
+
+
+<br>
+<table align="center">
+	<tbody><tr>
+		<td>
+		<span class="dijit dijitReset dijitInline dijitButton" role="presentation" widgetid="accion98"><span class="dijitReset dijitInline dijitButtonNode" data-dojo-attach-event="ondijitclick:__onClick" role="presentation"><span class="dijitReset dijitStretch dijitButtonContents" data-dojo-attach-point="titleNode,focusNode" role="button" aria-labelledby="accion98_label" tabindex="0" id="accion98" style="user-select: none;"><span class="dijitReset dijitInline dijitIcon iconSearchIcon" data-dojo-attach-point="iconNode"></span><span class="dijitReset dijitToggleButtonIconChar">●</span><span class="dijitReset dijitInline dijitButtonText" id="accion98_label" data-dojo-attach-point="containerNode">Regresar</span></span></span><input type="button" value="" class="dijitOffScreen" data-dojo-attach-event="onclick:_onClick" tabindex="-1" role="presentation" data-dojo-attach-point="valueNode"></span>		
+		</td>
+	</tr>
+</tbody></table>
+<br>
+
+
+<script id="f5_cspm">(function(){var f5_cspm={f5_p:'NENMDDMKNLDJDHFJHFHEGFOGEKJJGMIKDPNMKNBHFPPJAKGDIGBAHGMEBFHNPKHLHGCBMKGDCHOPFIAAGKMAGAACAIANHNNCOPJDINKDLJLAPDJDDJMCFAJCLAEGADCE',setCharAt:function(str,index,chr){if(index>str.length-1)return str;return str.substr(0,index)+chr+str.substr(index+1);},get_byte:function(str,i){var s=(i/16)|0;i=(i&15);s=s*32;return((str.charCodeAt(i+16+s)-65)<<4)|(str.charCodeAt(i+s)-65);},set_byte:function(str,i,b){var s=(i/16)|0;i=(i&15);s=s*32;str=f5_cspm.setCharAt(str,(i+16+s),String.fromCharCode((b>>4)+65));str=f5_cspm.setCharAt(str,(i+s),String.fromCharCode((b&15)+65));return str;},set_latency:function(str,latency){latency=latency&0xffff;str=f5_cspm.set_byte(str,40,(latency>>8));str=f5_cspm.set_byte(str,41,(latency&0xff));str=f5_cspm.set_byte(str,35,2);return str;},wait_perf_data:function(){try{var wp=window.performance.timing;if(wp.loadEventEnd>0){var res=wp.loadEventEnd-wp.navigationStart;if(res<60001){var cookie_val=f5_cspm.set_latency(f5_cspm.f5_p,res);window.document.cookie='f5avr2118791389aaaaaaaaaaaaaaaa_cspm_='+encodeURIComponent(cookie_val)+';path=/;'+'';}
+return;}}
+catch(err){return;}
+setTimeout(f5_cspm.wait_perf_data,100);return;},go:function(){var chunk=window.document.cookie.split(/\s*;\s*/);for(var i=0;i<chunk.length;++i){var pair=chunk[i].split(/\s*=\s*/);if(pair[0]=='f5_cspm'&&pair[1]=='1234')
+{var d=new Date();d.setTime(d.getTime()-1000);window.document.cookie='f5_cspm=;expires='+d.toUTCString()+';path=/;'+';';setTimeout(f5_cspm.wait_perf_data,100);}}}}
+f5_cspm.go();}());</script><div class="dijitDialog" role="dialog" aria-labelledby="dlgDocumentoTransporte_title" id="dlgDocumentoTransporte" widgetid="dlgDocumentoTransporte" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgDocumentoTransporte_title" role="heading" level="1">Documento de Transporte Hijo</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+	<div style="width: 790px; height: 500px; overflow: auto;">
+	<table width="100%" class="form-table" align="center">
+        <tbody>
+           <tr>
+	           <td class="beta" align="left">
+	                <b>
+	                  CONSULTA DE DATOS DEL DOCUMENTO DE TRANSPORTE HIJO
+	                </b>
+	       		</td>
+	       </tr> 
+	       <tr>
+           		<td width="100%">
+                <table id="tabDetalleDocumentoDeTransporte1">
+					<tbody><tr>
+						<td><b>Parámetros de Consulta:</b></td>
+						<td><b>&nbsp;Documento de Transporte:</b></td>
+						<td align="left"><div id="divDocuTrans"></div></td>
+						<td align="right"><b>Detalle Nro.:&nbsp;</b></td>
+						<td><div id="divDetalle"></div></td>
+						
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="3"><b>&nbsp;Tipo de manifiesto/Aduana/Vía de transporte/Año/Número de manifiesto Desconsolidado:&nbsp;</b></td>
+						<td><div id="divManifiesto"></div></td>
+					</tr>
+				</tbody></table>
+                
+				<br>
+				
+           		<table class="form-table" style="border-collapse:collapse" width="98%" border="1" cellpadding="0" cellspacing="0" id="tabDetalleDocumentoDeTransporte1">
+           			
+           			<tbody><tr>
+           				<td class="beta" width="20%"><b>Nro. Doc. Transporte Master asociado</b></td>
+           				<td width="30%"><div id="divDocuTransMaster"></div></td>
+           			</tr>
+           			<tr>
+           				<td class="beta" width="20%"><b>A la Orden</b></td>
+           				<td colspan="3"><div id="divALaOrdenDocuTrans"></div></td>
+           			</tr>
+           			<tr>
+           				<td class="beta" width="20%"><b>Consignatario</b></td>
+           				<td colspan="3"><div id="divConsignatarioDocuTrans"></div></td>
+           			</tr>
+           			<tr>
+           				<td class="beta" width="20%"><b>Consolidador</b></td>
+           				<td colspan="3"><div id="divConsolidadorDocuTrans"></div></td>
+           			</tr>
+           			<tr>
+           				<td class="beta" width="20%"><b>Embarcador</b></td>
+           				<td colspan="3"><div id="divEmbarcadorDocuTrans"></div></td>
+           			</tr>
+           			<tr>
+           				<td class="beta" width="20%"><b>Notificado al Arribo</b></td>
+           				<td colspan="3"><div id="divNotificadoAlArriboDocuTrans"></div></td>
+           			</tr>
+           			<tr>
+           				<td class="beta" width="20%"><b>Representante del Transportista</b></td>
+           				<td colspan="3"><div id="divRepresentanteTransportistaDocuTrans"></div></td>
+           			</tr>	
+           		</tbody></table>
+                                <br>
+                
+				<table class="form-table" style="border-collapse:collapse" border="1" cellpadding="0" cellspacing="0" width="98%" id="tabDetalleDocumentoDeTransporte1">
+		                <tbody><tr class="beta">
+			                	<th><b>Peso Manifestado</b></th>                                                     
+			                    <th><b>Bulto Manifestado</b></th>
+			                    <th><b>Volumen</b></th>
+			                    <th><b>Cant. Contenedores</b></th>
+		                </tr>
+		                <tr>
+			                	<td valign="top"><div id="divPesoManifestado"></div></td>                                                     
+			                    <td valign="top"><div id="divBultoManifestado"></div></td>
+			                    <td valign="top"><div id="divVolumen"></div></td>
+			                    <td valign="top"><div id="divCantidadContenedores"></div></td>
+		                </tr>
+ 				</tbody></table>
+				<br>
+
+				<table class="form-table" style="border-collapse:collapse" border="1" cellpadding="0" cellspacing="0" width="98%" id="tabDetalleDocumentoDeTransporte1">
+		                <tbody><tr class="beta">
+			                	<th><b>Fecha Nota Tarja al Detalle</b></th>                                                     
+			                    <th><b>Bulto Tarja al detalle</b></th>
+			                    <th><b>Bulto Buen Estado</b></th>
+			                    <th><b>Bulto Mal Estado</b></th>
+			                    <th><b>Peso Tarja al Detalle</b></th>
+			                    <th><b>Peso Buen Estado</b></th>
+			                    <th><b>Peso Mal Estado</b></th>
+		                </tr>
+		                <tr>
+			                	<td valign="top"><div id="divFechaTarjaDetalle"></div></td>
+			                	<td valign="top"><div id="divBultoTarjaDetalle"></div></td>
+			                	<td valign="top"><div id="divBultoTarjaDetalleBuenEstado"></div></td>
+			                	<td valign="top"><div id="divBultoTarjaDetalleMalEstado"></div></td>
+			                    <td valign="top"><div id="divPesoTarjaDetalle"></div></td>
+			                    <td valign="top"><div id="divPesoTarjaDetalleBuenEstado"></div></td>
+			                    <td valign="top"><div id="divPesoTarjaDetalleMalEstado"></div></td>
+		                </tr>
+ 				</tbody></table>				      		
+				
+           		<br>				
+ 				
+ 				<table width="98%">
+ 					<tbody><tr>
+                                        <td>
+						<input type="button" dojotype="dijit.form.Button" id="accion7" showlabel="true" iconclass="iconSearchIcon" onclick="buscaListaDetalleDeMercancias();" value="Detalle de mercancía">
+           				</td>
+ 					<td>						
+						<input type="button" dojotype="dijit.form.Button" id="accion14" showlabel="true" iconclass="iconSearchIcon" onclick="buscaListaCargaPeligrosa();" value="Carga Peligrosa">
+           				</td>
+           				<td>
+						<input type="button" dojotype="dijit.form.Button" id="accion16" showlabel="true" iconclass="iconSearchIcon" onclick="buscaListaPuertosIntermedios();" value="Puertos Intermedios">
+           				</td>
+           				<td>
+						<input type="button" dojotype="dijit.form.Button" id="accion25" showlabel="true" iconclass="iconSearchIcon" onclick="buscaListaDamDeTransbordo();" value="DAM Transbordo">
+           				</td>
+           				<td>
+						<input type="button" dojotype="dijit.form.Button" id="accion26" showlabel="true" iconclass="iconSearchIcon" onclick="buscaListaOperacionesAsociadasDocumentoTransporte();" value="Operaciones Asociadas">
+           				</td>
+           				<td>
+						<input type="button" dojotype="dijit.form.Button" id="accion15" showlabel="true" iconclass="iconSearchIcon" onclick="buscaListaRectificacionesDocumentoTransporte();" value="Rectificaciones">
+           				</td>
+           				<!-- <td>
+						<input type="button" dojoType="dijit.form.Button" id="accion27" showLabel="true" iconClass="iconSearchIcon" onclick="buscaListaActaTrasladoDocumentoTransporte();" value="Acta de Traslado">
+           				</td> -->
+           				<td>
+						<input type="button" dojotype="dijit.form.Button" id="accion28" showlabel="true" iconclass="iconSearchIcon" onclick="buscaListaTicketSalidaDocumentoTransporte();" value="Ticket de Salida del Puerto">
+           				</td> 
+           			</tr>           			           			
+           			<!-- <tr>
+           				<td>
+						<input type="button" dojoType="dijit.form.Button" id="accion27" showLabel="true" iconClass="iconSearchIcon" onclick="buscaListaActaTrasladoDocumentoTransporte();" value="Acta de Traslado">
+           				</td>
+           				<td>
+						<input type="button" dojoType="dijit.form.Button" id="accion28" showLabel="true" iconClass="iconSearchIcon" onclick="buscaListaTicketSalidaDocumentoTransporte();" value="Ticket de Salida del Puerto">
+           				</td>           				
+           			</tr> -->
+           			
+           		</tbody></table>
+           		<br>      				
+				<table>
+					<tbody><tr><th><b>DETALLE DE MERCANCIA DEL DOCUMENTO DE TRANSPORTE</b></th></tr>
+				</tbody></table>
+		        <form action="" method="post" id="frm_detDocTrans" name="frm_detDocTrans" dojotype="dijit.form.Form"></form>
+				<div id="qpagesContainer2"></div>
+				<table cellpadding="0" cellspacing="5" border="0" width="100%" id="tabHeaderPage2"></table>
+		        <table class="form-table" style="border-collapse:collapse" border="1" cellpadding="0" cellspacing="0" width="100%" id="tabDetalleDocumentoDeTransporte">
+		        	<tbody><tr class="beta">
+		            	<th><b>Número de<br>identificación de unidad de carga</b></th>
+		            	<th><b>Seguros <br>Marcas <br>Contramarcas</b></th>
+		                <th><b>Cantidad de Bultos</b></th>
+		                <th><b>Tipo de Bultos</b></th>
+		                <th><b>Peso</b></th>
+		                <th><b>Volumen</b></th>
+		                <th><b>Descripción de mercancía</b></th>		                 
+		                <th><b>Equipamiento</b></th>
+		                <th><b>Vehículos</b></th>
+		            </tr>
+		        </tbody></table>
+		        
+				</td></tr>
+					</tbody></table><table align="center">
+					<tbody><tr>
+					<td>
+					<input type="button" dojotype="dijit.form.Button" id="accion255" showlabel="true" iconclass="iconSearchIcon" onclick="exportarExcelPdf('reporteDocumentoDeTransporteManifiestoDesconsolidado','excel');" value="Exportar a Excel">
+					</td>
+					<td>&nbsp;&nbsp;&nbsp;</td>
+					<td>
+					<input type="button" dojotype="dijit.form.Button" id="accion256" showlabel="true" iconclass="iconSearchIcon" onclick="exportarExcelPdf('reporteDocumentoDeTransporteManifiestoDesconsolidado','pdf');" value="Exportar a Pdf">
+					</td>
+					<td>&nbsp;&nbsp;&nbsp;</td>
+					<td>
+					<input type="button" dojotype="dijit.form.Button" id="accion257" showlabel="true" iconclass="iconSearchIcon" onclick="dijit.byId('dlgDocumentoTransporte').hide();" value="Regresar">
+					</td>				
+				</tr>
+				</tbody></table>
+				
+				
+    		
+    	
+	
+<br>
+</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgDatadoDT_title" id="dlgDatadoDT" widgetid="dlgDatadoDT" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgDatadoDT_title" role="heading" level="1">Consulta Datos del Documento de Transporte</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+	<div id="divTituloDatadoDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divSubtituloDatadoDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divResultadoDatadoDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+	<div class="dijitDialogPaneActionBar">
+      <center>
+         <table>
+         <tbody><tr>
+         <td id="tdDatadoDTExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf(buscarNombreReporteDatadoDocumentoTransporte(),'excel');" type="button" id="btnDatadoDTExcel">Exportar a Excel
+         </button>
+         </td>
+         <td id="tdDatadoDTPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf(buscarNombreReporteDatadoDocumentoTransporte(),'pdf');" type="button" id="btnDatadoDTPDF">Exportar a Pdf
+         </button>
+         </td>
+         <td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgDatadoDT').hide();" type="button">Salir
+         </button>
+         </td>
+         </tr>
+         </tbody></table>
+       </center>
+  	</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgRectificaciones_title" id="dlgRectificaciones" widgetid="dlgRectificaciones" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgRectificaciones_title" role="heading" level="1">Consulta Datos del Documento de Transporte</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+	<div id="divTituloRectificaciones" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  	<div id="divSubtituloRectificaciones" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  	<div id="divResultadoRectificaciones" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+	<div class="dijitDialogPaneActionBar">
+      <center>
+         <table>
+           <tbody><tr>
+         <td id="tdRectificacionesManifiestoExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteRectificaciones','excel');" type="button" id="btnRectificacionesManifiestoExcel">Exportar a Excel
+         </button>
+         </td>
+         <td id="tdRectificacionesManifiestoPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteRectificaciones','pdf');" type="button" id="btnRectificacionesManifiestoPDF">Exportar a Pdf
+         </button>
+	       		</td>
+         <td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgRectificaciones').hide();" type="button">Salir
+         </button>
+				</td>
+		            </tr>
+		        </tbody></table>
+       </center>
+  	</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgExpedientesDT_title" id="dlgExpedientesDT" widgetid="dlgExpedientesDT" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgExpedientesDT_title" role="heading" level="1">Consulta Datos del Documento de Transporte</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+	<div id="divTituloExpedientesDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divSubtituloExpedientesDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divResultadoExpedientesDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+	<div class="dijitDialogPaneActionBar">
+      <center>
+         <table>
+ 		<tbody><tr>
+         <td id="tdExpedientesDTExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteExpedientesDocumentoDeTransporte','excel');" type="button" id="btnExpedientesDTExcel">Exportar a Excel
+         </button>
+         </td>
+         <td id="tdExpedientesDTPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteExpedientesDocumentoDeTransporte','pdf');" type="button" id="btnExpedientesDTPDF">Exportar a Pdf
+         </button>
+			</td>
+			<td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgExpedientesDT').hide();" type="button">Salir
+         </button>
+				</td>
+    		</tr>
+	</tbody></table>
+       </center>
+</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgNotificacionesDT_title" id="dlgNotificacionesDT" widgetid="dlgNotificacionesDT" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgNotificacionesDT_title" role="heading" level="1">Consulta Datos del Documento de Transporte</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+	<div id="divTituloNotificacionesDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divSubtituloNotificacionesDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divResultadoNotificacionesDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+	<div class="dijitDialogPaneActionBar">
+      <center>
+         <table>
+         <tbody><tr>
+         <td id="tdNotificacionesDTExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteNotificacionesDocumentoDeTransporte','excel');" type="button" id="btnNotificacionesDTExcel">Exportar a Excel
+         </button>
+         </td>
+         <td id="tdNotificacionesDTPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteNotificacionesDocumentoDeTransporte','pdf');" type="button" id="btnNotificacionesDTPDF">Exportar a Pdf
+         </button>
+         </td>
+         <td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgNotificacionesDT').hide();" type="button">Salir
+         </button>
+         </td>
+         </tr>
+         </tbody></table>
+       </center>
+  	</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgResolucionesDT_title" id="dlgResolucionesDT" widgetid="dlgResolucionesDT" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgResolucionesDT_title" role="heading" level="1">Consulta Datos del Documento de Transporte</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+	<div id="divTituloResolucionesDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divSubtituloResolucionesDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divResultadoResolucionesDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+	<div class="dijitDialogPaneActionBar">
+      <center>
+         <table>
+         <tbody><tr>
+         <td id="tdResolucionesDTExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteResolucionesDocumentoDeTransporte','excel');" type="button" id="btnNotificacionesDTExcel">Exportar a Excel
+         </button>
+         </td>
+         <td id="tdResolucionesDTPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteResolucionesDocumentoDeTransporte','pdf');" type="button" id="btnResolucionesDTPDF">Exportar a Pdf
+         </button>
+         </td>
+         <td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgResolucionesDT').hide();" type="button">Salir
+         </button>
+         </td>
+         </tr>
+         </tbody></table>
+       </center>
+  	</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgLiquidacionesDT_title" id="dlgLiquidacionesDT" widgetid="dlgLiquidacionesDT" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgLiquidacionesDT_title" role="heading" level="1">Consulta Datos del Documento de Transporte</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+	<div id="divTituloLiquidacionesDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divSubtituloLiquidacionesDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divResultadoLiquidacionesDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+	<div class="dijitDialogPaneActionBar">
+      <center>
+         <table>
+         <tbody><tr>
+         <td id="tdLiquidacionesDTExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteLiquidacionesDocumentoDeTransporte','excel');" type="button" id="btnLiquidacionesDTExcel">Exportar a Excel
+         </button>
+         </td>
+         <td id="tdLiquidacionesDTPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteLiquidacionesDocumentoDeTransporte','pdf');" type="button" id="btnLiquidacionesDTPDF">Exportar a Pdf
+         </button>
+         </td>
+         <td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgLiquidacionesDT').hide();" type="button">Salir
+         </button>
+         </td>
+         </tr>
+         </tbody></table>
+       </center>
+  	</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgACEDT_title" id="dlgACEDT" widgetid="dlgACEDT" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgACEDT_title" role="heading" level="1">Consulta Datos del Documento de Transporte</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+	<div id="divTituloACEDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divSubtituloACEDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divResultadoACEDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+	<div class="dijitDialogPaneActionBar">
+      <center>
+         <table>
+         <tbody><tr>
+         <td id="tdACEDTExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteACEDocumentoDeTransporte','excel');" type="button" id="btnACEDTExcel">Exportar a Excel
+         </button>
+         </td>
+         <td id="tdACEDTPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteACEDocumentoDeTransporte','pdf');" type="button" id="btnACEDTPDF">Exportar a Pdf
+         </button>
+         </td>
+         <td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgACEDT').hide();" type="button">Salir
+         </button>
+         </td>
+         </tr>
+         </tbody></table>
+       </center>
+  	</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgActaTrasladoDT_title" id="dlgActaTrasladoDT" widgetid="dlgActaTrasladoDT" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgActaTrasladoDT_title" role="heading" level="1">Consulta Datos del Documento de Transporte</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+	<div id="divTituloActaTrasladoDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divSubtituloActaTrasladoDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divResultadoActaTrasladoDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+	<div class="dijitDialogPaneActionBar">
+      <center>
+         <table>
+         <tbody><tr>
+         <td id="tdActaTrasladoDTExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteActaTrasladoDocumentoDeTransporte','excel');" type="button" id="btnActaTrasladoDTExcel">Exportar a Excel
+         </button>
+         </td>
+         <td id="tdActaTrasladoDTPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteActaTrasladoDocumentoDeTransporte','pdf');" type="button" id="btnActaTrasladoDTPDF">Exportar a Pdf
+         </button>
+         </td>
+         <td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgActaTrasladoDT').hide();" type="button">Salir
+         </button>
+         </td>
+         </tr>
+         </tbody></table>
+       </center>
+  	</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgTicketSalidaDT_title" id="dlgTicketSalidaDT" widgetid="dlgTicketSalidaDT" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgTicketSalidaDT_title" role="heading" level="1">Consulta Datos del Documento de Transporte</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+	<div id="divTituloTicketSalidaDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divSubtituloTicketSalidaDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divResultadoTicketSalidaDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+	<div class="dijitDialogPaneActionBar">
+      <center>
+         <table>
+         <tbody><tr>
+         <td id="tdTicketSalidaDTExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteTicketSalidaDocumentoDeTransporte','excel');" type="button" id="btnTicketSalidaDTExcel">Exportar a Excel
+         </button>
+         </td>
+         <td id="tdTicketSalidaDTPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteTicketSalidaDocumentoDeTransporte','pdf');" type="button" id="btnTicketSalidaDTPDF">Exportar a Pdf
+         </button>
+         </td>
+         <td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgTicketSalidaDT').hide();" type="button">Salir
+         </button>
+         </td>
+         </tr>
+         </tbody></table>
+       </center>
+  	</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgRegularizacionDAMVehiculosDocumentoTransporte_title" id="dlgRegularizacionDAMVehiculosDocumentoTransporte" widgetid="dlgRegularizacionDAMVehiculosDocumentoTransporte" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgRegularizacionDAMVehiculosDocumentoTransporte_title" role="heading" level="1">Consulta Datos del Documento de Transporte</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+	<div id="divTituloRegularizacionDAMVehiculosDocumentoTransporte" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  	<div id="divSubtituloRegularizacionDAMVehiculosDocumentoTransporte" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>     
+	<div id="divSubtituloRegularizacionDAMCtaCte" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>  	
+  	<div id="divResultadoRegularizacionDAMVehiculosDocumentoTransporte" class="dijitDialogPaneContentArea" style="border: 1px solid silver;">
+	</div>
+    <div class="dijitDialogPaneActionBar">
+      <center>
+           		<table>
+					<tbody><tr>
+         <td id="tdRegularizacionDAMVehiculosExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteRegularizacionDAMVehiculosDocumentoDeTransporte','excel');" type="button" id="btnRegularizacionDAMVehiculosExcel">Exportar a Excel
+         </button>
+				</td>
+         <td id="tdRegularizacionDAMVehiculosPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteRegularizacionDAMVehiculosDocumentoDeTransporte','pdf');" type="button" id="btnRegularizacionDAMVehiculosPDF">Exportar a Pdf
+         </button>
+				</td>
+ 			<td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgRegularizacionDAMVehiculosDocumentoTransporte').hide();" type="button">Salir
+         </button>
+			</td>			
+		</tr>
+	</tbody></table>
+       </center>
+	</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgPrecintoDeEquipamiento_title" id="dlgPrecintoDeEquipamiento" widgetid="dlgPrecintoDeEquipamiento" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgPrecintoDeEquipamiento_title" role="heading" level="1">CONSULTA DE DATOS DEL MANIFIESTO DE CARGA</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+	<div style="width: 800px; height: 350px; overflow: auto;">
+	<table width="99%" class="form-table" align="center">
+        <tbody>
+           <tr>
+	           <td class="beta" align="left">
+	                <b>
+	                  Listado de Precintos del Contenedor del Manifiesto
+	                </b>
+	       		</td>
+	       </tr> 
+	       <tr>
+           		<td width="100%">
+                <table class="form-table" width="100%">
+					<tbody><tr><td><b><div id="divSubtituloPrecintoDeEquipamiento"></div></b></td></tr>
+					<tr><td><div id="divResultadoPrecintoDeEquipamiento" dojotype="dijit.layout.ContentPane" region="center" style="height:210px;width:100%;"></div></td></tr>
+				</tbody></table>
+				</td>
+		            </tr>
+    	</tbody>
+				</table>
+				<br>
+	<table align="center">
+ 		<tbody><tr>
+ 			<td>
+			<input type="button" dojotype="dijit.form.Button" id="accion44" showlabel="true" iconclass="iconSearchIcon" onclick="exportarExcelPdf('reportePrecintoContenedorManifiesto','excel');" value="Exportar a Excel">
+			</td>
+			<td>&nbsp;&nbsp;&nbsp;</td>
+			<td>
+			<input type="button" dojotype="dijit.form.Button" id="accion45" showlabel="true" iconclass="iconSearchIcon" onclick="exportarExcelPdf('reportePrecintoContenedorManifiesto','pdf');" value="Exportar a Pdf">
+			</td>
+			<td>&nbsp;&nbsp;&nbsp;</td>
+			<td>
+			<input type="button" dojotype="dijit.form.Button" id="accion99" showlabel="true" iconclass="iconSearchIcon" onclick="dijit.byId('dlgPrecintoDeEquipamiento').hide();" value="Regresar">
+			</td>    	
+    	</tr>
+	</tbody></table>
+</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgOperacionesAsociadasDT_title" id="dlgOperacionesAsociadasDT" widgetid="dlgOperacionesAsociadasDT" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgOperacionesAsociadasDT_title" role="heading" level="1">Consulta Datos del Documento de Transporte</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+	<div id="divTituloOperacionesAsociadasDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divSubtituloOperacionesAsociadasDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divResultadoOperacionesAsociadasDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+	<div class="dijitDialogPaneActionBar">
+      <center>
+         <table>
+         <tbody><tr>
+         <td id="tdOperacionesAsociadasDTExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteOperacionAsociadaDocumentoTransporte','excel');" type="button" id="btnOperacionesAsociadasDTExcel">Exportar a Excel
+         </button>
+         </td>
+         <td id="tdOperacionesAsociadasDTPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteOperacionAsociadaDocumentoTransporte','pdf');" type="button" id="btnOperacionesAsociadasDTPDF">Exportar a Pdf
+         </button>
+         </td>
+         <td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgOperacionesAsociadasDT').hide();" type="button">Salir
+         </button>
+         </td>
+         </tr>
+         </tbody></table>
+       </center>
+  	</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgContenedorOperAsocDocumentoTransporte_title" id="dlgContenedorOperAsocDocumentoTransporte" widgetid="dlgContenedorOperAsocDocumentoTransporte" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgContenedorOperAsocDocumentoTransporte_title" role="heading" level="1">Consulta de Datos del Documento de Transporte</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+	<div style="width: 1024px; height: 370px; overflow: auto;">
+	<table width="99%" class="form-table" align="center">
+        <tbody>
+           <tr>
+	           <td class="beta" align="left">
+	                <b>Consulta de las OPERACIONES ASOCIADAS</b>
+	       		</td>
+	       </tr> 
+	       <tr>
+           		<td width="100%">
+                <table class="form-table" width="100%">
+                <tbody><tr><td><b><div id="divSubtituloContenedorOperAsocDocumentoTransporte"></div></b></td></tr>
+					<tr><td><div id="divResultadoContenedorOperAsocDocumentoTransporte" dojotype="dijit.layout.ContentPane" region="center" style="height:210px;width:100%;"></div></td></tr>
+		        </tbody></table>
+				</td>
+				</tr>
+    	</tbody>
+				</table>
+	<br>
+	<table align="center">
+ 		<tbody><tr>
+ 			<td>
+			<input type="button" dojotype="dijit.form.Button" id="accion44" showlabel="true" iconclass="iconSearchIcon" onclick="exportarExcelPdf('reporteContenedorOperAsocDocumentoTransporte','excel');" value="Exportar a Excel">
+			</td>
+			<td>&nbsp;&nbsp;&nbsp;</td>
+			<td>
+			<input type="button" dojotype="dijit.form.Button" id="accion45" showlabel="true" iconclass="iconSearchIcon" onclick="exportarExcelPdf('reporteContenedorOperAsocDocumentoTransporte','pdf');" value="Exportar a Pdf">
+			</td>
+			<td>&nbsp;&nbsp;&nbsp;</td>
+			<td>
+			<input type="button" dojotype="dijit.form.Button" id="accion99" showlabel="true" iconclass="iconSearchIcon" onclick="dijit.byId('dlgContenedorOperAsocDocumentoTransporte').hide();" value="Regresar">
+			</td>    	
+    	</tr>
+	</tbody></table>
+<br>
+</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgPrecintoContenedorOperAsocDocumentoTransporte_title" id="dlgPrecintoContenedorOperAsocDocumentoTransporte" widgetid="dlgPrecintoContenedorOperAsocDocumentoTransporte" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgPrecintoContenedorOperAsocDocumentoTransporte_title" role="heading" level="1">Consulta de Datos del Documento de Transporte</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+	<div style="width: 800px; height: 380px; overflow: auto;">
+	<table width="99%" class="form-table" align="center">
+        <tbody>
+           <tr>
+	           <td class="beta" align="left">
+	                <b>Consulta de las OPERACIONES ASOCIADAS</b>
+	       		</td>
+	       </tr> 
+	       <tr>
+           		<td width="100%">
+                <table class="form-table" width="100%">
+					<tbody><tr><td><b><div id="divSubtituloPrecintoContenedorOperAsocDocumentoTransporte"></div></b></td></tr>
+					<tr><td><div id="divResultadoPrecintoContenedorOperAsocDocumentoTransporte" dojotype="dijit.layout.ContentPane" region="center" style="height:210px;width:100%;"></div></td></tr>
+		        </tbody></table>
+				</td>
+				</tr>
+    	</tbody>
+				</table>
+	<br>
+	<table align="center">
+ 		<tbody><tr>
+ 			<td>
+			<input type="button" dojotype="dijit.form.Button" id="accion44" showlabel="true" iconclass="iconSearchIcon" onclick="exportarExcelPdf('reportePrecintoContenedorOperAsocDocumentoTransporte','excel');" value="Exportar a Excel">
+			</td>
+			<td>&nbsp;&nbsp;&nbsp;</td>
+			<td>
+			<input type="button" dojotype="dijit.form.Button" id="accion45" showlabel="true" iconclass="iconSearchIcon" onclick="exportarExcelPdf('reportePrecintoContenedorOperAsocDocumentoTransporte','pdf');" value="Exportar a Pdf">
+			</td>
+			<td>&nbsp;&nbsp;&nbsp;</td>
+			<td>
+			<input type="button" dojotype="dijit.form.Button" id="accion99" showlabel="true" iconclass="iconSearchIcon" onclick="dijit.byId('dlgPrecintoContenedorOperAsocDocumentoTransporte').hide();" value="Regresar">
+			</td>    	
+    	</tr>
+	</tbody></table>
+<br>
+</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgAlmacen_title" id="dlgAlmacen" widgetid="dlgAlmacen" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgAlmacen_title" role="heading" level="1">Almacén</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+	<div style="width: 600px; height: 120px; overflow: auto;">
+	<table width="99%" class="form-table" align="center">
+        <tbody>
+           <tr>
+	           <td class="beta" align="left">
+	                <b>ALMACÉN:</b>
+	       		</td>
+	       </tr> 
+	       <tr>
+           		<td width="100%">
+                <table class="form-table" width="100%">
+                <tbody><tr>
+                <td>
+		        <table class="form-table" style="border-collapse:collapse" border="1" cellpadding="0" cellspacing="0" width="100%" id="tabCodigoAlmacen">
+		        	<tbody><tr class="beta">
+		                <th><b>RUC</b></th>
+		                <th><b>Razón Social</b></th>
+		            </tr>
+		            <tr>
+		                <td><div id="divRucAlmacen"></div></td>
+		                <td><div id="divRazonSocialAlmacen"></div></td>
+		            </tr>
+		        </tbody></table>
+				<br>
+				</td>
+				</tr>
+				</tbody></table>
+				</td>
+    		</tr>
+    	</tbody>
+	</table>
+<br>
+</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgDocumentosCargaPeligrosa_title" id="dlgDocumentosCargaPeligrosa" widgetid="dlgDocumentosCargaPeligrosa" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgDocumentosCargaPeligrosa_title" role="heading" level="1">Documentos de Transporte Asociados con Carga Peligrosa</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+	<div style="width: 600px; height: 250px; overflow: auto;">
+	<table width="99%" class="form-table" align="center">
+        <tbody>
+           <tr>
+	           <td class="beta" align="left">
+	                <b>DOCUMENTOS DE TRANSPORTE ASOCIADOS CON CARGA PELIGROSA</b>
+	       		</td>
+	       </tr> 
+	       <tr>
+           		<td width="100%">
+                <table class="form-table" width="100%">
+                <tbody><tr>
+                <td>
+				<div id="qpagesContainer11"></div>
+				<table cellpadding="0" cellspacing="5" border="0" width="100%" id="tabHeaderPage11"></table>
+		        <table class="form-table" style="border-collapse:collapse" border="1" cellpadding="0" cellspacing="0" width="100%" id="tabDocumentosCargaPeligrosa">
+		        	<tbody><tr class="beta">
+		                <th><b>Número de Detalle-Número de Documento de Transporte</b></th>
+		            </tr>
+		        </tbody></table>
+		        <div id="ver11" style="position:absolute;width:100%"></div><br>
+				<br>
+				</td>
+				</tr>
+				</tbody></table>
+				</td>
+    		</tr>
+    	</tbody>
+	</table>
+<br>
+</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgDestinacionDUA_title" id="dlgDestinacionDUA" widgetid="dlgDestinacionDUA" style="width: 608px; display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgDestinacionDUA_title" role="heading" level="1">Destinacion - Documento Unico de Aduana</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgAccionDeControl_title" id="dlgAccionDeControl" widgetid="dlgAccionDeControl" style="width: 608px; display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgAccionDeControl_title" role="heading" level="1">Accion de Control</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgDetalleDeMercanciaDT_title" id="dlgDetalleDeMercanciaDT" widgetid="dlgDetalleDeMercanciaDT" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgDetalleDeMercanciaDT_title" role="heading" level="1">Consulta Datos del Documento de Transporte</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+	<div id="divTituloDetalleDeMercanciaDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divSubtituloDetalleDeMercanciaDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divResultadoDetalleDeMercanciaDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+	<div class="dijitDialogPaneActionBar">
+      <center>
+         <table>
+         <tbody><tr>
+         <td id="tdDetalleDeMercanciaDTExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteDetalleDeMercancias','excel');" type="button" id="btnDetalleDeMercanciaDTExcel">Exportar a Excel
+         </button>
+         </td>
+         <td id="tdDetalleDeMercanciaDTPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteDetalleDeMercancias','pdf');" type="button" id="btnDetalleDeMercanciaDTPDF">Exportar a Pdf
+         </button>
+         </td>
+         <td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgDetalleDeMercanciaDT').hide();" type="button">Salir
+         </button>
+         </td>
+         </tr>
+         </tbody></table>
+       </center>
+  	</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgParticipantesDT_title" id="dlgParticipantesDT" widgetid="dlgParticipantesDT" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgParticipantesDT_title" role="heading" level="1">Consulta Datos del Documento de Transporte</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+	<div id="divTituloParticipantesDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divSubtituloParticipantesDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divResultadoParticipantesDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+	<div class="dijitDialogPaneActionBar">
+      <center>
+         <table>
+         <tbody><tr>
+         <td id="tdParticipantesDTExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteParticipantes','excel');" type="button" id="btnParticipantesDTExcel">Exportar a Excel
+         </button>
+         </td>
+         <td id="tdParticipantesDTPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteParticipantes','pdf');" type="button" id="btnParticipantesDTPDF">Exportar a Pdf
+         </button>
+         </td>
+         <td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgParticipantesDT').hide();" type="button">Salir
+         </button>
+         </td>
+         </tr>
+         </tbody></table>
+       </center>
+  	</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgContenedoresDT_title" id="dlgContenedoresDT" widgetid="dlgContenedoresDT" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgContenedoresDT_title" role="heading" level="1">Consulta Datos del Documento de Transporte</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+	<div id="divTituloContenedoresDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divSubtituloContenedoresDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divResultadoContenedoresDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+	<div class="dijitDialogPaneActionBar">
+      <center>
+         <table>
+         <tbody><tr>
+         <td id="tdContenedoresDTExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteContenedores','excel');" type="button" id="btnContenedoresDTExcel">Exportar a Excel
+         </button>
+         </td>
+         <td id="tdContenedoresDTPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteContenedores','pdf');" type="button" id="btnContenedoresDTPDF">Exportar a Pdf
+         </button>
+         </td>
+         <td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgContenedoresDT').hide();" type="button">Salir
+         </button>
+         </td>
+         </tr>
+         </tbody></table>
+       </center>
+  	</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgCargaPeligrosaDT_title" id="dlgCargaPeligrosaDT" widgetid="dlgCargaPeligrosaDT" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgCargaPeligrosaDT_title" role="heading" level="1">Consulta Datos del Documento de Transporte</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+  <div id="divTituloCargaPeligrosaDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divSubtituloCargaPeligrosaDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divResultadoCargaPeligrosaDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+	<div class="dijitDialogPaneActionBar">
+      <center>
+         <table>
+         <tbody><tr>
+         <td id="tdCargaPeligrosaDTExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteCargaPeligrosa','excel');" type="button" id="btnCargaPeligrosaDTExcel">Exportar a Excel
+         </button>
+         </td>
+         <td id="tdCargaPeligrosaDTPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteCargaPeligrosa','pdf');" type="button" id="btnCargaPeligrosaDTPDF">Exportar a Pdf
+         </button>
+         </td>
+         <td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgCargaPeligrosaDT').hide();" type="button">Salir
+         </button>
+         </td>
+         </tr>
+         </tbody></table>
+       </center>
+  	</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgFletesDT_title" id="dlgFletesDT" widgetid="dlgFletesDT" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgFletesDT_title" role="heading" level="1">Consulta Datos del Documento de Transporte</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+  <div id="divTituloFletesDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divSubtituloFletesDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divResultadoFletesDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+	<div class="dijitDialogPaneActionBar">
+      <center>
+         <table>
+         <tbody><tr>
+         <td id="tdFletesDTExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteFletes','excel');" type="button" id="btnFletesDTExcel">Exportar a Excel
+         </button>
+         </td>
+         <td id="tdFletesDTPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteFletes','pdf');" type="button" id="btnFletesDTPDF">Exportar a Pdf
+         </button>
+         </td>
+         <td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgFletesDT').hide();" type="button">Salir
+         </button>
+         </td>
+         </tr>
+         </tbody></table>
+       </center>
+  	</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgPuertosIntermediosDT_title" id="dlgPuertosIntermediosDT" widgetid="dlgPuertosIntermediosDT" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgPuertosIntermediosDT_title" role="heading" level="1">Consulta Datos del Documento de Transporte</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+	<div id="divTituloPuertosIntermediosDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divSubtituloPuertosIntermediosDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divResultadoPuertosIntermediosDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+	<div class="dijitDialogPaneActionBar">
+      <center>
+         <table>
+         <tbody><tr>
+         <td id="tdPuertosIntermediosDTExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reportePuertosIntermedios','excel');" type="button" id="btnPuertosIntermediosDTExcel">Exportar a Excel
+         </button>
+         </td>
+         <td id="tdPuertosIntermediosDTPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reportePuertosIntermedios','pdf');" type="button" id="btnPuertosIntermediosDTPDF">Exportar a Pdf
+         </button>
+         </td>
+         <td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgPuertosIntermediosDT').hide();" type="button">Salir
+         </button>
+         </td>
+         </tr>
+         </tbody></table>
+       </center>
+  	</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgDamTransbordoDT_title" id="dlgDamTransbordoDT" widgetid="dlgDamTransbordoDT" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgDamTransbordoDT_title" role="heading" level="1">Consulta Datos del Documento de Transporte</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+	<div id="divTituloDamTransbordoDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divSubtituloDamTransbordoDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  <div id="divResultadoDamTransbordoDT" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+	<div class="dijitDialogPaneActionBar">
+      <center>
+         <table>
+         <tbody><tr>
+         <td id="tdDamTransbordoDTExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteDamTransbordo','excel');" type="button" id="btnDamTransbordoDTExcel">Exportar a Excel
+         </button>
+         </td>
+         <td id="tdDamTransbordoDTPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteDamTransbordo','pdf');" type="button" id="btnDamTransbordoDTPDF">Exportar a Pdf
+         </button>
+         </td>
+         <td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgDamTransbordoDT').hide();" type="button">Salir
+         </button>
+         </td>
+         </tr>
+         </tbody></table>
+       </center>
+  	</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgContenedoresManifiesto_title" id="dlgContenedoresManifiesto" widgetid="dlgContenedoresManifiesto" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgContenedoresManifiesto_title" role="heading" level="1">Consulta de los CONTENEDORES</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+  	<div id="divSubtituloContenedoresManifiesto" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  	<div id="divResultadoContenedoresManifiesto" class="dijitDialogPaneContentArea" style="border: 1px solid silver;">
+	</div>
+    <div class="dijitDialogPaneActionBar">
+      <center>
+                <table>
+					<tbody><tr>
+         <td id="tdContenedoresManifiestoExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteContenedoresManifiesto','excel');" type="button" id="btnContenedoresManifiestoExcel">Exportar a Excel
+         </button>
+				</td>
+         <td id="tdContenedoresManifiestoPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteContenedoresManifiesto','pdf');" type="button" id="btnContenedoresManifiestoPDF">Exportar a Pdf
+         </button>
+			</td>
+			<td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgContenedoresManifiesto').hide();" type="button">Salir
+         </button>
+			</td>
+		</tr>
+	</tbody></table>
+       </center>
+  	</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgPuertosIntermediosManifiesto_title" id="dlgPuertosIntermediosManifiesto" widgetid="dlgPuertosIntermediosManifiesto" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgPuertosIntermediosManifiesto_title" role="heading" level="1">Consulta de Puertos Intermedios</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+  	<div id="divSubtituloPuertosIntermediosManifiesto" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  	<div id="divResultadoPuertosIntermediosManifiesto" class="dijitDialogPaneContentArea" style="border: 1px solid silver;">
+	</div>
+    <div class="dijitDialogPaneActionBar">
+      <center>
+         <table>
+         <tbody><tr>
+         <td id="tdPuertosIntermediosManifiestoExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reportePuertosIntermediosManifiesto','excel');" type="button" id="btnPuertosIntermediosManifiestoExcel">Exportar a Excel
+         </button>
+         </td>
+         <td id="tdPuertosIntermediosManifiestoPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reportePuertosIntermediosManifiesto','pdf');" type="button" id="btnPuertosIntermediosManifiestoPDF">Exportar a Pdf
+         </button>
+         </td>
+         <td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgPuertosIntermediosManifiesto').hide();" type="button">Salir
+         </button>
+         </td>
+         </tr>
+         </tbody></table>
+       </center>
+  	</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgCargaPeligrosaManifiesto_title" id="dlgCargaPeligrosaManifiesto" widgetid="dlgCargaPeligrosaManifiesto" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgCargaPeligrosaManifiesto_title" role="heading" level="1">consulta de CARGA PELIGROSA</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+  	<div id="divSubtituloCargaPeligrosaManifiesto" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  	<div id="divResultadoCargaPeligrosaManifiesto" class="dijitDialogPaneContentArea" style="border: 1px solid silver;">
+	</div>
+    <div class="dijitDialogPaneActionBar">
+      <center>
+         <table>
+         <tbody><tr>
+         <td id="tdCargaPeligrosaManifiestoExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteCargaPeligrosaManifiesto','excel');" type="button" id="btndlgCargaPeligrosaManifiestoExcel">Exportar a Excel
+         </button>
+         </td>
+         <td id="tdCargaPeligrosaManifiestoPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteCargaPeligrosaManifiesto','pdf');" type="button" id="btndlgCargaPeligrosaManifiestoPDF">Exportar a Pdf
+         </button>
+         </td>
+         <td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgCargaPeligrosaManifiesto').hide();" type="button">Salir
+         </button>
+         </td>
+         </tr>
+         </tbody></table>
+       </center>
+  	</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgVehiculosManifiesto_title" id="dlgVehiculosManifiesto" widgetid="dlgVehiculosManifiesto" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgVehiculosManifiesto_title" role="heading" level="1">Consulta de Vehiculos</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+  	<div id="divSubtituloVehiculosManifiesto" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  	<div id="divResultadoVehiculosManifiesto" class="dijitDialogPaneContentArea" style="border: 1px solid silver;">
+	</div>
+    <div class="dijitDialogPaneActionBar">
+      <center>
+         <table>
+         <tbody><tr>
+         <td id="tdVehiculosManifiestoExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteVehiculosManifiesto','excel');" type="button" id="btnVehiculosManifiestoExcel">Exportar a Excel
+         </button>
+         </td>
+         <td id="tdVehiculosManifiestoPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteVehiculosManifiesto','pdf');" type="button" id="btnVehiculosManifiestoPDF">Exportar a Pdf
+         </button>
+         </td>
+         <td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgVehiculosManifiesto').hide();" type="button">Salir
+         </button>
+         </td>
+         </tr>
+         </tbody></table>
+       </center>
+  	</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgDamTransbordoManifiesto_title" id="dlgDamTransbordoManifiesto" widgetid="dlgDamTransbordoManifiesto" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgDamTransbordoManifiesto_title" role="heading" level="1">Consulta de las DAM de SOLICITUD DE TRANSBORDO</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+  	<div id="divSubtituloDamTransbordoManifiesto" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  	<div id="divResultadoDamTransbordoManifiesto" class="dijitDialogPaneContentArea" style="border: 1px solid silver;">
+	</div>
+    <div class="dijitDialogPaneActionBar">
+      <center>
+         <table>
+         <tbody><tr>
+         <td id="tdDamTransbordoManifiestoExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteDamTransbordoManifiesto','excel');" type="button" id="btnDamManifiestoExcel">Exportar a Excel
+         </button>
+         </td>
+         <td id="tdDamTransbordoManifiestoPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteDamTransbordoManifiesto','pdf');" type="button" id="btnDamManifiestoPDF">Exportar a Pdf
+         </button>
+         </td>
+         <td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgDamTransbordoManifiesto').hide();" type="button">Salir
+         </button>
+         </td>
+         </tr>
+         </tbody></table>
+       </center>
+  	</div>
+</div>
+</div><div class="dijitDialog" role="dialog" aria-labelledby="dlgDTContenedor_title" id="dlgDTContenedor" widgetid="dlgDTContenedor" style="display: none; position: absolute;">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar">
+		<span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="dlgDTContenedor_title" role="heading" level="1">Listado de Documentos de Transporte asociados al Contenedor</span>
+		<span data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="Cancelar" role="button" tabindex="0">
+			<span data-dojo-attach-point="closeText" class="closeText" title="Cancelar">x</span>
+		</span>
+	</div>
+	<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent">
+  	<div id="divSubtituloDTContenedor" class="dijitDialogPaneContentArea" style="border: 1px solid silver;"></div>
+  	<div id="divResultadoDTContenedor" class="dijitDialogPaneContentArea" style="border: 1px solid silver;">
+	</div>
+    <div class="dijitDialogPaneActionBar">
+      <center>
+         <table>
+         <tbody><tr>
+         <td id="tdDTContenedorExcel" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteDTContenedor','excel');" type="button" id="btnDTContenedorExcel">Exportar a Excel
+         </button>
+         </td>
+         <td id="tdDTContenedorPDF" style="display:none;">
+         <button data-dojo-type="dojox.form.BusyButton" busylabel="Generando reporte..." iconclass="grabarIco" onclick="exportarExcelPdf('reporteDTContenedor','pdf');" type="button" id="btnDTContenedorPDF">Exportar a Pdf
+         </button>
+         </td>
+         <td>
+         <button data-dojo-type="dijit.form.Button" onclick="dijit.byId('dlgDTContenedor').hide();" type="button">Salir
+         </button>
+         </td>
+         </tr>
+         </tbody></table>
+       </center>
+  	</div>
+</div>
+</div><iframe src="javascript:'&lt;html&gt;&lt;head&gt;&lt;script&gt;if(&quot;loadFirebugConsole&quot; in window){window.loadFirebugConsole();}&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;'" style="position: absolute; width: 5em; height: 10em; top: -10000px; display: none;"></iframe></body>
