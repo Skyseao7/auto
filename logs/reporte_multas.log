@@ -1200,3 +1200,14 @@ task: <Task cancelling name='Task-175' coro=<Locator.wait_for() done, defined at
 2026-08-07 16:24:13,788 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 32908 (fila grilla 8, 1 documento(s)).
 2026-08-07 16:24:19,746 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 3 documento(s).
 2026-08-07 16:24:19,803 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 32908 procesada (1 documento(s)).
+2026-08-07 16:24:49,932 | WARNING | sunat_multas.sunat_client | No se pudo volver con el botón atrás; re-consultando la grilla.
+2026-08-07 16:24:54,517 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 16:24:54,824 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 16:25:07,345 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 16:25:07,467 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20511032114
+2026-08-07 16:25:14,434 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 16:25:22,450 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 16:25:23,737 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 15
+2026-08-07 16:25:23,738 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 33752 (fila grilla 9, 1 documento(s)).
+2026-08-07 16:25:29,336 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 16:25:29,399 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 33752 procesada (1 documento(s)).
