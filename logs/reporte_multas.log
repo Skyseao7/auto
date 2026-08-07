@@ -673,3 +673,22 @@ playwright._impl._errors.TimeoutError: No se encontró selector: button:has-text
 2026-08-06 19:03:35,370 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'IMPO118-Transmisiones' en output\PRADIVO WORLD COMPANY 1096.xlsx: 8
 2026-08-06 19:09:22,039 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'IMPO118-Transmisiones' en output\PRADIVO WORLD COMPANY 1096.xlsx: 12
 2026-08-06 19:13:29,469 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'IMPO118-Transmisiones' en output\PRADIVO WORLD COMPANY 1096.xlsx: 12
+2026-08-06 19:14:44,994 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-06 19:14:45,057 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-06 19:14:45,057 | INFO | sunat_multas.cli | Procesando EMO LOGISTICS PERU S.A.C. | RUC 20604081964
+2026-08-06 19:14:46,097 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20604081964
+2026-08-06 19:14:47,275 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20604081964 | Usuario EVERAV20 | Clave *********
+2026-08-06 19:14:59,680 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-06 19:14:59,837 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-06 19:15:06,874 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-06 19:15:11,372 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-06 19:15:11,634 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-06 19:15:24,114 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-06 19:15:24,216 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-06 19:15:31,061 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-06 19:15:39,066 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-06 19:15:40,345 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 16
+2026-08-06 19:15:54,775 | WARNING | sunat_multas.sunat_client | No se pudo cerrar sesión desde el enlace configurado.
+2026-08-06 19:15:55,161 | INFO | sunat_multas.cli | Registros insertados para EMO LOGISTICS PERU S.A.C.: 16
+2026-08-06 19:15:55,161 | INFO | sunat_multas.cli | Proceso finalizado. Correctas: 1 | Incidencias: 0
+2026-08-06 19:22:02,286 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'IMPO118-Transmisiones' en output\EMO LOGISTICS PERU S.A.C..xlsx: 48

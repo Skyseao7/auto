@@ -160,11 +160,12 @@ def copy_manifiestos_to_impo118(workbook, source_title: str = MANIFEST_SOURCE_SH
     destination = workbook[MANIFEST_DEST_SHEET]
     copied = 0
 
-    recompute_mappings = (
+    mappings = (
         (DESCONS_SOURCE_COLUMN, DESCONS_DEST_COLUMN, True),
+        (CARGA_SOURCE_COLUMN, CARGA_DEST_COLUMN, False),
         (LLEGADA_SOURCE_COLUMN, LLEGADA_DEST_COLUMN, False),
     )
-    for src_col, dst_col, transform in recompute_mappings:
+    for src_col, dst_col, transform in mappings:
         values: list[object] = []
         for row in range(2, source.max_row + 1):
             raw = source.cell(row, src_col).value
@@ -181,20 +182,6 @@ def copy_manifiestos_to_impo118(workbook, source_title: str = MANIFEST_SOURCE_SH
         for index, value in enumerate(values):
             destination.cell(2 + index, dst_col, value)
         copied += len(values)
-
-    existing = _column_values(destination, CARGA_DEST_COLUMN)
-    target = _next_empty_column_row(destination, CARGA_DEST_COLUMN)
-    for row in range(2, source.max_row + 1):
-        raw = source.cell(row, CARGA_SOURCE_COLUMN).value
-        if raw is None or not str(raw).strip():
-            continue
-        key = str(raw).strip()
-        if key in existing:
-            continue
-        destination.cell(target, CARGA_DEST_COLUMN, raw)
-        existing.add(key)
-        target += 1
-        copied += 1
 
     _number_impo118_rows(destination)
     return copied
@@ -220,15 +207,6 @@ def _ultimo_segmento(value: str) -> str:
     return text
 
 
-def _column_values(sheet, column: int) -> set[str]:
-    values: set[str] = set()
-    for row in range(2, sheet.max_row + 1):
-        value = sheet.cell(row, column).value
-        if value is not None and str(value).strip():
-            values.add(str(value).strip())
-    return values
-
-
 def _clear_column(sheet, column: int) -> None:
     for row in range(2, sheet.max_row + 1):
         sheet.cell(row, column).value = None
@@ -246,14 +224,6 @@ def process_manifiestos_excel(
     copied = copy_manifiestos_to_impo118(workbook, source_title)
     workbook.save(workbook_path)
     return copied
-
-
-def _next_empty_column_row(sheet, column: int) -> int:
-    for row in range(2, sheet.max_row + 1):
-        value = sheet.cell(row, column).value
-        if value is None or str(value).strip() == "":
-            return row
-    return max(2, sheet.max_row + 1)
 
 
 def classify_sheet(record: ManifestRecord) -> str:
