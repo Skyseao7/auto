@@ -83,25 +83,39 @@ def main() -> None:
     LOGGER.info("Proceso finalizado. Correctas: %s | Incidencias: %s", successful, incidents)
 
 
-def run_consulta(config, companies, start_date, end_date) -> None:
+def run_consulta(config, companies, start_date, end_date) -> set[str]:
     client = SunatClient(config.sunat)
+    with_data: set[str] = set()
     for company in companies:
         LOGGER.info("Consultando SUNAT para %s | RUC %s", company.name, company.ruc)
-        output_path = create_company_workbook(
-            config.template_path,
-            config.output_dir,
-            company,
-            config.keep_existing_outputs,
-        )
-        rows = client.fetch_records(company, start_date, end_date)
-        count = escribir_hoja_transmisiones(output_path, rows)
-        LOGGER.info("Hoja %s actualizada para %s: %s transmisiones.", MANIFEST_SOURCE_SHEET, company.name, count)
+        try:
+            output_path = create_company_workbook(
+                config.template_path,
+                config.output_dir,
+                company,
+                config.keep_existing_outputs,
+            )
+            rows = client.fetch_records(company, start_date, end_date)
+            count = escribir_hoja_transmisiones(output_path, rows)
+            LOGGER.info("Hoja %s actualizada para %s: %s transmisiones.", MANIFEST_SOURCE_SHEET, company.name, count)
+            with_data.add(company.ruc)
+        except NoRecordsFound as exc:
+            record_incident(config.log_dir, company, None, IncidentType.NO_RECORDS, str(exc))
+        except AuthenticationError as exc:
+            record_incident(config.log_dir, company, None, IncidentType.AUTH, str(exc))
+        except (NavigationError, ExtractionError) as exc:
+            record_incident(config.log_dir, company, None, IncidentType.SCRAPING, str(exc))
+        except Exception as exc:
+            LOGGER.exception("Error no controlado consultando %s", company.name)
+            record_incident(config.log_dir, company, None, IncidentType.UNKNOWN, str(exc))
+    return with_data
 
 
 def run_todo(config, companies, start_date, end_date) -> None:
-    run_consulta(config, companies, start_date, end_date)
-    run_excel_only(config, companies, None, None)
-    for company in companies:
+    with_data = run_consulta(config, companies, start_date, end_date)
+    companies_with_data = [company for company in companies if company.ruc in with_data]
+    run_excel_only(config, companies_with_data, None, None)
+    for company in companies_with_data:
         run_detalle(config, [company], start_date, end_date)
 
 
@@ -113,7 +127,11 @@ def run_detalle(config, companies, start_date, end_date) -> None:
     if not workbook_path.exists():
         raise ValueError(f"No existe el archivo: {workbook_path}")
 
-    codes = read_transmisiones(workbook_path)
+    try:
+        codes = read_transmisiones(workbook_path)
+    except ValueError as exc:
+        LOGGER.warning("No hay transmisiones para %s: %s", company.name, exc)
+        return
     groups = _build_groups(codes)
     log_path = config.output_dir / f"{safe_filename(company.name)}_procesados.json"
     processed = load_procesados(log_path)
