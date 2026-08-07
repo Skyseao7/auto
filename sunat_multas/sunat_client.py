@@ -117,9 +117,9 @@ class SunatClient:
                 self._login(page, company)
                 self._navigate_to_query(page)
                 records = self._query_and_extract(page, company.ruc, start_date, end_date)
-                self._logout(page)
                 return records
             finally:
+                self._logout(page)
                 context.close()
                 browser.close()
 
@@ -362,8 +362,8 @@ class SunatClient:
                 self._query_and_extract(page, company.ruc, start_date, end_date)
                 for group in groups:
                     self._procesar_grupo_detalle(page, company.ruc, start_date, end_date, group, on_group)
-                self._logout(page)
             finally:
+                self._logout(page)
                 context.close()
                 browser.close()
 
@@ -617,6 +617,7 @@ class SunatClient:
     def _logout(self, page: Page) -> None:
         try:
             self._click_first_available(page, self.config.selectors.logout_link, timeout_ms=5000)
+            LOGGER.info("Sesión SUNAT cerrada con el botón Salir.")
         except (PlaywrightError, PlaywrightTimeoutError):
             LOGGER.warning("No se pudo cerrar sesión desde el enlace configurado.")
 
