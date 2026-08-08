@@ -11,4 +11,4 @@ __pycache__/
 logs/
 html/
 logs/reporte_multas.log
-lista_reporte_de_multas_sector_b.xlsx
+logs/incidentes.csv

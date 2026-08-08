@@ -8,6 +8,7 @@ from pathlib import Path
 from openpyxl import load_workbook
 
 from .models import Company, ManifestRecord
+from .reportes import TipoReporte
 
 
 REQUIRED_LIST_COLUMNS = {"ITEM", "NOMBRE", "RUC", "USUARIO", "CLAVE"}
@@ -151,34 +152,35 @@ def append_records(workbook_path: Path, records: list[ManifestRecord]) -> int:
     return inserted
 
 
-def _crear_hoja_transmisiones(workbook, rows: list[list[str]]) -> None:
-    if MANIFEST_DEST_SHEET not in workbook.sheetnames:
-        raise ValueError(f"La plantilla no contiene la hoja {MANIFEST_DEST_SHEET}")
-    if MANIFEST_SOURCE_SHEET in workbook.sheetnames:
-        del workbook[MANIFEST_SOURCE_SHEET]
-    sheet = workbook.create_sheet(title=MANIFEST_SOURCE_SHEET)
-    sheet.append(MANIFEST_SHEET_COLUMNS)
+def _crear_hoja_transmisiones(workbook, rows: list[list[str]], tipo: TipoReporte) -> None:
+    if tipo.hoja_destino not in workbook.sheetnames:
+        raise ValueError(f"La plantilla no contiene la hoja {tipo.hoja_destino}")
+    if tipo.hoja_transmisiones in workbook.sheetnames:
+        del workbook[tipo.hoja_transmisiones]
+    sheet = workbook.create_sheet(title=tipo.hoja_transmisiones)
+    sheet.append(list(tipo.cabeceras_transmisiones))
     for row in rows:
         sheet.append((row + [None] * 9)[:9])
 
 
-def escribir_hoja_transmisiones(workbook_path: Path, rows: list[list[str]]) -> int:
+def escribir_hoja_transmisiones(workbook_path: Path, rows: list[list[str]], tipo: TipoReporte) -> int:
     workbook = load_workbook(workbook_path)
-    _crear_hoja_transmisiones(workbook, rows)
+    _crear_hoja_transmisiones(workbook, rows, tipo)
     workbook.save(workbook_path)
     return len(rows)
 
 
-def append_manifest_sheet(workbook_path: Path, rows: list[list[str]]) -> int:
+def append_manifest_sheet(workbook_path: Path, rows: list[list[str]], tipo: TipoReporte) -> int:
     workbook = load_workbook(workbook_path)
-    _crear_hoja_transmisiones(workbook, rows)
-    copy_manifiestos_to_impo118(workbook)
+    _crear_hoja_transmisiones(workbook, rows, tipo)
+    copy_manifiestos_to_impo118(workbook, tipo)
     workbook.save(workbook_path)
     return len(rows)
 
 
-def read_transmisiones(workbook_path: Path, source_title: str = MANIFEST_SOURCE_SHEET) -> list[str]:
+def read_transmisiones(workbook_path: Path, tipo: TipoReporte, source_title: str | None = None) -> list[str]:
     workbook = load_workbook(workbook_path, data_only=True)
+    source_title = source_title or tipo.hoja_transmisiones
     if source_title not in workbook.sheetnames:
         raise ValueError(f"No existe la hoja {source_title!r} en {workbook_path}")
     sheet = workbook[source_title]
@@ -215,26 +217,28 @@ def cargar_mapa_puertos(ruta_json: Path) -> dict[str, str]:
 def aplicar_detalle_filas(
     workbook,
     updates: list[tuple[int, dict]],
+    tipo: TipoReporte,
     mapa_puertos: dict[str, str] | None = None,
 ) -> None:
-    sheet = workbook[MANIFEST_DEST_SHEET]
+    sheet = workbook[tipo.hoja_destino]
+    columnas = dict(tipo.columnas_detalle)
     for fila, datos in updates:
-        for key, column in DETALLE_COLUMNS.items():
+        for key, column in columnas.items():
             value = datos.get(key)
             if value:
                 sheet.cell(fila, column, value)
         if mapa_puertos:
-            codigo_puerto = sheet.cell(fila, DETALLE_COLUMNS["puerto_embarque"]).value
+            codigo_puerto = sheet.cell(fila, columnas["puerto_embarque"]).value
             if codigo_puerto:
                 codigo = str(codigo_puerto).strip()
                 if codigo in mapa_puertos:
                     sheet.cell(fila, PUERTO_COLUMN, mapa_puertos[codigo])
         fechas = [
-            sheet.cell(fila, DETALLE_COLUMNS[key]).value
+            sheet.cell(fila, columnas[key]).value
             for key in ("fecha_hijo", "fecha_master", "fecha_info")
         ]
-        tipo = "PREVIO" if all(_tiene_fecha(fecha) for fecha in fechas) else ""
-        sheet.cell(fila, TIPO_NUMERACION_COLUMN, tipo)
+        tipo_num = "PREVIO" if all(_tiene_fecha(fecha) for fecha in fechas) else ""
+        sheet.cell(fila, tipo.columna_tipo_numeracion, tipo_num)
 
 
 def load_procesados(path: Path) -> set[str]:
@@ -254,16 +258,12 @@ def save_procesados(path: Path, codes: set[str]) -> None:
     )
 
 
-def copy_manifiestos_to_impo118(workbook, source_title: str = MANIFEST_SOURCE_SHEET) -> int:
-    source = workbook[source_title]
-    destination = workbook[MANIFEST_DEST_SHEET]
+def copy_manifiestos_to_impo118(workbook, tipo: TipoReporte, source_title: str | None = None) -> int:
+    source = workbook[source_title or tipo.hoja_transmisiones]
+    destination = workbook[tipo.hoja_destino]
     copied = 0
 
-    mappings = (
-        (DESCONS_SOURCE_COLUMN, DESCONS_DEST_COLUMN, True),
-        (CARGA_SOURCE_COLUMN, CARGA_DEST_COLUMN, False),
-        (LLEGADA_SOURCE_COLUMN, LLEGADA_DEST_COLUMN, False),
-    )
+    mappings = tipo.mapeo_copia
     for src_col, dst_col, transform in mappings:
         values: list[object] = []
         for row in range(2, source.max_row + 1):
@@ -282,12 +282,12 @@ def copy_manifiestos_to_impo118(workbook, source_title: str = MANIFEST_SOURCE_SH
             destination.cell(2 + index, dst_col, value)
         copied += len(values)
 
-    _number_impo118_rows(destination)
+    _number_destino_rows(destination, tipo)
     return copied
 
 
-def _number_impo118_rows(destination) -> None:
-    data_columns = (CARGA_DEST_COLUMN, DESCONS_DEST_COLUMN, LLEGADA_DEST_COLUMN)
+def _number_destino_rows(destination, tipo: TipoReporte) -> None:
+    data_columns = tuple(dst_col for _, dst_col, _ in tipo.mapeo_copia)
     count = 0
     for row in range(2, destination.max_row + 1):
         if any(destination.cell(row, col).value not in (None, "") for col in data_columns):
@@ -313,14 +313,16 @@ def _clear_column(sheet, column: int) -> None:
 
 def process_manifiestos_excel(
     workbook_path: Path,
-    source_title: str = MANIFEST_SOURCE_SHEET,
+    tipo: TipoReporte,
+    source_title: str | None = None,
 ) -> int:
     workbook = load_workbook(workbook_path)
+    source_title = source_title or tipo.hoja_transmisiones
     if source_title not in workbook.sheetnames:
         raise ValueError(f"No existe la hoja {source_title!r} en {workbook_path}")
-    if MANIFEST_DEST_SHEET not in workbook.sheetnames:
-        raise ValueError(f"No existe la hoja {MANIFEST_DEST_SHEET} en {workbook_path}")
-    copied = copy_manifiestos_to_impo118(workbook, source_title)
+    if tipo.hoja_destino not in workbook.sheetnames:
+        raise ValueError(f"No existe la hoja {tipo.hoja_destino} en {workbook_path}")
+    copied = copy_manifiestos_to_impo118(workbook, tipo, source_title)
     workbook.save(workbook_path)
     return copied
 

@@ -19,6 +19,7 @@ except ModuleNotFoundError:
 from .config import SunatConfig, SunatSelectors
 from .errors import AuthenticationError, ExtractionError, NavigationError, NoRecordsFound
 from .models import Company, ManifestRecord
+from .reportes import TIPOS, TipoReporte
 
 
 LOGGER = logging.getLogger(__name__)
@@ -58,8 +59,9 @@ MENU_TREE = (
 
 
 class SunatClient:
-    def __init__(self, config: SunatConfig) -> None:
+    def __init__(self, config: SunatConfig, tipo: TipoReporte | None = None) -> None:
         self.config = config
+        self.tipo = tipo or TIPOS["impo118"]
 
     def login_only(self, company: Company, pause_seconds: int = 20) -> None:
         if sync_playwright is None:
@@ -96,6 +98,7 @@ class SunatClient:
                 self._navigate_to_query(page)
                 self._select_fecha_numeracion_desconsolidado(page)
                 self._fill_date_range(page, start_date, end_date)
+                self._aplicar_pasos_formulario(page)
                 self._fill_agente_carga_ruc(page, company.ruc)
                 LOGGER.info("Consulta Manifiesto Desconsolidado abierta. Manteniendo ventana %s segundos.", pause_seconds)
                 sleep(pause_seconds)
@@ -286,6 +289,7 @@ class SunatClient:
         selectors = self.config.selectors
         self._select_fecha_numeracion_desconsolidado(page)
         self._fill_date_range(page, start_date, end_date)
+        self._aplicar_pasos_formulario(page)
         self._fill_agente_carga_ruc(page, ruc)
         self._click_consultar(page)
         try:
@@ -425,7 +429,10 @@ class SunatClient:
         self._esperar_grid_documentos(page, timeout_ms=15000)
         sleep(1)
         listado = self._extraer_listado_documentos(page)
-        contenedores = self._extraer_listado_contenedores(page)
+        if self.tipo.tiene_contenedores:
+            contenedores = self._extraer_listado_contenedores(page)
+        else:
+            contenedores = []
         data_list: list[dict] = []
         for offset in range(group["count"]):
             if offset < len(listado):
@@ -438,8 +445,9 @@ class SunatClient:
                     group["count"],
                 )
                 doc = {}
-            tipo_contenedor = contenedores[offset]["tipo_contenedor"] if offset < len(contenedores) else ""
-            doc["cnt"] = "SI" if "CONTENEDOR" in tipo_contenedor.upper() else "NO"
+            if self.tipo.tiene_contenedores:
+                tipo_contenedor = contenedores[offset]["tipo_contenedor"] if offset < len(contenedores) else ""
+                doc["cnt"] = "SI" if "CONTENEDOR" in tipo_contenedor.upper() else "NO"
             data_list.append(doc)
         on_group(group, data_list)
         self._regresar_a_grilla(page, ruc, start_date, end_date)
@@ -475,11 +483,11 @@ class SunatClient:
             return ""
         for scope in _page_scopes(active):
             try:
-                fila = scope.locator("tr", has_text="Manifiesto Desconsolidado").first
+                fila = scope.locator("tr", has_text=self.tipo.etiqueta_manifiesto).first
                 celdas = fila.locator("td")
                 for idx in range(celdas.count()):
                     texto = _clean_text(celdas.nth(idx).inner_text())
-                    if re.fullmatch(r"\d{2}-\d{3}-\d+-\d{4}-\d+", texto):
+                    if re.fullmatch(self.tipo.codigo_regex, texto):
                         return texto
             except (PlaywrightError, PlaywrightTimeoutError):
                 continue
@@ -688,6 +696,46 @@ class SunatClient:
         locator = self._find_visible_quick(page, selector_list, timeout_ms=8000)
         locator.fill(value)
         return locator
+
+    def _aplicar_pasos_formulario(self, page: Page) -> None:
+        for paso in self.tipo.pasos_formulario:
+            self._seleccionar_combobox(page, paso.input_id, paso.texto)
+
+    def _seleccionar_combobox(self, page: Page, input_id: str, texto: str, timeout_ms: int = 12000) -> None:
+        deadline = _monotonic_ms() + timeout_ms
+        last_error: Exception | None = None
+        while _monotonic_ms() < deadline:
+            try:
+                active = _active_page(page)
+            except PlaywrightError:
+                return
+            for scope in _page_scopes(active):
+                try:
+                    combo = scope.locator(f"#{input_id}").first
+                    combo.click(timeout=2000)
+                    combo.fill("")
+                    combo.press_sequentially(texto, delay=60)
+                    sleep(0.4)
+                    items = scope.locator(f"#{input_id}_popup .dijitMenuItem:visible")
+                    if items.count() == 0:
+                        items = scope.locator(".dijitMenuItem:visible")
+                    target = None
+                    for index in range(items.count()):
+                        item_text = _clean_text(items.nth(index).inner_text())
+                        if texto.casefold() in item_text.casefold():
+                            target = items.nth(index)
+                            break
+                    if target is None and items.count() == 1:
+                        target = items.first
+                    if target is not None:
+                        target.click(timeout=3000)
+                        if texto.casefold() in combo.input_value().casefold():
+                            LOGGER.info("Combobox %s seleccionado: %s", input_id, texto)
+                            return
+                except (PlaywrightError, PlaywrightTimeoutError) as exc:
+                    last_error = exc
+            sleep(0.3)
+        raise PlaywrightTimeoutError(f"No se pudo seleccionar el combobox {input_id} = {texto}") from last_error
 
     def _find_visible_quick(self, page: Page, selector_list: str, timeout_ms: int) -> Any:
         """Busca el primer selector visible con sondeo rápido, sin bloquear por scope."""

@@ -11,7 +11,6 @@ from openpyxl import load_workbook
 from .config import load_config
 from .errors import AuthenticationError, ExtractionError, NavigationError, NoRecordsFound
 from .excel_io import (
-    MANIFEST_SOURCE_SHEET,
     aplicar_detalle_filas,
     append_manifest_sheet,
     cargar_mapa_puertos,
@@ -26,6 +25,7 @@ from .excel_io import (
 )
 from .logging_setup import append_incident, configure_logging
 from .models import CompanyResult, IncidentType
+from .reportes import obtener_tipo
 from .sunat_client import SunatClient
 
 
@@ -36,6 +36,7 @@ def main() -> None:
     args = parse_args()
     config = load_config(args.config)
     configure_logging(config.log_dir)
+    tipo = obtener_tipo(args.reporte)
 
     companies = filter_companies(
         read_companies(config.list_path),
@@ -48,7 +49,7 @@ def main() -> None:
         raise ValueError("No se encontró ninguna empresa con los filtros indicados.")
 
     if args.excel or args.solo_excel:
-        run_excel_only(config, companies, args.archivo, args.hoja)
+        run_excel_only(config, companies, args.archivo, args.hoja, tipo)
         return
 
     if args.cerrar_sesiones:
@@ -57,7 +58,7 @@ def main() -> None:
 
     start_date, end_date = resolve_date_range(args)
 
-    client = SunatClient(config.sunat)
+    client = SunatClient(config.sunat, tipo)
     if args.solo_login or args.solo_navegar:
         if len(companies) != 1:
             raise ValueError("Para esta prueba usa --item, --ruc o --nombre hasta seleccionar una sola empresa.")
@@ -70,13 +71,13 @@ def main() -> None:
         return
 
     if args.consulta:
-        run_consulta(config, companies, start_date, end_date)
+        run_consulta(config, companies, start_date, end_date, tipo)
         return
     if args.detalle:
-        run_detalle(config, companies, start_date, end_date)
+        run_detalle(config, companies, start_date, end_date, tipo)
         return
     if args.todo:
-        run_todo(config, companies, start_date, end_date)
+        run_todo(config, companies, start_date, end_date, tipo)
         return
 
     results: list[CompanyResult] = []
@@ -88,8 +89,8 @@ def main() -> None:
     LOGGER.info("Proceso finalizado. Correctas: %s | Incidencias: %s", successful, incidents)
 
 
-def run_consulta(config, companies, start_date, end_date) -> set[str]:
-    client = SunatClient(config.sunat)
+def run_consulta(config, companies, start_date, end_date, tipo) -> set[str]:
+    client = SunatClient(config.sunat, tipo)
     with_data: set[str] = set()
     for company in companies:
         LOGGER.info("Consultando SUNAT para %s | RUC %s", company.name, company.ruc)
@@ -101,8 +102,8 @@ def run_consulta(config, companies, start_date, end_date) -> set[str]:
                 config.keep_existing_outputs,
             )
             rows = client.fetch_records(company, start_date, end_date)
-            count = escribir_hoja_transmisiones(output_path, rows)
-            LOGGER.info("Hoja %s actualizada para %s: %s transmisiones.", MANIFEST_SOURCE_SHEET, company.name, count)
+            count = escribir_hoja_transmisiones(output_path, rows, tipo)
+            LOGGER.info("Hoja %s actualizada para %s: %s transmisiones.", tipo.hoja_transmisiones, company.name, count)
             with_data.add(company.ruc)
         except NoRecordsFound as exc:
             record_incident(config.log_dir, company, None, IncidentType.NO_RECORDS, str(exc))
@@ -116,15 +117,15 @@ def run_consulta(config, companies, start_date, end_date) -> set[str]:
     return with_data
 
 
-def run_todo(config, companies, start_date, end_date) -> None:
-    with_data = run_consulta(config, companies, start_date, end_date)
+def run_todo(config, companies, start_date, end_date, tipo) -> None:
+    with_data = run_consulta(config, companies, start_date, end_date, tipo)
     companies_with_data = [company for company in companies if company.ruc in with_data]
-    run_excel_only(config, companies_with_data, None, None)
+    run_excel_only(config, companies_with_data, None, None, tipo)
     for company in companies_with_data:
-        run_detalle(config, [company], start_date, end_date)
+        run_detalle(config, [company], start_date, end_date, tipo)
 
 
-def run_detalle(config, companies, start_date, end_date) -> None:
+def run_detalle(config, companies, start_date, end_date, tipo) -> None:
     if len(companies) != 1:
         raise ValueError("Para --detalle o --todo selecciona una sola empresa con --item, --ruc o --nombre.")
     company = companies[0]
@@ -133,7 +134,7 @@ def run_detalle(config, companies, start_date, end_date) -> None:
         raise ValueError(f"No existe el archivo: {workbook_path}")
 
     try:
-        codes = read_transmisiones(workbook_path)
+        codes = read_transmisiones(workbook_path, tipo)
     except ValueError as exc:
         LOGGER.warning("No hay transmisiones para %s: %s", company.name, exc)
         return
@@ -147,7 +148,7 @@ def run_detalle(config, companies, start_date, end_date) -> None:
     LOGGER.info("Transmisiones por procesar para %s: %s de %s.", company.name, len(pending), len(groups))
 
     workbook = load_workbook(workbook_path)
-    client = SunatClient(config.sunat)
+    client = SunatClient(config.sunat, tipo)
 
     mapa_puertos: dict[str, str] = {}
     if config.puertos_json and config.puertos_json.exists():
@@ -163,7 +164,7 @@ def run_detalle(config, companies, start_date, end_date) -> None:
         updates = []
         for offset, data in enumerate(data_list):
             updates.append((group["grid_start"] + 2 + offset, data))
-        aplicar_detalle_filas(workbook, updates, mapa_puertos)
+        aplicar_detalle_filas(workbook, updates, tipo, mapa_puertos)
         workbook.save(workbook_path)
         processed.add(group["code"])
         save_procesados(log_path, processed)
@@ -205,26 +206,27 @@ def run_logout_all(config, companies) -> None:
             record_incident(config.log_dir, company, None, IncidentType.UNKNOWN, str(exc))
 
 
-def run_excel_only(config, companies, archivo, hoja) -> None:
-    source_title = hoja or MANIFEST_SOURCE_SHEET
+def run_excel_only(config, companies, archivo, hoja, tipo) -> None:
+    source_title = hoja or tipo.hoja_transmisiones
     if archivo:
         file_path = Path(archivo)
         if not file_path.exists():
             raise ValueError(f"No existe el archivo: {file_path}")
-        copied = process_manifiestos_excel(file_path, source_title)
-        LOGGER.info("Manifiestos copiados a IMPO118 desde %r en %s: %s", source_title, file_path, copied)
+        copied = process_manifiestos_excel(file_path, tipo, source_title)
+        LOGGER.info("Manifiestos copiados a %s desde %r en %s: %s", tipo.hoja_destino, source_title, file_path, copied)
         return
     for company in companies:
         file_path = config.output_dir / f"{safe_filename(company.name)}.xlsx"
         if not file_path.exists():
             raise ValueError(f"No existe el archivo: {file_path}")
-        copied = process_manifiestos_excel(file_path, source_title)
-        LOGGER.info("Manifiestos copiados a IMPO118 desde %r en %s: %s", source_title, file_path, copied)
+        copied = process_manifiestos_excel(file_path, tipo, source_title)
+        LOGGER.info("Manifiestos copiados a %s desde %r en %s: %s", tipo.hoja_destino, source_title, file_path, copied)
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Automatiza reportes de multas SUNAT por empresa.")
     parser.add_argument("--config", type=Path, default=Path("config.yaml"), help="Ruta del archivo de configuración.")
+    parser.add_argument("--reporte", default="impo118", help="Tipo de reporte: impo118, impo235, expo118, expo235 (por defecto, impo118).")
     parser.add_argument("--desde", help="Fecha inicial de consulta en formato YYYY-MM-DD.")
     parser.add_argument("--hasta", help="Fecha final de consulta en formato YYYY-MM-DD.")
     parser.add_argument("--mes", type=int, help="Mes de la consulta (1 a 12). Si se omite, se solicita al iniciar.")
@@ -239,7 +241,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--todo", action="store_true", help="Ejecuta todo el flujo: --consulta + --excel + --detalle.")
     parser.add_argument("--cerrar-sesiones", action="store_true", help="Cierra la sesión SUNAT de todas las empresas de la LISTA (login + Salir).")
     parser.add_argument("--archivo", type=Path, help="Ruta de un Excel existente para usar con --excel/--solo-excel.")
-    parser.add_argument("--hoja", help=f"Nombre de la hoja de datos para usar con --excel/--solo-excel (por defecto, {MANIFEST_SOURCE_SHEET}).")
+    parser.add_argument("--hoja", help="Nombre de la hoja de datos para usar con --excel/--solo-excel (por defecto, la hoja de transmisiones del reporte).")
     parser.add_argument("--pausa-login", type=int, default=20, help="Segundos que mantiene abierta la ventana tras login en modo --solo-login.")
     parser.add_argument("--item", help="Procesa solo la empresa con este ITEM de la hoja LISTA.")
     parser.add_argument("--ruc", help="Procesa solo la empresa con este RUC de la hoja LISTA.")
@@ -269,7 +271,7 @@ def process_company(
             return CompanyResult(company, output_path, 0)
 
         rows = client.fetch_records(company, start_date, end_date)
-        inserted = append_manifest_sheet(output_path, rows)
+        inserted = append_manifest_sheet(output_path, rows, client.tipo)
         LOGGER.info("Registros insertados para %s: %s", company.name, inserted)
         return CompanyResult(company, output_path, inserted)
     except AuthenticationError as exc:
