@@ -14,6 +14,7 @@ from .excel_io import (
     MANIFEST_SOURCE_SHEET,
     aplicar_detalle_filas,
     append_manifest_sheet,
+    cargar_mapa_puertos,
     create_company_workbook,
     escribir_hoja_transmisiones,
     load_procesados,
@@ -148,11 +149,21 @@ def run_detalle(config, companies, start_date, end_date) -> None:
     workbook = load_workbook(workbook_path)
     client = SunatClient(config.sunat)
 
+    mapa_puertos: dict[str, str] = {}
+    if config.puertos_json and config.puertos_json.exists():
+        try:
+            mapa_puertos = cargar_mapa_puertos(config.puertos_json)
+            LOGGER.info("Mapa de puertos cargado: %s códigos.", len(mapa_puertos))
+        except (OSError, ValueError) as exc:
+            LOGGER.warning("No se pudo cargar el mapa de puertos '%s': %s", config.puertos_json, exc)
+    else:
+        LOGGER.warning("No se encontró el JSON de puertos '%s'; la columna PUERTO quedará vacía.", config.puertos_json)
+
     def on_group(group, data_list) -> None:
         updates = []
         for offset, data in enumerate(data_list):
             updates.append((group["grid_start"] + 2 + offset, data))
-        aplicar_detalle_filas(workbook, updates)
+        aplicar_detalle_filas(workbook, updates, mapa_puertos)
         workbook.save(workbook_path)
         processed.add(group["code"])
         save_procesados(log_path, processed)

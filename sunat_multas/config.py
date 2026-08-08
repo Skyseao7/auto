@@ -49,6 +49,7 @@ class AppConfig:
     log_dir: Path
     keep_existing_outputs: bool
     sunat: SunatConfig
+    puertos_json: Path = Path("json/puertos_sunat_consolidado.json")
 
 
 def load_config(path: Path) -> AppConfig:
@@ -73,6 +74,7 @@ def load_config(path: Path) -> AppConfig:
         output_dir=Path(raw.get("output_dir", "output")),
         log_dir=Path(raw.get("log_dir", "logs")),
         keep_existing_outputs=bool(raw.get("keep_existing_outputs", True)),
+        puertos_json=Path(raw.get("puertos_json", "json/puertos_sunat_consolidado.json")),
         sunat=sunat,
     )
 

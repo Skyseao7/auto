@@ -44,6 +44,7 @@ DETALLE_COLUMNS = {
 }
 
 TIPO_NUMERACION_COLUMN = 8
+PUERTO_COLUMN = 6
 
 
 def safe_filename(value: str) -> str:
@@ -196,13 +197,38 @@ def _tiene_fecha(valor: object) -> bool:
     return bool(str(valor).strip())
 
 
-def aplicar_detalle_filas(workbook, updates: list[tuple[int, dict]]) -> None:
+def cargar_mapa_puertos(ruta_json: Path) -> dict[str, str]:
+    """Carga el JSON y crea un diccionario con clave de 5 caracteres: pais + codigo_actual."""
+    mapa: dict[str, str] = {}
+    with ruta_json.open("r", encoding="utf-8") as json_file:
+        datos = json.load(json_file)
+    for item in datos:
+        pais = str(item.get("pais", "") or "").strip()
+        codigo_local = str(item.get("codigo_actual", "") or "").strip()
+        descripcion = str(item.get("descripcion", "") or "").strip()
+        codigo_5_letras = f"{pais}{codigo_local}"
+        if codigo_5_letras and codigo_5_letras not in mapa:
+            mapa[codigo_5_letras] = descripcion
+    return mapa
+
+
+def aplicar_detalle_filas(
+    workbook,
+    updates: list[tuple[int, dict]],
+    mapa_puertos: dict[str, str] | None = None,
+) -> None:
     sheet = workbook[MANIFEST_DEST_SHEET]
     for fila, datos in updates:
         for key, column in DETALLE_COLUMNS.items():
             value = datos.get(key)
             if value:
                 sheet.cell(fila, column, value)
+        if mapa_puertos:
+            codigo_puerto = sheet.cell(fila, DETALLE_COLUMNS["puerto_embarque"]).value
+            if codigo_puerto:
+                codigo = str(codigo_puerto).strip()
+                if codigo in mapa_puertos:
+                    sheet.cell(fila, PUERTO_COLUMN, mapa_puertos[codigo])
         fechas = [
             sheet.cell(fila, DETALLE_COLUMNS[key]).value
             for key in ("fecha_hijo", "fecha_master", "fecha_info")
