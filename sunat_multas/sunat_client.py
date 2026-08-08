@@ -416,10 +416,11 @@ class SunatClient:
         self._click_manifiesto_link(page, group["grid_start"])
         page.wait_for_timeout(5000)
         listado = self._extraer_listado_documentos(page)
+        contenedores = self._extraer_listado_contenedores(page)
         data_list: list[dict] = []
         for offset in range(group["count"]):
             if offset < len(listado):
-                data_list.append(listado[offset])
+                doc = listado[offset]
             else:
                 LOGGER.warning(
                     "Transmisión %s: el listado trajo %s documento(s), se esperaban %s.",
@@ -427,7 +428,10 @@ class SunatClient:
                     len(listado),
                     group["count"],
                 )
-                data_list.append({})
+                doc = {}
+            tipo_contenedor = contenedores[offset]["tipo_contenedor"] if offset < len(contenedores) else ""
+            doc["cnt"] = "SI" if "CONTENEDOR" in tipo_contenedor.upper() else "NO"
+            data_list.append(doc)
         on_group(group, data_list)
         self._regresar_a_grilla(page, ruc, start_date, end_date)
 
@@ -456,24 +460,55 @@ class SunatClient:
         raise NavigationError(f"No se encontró la fila {row_index} en la grilla de manifiestos.")
 
     def _extraer_listado_documentos(self, page: Page) -> list[dict[str, str]]:
+        rows = self._extraer_dojo_grid(page, "#gridDocumentosTransporte")
+        if rows is None:
+            raise ExtractionError("No se encontró LISTADO DE DOCUMENTOS DE TRANSPORTE.")
+        result: list[dict[str, str]] = []
+        for data in rows:
+            doc = {
+                "master": data.get(6, ""),
+                "fecha_hijo": data.get(3, ""),
+                "fecha_master": data.get(7, ""),
+                "fecha_info": data.get(8, ""),
+                "puerto_embarque": data.get(9, ""),
+            }
+            if any(doc.values()):
+                result.append(doc)
+        LOGGER.info("Listado de documentos extraído: %s documento(s).", len(result))
+        return result
+
+    def _extraer_listado_contenedores(self, page: Page) -> list[dict[str, str]]:
+        rows = self._extraer_dojo_grid(page, "#gridEquipamientos")
+        if not rows:
+            LOGGER.info("LISTADO DE CONTENEDORES sin datos; se usará NO en la columna CTN.")
+            return []
+        result: list[dict[str, str]] = []
+        for data in rows:
+            contenedor = {"tipo_contenedor": data.get(3, "")}
+            if any(contenedor.values()):
+                result.append(contenedor)
+        LOGGER.info("Listado de contenedores extraído: %s contenedor(es).", len(result))
+        return result
+
+    def _extraer_dojo_grid(self, page: Page, grid_selector: str) -> list[dict[int, str]] | None:
         scope = None
         for candidate in _page_scopes(_active_page(page)):
             try:
-                if candidate.locator("#gridDocumentosTransporte").count() > 0:
+                if candidate.locator(grid_selector).count() > 0:
                     scope = candidate
                     break
             except PlaywrightError:
                 continue
         if scope is None:
-            raise ExtractionError("No se encontró LISTADO DE DOCUMENTOS DE TRANSPORTE.")
+            return None
         try:
-            scope.locator("#gridDocumentosTransporte").scroll_into_view_if_needed(timeout=5000)
+            scope.locator(grid_selector).scroll_into_view_if_needed(timeout=5000)
         except (PlaywrightError, PlaywrightTimeoutError):
             pass
         rows: list[dict[int, str]] = []
         seen_first: set[tuple] = set()
         for _ in range(50):
-            grid_rows = scope.locator("#gridDocumentosTransporte .dojoxGridRow")
+            grid_rows = scope.locator(f"{grid_selector} .dojoxGridRow")
             count = grid_rows.count()
             if count == 0:
                 break
@@ -497,22 +532,10 @@ class SunatClient:
                 break
             seen_first.add(first_key)
             rows.extend(page_rows)
-            if not self._next_dojo_page(scope, "#gridDocumentosTransporte"):
+            if not self._next_dojo_page(scope, grid_selector):
                 break
             sleep(1)
-        result: list[dict[str, str]] = []
-        for data in rows:
-            doc = {
-                "master": data.get(6, ""),
-                "fecha_hijo": data.get(3, ""),
-                "fecha_master": data.get(7, ""),
-                "fecha_info": data.get(8, ""),
-                "puerto_embarque": data.get(9, ""),
-            }
-            if any(doc.values()):
-                result.append(doc)
-        LOGGER.info("Listado de documentos extraído: %s documento(s).", len(result))
-        return result
+        return rows
 
     def _next_dojo_page(self, scope, grid_selector: str) -> bool:
         try:

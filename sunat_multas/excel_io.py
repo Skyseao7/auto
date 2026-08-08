@@ -37,6 +37,7 @@ LLEGADA_DEST_COLUMN = 12
 DETALLE_COLUMNS = {
     "master": 2,
     "puerto_embarque": 5,
+    "cnt": 7,
     "fecha_hijo": 9,
     "fecha_master": 10,
     "fecha_info": 11,
