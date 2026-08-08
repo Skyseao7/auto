@@ -9,6 +9,7 @@ sunat:
   headless: false
   slow_mo_ms: 80
   timeout_ms: 30000
+  logout_manual: false
   selectors:
     ruc_mode_button: "button:has-text('RUC')|text=RUC|#btnPorRuc"
     ruc_input: "input[placeholder='RUC']|input[placeholder*='RUC']|input[name='ruc']|input#txtRuc|input[id*='Ruc']|input[id*='ruc']|input[formcontrolname*='ruc']"
@@ -24,6 +25,8 @@ sunat:
     result_table: "table"
     no_records_text: "no existe manifiesto|no se encontraron|sin registros|no existen registros"
     no_records_selector: "div.dojoxGridMasterMessages"
+    session_open_text: "sesiÃ³n ya se encuentra|sesiÃ³n abierta|sesiÃ³n sigue abierta|sesiÃ³n ya iniciada|sesion abierta"
+    session_open_confirm: "text=Continuar|text=Aceptar|text=OK|#btnAceptar|button:has-text('Continuar')|button:has-text('Aceptar')"
     auth_error_text: "clave incorrecta|usuario incorrecto|credenciales|captcha|verificaciÃ³n"
 
 

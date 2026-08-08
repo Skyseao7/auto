@@ -50,6 +50,10 @@ def main() -> None:
         run_excel_only(config, companies, args.archivo, args.hoja)
         return
 
+    if args.cerrar_sesiones:
+        run_logout_all(config, companies)
+        return
+
     start_date, end_date = resolve_date_range(args)
 
     client = SunatClient(config.sunat)
@@ -174,6 +178,22 @@ def _build_groups(codes: list[str]) -> list[dict]:
     return groups
 
 
+def run_logout_all(config, companies) -> None:
+    client = SunatClient(config.sunat)
+    for company in companies:
+        LOGGER.info("Cerrando sesión de %s | RUC %s", company.name, company.ruc)
+        try:
+            client.logout_all(company)
+            LOGGER.info("Sesión cerrada para %s | RUC %s", company.name, company.ruc)
+        except AuthenticationError as exc:
+            record_incident(config.log_dir, company, None, IncidentType.AUTH, str(exc))
+        except (NavigationError, ExtractionError) as exc:
+            record_incident(config.log_dir, company, None, IncidentType.SCRAPING, str(exc))
+        except Exception as exc:
+            LOGGER.exception("Error no controlado cerrando sesión de %s", company.name)
+            record_incident(config.log_dir, company, None, IncidentType.UNKNOWN, str(exc))
+
+
 def run_excel_only(config, companies, archivo, hoja) -> None:
     source_title = hoja or MANIFEST_SOURCE_SHEET
     if archivo:
@@ -206,6 +226,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--consulta", action="store_true", help="Solo consulta SUNAT y crea/actualiza la hoja IMPO118-Transmisiones.")
     parser.add_argument("--detalle", action="store_true", help="Recorre cada transmisión en SUNAT y llena el detalle de documentos en IMPO118.")
     parser.add_argument("--todo", action="store_true", help="Ejecuta todo el flujo: --consulta + --excel + --detalle.")
+    parser.add_argument("--cerrar-sesiones", action="store_true", help="Cierra la sesión SUNAT de todas las empresas de la LISTA (login + Salir).")
     parser.add_argument("--archivo", type=Path, help="Ruta de un Excel existente para usar con --excel/--solo-excel.")
     parser.add_argument("--hoja", help=f"Nombre de la hoja de datos para usar con --excel/--solo-excel (por defecto, {MANIFEST_SOURCE_SHEET}).")
     parser.add_argument("--pausa-login", type=int, default=20, help="Segundos que mantiene abierta la ventana tras login en modo --solo-login.")

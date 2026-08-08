@@ -123,7 +123,7 @@ class SunatClient:
                 context.close()
                 browser.close()
 
-    def _login(self, page: Page, company: Company) -> None:
+    def _login(self, page: Page, company: Company, wait_login: bool = True) -> None:
         selectors = self.config.selectors
         LOGGER.info("Abriendo SUNAT para RUC %s", company.ruc)
         page.goto(self.config.login_url, wait_until="domcontentloaded")
@@ -144,11 +144,50 @@ class SunatClient:
             company.user,
             "*" * len(company.password),
         )
-        self._click_first_available(page, selectors.login_button)
-        page.wait_for_load_state("domcontentloaded")
+        if wait_login:
+            self._click_first_available(page, selectors.login_button)
+            page.wait_for_load_state("domcontentloaded")
+            if self._text_visible(page, selectors.auth_error_text, timeout_ms=3000):
+                raise AuthenticationError("SUNAT rechazó las credenciales o solicitó validación adicional.")
+            self._dismiss_session_open(page)
+        else:
+            locator = self._first_available_locator(page, selectors.login_button)
+            locator.click(no_wait_after=True)
+            LOGGER.info("Login enviado sin esperar la carga completa del menú.")
 
-        if self._text_visible(page, selectors.auth_error_text, timeout_ms=3000):
-            raise AuthenticationError("SUNAT rechazó las credenciales o solicitó validación adicional.")
+    def _dismiss_session_open(self, page: Page) -> None:
+        selectors = self.config.selectors
+        if not selectors.session_open_text:
+            return
+        if not self._text_visible(page, selectors.session_open_text, timeout_ms=2000):
+            return
+        LOGGER.info("Aviso de sesión abierta en otro equipo detectado; confirmando el cierre de la sesión anterior.")
+        confirm_selectors = selectors.session_open_confirm or "text=Continuar|text=Aceptar|text=OK|#btnAceptar"
+        for _ in range(3):
+            try:
+                self._click_first_available(page, confirm_selectors, timeout_ms=3000)
+                return
+            except (PlaywrightError, PlaywrightTimeoutError):
+                sleep(1)
+        LOGGER.warning("No se pudo confirmar el aviso de sesión abierta en otro equipo.")
+
+    def logout_all(self, company: Company) -> None:
+        if sync_playwright is None:
+            raise RuntimeError("Playwright no está instalado. Ejecuta: pip install -r requirements.txt")
+        with sync_playwright() as playwright:
+            browser = playwright.chromium.launch(
+                headless=self.config.headless,
+                slow_mo=self.config.slow_mo_ms,
+            )
+            context = browser.new_context()
+            page = context.new_page()
+            page.set_default_timeout(self.config.timeout_ms)
+            try:
+                self._login(page, company, wait_login=False)
+                self._logout(page)
+            finally:
+                context.close()
+                browser.close()
 
     def _navigate_to_query(self, page: Page) -> None:
         try:
@@ -615,11 +654,122 @@ class SunatClient:
                 continue
         LOGGER.warning("No se encontró el checkbox RUC del Agente de Carga.")
     def _logout(self, page: Page) -> None:
+        if self.config.logout_manual:
+            self._logout_manual(page)
+        else:
+            self._logout_os(page)
+
+    def _logout_os(self, page: Page) -> None:
+        inicio = _monotonic_ms()
+        boton = self._wait_for_btn_salir(page, timeout_ms=30000)
+        LOGGER.info("Botón Salir localizado en %s ms.", _monotonic_ms() - inicio)
+        if boton is None:
+            LOGGER.warning("No se encontró el botón Salir; no se pudo cerrar sesión.")
+            return
         try:
-            self._click_first_available(page, self.config.selectors.logout_link, timeout_ms=5000)
-            LOGGER.info("Sesión SUNAT cerrada con el botón Salir.")
+            boton.dispatch_event("click")
+        except (PlaywrightError, PlaywrightTimeoutError) as exc:
+            LOGGER.warning("No se pudo clicar el botón Salir: %s", exc)
+            return
+        LOGGER.info("Botón Salir clicado (dispatch_event).")
+        sleep(1)
+        page.keyboard.press("Enter")
+        LOGGER.info("Enter 1 enviado.")
+        sleep(2)
+        page.keyboard.press("Enter")
+        LOGGER.info("Enter 2 enviado.")
+        sleep(2)
+        LOGGER.info("Sesión SUNAT cerrada con Enter.")
+
+    def _find_btn_salir(self, page: Page, verbose: bool = True):
+        for frame in page.frames:
+            inicio = _monotonic_ms()
+            try:
+                locator = frame.locator("#btnSalir")
+                if locator.count() > 0:
+                    if verbose:
+                        LOGGER.info(
+                            "btnSalir encontrado en el frame '%s' tras %s ms.",
+                            frame.name,
+                            _monotonic_ms() - inicio,
+                        )
+                    return locator.first
+            except PlaywrightError:
+                pass
+            if verbose:
+                LOGGER.info("Frame '%s' revisado en %s ms.", frame.name, _monotonic_ms() - inicio)
+        return None
+
+    def _wait_for_btn_salir(self, page: Page, timeout_ms: int):
+        deadline = _monotonic_ms() + timeout_ms
+        chequeo_credenciales = _monotonic_ms() + 8000
+        while _monotonic_ms() < deadline:
+            boton = self._find_btn_salir(page, verbose=False)
+            if boton is not None:
+                return boton
+            if _monotonic_ms() >= chequeo_credenciales:
+                try:
+                    if self._at_login_page(page):
+                        raise AuthenticationError(
+                            "SUNAT rechazó las credenciales o solicitó validación adicional."
+                        )
+                except (PlaywrightError, PlaywrightTimeoutError):
+                    pass
+            sleep(0.5)
+        return None
+
+    def _logout_manual(self, page: Page) -> None:
+        selectors = self.config.selectors
+
+        def mantener_dialogo(dialog) -> None:
+            LOGGER.info(
+                "Diálogo SUNAT abierto (%s). Acepta manualmente: 'Volver a cargar' y luego 'Salir'.",
+                dialog.type,
+            )
+
+        page.on("dialog", mantener_dialogo)
+        try:
+            locator = self._first_available_locator(page, selectors.logout_link, timeout_ms=5000)
+            locator.click(no_wait_after=True)
         except (PlaywrightError, PlaywrightTimeoutError):
-            LOGGER.warning("No se pudo cerrar sesión desde el enlace configurado.")
+            LOGGER.warning("No se encontró el botón Salir; no se pudo cerrar sesión.")
+            page.remove_listener("dialog", mantener_dialogo)
+            return
+
+        LOGGER.info("Clickea 'Volver a cargar' y luego 'Salir' en el navegador para cerrar la sesión SUNAT.")
+        deadline = _monotonic_ms() + 300000
+        salio = False
+        while _monotonic_ms() < deadline:
+            try:
+                if self._at_login_page(page):
+                    salio = True
+                    break
+            except (PlaywrightError, PlaywrightTimeoutError):
+                pass
+            sleep(0.5)
+        page.remove_listener("dialog", mantener_dialogo)
+        if salio:
+            LOGGER.info("Sesión SUNAT cerrada: se detectó la pantalla de inicio de sesión.")
+        else:
+            LOGGER.warning("No se detectó la pantalla de inicio de sesión dentro de los 5 minutos.")
+
+    def _at_login_page(self, page: Page) -> bool:
+        selectors = self.config.selectors
+        ruc_selectors = [s.strip() for s in selectors.ruc_input.split("|") if s.strip()]
+        user_selectors = [s.strip() for s in selectors.user_input.split("|") if s.strip()]
+        try:
+            scopes = _page_scopes(_active_page(page))
+        except (PlaywrightError, PlaywrightTimeoutError):
+            return False
+        for scope in scopes:
+            try:
+                has_ruc = any(scope.locator(s).count() > 0 for s in ruc_selectors)
+                has_user = any(scope.locator(s).count() > 0 for s in user_selectors)
+                if has_ruc and has_user:
+                    return True
+            except PlaywrightError:
+                continue
+        return False
 
     def _extract_table_rows(self, page: Page, table_selector: str) -> list[dict[str, str]]:
         try:

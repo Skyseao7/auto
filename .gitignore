@@ -1,0 +1,12 @@
+# Resultados generados por el script (no se comparten ni se borran)
+output/
+
+# Entorno y artefactos de Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Logs y capturas del navegador
+logs/
+html/

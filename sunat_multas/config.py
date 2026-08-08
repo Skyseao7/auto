@@ -27,6 +27,8 @@ class SunatSelectors:
     auth_error_text: str
     ruc_mode_button: str = ""
     no_records_selector: str = ""
+    session_open_text: str = ""
+    session_open_confirm: str = ""
 
 
 @dataclass(frozen=True)
@@ -36,6 +38,7 @@ class SunatConfig:
     slow_mo_ms: int
     timeout_ms: int
     selectors: SunatSelectors
+    logout_manual: bool = True
 
 
 @dataclass(frozen=True)
@@ -61,6 +64,7 @@ def load_config(path: Path) -> AppConfig:
         headless=bool(sunat_raw.get("headless", False)),
         slow_mo_ms=int(sunat_raw.get("slow_mo_ms", 50)),
         timeout_ms=int(sunat_raw.get("timeout_ms", 30000)),
+        logout_manual=bool(sunat_raw.get("logout_manual", True)),
         selectors=selectors,
     )
     return AppConfig(
