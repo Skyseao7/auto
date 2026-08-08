@@ -414,7 +414,16 @@ class SunatClient:
             group["count"],
         )
         self._click_manifiesto_link(page, group["grid_start"])
-        page.wait_for_timeout(5000)
+        if not self._esperar_detalle_transmision(page, group["code"], timeout_ms=15000):
+            LOGGER.warning(
+                "No se confirmó la apertura de la transmisión %s; reintentando.",
+                group["code"],
+            )
+            self._regresar_a_grilla(page, ruc, start_date, end_date)
+            self._click_manifiesto_link(page, group["grid_start"])
+            self._esperar_detalle_transmision(page, group["code"], timeout_ms=15000)
+        self._esperar_grid_documentos(page, timeout_ms=15000)
+        sleep(1)
         listado = self._extraer_listado_documentos(page)
         contenedores = self._extraer_listado_contenedores(page)
         data_list: list[dict] = []
@@ -458,6 +467,51 @@ class SunatClient:
             remaining -= count
             sleep(1)
         raise NavigationError(f"No se encontró la fila {row_index} en la grilla de manifiestos.")
+
+    def _leer_codigo_transmision_detalle(self, page: Page) -> str:
+        try:
+            active = _active_page(page)
+        except PlaywrightError:
+            return ""
+        for scope in _page_scopes(active):
+            try:
+                fila = scope.locator("tr", has_text="Manifiesto Desconsolidado").first
+                celdas = fila.locator("td")
+                for idx in range(celdas.count()):
+                    texto = _clean_text(celdas.nth(idx).inner_text())
+                    if re.fullmatch(r"\d{2}-\d{3}-\d+-\d{4}-\d+", texto):
+                        return texto
+            except (PlaywrightError, PlaywrightTimeoutError):
+                continue
+        return ""
+
+    def _esperar_detalle_transmision(self, page: Page, code: str, timeout_ms: int) -> bool:
+        expected = code.strip().rsplit("-", 1)[-1].strip()
+        deadline = _monotonic_ms() + timeout_ms
+        while _monotonic_ms() < deadline:
+            actual = self._leer_codigo_transmision_detalle(page)
+            if actual and actual.rsplit("-", 1)[-1].strip() == expected:
+                LOGGER.info("Transmisión confirmada en el detalle: %s.", actual)
+                return True
+            sleep(0.5)
+        LOGGER.warning("El detalle no mostró la transmisión esperada %s.", code)
+        return False
+
+    def _esperar_grid_documentos(self, page: Page, timeout_ms: int) -> bool:
+        deadline = _monotonic_ms() + timeout_ms
+        while _monotonic_ms() < deadline:
+            try:
+                active = _active_page(page)
+            except PlaywrightError:
+                return False
+            for scope in _page_scopes(active):
+                try:
+                    if scope.locator("#gridDocumentosTransporte .dojoxGridRow").count() > 0:
+                        return True
+                except (PlaywrightError, PlaywrightTimeoutError):
+                    continue
+            sleep(0.4)
+        return False
 
     def _extraer_listado_documentos(self, page: Page) -> list[dict[str, str]]:
         rows = self._extraer_dojo_grid(page, "#gridDocumentosTransporte")

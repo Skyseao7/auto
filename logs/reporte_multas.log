@@ -1,0 +1,390 @@
+2026-08-07 23:27:04,174 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-07 23:27:06,219 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-07 23:27:06,219 | INFO | sunat_multas.cli | Consultando SUNAT para GLOVAL SHIPPING LATIN AMERICA (PERU) S.R.L | RUC 20603083050
+2026-08-07 23:27:09,756 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20603083050
+2026-08-07 23:27:11,195 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20603083050 | Usuario IFTERATC | Clave *********
+2026-08-07 23:27:29,289 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 23:27:29,521 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 23:27:35,034 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 23:27:39,582 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 23:27:39,887 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 23:27:52,419 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 23:27:52,542 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20603083050
+2026-08-07 23:27:59,500 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 23:28:07,514 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 23:28:10,162 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 33
+2026-08-07 23:28:10,166 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 5 ms.
+2026-08-07 23:28:10,501 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-07 23:28:11,596 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-07 23:28:13,681 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-07 23:28:15,682 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-07 23:28:16,448 | INFO | sunat_multas.cli | Hoja IMPO118-Transmisiones actualizada para GLOVAL SHIPPING LATIN AMERICA (PERU) S.R.L: 33 transmisiones.
+2026-08-07 23:28:16,567 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'IMPO118-Transmisiones' en output\GLOVAL SHIPPING LATIN AMERICA (PERU) S.R.L.xlsx: 99
+2026-08-07 23:28:16,606 | INFO | sunat_multas.cli | Transmisiones por procesar para GLOVAL SHIPPING LATIN AMERICA (PERU) S.R.L: 19 de 19.
+2026-08-07 23:28:19,399 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20603083050
+2026-08-07 23:28:20,813 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20603083050 | Usuario IFTERATC | Clave *********
+2026-08-07 23:28:38,746 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 23:28:38,981 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 23:28:45,992 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 23:28:50,594 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 23:28:50,895 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 23:29:03,420 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 23:29:03,528 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20603083050
+2026-08-07 23:29:10,511 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 23:29:18,515 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 23:30:13,337 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-07 23:30:15,807 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-07 23:30:15,807 | INFO | sunat_multas.cli | Consultando SUNAT para GLOVAL SHIPPING LATIN AMERICA (PERU) S.R.L | RUC 20603083050
+2026-08-07 23:30:16,878 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20603083050
+2026-08-07 23:30:18,224 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20603083050 | Usuario IFTERATC | Clave *********
+2026-08-07 23:30:36,221 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 23:30:36,453 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 23:30:43,186 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 23:30:47,769 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 23:30:48,150 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 23:31:00,691 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 23:31:00,801 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20603083050
+2026-08-07 23:31:07,787 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 23:31:15,799 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 23:33:17,522 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-07 23:33:33,463 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-07 23:33:33,463 | INFO | sunat_multas.cli | Consultando SUNAT para GLOVAL SHIPPING LATIN AMERICA (PERU) S.R.L | RUC 20603083050
+2026-08-07 23:33:34,699 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20603083050
+2026-08-07 23:33:36,003 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20603083050 | Usuario IFTERATC | Clave *********
+2026-08-07 23:33:53,986 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 23:33:54,257 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 23:34:01,355 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 23:34:05,919 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 23:34:06,240 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 23:34:18,791 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 23:34:18,902 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20603083050
+2026-08-07 23:34:25,876 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 23:34:33,885 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 23:34:36,484 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 33
+2026-08-07 23:34:36,490 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 6 ms.
+2026-08-07 23:34:36,821 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-07 23:34:37,923 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-07 23:34:40,020 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-07 23:34:42,021 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-07 23:34:42,542 | INFO | sunat_multas.cli | Hoja IMPO118-Transmisiones actualizada para GLOVAL SHIPPING LATIN AMERICA (PERU) S.R.L: 33 transmisiones.
+2026-08-07 23:34:42,641 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'IMPO118-Transmisiones' en output\GLOVAL SHIPPING LATIN AMERICA (PERU) S.R.L.xlsx: 99
+2026-08-07 23:34:42,678 | INFO | sunat_multas.cli | Transmisiones por procesar para GLOVAL SHIPPING LATIN AMERICA (PERU) S.R.L: 19 de 19.
+2026-08-07 23:34:43,703 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20603083050
+2026-08-07 23:34:44,976 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20603083050 | Usuario IFTERATC | Clave *********
+2026-08-07 23:35:02,835 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 23:35:03,061 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 23:35:10,510 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 23:35:15,080 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 23:35:15,400 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 23:35:27,952 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 23:35:28,061 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20603083050
+2026-08-07 23:35:35,032 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 23:35:43,041 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 23:35:45,602 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 33
+2026-08-07 23:35:45,602 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 30210 (fila grilla 0, 4 documento(s)).
+2026-08-07 23:35:51,272 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 23:35:51,487 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-07 23:35:51,487 | WARNING | sunat_multas.sunat_client | Transmisión 01-118-1-2026- 30210: el listado trajo 1 documento(s), se esperaban 4.
+2026-08-07 23:35:51,487 | WARNING | sunat_multas.sunat_client | Transmisión 01-118-1-2026- 30210: el listado trajo 1 documento(s), se esperaban 4.
+2026-08-07 23:35:51,488 | WARNING | sunat_multas.sunat_client | Transmisión 01-118-1-2026- 30210: el listado trajo 1 documento(s), se esperaban 4.
+2026-08-07 23:35:51,551 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 30210 procesada (4 documento(s)).
+2026-08-07 23:35:51,572 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 23:35:52,133 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 30569 (fila grilla 4, 1 documento(s)).
+2026-08-07 23:35:58,674 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 23:35:58,887 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-07 23:35:58,945 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 30569 procesada (1 documento(s)).
+2026-08-07 23:35:58,964 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 23:35:59,869 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 30725 (fila grilla 5, 1 documento(s)).
+2026-08-07 23:36:05,524 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 23:36:05,744 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-07 23:36:05,827 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 30725 procesada (1 documento(s)).
+2026-08-07 23:36:05,866 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 23:36:06,441 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 31190 (fila grilla 6, 1 documento(s)).
+2026-08-07 23:36:12,945 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 23:36:13,165 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-07 23:36:13,230 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 31190 procesada (1 documento(s)).
+2026-08-07 23:36:13,249 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 23:36:13,766 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 31253 (fila grilla 7, 1 documento(s)).
+2026-08-07 23:36:20,274 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 23:36:20,478 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-07 23:36:20,535 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 31253 procesada (1 documento(s)).
+2026-08-07 23:36:20,550 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 23:36:21,049 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 31338 (fila grilla 8, 1 documento(s)).
+2026-08-07 23:36:27,550 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 23:36:27,759 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-07 23:36:27,818 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 31338 procesada (1 documento(s)).
+2026-08-07 23:36:27,837 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 23:36:28,353 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 31454 (fila grilla 9, 2 documento(s)).
+2026-08-07 23:36:35,058 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 2 documento(s).
+2026-08-07 23:36:35,417 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 3 contenedor(es).
+2026-08-07 23:36:35,480 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 31454 procesada (2 documento(s)).
+2026-08-07 23:36:35,501 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 23:36:36,803 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 31518 (fila grilla 11, 1 documento(s)).
+2026-08-07 23:36:43,312 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 23:36:43,542 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-07 23:36:43,612 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 31518 procesada (1 documento(s)).
+2026-08-07 23:36:43,636 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 23:36:44,201 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 31570 (fila grilla 12, 3 documento(s)).
+2026-08-07 23:36:53,027 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 12 documento(s).
+2026-08-07 23:36:54,212 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 12 contenedor(es).
+2026-08-07 23:36:54,277 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 31570 procesada (3 documento(s)).
+2026-08-07 23:36:54,303 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 23:36:54,900 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 32155 (fila grilla 15, 1 documento(s)).
+2026-08-07 23:37:01,416 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 23:37:01,625 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-07 23:37:01,685 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 32155 procesada (1 documento(s)).
+2026-08-07 23:37:01,704 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 23:37:02,215 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 32903 (fila grilla 16, 3 documento(s)).
+2026-08-07 23:37:11,108 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 13 documento(s).
+2026-08-07 23:37:12,321 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 13 contenedor(es).
+2026-08-07 23:37:12,387 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 32903 procesada (3 documento(s)).
+2026-08-07 23:37:12,407 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 23:37:12,915 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 32967 (fila grilla 19, 1 documento(s)).
+2026-08-07 23:37:19,433 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 23:37:19,642 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-07 23:37:19,702 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 32967 procesada (1 documento(s)).
+2026-08-07 23:37:19,719 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 23:37:21,524 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 33413 (fila grilla 20, 1 documento(s)).
+2026-08-07 23:37:27,252 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 23:37:27,480 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-07 23:37:27,543 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 33413 procesada (1 documento(s)).
+2026-08-07 23:37:27,561 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 23:37:28,880 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 34256 (fila grilla 21, 4 documento(s)).
+2026-08-07 23:37:36,037 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 9 documento(s).
+2026-08-07 23:37:36,877 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 9 contenedor(es).
+2026-08-07 23:37:36,944 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 34256 procesada (4 documento(s)).
+2026-08-07 23:37:36,962 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 23:37:37,899 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 34513 (fila grilla 25, 1 documento(s)).
+2026-08-07 23:37:44,911 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 23:37:45,122 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-07 23:37:45,187 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 34513 procesada (1 documento(s)).
+2026-08-07 23:37:45,205 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 23:37:46,556 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 34709 (fila grilla 26, 2 documento(s)).
+2026-08-07 23:37:53,527 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 2 documento(s).
+2026-08-07 23:37:53,803 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 2 contenedor(es).
+2026-08-07 23:37:53,875 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 34709 procesada (2 documento(s)).
+2026-08-07 23:37:53,893 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 23:37:54,430 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 35214 (fila grilla 28, 1 documento(s)).
+2026-08-07 23:38:02,109 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 23:38:02,318 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-07 23:38:02,377 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 35214 procesada (1 documento(s)).
+2026-08-07 23:38:02,396 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 23:38:03,320 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 35271 (fila grilla 29, 1 documento(s)).
+2026-08-07 23:38:10,305 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-07 23:38:10,508 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-07 23:38:10,570 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 35271 procesada (1 documento(s)).
+2026-08-07 23:38:10,586 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 23:38:11,621 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 35372 (fila grilla 30, 3 documento(s)).
+2026-08-07 23:38:20,781 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 12 documento(s).
+2026-08-07 23:38:21,878 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 12 contenedor(es).
+2026-08-07 23:38:21,944 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 35372 procesada (3 documento(s)).
+2026-08-07 23:38:21,961 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-07 23:38:22,521 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 5 ms.
+2026-08-07 23:38:22,801 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-07 23:38:23,901 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-07 23:38:25,997 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-07 23:38:27,997 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-07 23:38:28,410 | INFO | sunat_multas.cli | Detalle finalizado para GLOVAL SHIPPING LATIN AMERICA (PERU) S.R.L. Procesadas: 19.
+2026-08-07 23:57:48,408 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-07 23:57:50,954 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-07 23:57:50,954 | INFO | sunat_multas.cli | Consultando SUNAT para GLOVAL SHIPPING LATIN AMERICA (PERU) S.R.L | RUC 20603083050
+2026-08-07 23:57:51,900 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20603083050
+2026-08-07 23:57:53,175 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20603083050 | Usuario IFTERATC | Clave *********
+2026-08-07 23:58:11,083 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 23:58:11,347 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 23:58:18,330 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 23:58:22,898 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-07 23:58:23,185 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-07 23:58:35,715 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-07 23:58:35,824 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20603083050
+2026-08-07 23:58:42,792 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-07 23:58:50,799 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-07 23:58:53,286 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 33
+2026-08-07 23:58:53,290 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 3 ms.
+2026-08-07 23:58:53,517 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-07 23:58:54,603 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-07 23:58:56,690 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-07 23:58:58,691 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-07 23:58:59,058 | ERROR | sunat_multas.cli | Error no controlado consultando GLOVAL SHIPPING LATIN AMERICA (PERU) S.R.L
+Traceback (most recent call last):
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\cli.py", line 103, in run_consulta
+    count = escribir_hoja_transmisiones(output_path, rows)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\excel_io.py", line 165, in escribir_hoja_transmisiones
+    workbook = load_workbook(workbook_path)
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\openpyxl\reader\excel.py", line 346, in load_workbook
+    reader = ExcelReader(filename, read_only, keep_vba,
+                         data_only, keep_links, rich_text)
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\openpyxl\reader\excel.py", line 123, in __init__
+    self.archive = _validate_archive(fn)
+                   ~~~~~~~~~~~~~~~~~^^^^
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\openpyxl\reader\excel.py", line 95, in _validate_archive
+    archive = ZipFile(filename, 'r')
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\zipfile\__init__.py", line 1453, in __init__
+    self.fp = io.open(file, filemode)
+              ~~~~~~~^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'output\\GLOVAL SHIPPING LATIN AMERICA (PERU) S.R.L.xlsx'
+2026-08-07 23:58:59,102 | WARNING | sunat_multas.cli | GLOVAL SHIPPING LATIN AMERICA (PERU) S.R.L | UNKNOWN | [Errno 2] No such file or directory: 'output\\GLOVAL SHIPPING LATIN AMERICA (PERU) S.R.L.xlsx'
+2026-08-07 23:59:25,944 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-07 23:59:27,935 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-07 23:59:27,936 | INFO | sunat_multas.cli | Consultando SUNAT para GLOVAL SHIPPING LATIN AMERICA (PERU) S.R.L | RUC 20603083050
+2026-08-07 23:59:28,821 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20603083050
+2026-08-07 23:59:30,069 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20603083050 | Usuario IFTERATC | Clave *********
+2026-08-07 23:59:47,867 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-07 23:59:48,064 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-07 23:59:55,178 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-07 23:59:59,779 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-08 00:00:00,084 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-08 00:00:12,643 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-08 00:00:12,752 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20603083050
+2026-08-08 00:00:19,704 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-08 00:00:27,708 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-08 00:00:30,323 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 33
+2026-08-08 00:00:30,327 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 4 ms.
+2026-08-08 00:00:30,575 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-08 00:00:31,673 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-08 00:00:33,756 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-08 00:00:35,757 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-08 00:00:36,184 | INFO | sunat_multas.cli | Hoja IMPO118-Transmisiones actualizada para GLOVAL SHIPPING LATIN AMERICA (PERU) S.R.L: 33 transmisiones.
+2026-08-08 00:00:36,277 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'IMPO118-Transmisiones' en output\GLOVAL SHIPPING LATIN AMERICA (PERU) S.R.L.xlsx: 99
+2026-08-08 00:00:36,304 | INFO | sunat_multas.cli | Transmisiones por procesar para GLOVAL SHIPPING LATIN AMERICA (PERU) S.R.L: 19 de 19.
+2026-08-08 00:00:37,320 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20603083050
+2026-08-08 00:00:38,529 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20603083050 | Usuario IFTERATC | Clave *********
+2026-08-08 00:00:56,555 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-08 00:00:56,773 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-08 00:01:03,514 | INFO | sunat_multas.sunat_client | Formulario de Consulta Manifiesto Desconsolidado cargado.
+2026-08-08 00:01:08,089 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID.
+2026-08-08 00:01:08,405 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-08 00:01:20,958 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado.
+2026-08-08 00:01:21,068 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20603083050
+2026-08-08 00:01:28,039 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-08 00:01:36,044 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-08 00:01:38,600 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 33
+2026-08-08 00:01:38,601 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 30210 (fila grilla 0, 4 documento(s)).
+2026-08-08 00:01:54,169 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 30210.
+2026-08-08 00:01:54,170 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-118-1-2026- 30210; reintentando.
+2026-08-08 00:01:54,191 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-08 00:01:56,410 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-118-1-2026-30210.
+2026-08-08 00:01:58,812 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 6 documento(s).
+2026-08-08 00:01:59,449 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 6 contenedor(es).
+2026-08-08 00:01:59,517 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 30210 procesada (4 documento(s)).
+2026-08-08 00:01:59,539 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-08 00:02:00,002 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 30569 (fila grilla 4, 1 documento(s)).
+2026-08-08 00:02:31,737 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 30569.
+2026-08-08 00:02:31,738 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-118-1-2026- 30569; reintentando.
+2026-08-08 00:02:31,754 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-08 00:02:34,015 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-118-1-2026-30569.
+2026-08-08 00:02:35,360 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-08 00:02:35,566 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-08 00:02:35,626 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 30569 procesada (1 documento(s)).
+2026-08-08 00:02:35,642 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-08 00:02:36,153 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 30725 (fila grilla 5, 1 documento(s)).
+2026-08-08 00:02:37,915 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-118-1-2026-30725.
+2026-08-08 00:02:39,315 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-08 00:02:39,533 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-08 00:02:39,597 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 30725 procesada (1 documento(s)).
+2026-08-08 00:02:39,615 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-08 00:02:40,100 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 31190 (fila grilla 6, 1 documento(s)).
+2026-08-08 00:03:11,842 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 31190.
+2026-08-08 00:03:11,842 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-118-1-2026- 31190; reintentando.
+2026-08-08 00:03:11,862 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-08 00:03:44,149 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 31190.
+2026-08-08 00:03:45,537 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-08 00:03:45,740 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-08 00:03:45,806 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 31190 procesada (1 documento(s)).
+2026-08-08 00:03:45,826 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-08 00:03:46,503 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 31253 (fila grilla 7, 1 documento(s)).
+2026-08-08 00:03:47,826 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-118-1-2026-31253.
+2026-08-08 00:03:49,184 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-08 00:03:49,394 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-08 00:03:49,459 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 31253 procesada (1 documento(s)).
+2026-08-08 00:03:49,480 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-08 00:03:49,982 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 31338 (fila grilla 8, 1 documento(s)).
+2026-08-08 00:03:51,721 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-118-1-2026-31338.
+2026-08-08 00:03:53,122 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-08 00:03:53,334 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-08 00:03:53,394 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 31338 procesada (1 documento(s)).
+2026-08-08 00:03:53,413 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-08 00:03:54,317 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 31454 (fila grilla 9, 2 documento(s)).
+2026-08-08 00:03:55,261 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-118-1-2026-31454.
+2026-08-08 00:03:56,821 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 2 documento(s).
+2026-08-08 00:03:57,214 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 3 contenedor(es).
+2026-08-08 00:03:57,282 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 31454 procesada (2 documento(s)).
+2026-08-08 00:03:57,303 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-08 00:03:57,857 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 31518 (fila grilla 11, 1 documento(s)).
+2026-08-08 00:03:59,641 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-118-1-2026-31518.
+2026-08-08 00:04:01,028 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-08 00:04:01,239 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-08 00:04:01,305 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 31518 procesada (1 documento(s)).
+2026-08-08 00:04:01,322 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-08 00:04:01,901 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 31570 (fila grilla 12, 3 documento(s)).
+2026-08-08 00:04:03,659 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-118-1-2026-31570.
+2026-08-08 00:04:07,328 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 12 documento(s).
+2026-08-08 00:04:08,547 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 12 contenedor(es).
+2026-08-08 00:04:08,613 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 31570 procesada (3 documento(s)).
+2026-08-08 00:04:08,628 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-08 00:04:09,160 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 32155 (fila grilla 15, 1 documento(s)).
+2026-08-08 00:04:10,933 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-118-1-2026-32155.
+2026-08-08 00:04:12,314 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-08 00:04:12,518 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-08 00:04:12,582 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 32155 procesada (1 documento(s)).
+2026-08-08 00:04:12,603 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-08 00:04:13,109 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 32903 (fila grilla 16, 3 documento(s)).
+2026-08-08 00:04:14,837 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-118-1-2026-32903.
+2026-08-08 00:04:19,177 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 13 documento(s).
+2026-08-08 00:04:20,545 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 13 contenedor(es).
+2026-08-08 00:04:20,611 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 32903 procesada (3 documento(s)).
+2026-08-08 00:04:20,629 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-08 00:04:21,182 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 32967 (fila grilla 19, 1 documento(s)).
+2026-08-08 00:04:22,957 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-118-1-2026-32967.
+2026-08-08 00:04:24,335 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-08 00:04:24,545 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-08 00:04:24,609 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 32967 procesada (1 documento(s)).
+2026-08-08 00:04:24,626 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-08 00:04:25,126 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 33413 (fila grilla 20, 1 documento(s)).
+2026-08-08 00:04:26,995 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-118-1-2026-33413.
+2026-08-08 00:04:28,345 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-08 00:04:28,547 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-08 00:04:28,619 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 33413 procesada (1 documento(s)).
+2026-08-08 00:04:28,637 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-08 00:04:29,119 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 34256 (fila grilla 21, 4 documento(s)).
+2026-08-08 00:04:30,810 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-118-1-2026-34256.
+2026-08-08 00:04:33,709 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 9 documento(s).
+2026-08-08 00:04:34,575 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 9 contenedor(es).
+2026-08-08 00:04:34,644 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 34256 procesada (4 documento(s)).
+2026-08-08 00:04:34,659 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-08 00:04:35,165 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 34513 (fila grilla 25, 1 documento(s)).
+2026-08-08 00:04:38,062 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-118-1-2026-34513.
+2026-08-08 00:04:39,484 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-08 00:04:39,709 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-08 00:04:39,765 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 34513 procesada (1 documento(s)).
+2026-08-08 00:04:39,784 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-08 00:04:40,262 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 34709 (fila grilla 26, 2 documento(s)).
+2026-08-08 00:04:43,162 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-118-1-2026-34709.
+2026-08-08 00:04:44,704 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 2 documento(s).
+2026-08-08 00:04:45,009 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 2 contenedor(es).
+2026-08-08 00:04:45,068 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 34709 procesada (2 documento(s)).
+2026-08-08 00:04:45,083 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-08 00:04:45,650 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 35214 (fila grilla 28, 1 documento(s)).
+2026-08-08 00:04:48,525 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-118-1-2026-35214.
+2026-08-08 00:04:49,861 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-08 00:04:50,066 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-08 00:04:50,156 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 35214 procesada (1 documento(s)).
+2026-08-08 00:04:50,175 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-08 00:04:50,667 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 35271 (fila grilla 29, 1 documento(s)).
+2026-08-08 00:04:53,520 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-118-1-2026-35271.
+2026-08-08 00:04:54,854 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-08 00:04:55,123 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-08 00:04:55,202 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 35271 procesada (1 documento(s)).
+2026-08-08 00:04:55,223 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-08 00:04:55,703 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 35372 (fila grilla 30, 3 documento(s)).
+2026-08-08 00:04:58,581 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-118-1-2026-35372.
+2026-08-08 00:05:02,137 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 12 documento(s).
+2026-08-08 00:05:03,278 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 12 contenedor(es).
+2026-08-08 00:05:03,341 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 35372 procesada (3 documento(s)).
+2026-08-08 00:05:03,360 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-08 00:05:03,862 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 6 ms.
+2026-08-08 00:05:04,149 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-08 00:05:05,247 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-08 00:05:07,332 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-08 00:05:09,333 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-08 00:05:09,784 | INFO | sunat_multas.cli | Detalle finalizado para GLOVAL SHIPPING LATIN AMERICA (PERU) S.R.L. Procesadas: 19.
