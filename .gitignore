@@ -10,3 +10,4 @@ __pycache__/
 # Logs y capturas del navegador
 logs/
 html/
+logs/reporte_multas.log

@@ -43,6 +43,8 @@ DETALLE_COLUMNS = {
     "fecha_info": 11,
 }
 
+TIPO_NUMERACION_COLUMN = 8
+
 
 def safe_filename(value: str) -> str:
     cleaned = re.sub(r'[<>:"/\\|?*]+', " ", value).strip()
@@ -186,6 +188,14 @@ def read_transmisiones(workbook_path: Path, source_title: str = MANIFEST_SOURCE_
     return codes
 
 
+def _tiene_fecha(valor: object) -> bool:
+    if valor is None:
+        return False
+    if isinstance(valor, (int, float)):
+        return valor != 0
+    return bool(str(valor).strip())
+
+
 def aplicar_detalle_filas(workbook, updates: list[tuple[int, dict]]) -> None:
     sheet = workbook[MANIFEST_DEST_SHEET]
     for fila, datos in updates:
@@ -193,6 +203,12 @@ def aplicar_detalle_filas(workbook, updates: list[tuple[int, dict]]) -> None:
             value = datos.get(key)
             if value:
                 sheet.cell(fila, column, value)
+        fechas = [
+            sheet.cell(fila, DETALLE_COLUMNS[key]).value
+            for key in ("fecha_hijo", "fecha_master", "fecha_info")
+        ]
+        tipo = "PREVIO" if all(_tiene_fecha(fecha) for fecha in fechas) else ""
+        sheet.cell(fila, TIPO_NUMERACION_COLUMN, tipo)
 
 
 def load_procesados(path: Path) -> set[str]:
