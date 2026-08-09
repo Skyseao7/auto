@@ -36,6 +36,13 @@ class TipoReporte:
     columnas_extraccion: int = 9
     columnas_condicion_color: tuple[int, ...] = ()
     columna_color_destino: int = 0
+    ruta_menu_trazabilidad: tuple[tuple[str, ...], ...] = ()
+    selector_formulario_trazabilidad: str = "radTipoBusqueda"
+    selector_radio_numero_manifiesto: str = "tipoBusquedaNumeroManifiestoDesconsolidado"
+    selector_input_numero_manifiesto: str = "txtNumeroManifiestoInicial"
+    selector_btn_consultar_trazabilidad: str = "#btnBuscar|text=Consultar|button:has-text('Consultar')"
+    selector_tabla_trazabilidad: str = "tblListaConsolidado"
+    selector_enlace_detalle_trazabilidad: str = "a.link"
 
     @property
     def es_expo(self) -> bool:
@@ -127,6 +134,12 @@ EXPO118 = TipoReporte(
             "Control de Cumplimiento del Manifiesto Consolidado",
         ),
     ),
+    ruta_menu_trazabilidad=(
+        ("Operaciones de Comercio Exterior", "Operador de Comercio Exterior"),
+        ("Manifiesto de Carga de Salida",),
+        ("Consultas",),
+        ("Trazabilidad del Manifiesto de Carga",),
+    ),
     pasos_formulario=(
         PasoFormulario(input_id="selCodigoAduana", texto="118", tipo_control="select"),
     ),
@@ -167,6 +180,10 @@ EXPO118 = TipoReporte(
     ),
     columnas_condicion_color=(11, 12),
     columna_color_destino=9,
+    selector_formulario_trazabilidad="tipoBusquedaNumeroManifiestoDesconsolidado",
+    selector_radio_numero_manifiesto="tipoBusquedaNumeroManifiestoDesconsolidado",
+    selector_input_numero_manifiesto="txtNumeroManifiestoInicial",
+    selector_btn_consultar_trazabilidad="#btnBuscar|text=Consultar|button:has-text('Consultar')",
 )
 
 EXPO235 = TipoReporte(

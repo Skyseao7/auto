@@ -19,6 +19,8 @@ from .excel_io import (
     load_procesados,
     process_manifiestos_excel,
     read_companies,
+    read_proceso_destino,
+    read_proceso_destino_grupos,
     read_transmisiones,
     safe_filename,
     save_procesados,
@@ -54,6 +56,10 @@ def main() -> None:
 
     if args.cerrar_sesiones:
         run_logout_all(config, companies)
+        return
+
+    if args.trazabilidad:
+        run_trazabilidad(config, companies, tipo)
         return
 
     start_date, end_date = resolve_date_range(args)
@@ -179,6 +185,24 @@ def run_detalle(config, companies, start_date, end_date, tipo) -> None:
     LOGGER.info("Detalle finalizado para %s. Procesadas: %s.", company.name, len(processed))
 
 
+def run_trazabilidad(config, companies, tipo) -> None:
+    if len(companies) != 1:
+        raise ValueError("Para --trazabilidad selecciona una sola empresa con --item, --ruc o --nombre.")
+    company = companies[0]
+    workbook_path = config.output_dir / f"{safe_filename(company.name)}.xlsx"
+    if not workbook_path.exists():
+        raise ValueError(f"No existe el archivo: {workbook_path}")
+    codigos = read_proceso_destino(workbook_path, tipo)
+    if not codigos:
+        LOGGER.warning("La columna PROCESO de %s está vacía para %s.", tipo.hoja_destino, company.name)
+        return
+    LOGGER.info("Códigos de trazabilidad para %s: %s", company.name, len(codigos))
+    grupos = read_proceso_destino_grupos(workbook_path, tipo)
+    LOGGER.info("Grupos únicos de trazabilidad para %s: %s", company.name, len(grupos))
+    client = SunatClient(config.sunat, tipo, workbook_path=workbook_path)
+    client.consultar_trazabilidad(company, grupos)
+
+
 def _build_groups(codes: list[str]) -> list[dict]:
     groups: list[dict] = []
     for index, code in enumerate(codes):
@@ -240,6 +264,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--excel", action="store_true", help="Solo procesa Excel: copia los datos base de IMPO118-Transmisiones a IMPO118.")
     parser.add_argument("--consulta", action="store_true", help="Solo consulta SUNAT y crea/actualiza la hoja IMPO118-Transmisiones.")
     parser.add_argument("--detalle", action="store_true", help="Recorre cada transmisión en SUNAT y llena el detalle de documentos en IMPO118.")
+    parser.add_argument("--trazabilidad", action="store_true", help="Consulta la Trazabilidad del Manifiesto de Carga para cada código de la columna PROCESO de la hoja destino.")
     parser.add_argument("--todo", action="store_true", help="Ejecuta todo el flujo: --consulta + --excel + --detalle.")
     parser.add_argument("--cerrar-sesiones", action="store_true", help="Cierra la sesión SUNAT de todas las empresas de la LISTA (login + Salir).")
     parser.add_argument("--archivo", type=Path, help="Ruta de un Excel existente para usar con --excel/--solo-excel.")

@@ -18,6 +18,7 @@ except ModuleNotFoundError:
 
 from .config import SunatConfig, SunatSelectors
 from .errors import AuthenticationError, ExtractionError, NavigationError, NoRecordsFound
+from .excel_io import escribir_puerto_destino
 from .models import Company, ManifestRecord
 from .reportes import TIPOS, TipoReporte
 
@@ -47,9 +48,10 @@ FIELD_ALIASES = {
 
 
 class SunatClient:
-    def __init__(self, config: SunatConfig, tipo: TipoReporte | None = None) -> None:
+    def __init__(self, config: SunatConfig, tipo: TipoReporte | None = None, workbook_path=None) -> None:
         self.config = config
         self.tipo = tipo or TIPOS["impo118"]
+        self.workbook_path = workbook_path
 
     def login_only(self, company: Company, pause_seconds: int = 20) -> None:
         if sync_playwright is None:
@@ -180,12 +182,19 @@ class SunatClient:
                 context.close()
                 browser.close()
 
-    def _navigate_to_query(self, page: Page) -> None:
+    def _navigate_to_query(
+        self,
+        page: Page,
+        ruta: tuple[tuple[str, ...], ...] | None = None,
+        selector_formulario: str | None = None,
+    ) -> None:
+        ruta = ruta or self.tipo.ruta_menu
+        selector_formulario = selector_formulario or self.tipo.selector_formulario
         try:
             self._wait_for_menu_ready(page)
-            self._open_menu_tree(page)
-            self._click_menu_option(page, self.tipo.ruta_menu[-1], timeout_ms=15000)
-            self._wait_for_query_form(page)
+            self._open_menu_tree(page, ruta)
+            self._click_menu_option(page, ruta[-1], timeout_ms=15000)
+            self._wait_for_query_form(page, selector_formulario=selector_formulario)
         except (PlaywrightError, PlaywrightTimeoutError) as exc:
             LOGGER.error("Opciones de menú visibles: %s", self._visible_menu_options(page))
             raise NavigationError(
@@ -193,7 +202,20 @@ class SunatClient:
                 "Verifica que la opción exista para este usuario."
             ) from exc
 
-    def _open_menu_tree(self, page: Page) -> None:
+    def _navigate_to_trazabilidad(self, page: Page) -> None:
+        if not self.tipo.ruta_menu_trazabilidad:
+            raise NavigationError("Este reporte no tiene configurada la ruta de trazabilidad.")
+        self._navigate_to_query(
+            page,
+            ruta=self.tipo.ruta_menu_trazabilidad,
+            selector_formulario=self.tipo.selector_formulario_trazabilidad,
+        )
+
+    def _open_menu_tree(
+        self,
+        page: Page,
+        ruta: tuple[tuple[str, ...], ...] | None = None,
+    ) -> None:
         """Expande cada nivel del árbol SOL solo si su hijo aún no es visible.
 
         No depende de la posición de los paneles (izquierda o derecha) ni de que el
@@ -202,7 +224,7 @@ class SunatClient:
         menú ya está expandido y para las que tienen los paneles del medio (p. ej.
         PRADIVO), donde el árbol queda desplazado a la derecha.
         """
-        ruta = self.tipo.ruta_menu
+        ruta = ruta or self.tipo.ruta_menu
         for index in range(len(ruta) - 1):
             child_labels = ruta[index + 1]
             if self._menu_option_visible(page, child_labels):
@@ -228,9 +250,9 @@ class SunatClient:
             sleep(0.2)
         LOGGER.warning("La opción del menú no apareció: %s", " / ".join(labels))
 
-    def _wait_for_query_form(self, page: Page, timeout_ms: int = 30000) -> None:
+    def _wait_for_query_form(self, page: Page, timeout_ms: int = 30000, selector_formulario: str | None = None) -> None:
         """Espera el formulario de la consulta y vuelve apenas esté visible."""
-        selector = self.tipo.selector_formulario
+        selector = selector_formulario or self.tipo.selector_formulario
         deadline = _monotonic_ms() + timeout_ms
         while _monotonic_ms() < deadline:
             for scope in _page_scopes(_active_page(page)):
@@ -416,6 +438,218 @@ class SunatClient:
                 self._logout(page)
                 context.close()
                 browser.close()
+
+    def consultar_trazabilidad(self, company: Company, grupos: list[dict]) -> None:
+        if sync_playwright is None:
+            raise RuntimeError("Playwright no está instalado. Ejecuta: pip install -r requirements.txt")
+        with sync_playwright() as playwright:
+            browser = playwright.chromium.launch(
+                headless=self.config.headless,
+                slow_mo=self.config.slow_mo_ms,
+            )
+            context = browser.new_context(accept_downloads=True)
+            page = context.new_page()
+            page.set_default_timeout(self.config.timeout_ms)
+            try:
+                self._login(page, company)
+                self._navigate_to_trazabilidad(page)
+                for index, grupo in enumerate(grupos, start=1):
+                    codigo = grupo["code"]
+                    self._llenar_consulta_trazabilidad(page, codigo)
+                    LOGGER.info("Trazabilidad consultada (%s/%s) para código %s.", index, len(grupos), codigo)
+                    self._abrir_detalle_trazabilidad(page, codigo, grupo["start_row"], grupo["count"])
+            finally:
+                self._logout(page)
+                context.close()
+                browser.close()
+
+    def _abrir_detalle_trazabilidad(self, page: Page, codigo: str, start_row: int, count: int) -> None:
+        fila_offset = 0
+        while True:
+            scope = self._abrir_tabla_detalle_consolidado(page, codigo)
+            if scope is None:
+                LOGGER.warning("No se abrió la tabla de detalle del documento (%s).", codigo)
+                return
+            if not self._existe_fila_hijo(scope, fila_offset):
+                return
+            if fila_offset >= count:
+                LOGGER.warning("La tabla de detalle tiene más filas que el grupo en Excel (%s).", codigo)
+            self._procesar_hijo(page, scope, codigo, start_row + fila_offset, fila_offset)
+            fila_offset += 1
+
+    def _abrir_tabla_detalle_consolidado(self, page: Page, codigo: str):
+        selector = self.tipo.selector_tabla_trazabilidad
+        deadline = _monotonic_ms() + 20000
+        enlace = None
+        while _monotonic_ms() < deadline:
+            for scope in _page_scopes(_active_page(page)):
+                try:
+                    enlace = scope.locator(
+                        f"#{selector} tbody {self.tipo.selector_enlace_detalle_trazabilidad}"
+                    ).first
+                    if enlace.count() > 0:
+                        break
+                except PlaywrightError:
+                    continue
+            if enlace is not None and enlace.count() > 0:
+                break
+            sleep(0.4)
+        if enlace is None or enlace.count() == 0:
+            LOGGER.warning("No se encontró el enlace de detalle en la tabla de trazabilidad (%s).", codigo)
+            return None
+        try:
+            enlace.click(timeout=3000, no_wait_after=True)
+            LOGGER.info("Enlace de detalle del Manifiesto Consolidado clicado (%s).", codigo)
+        except (PlaywrightError, PlaywrightTimeoutError) as exc:
+            LOGGER.warning("No se pudo clicar el enlace de detalle (%s): %s", codigo, exc)
+            return None
+        scope = self._esperar_tabla_en_cualquier_scope(page, "tblLista", timeout_ms=45000)
+        if scope is None:
+            LOGGER.warning("No se encontró la tabla de detalle del documento en la trazabilidad (%s).", codigo)
+            return None
+        return scope
+
+    def _existe_fila_hijo(self, scope, fila_offset: int) -> bool:
+        try:
+            fila = scope.locator(f"#tblLista tbody tr:nth-child({fila_offset + 1})").first
+            return fila.count() > 0
+        except PlaywrightError:
+            return False
+
+    def _procesar_hijo(self, page: Page, scope, codigo: str, fila: int, fila_offset: int) -> None:
+        enlace = scope.locator(f"#tblLista tbody tr:nth-child({fila_offset + 1}) a.link").first
+        if enlace.count() == 0:
+            LOGGER.warning("No se encontró el enlace del documento hijo en la tabla de detalle (%s).", codigo)
+            return
+        try:
+            enlace.click(timeout=3000, no_wait_after=True)
+            LOGGER.info("Enlace del documento hijo clicado (%s, fila %s).", codigo, fila)
+        except (PlaywrightError, PlaywrightTimeoutError) as exc:
+            LOGGER.warning("No se pudo clicar el enlace del documento hijo (%s): %s", codigo, exc)
+            return
+        puerto = self._esperar_puerto_destino(page, timeout_ms=45000)
+        if puerto is None:
+            LOGGER.warning("No se encontró Puerto Destino (%s, fila %s).", codigo, fila)
+            return
+        LOGGER.info("Puerto Destino de %s: %s", codigo, puerto)
+        try:
+            escribir_puerto_destino(self.workbook_path, self.tipo, fila, puerto)
+            LOGGER.info("Puerto Destino escrito en EXPO118 fila %s (E/F).", fila)
+        except OSError as exc:
+            LOGGER.warning("No se pudo escribir el puerto en %s: %s", self.workbook_path, exc)
+            return
+        self._clic_regresar(page, veces=2)
+
+    def _esperar_puerto_destino(self, page: Page, timeout_ms: int) -> str | None:
+        deadline = _monotonic_ms() + timeout_ms
+        while _monotonic_ms() < deadline:
+            for candidate in _context_pages(page):
+                for scope in _page_scopes(candidate):
+                    try:
+                        label = scope.locator(
+                            'div.col-sm-3:has(label:has-text("Puerto Destino:"))'
+                        )
+                        if label.count() == 0:
+                            continue
+                        valor = label.first.locator("xpath=following-sibling::div[contains(@class, 'col-sm-3')][1]")
+                        if valor.count() == 0:
+                            continue
+                        texto = _clean_text(valor.first.inner_text(timeout=3000))
+                        if texto:
+                            LOGGER.info("Puerto Destino localizado en %s.", scope)
+                            return texto
+                    except PlaywrightError:
+                        continue
+            sleep(0.4)
+        return None
+
+    def _clic_regresar(self, page: Page, veces: int = 1) -> None:
+        for intento in range(veces):
+            boton = self._esperar_boton_regresar(page, timeout_ms=15000)
+            if boton is None:
+                LOGGER.warning("No se encontró el botón Regresar (intento %s).", intento + 1)
+                return
+            try:
+                boton.click(timeout=3000, no_wait_after=True)
+                LOGGER.info("Botón Regresar clicado (intento %s).", intento + 1)
+            except (PlaywrightError, PlaywrightTimeoutError) as exc:
+                LOGGER.warning("No se pudo clicar Regresar (intento %s): %s", intento + 1, exc)
+                return
+            self._esperar_estabilidad_navegacion(page)
+            sleep(5)
+
+    def _esperar_estabilidad_navegacion(self, page: Page) -> None:
+        try:
+            activa = _active_page(page)
+            activa.wait_for_load_state("domcontentloaded", timeout=10000)
+        except (PlaywrightError, PlaywrightTimeoutError):
+            pass
+
+    def _esperar_boton_regresar(self, page: Page, timeout_ms: int):
+        deadline = _monotonic_ms() + timeout_ms
+        while _monotonic_ms() < deadline:
+            for candidate in _context_pages(page):
+                for scope in _page_scopes(candidate):
+                    try:
+                        boton = scope.locator('button:has-text("Regresar")').first
+                        if boton.count() > 0:
+                            return boton
+                    except PlaywrightError:
+                        continue
+            sleep(0.4)
+        return None
+
+    def _esperar_tabla_en_cualquier_scope(self, page: Page, table_id: str, timeout_ms: int):
+        deadline = _monotonic_ms() + timeout_ms
+        while _monotonic_ms() < deadline:
+            for candidate in _context_pages(page):
+                for scope in _page_scopes(candidate):
+                    try:
+                        if scope.locator(f"#{table_id} tbody tr").count() > 0:
+                            LOGGER.info("Tabla #%s localizada en %s.", table_id, scope)
+                            return scope
+                    except PlaywrightError:
+                        continue
+            sleep(0.4)
+        return None
+
+    def _llenar_consulta_trazabilidad(self, page: Page, codigo: str) -> None:
+        self._aplicar_pasos_formulario(page)
+        self._seleccionar_radio_numero_manifiesto(page)
+        input_numero = self._find_visible_quick(
+            page,
+            f"#{self.tipo.selector_input_numero_manifiesto}",
+            timeout_ms=8000,
+        )
+        input_numero.fill(codigo)
+        LOGGER.info("Número de Manifiesto Consolidado cargado: %s", codigo)
+        try:
+            btn = self._first_available_locator(
+                page, self.tipo.selector_btn_consultar_trazabilidad, timeout_ms=3000
+            )
+            btn.click(timeout=3000)
+            LOGGER.info("Botón Consultar trazabilidad presionado.")
+            sleep(4)
+        except (PlaywrightError, PlaywrightTimeoutError) as exc:
+            LOGGER.warning("No se pudo presionar Consultar en la trazabilidad: %s", exc)
+
+    def _seleccionar_radio_numero_manifiesto(self, page: Page) -> None:
+        radio_id = self.tipo.selector_radio_numero_manifiesto
+        for scope in _page_scopes(_active_page(page)):
+            try:
+                scope.locator(f"#{radio_id}").check(timeout=2000)
+                LOGGER.info("Radio 'Número de Manifiesto Consolidado' marcado (%s).", radio_id)
+                return
+            except (PlaywrightError, PlaywrightTimeoutError):
+                continue
+        for scope in _page_scopes(_active_page(page)):
+            try:
+                scope.get_by_text("Número de Manifiesto Consolidado").first.click(timeout=2000)
+                LOGGER.info("Radio 'Número de Manifiesto Consolidado' marcado por texto.")
+                return
+            except (PlaywrightError, PlaywrightTimeoutError):
+                continue
+        raise PlaywrightTimeoutError("No se pudo marcar el radio 'Número de Manifiesto Consolidado'.")
 
     def _procesar_grupo_detalle(self, page, ruc, start_date, end_date, group, on_group) -> None:
         LOGGER.info(
@@ -1248,6 +1482,13 @@ def _active_page(page: Page) -> Page:
     if not open_pages:
         raise PlaywrightError("SUNAT cerró la pestaña de la sesión.")
     return open_pages[-1]
+
+
+def _context_pages(page: Page):
+    try:
+        return [candidate for candidate in page.context.pages if not candidate.is_closed()]
+    except Exception:
+        return [page]
 
 
 def _find_value(normalized_row: dict[str, str], aliases: tuple[str, ...]) -> str:

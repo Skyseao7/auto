@@ -191,6 +191,52 @@ def read_transmisiones(workbook_path: Path, tipo: TipoReporte, source_title: str
     return codes
 
 
+def read_proceso_destino(workbook_path: Path, tipo: TipoReporte) -> list[str]:
+    workbook = load_workbook(workbook_path, data_only=True)
+    if tipo.hoja_destino not in workbook.sheetnames:
+        raise ValueError(f"No existe la hoja {tipo.hoja_destino!r} en {workbook_path}")
+    sheet = workbook[tipo.hoja_destino]
+    values: list[str] = []
+    for row in range(2, sheet.max_row + 1):
+        value = sheet.cell(row, 3).value
+        text = str(value).strip() if value is not None else ""
+        if text:
+            values.append(text)
+    return values
+
+
+def read_proceso_destino_grupos(workbook_path: Path, tipo: TipoReporte) -> list[dict]:
+    """Devuelve grupos de códigos consecutivos con su fila de inicio en la hoja destino."""
+    workbook = load_workbook(workbook_path, data_only=True)
+    if tipo.hoja_destino not in workbook.sheetnames:
+        raise ValueError(f"No existe la hoja {tipo.hoja_destino!r} en {workbook_path}")
+    sheet = workbook[tipo.hoja_destino]
+    grupos: list[dict] = []
+    fila_inicio = None
+    codigo_actual = None
+    for row in range(2, sheet.max_row + 1):
+        value = sheet.cell(row, 3).value
+        text = str(value).strip() if value is not None else ""
+        if not text:
+            continue
+        if text != codigo_actual:
+            codigo_actual = text
+            fila_inicio = row
+            grupos.append({"code": codigo_actual, "start_row": fila_inicio, "count": 1})
+        else:
+            grupos[-1]["count"] += 1
+    return grupos
+
+
+def escribir_puerto_destino(workbook_path: Path, tipo: TipoReporte, fila: int, texto_puerto: str) -> None:
+    codigo_puerto, _, puerto = texto_puerto.partition("-")
+    workbook = load_workbook(workbook_path)
+    sheet = workbook[tipo.hoja_destino]
+    sheet.cell(fila, 5, codigo_puerto.strip() or None)
+    sheet.cell(fila, 6, puerto.strip() or None)
+    workbook.save(workbook_path)
+
+
 def _tiene_fecha(valor: object) -> bool:
     if valor is None:
         return False
