@@ -160,7 +160,7 @@ def _crear_hoja_transmisiones(workbook, rows: list[list[str]], tipo: TipoReporte
     sheet = workbook.create_sheet(title=tipo.hoja_transmisiones)
     sheet.append(list(tipo.cabeceras_transmisiones))
     for row in rows:
-        sheet.append((row + [None] * 9)[:9])
+        sheet.append((row + [None] * tipo.columnas_extraccion)[:tipo.columnas_extraccion])
 
 
 def escribir_hoja_transmisiones(workbook_path: Path, rows: list[list[str]], tipo: TipoReporte) -> int:

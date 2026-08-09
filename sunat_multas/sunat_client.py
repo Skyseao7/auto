@@ -45,18 +45,6 @@ FIELD_ALIASES = {
 }
 
 
-MENU_TREE = (
-    ("Operaciones de Comercio Exterior", "Operador de Comercio Exterior"),
-    ("Manifiesto de Carga de Ingreso",),
-    ("Consultas",),
-    (
-        "Consulta Manifiesto Desconsolidado",
-        "Consulta del Manifiesto Desconsolidado",
-        "Consulta de Manifiesto Desconsolidado",
-        "Consulta Manifesto Desconsolidado",
-    ),
-)
-
 
 class SunatClient:
     def __init__(self, config: SunatConfig, tipo: TipoReporte | None = None) -> None:
@@ -196,12 +184,12 @@ class SunatClient:
         try:
             self._wait_for_menu_ready(page)
             self._open_menu_tree(page)
-            self._click_menu_option(page, MENU_TREE[-1], timeout_ms=15000)
+            self._click_menu_option(page, self.tipo.ruta_menu[-1], timeout_ms=15000)
             self._wait_for_query_form(page)
         except (PlaywrightError, PlaywrightTimeoutError) as exc:
             LOGGER.error("Opciones de menú visibles: %s", self._visible_menu_options(page))
             raise NavigationError(
-                "No se pudo abrir Consulta Manifiesto Desconsolidado desde el menú SUNAT. "
+                "No se pudo abrir la consulta desde el menú SUNAT. "
                 "Verifica que la opción exista para este usuario."
             ) from exc
 
@@ -214,19 +202,20 @@ class SunatClient:
         menú ya está expandido y para las que tienen los paneles del medio (p. ej.
         PRADIVO), donde el árbol queda desplazado a la derecha.
         """
-        for index in range(len(MENU_TREE) - 1):
-            child_labels = MENU_TREE[index + 1]
+        ruta = self.tipo.ruta_menu
+        for index in range(len(ruta) - 1):
+            child_labels = ruta[index + 1]
             if self._menu_option_visible(page, child_labels):
                 continue
-            LOGGER.info("Expandiendo el nivel del menú: %s", MENU_TREE[index][0])
-            self._click_menu_option(page, MENU_TREE[index], timeout_ms=10000)
+            LOGGER.info("Expandiendo el nivel del menú: %s", ruta[index][0])
+            self._click_menu_option(page, ruta[index], timeout_ms=10000)
             self._wait_for_menu_option(page, child_labels, timeout_ms=8000)
 
     def _wait_for_menu_ready(self, page: Page, timeout_ms: int = 15000) -> None:
         """Espera a que el menú SOL esté cargado para no desperdiciar tiempo fijo."""
         deadline = _monotonic_ms() + timeout_ms
         while _monotonic_ms() < deadline:
-            if self._menu_option_visible(page, MENU_TREE[0]):
+            if self._menu_option_visible(page, self.tipo.ruta_menu[0]):
                 return
             sleep(0.3)
         raise PlaywrightTimeoutError("No se cargó el menú SOL")
@@ -241,17 +230,18 @@ class SunatClient:
 
     def _wait_for_query_form(self, page: Page, timeout_ms: int = 30000) -> None:
         """Espera el formulario de la consulta y vuelve apenas esté visible."""
+        selector = self.tipo.selector_formulario
         deadline = _monotonic_ms() + timeout_ms
         while _monotonic_ms() < deadline:
             for scope in _page_scopes(_active_page(page)):
                 try:
-                    if scope.locator("#tipoBusquedaFechaNumeracionDesconsolidado:visible").count() > 0:
-                        LOGGER.info("Formulario de Consulta Manifiesto Desconsolidado cargado.")
+                    if scope.locator(f"#{selector}:visible").count() > 0:
+                        LOGGER.info("Formulario de consulta %s cargado.", self.tipo.nombre)
                         return
                 except PlaywrightError:
                     continue
             sleep(0.2)
-        raise PlaywrightTimeoutError("No se cargó el formulario de Consulta Manifiesto Desconsolidado")
+        raise PlaywrightTimeoutError(f"No se cargó el formulario de consulta {self.tipo.nombre}")
 
     def _menu_option_visible(self, page: Page, labels: tuple[str, ...]) -> bool:
         for scope in _page_scopes(_active_page(page)):
@@ -265,7 +255,21 @@ class SunatClient:
         return False
 
     def _click_consultar(self, page: Page) -> None:
-        """Presiona el botón Consultar con los selectores recomendados, con fallback."""
+        """Presiona el botón Consultar con los selectores del tipo, con fallback."""
+        try:
+            btn = self._first_available_locator(page, self.tipo.selector_btn_consultar, timeout_ms=3000)
+            for intento in range(1, 4):
+                try:
+                    btn.click(timeout=1500)
+                    LOGGER.info("Botón Consultar presionado (intento %s/3): %s.", intento, self.tipo.selector_btn_consultar)
+                except (PlaywrightError, PlaywrightTimeoutError) as exc:
+                    LOGGER.info("Intento %s/3 de Consultar falló: %s", intento, exc)
+                if intento < 3:
+                    sleep(2)
+            sleep(3)
+            return
+        except (PlaywrightError, PlaywrightTimeoutError):
+            pass
         deadline = _monotonic_ms() + 10000
         last_error: Exception | None = None
         while _monotonic_ms() < deadline:
@@ -306,27 +310,27 @@ class SunatClient:
         selectors = self.config.selectors
         deadline = _monotonic_ms() + timeout_ms
         while _monotonic_ms() < deadline:
-            if self._grid_has_rows(page):
-                return self._extract_manifest_grid(page)
             if self._grid_has_no_records(page):
                 return []
+            if self._grid_has_rows(page):
+                return self._extract_manifest_grid(page)
             if self._text_visible(page, selectors.no_records_text, timeout_ms=300):
                 break
             sleep(0.4)
         return []
 
     def _grid_has_no_records(self, page: Page) -> bool:
-        selector = self.config.selectors.no_records_selector
-        if not selector:
-            return False
         pattern = re.compile(r"no existe|sin registros|no se encontraron|no existen registros", re.IGNORECASE)
-        for scope in _page_scopes(_active_page(page)):
-            try:
-                node = scope.locator(selector).filter(has_text=pattern).first
-                if node.count() > 0 and node.is_visible():
-                    return True
-            except (PlaywrightError, PlaywrightTimeoutError):
+        for selector in (self.tipo.selector_grid_vacio, self.config.selectors.no_records_selector):
+            if not selector:
                 continue
+            for scope in _page_scopes(_active_page(page)):
+                try:
+                    node = scope.locator(selector).filter(has_text=pattern).first
+                    if node.count() > 0 and node.is_visible():
+                        return True
+                except (PlaywrightError, PlaywrightTimeoutError):
+                    continue
         return False
 
     def _grid_has_rows(self, page: Page) -> bool:
@@ -334,14 +338,15 @@ class SunatClient:
         if scope is None:
             return False
         try:
-            return scope.locator("#gridManifiestoCarga .dojoxGridRow").count() > 0
+            return scope.locator(f"#{self.tipo.selector_grid} {self.tipo.selector_grid_filas}").count() > 0
         except PlaywrightError:
             return False
 
     def _find_grid_scope(self, page: Page):
+        selector = self.tipo.selector_grid
         for scope in _page_scopes(_active_page(page)):
             try:
-                if scope.locator("#gridManifiestoCarga").count() > 0:
+                if scope.locator(f"#{selector}").count() > 0:
                     return scope
             except PlaywrightError:
                 continue
@@ -351,10 +356,12 @@ class SunatClient:
         scope = self._find_grid_scope(page)
         if scope is None:
             return []
+        grid_selector = f"#{self.tipo.selector_grid}"
+        max_cols = self.tipo.columnas_extraccion
         rows: list[list[str]] = []
         seen_first: set[tuple[str, ...]] = set()
         for _ in range(50):
-            row_locator = scope.locator("#gridManifiestoCarga .dojoxGridRow")
+            row_locator = scope.locator(f"{grid_selector} {self.tipo.selector_grid_filas}")
             count = row_locator.count()
             if count == 0:
                 break
@@ -362,7 +369,7 @@ class SunatClient:
             for index in range(count):
                 cells = [_clean_text(cell) for cell in row_locator.nth(index).locator("td").all_inner_texts()]
                 if any(cells):
-                    page_rows.append(cells[:9])
+                    page_rows.append(cells[:max_cols])
             if not page_rows:
                 break
             first_key = tuple(page_rows[0])
@@ -377,7 +384,7 @@ class SunatClient:
 
     def _next_grid_page(self, scope) -> bool:
         try:
-            next_button = scope.locator('[title="Página siguiente"]').first
+            next_button = scope.locator(self.tipo.selector_grid_siguiente).first
             if next_button.count() == 0:
                 return False
             classes = (next_button.get_attribute("class") or "") + " " + (next_button.get_attribute("aria-disabled") or "")
@@ -651,24 +658,25 @@ class SunatClient:
         return False
 
     def _select_fecha_numeracion_desconsolidado(self, page: Page) -> None:
-        target = "Fecha de Numeración de Manifiesto Desconsolidado"
+        radio_id = self.tipo.selector_radio_fecha
+        target = self.tipo.radio_fecha_label
         for scope in _page_scopes(page):
             try:
-                scope.locator("#tipoBusquedaFechaNumeracionDesconsolidado").check(timeout=1000)
-                LOGGER.info("Filtro de fecha seleccionado por ID.")
+                scope.locator(f"#{radio_id}").check(timeout=1000)
+                LOGGER.info("Filtro de fecha seleccionado por ID (%s).", radio_id)
                 return
             except (PlaywrightError, PlaywrightTimeoutError):
                 pass
         for scope in _page_scopes(page):
             try:
-                scope.get_by_label(re.compile(r"Fecha de Numeración.*Desconsolidado", re.IGNORECASE)).check(timeout=1000)
+                scope.get_by_label(re.compile(target, re.IGNORECASE)).check(timeout=1000)
                 LOGGER.info("Filtro de fecha seleccionado por etiqueta.")
                 return
             except (PlaywrightError, PlaywrightTimeoutError):
                 pass
         for scope in _page_scopes(page):
             try:
-                scope.get_by_text(re.compile(r"Fecha\s+de\s+Numeraci[oó]n\s+de\s+Manifiesto\s+Desconsolidado", re.IGNORECASE)).click(timeout=1000)
+                scope.get_by_text(re.compile(target, re.IGNORECASE)).click(timeout=1000)
                 LOGGER.info("Filtro de fecha seleccionado por texto.")
                 return
             except (PlaywrightError, PlaywrightTimeoutError):
@@ -680,14 +688,13 @@ class SunatClient:
                     return
             except PlaywrightError:
                 continue
-        raise PlaywrightTimeoutError("No se pudo seleccionar Fecha de Numeración de Manifiesto Desconsolidado")
+        raise PlaywrightTimeoutError(f"No se pudo seleccionar {target}")
 
     def _fill_date_range(self, page: Page, start_date: date, end_date: date) -> None:
-        selectors = self.config.selectors
         start_value = start_date.strftime("%d/%m/%Y")
         end_value = end_date.strftime("%d/%m/%Y")
-        start_input = self._fill_date_plain(page, selectors.date_from_input, start_value)
-        end_input = self._fill_date_plain(page, selectors.date_to_input, end_value)
+        start_input = self._fill_date_plain(page, self.tipo.date_from_input, start_value)
+        end_input = self._fill_date_plain(page, self.tipo.date_to_input, end_value)
         if start_input.input_value() != start_value or end_input.input_value() != end_value:
             raise NavigationError("SUNAT no conservó el rango de fechas ingresado.")
         LOGGER.info("Rango mensual cargado: %s a %s", start_value, end_value)
@@ -699,7 +706,90 @@ class SunatClient:
 
     def _aplicar_pasos_formulario(self, page: Page) -> None:
         for paso in self.tipo.pasos_formulario:
-            self._seleccionar_combobox(page, paso.input_id, paso.texto)
+            if paso.tipo_control == "select":
+                self._seleccionar_select_html(page, paso.input_id, paso.texto)
+            elif paso.tipo_control == "teclado":
+                self._escribir_y_enter(page, paso.input_id, paso.texto)
+            else:
+                self._seleccionar_combobox(page, paso.input_id, paso.texto)
+
+    def _escribir_y_enter(self, page: Page, input_id: str, texto: str, timeout_ms: int = 12000) -> None:
+        deadline = _monotonic_ms() + timeout_ms
+        last_error: Exception | None = None
+        while _monotonic_ms() < deadline:
+            try:
+                active = _active_page(page)
+            except PlaywrightError:
+                return
+            for scope in _page_scopes(active):
+                try:
+                    campo = scope.locator(f"#{input_id}").first
+                    campo.click(timeout=2000)
+                    campo.fill("")
+                    campo.press_sequentially(texto, delay=60)
+                    sleep(0.4)
+                    items = scope.locator(f"#{input_id}_popup .dijitMenuItem:visible")
+                    if items.count() == 0:
+                        items = scope.locator(".dijitMenuItem:visible")
+                    if items.count() == 0:
+                        items = scope.locator("ul:visible li:visible")
+                    clicked = False
+                    if items.count() > 0:
+                        for index in range(items.count()):
+                            item_text = _clean_text(items.nth(index).inner_text())
+                            if texto.casefold() in item_text.casefold():
+                                items.nth(index).click(timeout=2500)
+                                clicked = True
+                                LOGGER.info("Opción %s clicada en %s: %s", input_id, texto, item_text)
+                                break
+                        if not clicked and items.count() == 1:
+                            items.first.click(timeout=2500)
+                            clicked = True
+                    if not clicked:
+                        campo.press("Enter")
+                        sleep(0.3)
+                    valor = campo.input_value()
+                    if valor and texto.casefold() in valor.casefold():
+                        LOGGER.info("Campo %s seleccionado: %s (valor %s)", input_id, texto, valor)
+                        return
+                    LOGGER.info("Campo %s quedó con valor: %r", input_id, valor)
+                except (PlaywrightError, PlaywrightTimeoutError) as exc:
+                    last_error = exc
+            sleep(0.3)
+        raise PlaywrightTimeoutError(f"No se pudo seleccionar el campo {input_id} = {texto}") from last_error
+
+    def _seleccionar_select_html(self, page: Page, input_id: str, texto: str, timeout_ms: int = 12000) -> None:
+        deadline = _monotonic_ms() + timeout_ms
+        last_error: Exception | None = None
+        while _monotonic_ms() < deadline:
+            try:
+                active = _active_page(page)
+            except PlaywrightError:
+                return
+            for scope in _page_scopes(active):
+                try:
+                    select = scope.locator(f"#{input_id}").first
+                    target_value = None
+                    for idx in range(select.locator("option").count()):
+                        opt = select.locator("option").nth(idx)
+                        opt_text = _clean_text(opt.inner_text())
+                        opt_value = opt.get_attribute("value") or ""
+                        if opt_text == texto or opt_value == texto or texto in opt_text:
+                            target_value = opt_value or opt_text
+                            break
+                    if target_value is None:
+                        raise PlaywrightTimeoutError(
+                            f"No se encontró la opción {texto!r} en el select #{input_id}"
+                        )
+                    select.select_option(value=target_value, timeout=2000)
+                    selected = select.input_value()
+                    if selected:
+                        LOGGER.info("Select %s seleccionado: %s (%s)", input_id, texto, selected)
+                        return
+                except (PlaywrightError, PlaywrightTimeoutError) as exc:
+                    last_error = exc
+            sleep(0.3)
+        raise PlaywrightTimeoutError(f"No se pudo seleccionar el select {input_id} = {texto}") from last_error
 
     def _seleccionar_combobox(self, page: Page, input_id: str, texto: str, timeout_ms: int = 12000) -> None:
         deadline = _monotonic_ms() + timeout_ms
@@ -757,27 +847,28 @@ class SunatClient:
     def _fill_agente_carga_ruc(self, page: Page, ruc: str) -> None:
         """Marca el checkbox RUC del Agente de Carga y escribe el RUC de la empresa."""
         self._check_agente_carga_box(page)
-        ruc_input = self._find_visible_quick(page, "#numeroRucAgenteCarga", timeout_ms=8000)
+        ruc_input = self._find_visible_quick(page, f"#{self.tipo.selector_input_ruc}", timeout_ms=8000)
         ruc_input.fill(ruc)
         LOGGER.info("RUC del agente de carga cargado: %s", ruc)
 
     def _check_agente_carga_box(self, page: Page) -> None:
         """Marca el checkbox sin desmarcarlo si ya estaba marcado (.check() es idempotente)."""
+        checkbox_id = self.tipo.selector_checkbox_ruc
         for scope in _page_scopes(_active_page(page)):
             try:
-                scope.locator("#tipoBusquedaAgenteCarga").first.check(timeout=3000)
-                LOGGER.info("Checkbox RUC del Agente de Carga marcado.")
+                scope.locator(f"#{checkbox_id}").first.check(timeout=3000)
+                LOGGER.info("Checkbox RUC del Agente de Carga marcado (%s).", checkbox_id)
                 return
             except (PlaywrightError, PlaywrightTimeoutError):
                 continue
         for scope in _page_scopes(_active_page(page)):
             try:
-                if scope.evaluate(_set_checkbox_script(), "tipoBusquedaAgenteCarga"):
-                    LOGGER.info("Checkbox RUC del Agente de Carga marcado mediante DOM.")
+                if scope.evaluate(_set_checkbox_script(), checkbox_id):
+                    LOGGER.info("Checkbox RUC del Agente de Carga marcado mediante DOM (%s).", checkbox_id)
                     return
             except PlaywrightError:
                 continue
-        LOGGER.warning("No se encontró el checkbox RUC del Agente de Carga.")
+        LOGGER.warning("No se encontró el checkbox RUC del Agente de Carga (%s).", checkbox_id)
     def _logout(self, page: Page) -> None:
         if self.config.logout_manual:
             self._logout_manual(page)

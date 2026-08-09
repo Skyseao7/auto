@@ -950,3 +950,321 @@ FileNotFoundError: [Errno 2] No such file or directory: 'output\\GLOVAL SHIPPING
 2026-08-08 12:06:38,033 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
 2026-08-08 12:06:40,033 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
 2026-08-08 12:06:40,369 | INFO | sunat_multas.cli | Detalle finalizado para SCHRYVER. Procesadas: 19.
+2026-08-08 12:32:02,589 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-08 12:32:06,485 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-08 12:32:08,054 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-08 12:32:09,287 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-08 12:32:27,148 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Salida
+2026-08-08 12:32:27,317 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-08 12:32:41,379 | ERROR | sunat_multas.sunat_client | Opciones de menú visibles: []
+2026-08-08 13:03:06,035 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-08 13:03:27,538 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-08 13:03:27,538 | INFO | sunat_multas.cli | Consultando SUNAT para SCHRYVER | RUC 20545207436
+2026-08-08 13:03:30,391 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20545207436
+2026-08-08 13:03:31,799 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20545207436 | Usuario SCHRYVER | Clave **********
+2026-08-08 13:03:49,711 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Salida
+2026-08-08 13:03:49,878 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-08 13:03:50,256 | INFO | sunat_multas.sunat_client | Formulario de consulta EXPO118 cargado.
+2026-08-08 13:03:54,792 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID (tipoBusquedaFechaTransCons).
+2026-08-08 13:04:02,901 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 4 ms.
+2026-08-08 13:04:03,134 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-08 13:04:04,225 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-08 13:04:06,319 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-08 13:04:08,320 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-08 13:04:08,707 | ERROR | sunat_multas.cli | Error no controlado consultando SCHRYVER
+Traceback (most recent call last):
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\cli.py", line 104, in run_consulta
+    rows = client.fetch_records(company, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 110, in fetch_records
+    records = self._query_and_extract(page, company.ruc, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 281, in _query_and_extract
+    self._fill_date_range(page, start_date, end_date)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 683, in _fill_date_range
+    start_input = self._fill_date_plain(page, selectors.date_from_input, start_value)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 690, in _fill_date_plain
+    locator = self._find_visible_quick(page, selector_list, timeout_ms=8000)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 773, in _find_visible_quick
+    raise PlaywrightTimeoutError(f"No se encontró selector: {selector_list}") from last_error
+playwright._impl._errors.TimeoutError: No se encontró selector: #fechaInicial|input[name*='fecIni']|input[placeholder*='Desde']|input[aria-label*='Desde']
+2026-08-08 13:04:08,715 | WARNING | sunat_multas.cli | SCHRYVER | UNKNOWN | No se encontró selector: #fechaInicial|input[name*='fecIni']|input[placeholder*='Desde']|input[aria-label*='Desde']
+2026-08-08 13:06:47,419 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-08 13:06:53,782 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-08 13:06:53,783 | INFO | sunat_multas.cli | Consultando SUNAT para SCHRYVER | RUC 20545207436
+2026-08-08 13:06:54,774 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20545207436
+2026-08-08 13:06:56,112 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20545207436 | Usuario SCHRYVER | Clave **********
+2026-08-08 13:07:14,021 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Salida
+2026-08-08 13:07:14,184 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-08 13:07:16,059 | INFO | sunat_multas.sunat_client | Formulario de consulta EXPO118 cargado.
+2026-08-08 13:07:20,588 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID (tipoBusquedaFechaTransCons).
+2026-08-08 13:07:28,658 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 5 ms.
+2026-08-08 13:07:28,897 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-08 13:07:29,997 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-08 13:07:32,099 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-08 13:07:34,099 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-08 13:07:34,447 | ERROR | sunat_multas.cli | Error no controlado consultando SCHRYVER
+Traceback (most recent call last):
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\cli.py", line 104, in run_consulta
+    rows = client.fetch_records(company, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 110, in fetch_records
+    records = self._query_and_extract(page, company.ruc, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 281, in _query_and_extract
+    self._fill_date_range(page, start_date, end_date)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 683, in _fill_date_range
+    start_input = self._fill_date_plain(page, selectors.date_from_input, start_value)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 690, in _fill_date_plain
+    locator = self._find_visible_quick(page, selector_list, timeout_ms=8000)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 785, in _find_visible_quick
+    raise PlaywrightTimeoutError(f"No se encontró selector: {selector_list}") from last_error
+playwright._impl._errors.TimeoutError: No se encontró selector: #fechaInicial|input[name*='fecIni']|input[placeholder*='Desde']|input[aria-label*='Desde']
+2026-08-08 13:07:34,453 | WARNING | sunat_multas.cli | SCHRYVER | UNKNOWN | No se encontró selector: #fechaInicial|input[name*='fecIni']|input[placeholder*='Desde']|input[aria-label*='Desde']
+2026-08-08 13:12:18,733 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-08 13:12:20,364 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-08 13:12:20,364 | INFO | sunat_multas.cli | Consultando SUNAT para SCHRYVER | RUC 20545207436
+2026-08-08 13:12:21,406 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20545207436
+2026-08-08 13:12:22,634 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20545207436 | Usuario SCHRYVER | Clave **********
+2026-08-08 13:12:40,579 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Salida
+2026-08-08 13:12:40,751 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-08 13:12:41,136 | INFO | sunat_multas.sunat_client | Formulario de consulta EXPO118 cargado.
+2026-08-08 13:12:45,692 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID (tipoBusquedaFechaTransCons).
+2026-08-08 13:12:45,978 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-08 13:13:03,926 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 4 ms.
+2026-08-08 13:13:04,168 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-08 13:13:05,255 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-08 13:13:07,519 | ERROR | sunat_multas.cli | Error no controlado consultando SCHRYVER
+Traceback (most recent call last):
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\cli.py", line 104, in run_consulta
+    rows = client.fetch_records(company, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 113, in fetch_records
+    self._logout(page)
+    ~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 843, in _logout
+    self._logout_os(page)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 862, in _logout_os
+    page.keyboard.press("Enter")
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 1628, in press
+    self._sync(self._impl_obj.press(key=key, delay=delay))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_input.py", line 38, in press
+    await self._channel.send("keyboardPress", None, locals_to_params(locals()))
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Keyboard.press: Target page, context or browser has been closed
+2026-08-08 13:13:07,536 | WARNING | sunat_multas.cli | SCHRYVER | UNKNOWN | Keyboard.press: Target page, context or browser has been closed
+2026-08-08 13:14:44,307 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-08 13:14:46,411 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-08 13:14:46,411 | INFO | sunat_multas.cli | Consultando SUNAT para SCHRYVER | RUC 20545207436
+2026-08-08 13:14:47,410 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20545207436
+2026-08-08 13:14:48,673 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20545207436 | Usuario SCHRYVER | Clave **********
+2026-08-08 13:15:06,517 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Salida
+2026-08-08 13:15:06,681 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-08 13:15:07,078 | INFO | sunat_multas.sunat_client | Formulario de consulta EXPO118 cargado.
+2026-08-08 13:15:11,630 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID (tipoBusquedaFechaTransCons).
+2026-08-08 13:15:11,905 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-08 13:15:29,787 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 4 ms.
+2026-08-08 13:15:30,025 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-08 13:15:31,116 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-08 13:15:33,212 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-08 13:15:35,212 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-08 13:15:35,579 | ERROR | sunat_multas.cli | Error no controlado consultando SCHRYVER
+Traceback (most recent call last):
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 714, in _escribir_y_enter
+    campo.fill("")
+    ~~~~~~~~~~^^^^
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 18242, in fill
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.fill(
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_locator.py", line 219, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 636, in fill
+    await self._fill(**locals_to_params(locals()))
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_frame.py", line 648, in _fill
+    await self._channel.send("fill", self._timeout, locals_to_params(locals()))
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Locator.fill: Error: Element is not an <input>, <textarea> or [contenteditable] element
+Call log:
+  - waiting for locator("#selCodigoAduana").first
+    - locator resolved to <select id="selCodigoAduana" name="selCodigoAduana" onchange="onChangeAduanas()" class="form-control input-sm">…</select>
+    - fill("")
+  - attempting fill action
+    - waiting for element to be visible, enabled and editable
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\cli.py", line 104, in run_consulta
+    rows = client.fetch_records(company, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 110, in fetch_records
+    records = self._query_and_extract(page, company.ruc, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 282, in _query_and_extract
+    self._aplicar_pasos_formulario(page)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 698, in _aplicar_pasos_formulario
+    self._escribir_y_enter(page, paso.input_id, paso.texto)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 745, in _escribir_y_enter
+    raise PlaywrightTimeoutError(f"No se pudo seleccionar el campo {input_id} = {texto}") from last_error
+playwright._impl._errors.TimeoutError: No se pudo seleccionar el campo selCodigoAduana = 118
+2026-08-08 13:15:35,608 | WARNING | sunat_multas.cli | SCHRYVER | UNKNOWN | No se pudo seleccionar el campo selCodigoAduana = 118
+2026-08-08 13:17:14,407 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-08 13:17:16,549 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-08 13:17:16,549 | INFO | sunat_multas.cli | Consultando SUNAT para SCHRYVER | RUC 20545207436
+2026-08-08 13:17:17,492 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20545207436
+2026-08-08 13:17:18,766 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20545207436 | Usuario SCHRYVER | Clave **********
+2026-08-08 13:17:36,602 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Salida
+2026-08-08 13:17:36,781 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-08 13:17:37,978 | INFO | sunat_multas.sunat_client | Formulario de consulta EXPO118 cargado.
+2026-08-08 13:17:42,525 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID (tipoBusquedaFechaTransCons).
+2026-08-08 13:17:42,800 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-08 13:17:42,980 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-08 13:17:55,501 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado (chbRucAgente).
+2026-08-08 13:18:03,561 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 4 ms.
+2026-08-08 13:18:03,791 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-08 13:18:04,884 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-08 13:18:07,165 | ERROR | sunat_multas.cli | Error no controlado consultando SCHRYVER
+Traceback (most recent call last):
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\cli.py", line 104, in run_consulta
+    rows = client.fetch_records(company, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 113, in fetch_records
+    self._logout(page)
+    ~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 862, in _logout
+    self._logout_os(page)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 881, in _logout_os
+    page.keyboard.press("Enter")
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\sync_api\_generated.py", line 1628, in press
+    self._sync(self._impl_obj.press(key=key, delay=delay))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_input.py", line 38, in press
+    await self._channel.send("keyboardPress", None, locals_to_params(locals()))
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Maric\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Keyboard.press: Target page, context or browser has been closed
+2026-08-08 13:18:07,168 | WARNING | sunat_multas.cli | SCHRYVER | UNKNOWN | Keyboard.press: Target page, context or browser has been closed
+2026-08-08 13:21:35,918 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-08 13:21:46,321 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-08 13:21:46,322 | INFO | sunat_multas.cli | Consultando SUNAT para SCHRYVER | RUC 20545207436
+2026-08-08 13:21:47,726 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20545207436
+2026-08-08 13:21:49,015 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20545207436 | Usuario SCHRYVER | Clave **********
+2026-08-08 13:22:06,955 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Salida
+2026-08-08 13:22:07,122 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-08 13:22:07,510 | INFO | sunat_multas.sunat_client | Formulario de consulta EXPO118 cargado.
+2026-08-08 13:22:12,056 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID (tipoBusquedaFechaTransCons).
+2026-08-08 13:22:12,343 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-08 13:22:12,524 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-08 13:22:25,064 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado (chbRucAgente).
+2026-08-08 13:22:25,187 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20545207436
+2026-08-08 13:22:32,169 | INFO | sunat_multas.sunat_client | Botón Consultar presionado por texto.
+2026-08-08 13:22:40,178 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-08 13:22:40,264 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 1
+2026-08-08 13:22:40,269 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 4 ms.
+2026-08-08 13:22:40,518 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-08 13:22:41,604 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-08 13:22:43,701 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-08 13:22:45,702 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-08 13:22:46,313 | INFO | sunat_multas.cli | Hoja EXPO118-Transmisiones actualizada para SCHRYVER: 1 transmisiones.
+2026-08-08 13:28:03,837 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-08 13:28:06,502 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-08 13:28:06,502 | INFO | sunat_multas.cli | Consultando SUNAT para SCHRYVER | RUC 20545207436
+2026-08-08 13:28:07,569 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20545207436
+2026-08-08 13:28:08,895 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20545207436 | Usuario SCHRYVER | Clave **********
+2026-08-08 13:28:26,894 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Salida
+2026-08-08 13:28:27,075 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-08 13:28:27,493 | INFO | sunat_multas.sunat_client | Formulario de consulta EXPO118 cargado.
+2026-08-08 13:28:32,050 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID (tipoBusquedaFechaTransCons).
+2026-08-08 13:28:32,339 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-08 13:28:32,522 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-08 13:28:45,049 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado (chbRucAgente).
+2026-08-08 13:28:45,173 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20545207436
+2026-08-08 13:28:59,901 | INFO | sunat_multas.sunat_client | Botón Consultar presionado: #btnBuscar|text=Consultar|button:has-text('Consultar').
+2026-08-08 13:29:07,908 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-08 13:29:07,982 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 1
+2026-08-08 13:29:07,986 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 3 ms.
+2026-08-08 13:29:08,262 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-08 13:29:09,361 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-08 13:29:11,461 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-08 13:29:13,461 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-08 13:29:13,899 | INFO | sunat_multas.cli | Hoja EXPO118-Transmisiones actualizada para SCHRYVER: 1 transmisiones.
+2026-08-08 13:32:54,440 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-08 13:32:55,559 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-08 13:32:55,559 | INFO | sunat_multas.cli | Consultando SUNAT para SCHRYVER | RUC 20545207436
+2026-08-08 13:32:56,511 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20545207436
+2026-08-08 13:32:57,793 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20545207436 | Usuario SCHRYVER | Clave **********
+2026-08-08 13:33:15,738 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Salida
+2026-08-08 13:33:15,903 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-08 13:33:16,263 | INFO | sunat_multas.sunat_client | Formulario de consulta EXPO118 cargado.
+2026-08-08 13:33:20,791 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID (tipoBusquedaFechaTransCons).
+2026-08-08 13:33:21,066 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-08 13:33:21,233 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-08 13:33:33,792 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado (chbRucAgente).
+2026-08-08 13:33:33,901 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20545207436
+2026-08-08 13:33:48,618 | INFO | sunat_multas.sunat_client | Botón Consultar presionado (intento 1/3): #btnBuscar|text=Consultar|button:has-text('Consultar').
+2026-08-08 13:33:50,733 | INFO | sunat_multas.sunat_client | Botón Consultar presionado (intento 2/3): #btnBuscar|text=Consultar|button:has-text('Consultar').
+2026-08-08 13:33:54,331 | INFO | sunat_multas.sunat_client | Intento 3/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#btnBuscar").first
+    - locator resolved to <a href="#" id="btnBuscar" class="btn btn-primary">Consultar</a>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-08 13:34:05,349 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-08 13:34:08,965 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 34
+2026-08-08 13:34:08,969 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 3 ms.
+2026-08-08 13:34:09,200 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-08 13:34:10,290 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-08 13:34:12,376 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-08 13:34:14,377 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-08 13:34:14,877 | INFO | sunat_multas.cli | Hoja EXPO118-Transmisiones actualizada para SCHRYVER: 34 transmisiones.

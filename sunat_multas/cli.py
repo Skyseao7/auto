@@ -106,7 +106,9 @@ def run_consulta(config, companies, start_date, end_date, tipo) -> set[str]:
             LOGGER.info("Hoja %s actualizada para %s: %s transmisiones.", tipo.hoja_transmisiones, company.name, count)
             with_data.add(company.ruc)
         except NoRecordsFound as exc:
-            record_incident(config.log_dir, company, None, IncidentType.NO_RECORDS, str(exc))
+            LOGGER.info("Sin datos para %s: %s", company.name, exc)
+            if not tipo.es_expo:
+                record_incident(config.log_dir, company, None, IncidentType.NO_RECORDS, str(exc))
         except AuthenticationError as exc:
             record_incident(config.log_dir, company, None, IncidentType.AUTH, str(exc))
         except (NavigationError, ExtractionError) as exc:

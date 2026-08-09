@@ -1,3 +1,8 @@
 ﻿
 "9","EUROPARTNERS","20601419697","NO_RECORDS","La consulta no devolvió registros."
 "12","DP WORLD LOGISTICS S.R.L.","20100010217","NO_RECORDS","La consulta no devolvió registros."
+"13","SCHRYVER","20545207436","UNKNOWN","No se encontró selector: #fechaInicial|input[name*='fecIni']|input[placeholder*='Desde']|input[aria-label*='Desde']"
+"13","SCHRYVER","20545207436","UNKNOWN","No se encontró selector: #fechaInicial|input[name*='fecIni']|input[placeholder*='Desde']|input[aria-label*='Desde']"
+"13","SCHRYVER","20545207436","UNKNOWN","Keyboard.press: Target page, context or browser has been closed"
+"13","SCHRYVER","20545207436","UNKNOWN","No se pudo seleccionar el campo selCodigoAduana = 118"
+"13","SCHRYVER","20545207436","UNKNOWN","Keyboard.press: Target page, context or browser has been closed"

@@ -7,6 +7,7 @@ from dataclasses import dataclass
 class PasoFormulario:
     input_id: str
     texto: str
+    tipo_control: str = "combobox"  # "combobox" (dijit) o "select" (HTML)
 
 
 @dataclass(frozen=True)
@@ -20,6 +21,23 @@ class TipoReporte:
     codigo_regex: str = r"\d{2}-\d{3}-\d+-\d{4}-\d+"
     tiene_contenedores: bool = True
     pasos_formulario: tuple[PasoFormulario, ...] = ()
+    selector_formulario: str = "tipoBusquedaFechaNumeracionDesconsolidado"
+    selector_radio_fecha: str = "tipoBusquedaFechaNumeracionDesconsolidado"
+    radio_fecha_label: str = "Fecha de Numeración de Manifiesto Desconsolidado"
+    selector_checkbox_ruc: str = "tipoBusquedaAgenteCarga"
+    selector_input_ruc: str = "numeroRucAgenteCarga"
+    date_from_input: str = "#fechaInicial|input[name*='fecIni']|input[placeholder*='Desde']|input[aria-label*='Desde']"
+    date_to_input: str = "#fechaFinal|input[name*='fecFin']|input[placeholder*='Hasta']|input[aria-label*='Hasta']"
+    selector_grid: str = "gridManifiestoCarga"
+    selector_btn_consultar: str = "#accion5_label|text=Consultar|button:has-text('Consultar')"
+    selector_grid_filas: str = ".dojoxGridRow"
+    selector_grid_siguiente: str = '[title="Página siguiente"]'
+    selector_grid_vacio: str = "div.dojoxGridMasterMessages"
+    columnas_extraccion: int = 9
+
+    @property
+    def es_expo(self) -> bool:
+        return self.prefijo == "EXPO"
     cabeceras_transmisiones: tuple[str, ...] = (
         "Manifiesto de Carga",
         "Fecha del Manifiesto de Carga",
@@ -37,6 +55,17 @@ class TipoReporte:
         (7, 12, False),
     )
     columna_tipo_numeracion: int = 8
+    ruta_menu: tuple[tuple[str, ...], ...] = (
+        ("Operaciones de Comercio Exterior", "Operador de Comercio Exterior"),
+        ("Manifiesto de Carga de Ingreso",),
+        ("Consultas",),
+        (
+            "Consulta Manifiesto Desconsolidado",
+            "Consulta del Manifiesto Desconsolidado",
+            "Consulta de Manifiesto Desconsolidado",
+            "Consulta Manifesto Desconsolidado",
+        ),
+    )
     columnas_detalle: tuple[tuple[str, int], ...] = (
         ("master", 2),
         ("puerto_embarque", 5),
@@ -87,6 +116,46 @@ EXPO118 = TipoReporte(
     sufijo="118",
     hoja_destino="EXPO118",
     hoja_transmisiones="EXPO118-Transmisiones",
+    ruta_menu=(
+        ("Operaciones de Comercio Exterior", "Operador de Comercio Exterior"),
+        ("Manifiesto de Carga de Salida",),
+        ("Consultas",),
+        (
+            "Control del Cumplimiento del Manifiesto Consolidado",
+            "Control de Cumplimiento del Manifiesto Consolidado",
+        ),
+    ),
+    pasos_formulario=(
+        PasoFormulario(input_id="selCodigoAduana", texto="118", tipo_control="select"),
+    ),
+    selector_formulario="tipoBusquedaFechaTransCons",
+    selector_radio_fecha="tipoBusquedaFechaTransCons",
+    radio_fecha_label="Fecha de Transmisión del Manifiesto Consolidado",
+    selector_checkbox_ruc="chbRucAgente",
+    selector_input_ruc="txtNroRucAgente",
+    date_from_input="#txtFechaInicial|input[name='txtFechaInicial']",
+    date_to_input="#txtFechaFinal|input[name='txtFechaFinal']",
+    selector_grid="tblLista",
+    selector_btn_consultar="#btnBuscar|text=Consultar|button:has-text('Consultar')",
+    selector_grid_filas="tbody tr",
+    selector_grid_siguiente="#tblLista_next",
+    selector_grid_vacio="td.dataTables_empty",
+    columnas_extraccion=13,
+    cabeceras_transmisiones=(
+        "Manifiesto de Carga",
+        "Manifiesto Consolidado",
+        "Agente de Carga Internacional",
+        "Detalle Master",
+        "Documento de Transporte Master",
+        "Detalle Hijo",
+        "Documento de Transporte Hijo",
+        "Fecha y Hora de Transmisión de Documento de Transporte Hijo (1)",
+        "Fecha y Hora del Término del Embarque",
+        "Fecha Limite Para Transmitir (2)",
+        "Plazo Excedido (2-1)",
+        "Condición",
+        "Estado del Documento de Transporte Hijo",
+    ),
 )
 
 EXPO235 = TipoReporte(
