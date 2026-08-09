@@ -1657,3 +1657,636 @@ Call log:
 2026-08-08 22:06:38,312 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
 2026-08-08 22:06:40,403 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
 2026-08-08 22:06:42,403 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-08 22:16:44,253 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-08 22:16:44,271 | INFO | sunat_multas.cli | Códigos de trazabilidad para SCHRYVER: 34
+2026-08-08 22:16:44,288 | INFO | sunat_multas.cli | Grupos únicos de trazabilidad para SCHRYVER: 16
+2026-08-08 22:16:44,304 | INFO | sunat_multas.sunat_client | Mapa de MASTER a fila cargado: 34 entradas.
+2026-08-08 22:16:45,466 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20545207436
+2026-08-08 22:16:46,742 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20545207436 | Usuario SCHRYVER | Clave **********
+2026-08-08 22:17:04,572 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Salida
+2026-08-08 22:17:04,730 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-08 22:17:05,182 | INFO | sunat_multas.sunat_client | Formulario de consulta EXPO118 cargado.
+2026-08-08 22:17:05,363 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-08 22:17:13,860 | INFO | sunat_multas.sunat_client | Radio 'Número de Manifiesto Consolidado' marcado (tipoBusquedaNumeroManifiestoDesconsolidado).
+2026-08-08 22:17:13,964 | INFO | sunat_multas.sunat_client | Número de Manifiesto Consolidado cargado: 10557
+2026-08-08 22:17:28,603 | INFO | sunat_multas.sunat_client | Botón Consultar trazabilidad presionado.
+2026-08-08 22:17:32,603 | INFO | sunat_multas.sunat_client | Trazabilidad consultada (1/16) para código 10557.
+2026-08-08 22:17:32,728 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:17:32,782 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:17:32,793 | INFO | sunat_multas.sunat_client | Master del sistema (fila 1): HDMULIMM36613000
+2026-08-08 22:17:32,915 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 9).
+2026-08-08 22:17:32,948 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=576'>.
+2026-08-08 22:17:32,948 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: MXZLO-MANZANILLO
+2026-08-08 22:17:33,083 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 9 (E/F).
+2026-08-08 22:17:33,207 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:17:38,345 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:17:43,483 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:17:43,515 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:17:43,523 | INFO | sunat_multas.sunat_client | Master del sistema (fila 2): HDMULIMM47894100
+2026-08-08 22:17:43,653 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 3).
+2026-08-08 22:17:43,683 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=575'>.
+2026-08-08 22:17:43,683 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: MXZLO-MANZANILLO
+2026-08-08 22:17:43,836 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 3 (E/F).
+2026-08-08 22:17:43,970 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:17:49,115 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:17:54,261 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:17:54,716 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:17:54,724 | INFO | sunat_multas.sunat_client | Master del sistema (fila 3): HDMULIMM87791800
+2026-08-08 22:17:54,852 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 4).
+2026-08-08 22:17:54,911 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=592'>.
+2026-08-08 22:17:54,911 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: COBUN-BUENAVENTURA
+2026-08-08 22:17:55,072 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 4 (E/F).
+2026-08-08 22:17:55,199 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:18:00,347 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:18:05,487 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:18:05,514 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:18:05,523 | INFO | sunat_multas.sunat_client | Master del sistema (fila 4): HDMULIMM68959100
+2026-08-08 22:18:05,650 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 7).
+2026-08-08 22:18:06,088 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=510'>.
+2026-08-08 22:18:06,088 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: MXZLO-MANZANILLO
+2026-08-08 22:18:06,226 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 7 (E/F).
+2026-08-08 22:18:06,351 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:18:11,489 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:18:16,621 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:18:16,653 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:18:16,662 | INFO | sunat_multas.sunat_client | Master del sistema (fila 5): HDMULIMM48914600
+2026-08-08 22:18:16,783 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 6).
+2026-08-08 22:18:16,814 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=578'>.
+2026-08-08 22:18:16,814 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: COBUN-BUENAVENTURA
+2026-08-08 22:18:16,946 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 6 (E/F).
+2026-08-08 22:18:17,080 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:18:22,216 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:18:27,351 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:18:27,372 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:18:27,382 | INFO | sunat_multas.sunat_client | Master del sistema (fila 6): HDMULIMM17111800
+2026-08-08 22:18:27,496 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 2).
+2026-08-08 22:18:27,524 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=595'>.
+2026-08-08 22:18:27,525 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: COBUN-BUENAVENTURA
+2026-08-08 22:18:27,663 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 2 (E/F).
+2026-08-08 22:18:27,788 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:18:32,924 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:18:38,060 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:18:38,088 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:18:38,097 | INFO | sunat_multas.sunat_client | Master del sistema (fila 7): ONEYLIMG11773600
+2026-08-08 22:18:38,231 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 5).
+2026-08-08 22:18:38,259 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=577'>.
+2026-08-08 22:18:38,259 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: COBUN-BUENAVENTURA
+2026-08-08 22:18:38,404 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 5 (E/F).
+2026-08-08 22:18:38,530 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:18:43,668 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:18:48,815 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:18:48,834 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:18:48,844 | INFO | sunat_multas.sunat_client | Master del sistema (fila 8): HLCULI3260705222
+2026-08-08 22:18:48,961 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 8).
+2026-08-08 22:18:48,993 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=597'>.
+2026-08-08 22:18:48,993 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: COBUN-BUENAVENTURA
+2026-08-08 22:18:49,135 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 8 (E/F).
+2026-08-08 22:18:49,263 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:18:54,395 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:18:59,557 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:18:59,589 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:19:11,881 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 4 ms.
+2026-08-08 22:19:12,156 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-08 22:19:13,252 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-08 22:19:15,342 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-08 22:19:17,343 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-08 22:28:31,832 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-08 22:28:31,848 | INFO | sunat_multas.cli | Códigos de trazabilidad para SCHRYVER: 34
+2026-08-08 22:28:31,868 | INFO | sunat_multas.cli | Grupos únicos de trazabilidad para SCHRYVER: 16
+2026-08-08 22:28:31,884 | INFO | sunat_multas.sunat_client | Mapa de MASTER a fila cargado: 34 entradas.
+2026-08-08 22:28:33,315 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20545207436
+2026-08-08 22:28:34,705 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20545207436 | Usuario SCHRYVER | Clave **********
+2026-08-08 22:28:52,666 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Salida
+2026-08-08 22:28:52,829 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-08 22:28:53,396 | INFO | sunat_multas.sunat_client | Formulario de consulta EXPO118 cargado.
+2026-08-08 22:28:53,632 | INFO | sunat_multas.sunat_client | Enlace 'Parámetros Búsqueda' clicado.
+2026-08-08 22:29:26,146 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 3 ms.
+2026-08-08 22:29:26,426 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-08 22:29:27,522 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-08 22:29:29,605 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-08 22:29:31,606 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-08 22:30:56,278 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-08 22:30:56,293 | INFO | sunat_multas.cli | Códigos de trazabilidad para SCHRYVER: 34
+2026-08-08 22:30:56,312 | INFO | sunat_multas.cli | Grupos únicos de trazabilidad para SCHRYVER: 16
+2026-08-08 22:30:56,330 | INFO | sunat_multas.sunat_client | Mapa de MASTER a fila cargado: 34 entradas.
+2026-08-08 22:30:57,281 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20545207436
+2026-08-08 22:30:58,499 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20545207436 | Usuario SCHRYVER | Clave **********
+2026-08-08 22:31:16,377 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Salida
+2026-08-08 22:31:16,516 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-08 22:31:16,935 | INFO | sunat_multas.sunat_client | Formulario de consulta EXPO118 cargado.
+2026-08-08 22:31:17,142 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-08 22:31:25,636 | INFO | sunat_multas.sunat_client | Radio 'Número de Manifiesto Consolidado' marcado (tipoBusquedaNumeroManifiestoDesconsolidado).
+2026-08-08 22:31:25,747 | INFO | sunat_multas.sunat_client | Número de Manifiesto Consolidado cargado: 10557
+2026-08-08 22:31:40,392 | INFO | sunat_multas.sunat_client | Botón Consultar trazabilidad presionado.
+2026-08-08 22:31:44,393 | INFO | sunat_multas.sunat_client | Trazabilidad consultada (1/16) para código 10557.
+2026-08-08 22:31:44,538 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:31:44,975 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:31:44,987 | INFO | sunat_multas.sunat_client | Master del sistema (fila 1): HDMULIMM36613000
+2026-08-08 22:31:45,121 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 9).
+2026-08-08 22:31:45,569 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=576'>.
+2026-08-08 22:31:45,569 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: MXZLO-MANZANILLO
+2026-08-08 22:31:45,722 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 9 (E/F).
+2026-08-08 22:31:45,850 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:31:50,995 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:31:56,149 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:31:56,193 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:31:56,206 | INFO | sunat_multas.sunat_client | Master del sistema (fila 2): HDMULIMM47894100
+2026-08-08 22:31:56,343 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 3).
+2026-08-08 22:31:56,376 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=575'>.
+2026-08-08 22:31:56,377 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: MXZLO-MANZANILLO
+2026-08-08 22:31:56,528 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 3 (E/F).
+2026-08-08 22:31:56,657 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:32:01,822 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:32:06,968 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:32:07,410 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:32:07,423 | INFO | sunat_multas.sunat_client | Master del sistema (fila 3): HDMULIMM87791800
+2026-08-08 22:32:07,551 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 4).
+2026-08-08 22:32:07,581 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=592'>.
+2026-08-08 22:32:07,582 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: COBUN-BUENAVENTURA
+2026-08-08 22:32:07,735 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 4 (E/F).
+2026-08-08 22:32:07,871 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:32:13,012 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:32:18,162 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:32:18,603 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:32:18,612 | INFO | sunat_multas.sunat_client | Master del sistema (fila 4): HDMULIMM68959100
+2026-08-08 22:32:18,738 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 7).
+2026-08-08 22:32:18,773 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=510'>.
+2026-08-08 22:32:18,774 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: MXZLO-MANZANILLO
+2026-08-08 22:32:18,931 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 7 (E/F).
+2026-08-08 22:32:19,065 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:32:24,203 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:32:29,346 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:32:29,373 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:32:29,383 | INFO | sunat_multas.sunat_client | Master del sistema (fila 5): HDMULIMM48914600
+2026-08-08 22:32:29,516 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 6).
+2026-08-08 22:32:29,546 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=578'>.
+2026-08-08 22:32:29,547 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: COBUN-BUENAVENTURA
+2026-08-08 22:32:29,693 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 6 (E/F).
+2026-08-08 22:32:29,828 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:32:34,974 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:32:40,128 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:32:40,589 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:32:40,599 | INFO | sunat_multas.sunat_client | Master del sistema (fila 6): HDMULIMM17111800
+2026-08-08 22:32:40,723 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 2).
+2026-08-08 22:32:41,583 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=595'>.
+2026-08-08 22:32:41,583 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: COBUN-BUENAVENTURA
+2026-08-08 22:32:41,736 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 2 (E/F).
+2026-08-08 22:32:41,876 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:32:47,015 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:32:52,161 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:32:52,186 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:32:52,197 | INFO | sunat_multas.sunat_client | Master del sistema (fila 7): ONEYLIMG11773600
+2026-08-08 22:32:52,320 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 5).
+2026-08-08 22:32:52,350 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=577'>.
+2026-08-08 22:32:52,351 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: COBUN-BUENAVENTURA
+2026-08-08 22:32:52,512 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 5 (E/F).
+2026-08-08 22:32:52,640 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:32:57,788 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:33:02,942 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:33:02,967 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:33:02,976 | INFO | sunat_multas.sunat_client | Master del sistema (fila 8): HLCULI3260705222
+2026-08-08 22:33:03,104 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 8).
+2026-08-08 22:33:03,131 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=597'>.
+2026-08-08 22:33:03,132 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: COBUN-BUENAVENTURA
+2026-08-08 22:33:03,291 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 8 (E/F).
+2026-08-08 22:33:03,424 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:33:08,563 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:33:13,707 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:33:13,733 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:33:29,058 | WARNING | sunat_multas.sunat_client | No se encontró el enlace 'Parámetros Búsqueda'.
+2026-08-08 22:34:01,630 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 4 ms.
+2026-08-08 22:34:01,923 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-08 22:34:03,012 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-08 22:34:05,102 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-08 22:34:07,103 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-08 22:37:33,544 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-08 22:37:33,561 | INFO | sunat_multas.cli | Códigos de trazabilidad para SCHRYVER: 34
+2026-08-08 22:37:33,578 | INFO | sunat_multas.cli | Grupos únicos de trazabilidad para SCHRYVER: 16
+2026-08-08 22:37:33,596 | INFO | sunat_multas.sunat_client | Mapa de MASTER a fila cargado: 34 entradas.
+2026-08-08 22:37:34,472 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20545207436
+2026-08-08 22:37:35,652 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20545207436 | Usuario SCHRYVER | Clave **********
+2026-08-08 22:37:53,481 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Salida
+2026-08-08 22:37:53,616 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-08 22:37:54,028 | INFO | sunat_multas.sunat_client | Formulario de consulta EXPO118 cargado.
+2026-08-08 22:37:54,230 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-08 22:38:02,750 | INFO | sunat_multas.sunat_client | Radio 'Número de Manifiesto Consolidado' marcado (tipoBusquedaNumeroManifiestoDesconsolidado).
+2026-08-08 22:38:02,852 | INFO | sunat_multas.sunat_client | Número de Manifiesto Consolidado cargado: 10557
+2026-08-08 22:38:17,511 | INFO | sunat_multas.sunat_client | Botón Consultar trazabilidad presionado.
+2026-08-08 22:38:21,511 | INFO | sunat_multas.sunat_client | Trazabilidad consultada (1/16) para código 10557.
+2026-08-08 22:38:21,641 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:38:21,683 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:38:21,686 | INFO | sunat_multas.sunat_client | Manifiesto 10557: 8 documento(s) hijo(s) en la tabla de detalle.
+2026-08-08 22:38:21,693 | INFO | sunat_multas.sunat_client | Master del sistema (fila 1): HDMULIMM36613000
+2026-08-08 22:38:21,817 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 9).
+2026-08-08 22:38:21,850 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=576'>.
+2026-08-08 22:38:21,851 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: MXZLO-MANZANILLO
+2026-08-08 22:38:21,996 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 9 (E/F).
+2026-08-08 22:38:22,121 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:38:27,253 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:38:32,401 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:38:32,837 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:38:32,843 | INFO | sunat_multas.sunat_client | Master del sistema (fila 2): HDMULIMM47894100
+2026-08-08 22:38:32,963 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 3).
+2026-08-08 22:38:32,995 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=575'>.
+2026-08-08 22:38:32,995 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: MXZLO-MANZANILLO
+2026-08-08 22:38:33,167 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 3 (E/F).
+2026-08-08 22:38:33,307 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:38:38,452 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:38:43,592 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:38:44,031 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:38:44,039 | INFO | sunat_multas.sunat_client | Master del sistema (fila 3): HDMULIMM87791800
+2026-08-08 22:38:44,167 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 4).
+2026-08-08 22:38:44,609 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=592'>.
+2026-08-08 22:38:44,609 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: COBUN-BUENAVENTURA
+2026-08-08 22:38:44,748 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 4 (E/F).
+2026-08-08 22:38:44,877 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:38:50,018 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:38:55,157 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:38:55,185 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:38:55,192 | INFO | sunat_multas.sunat_client | Master del sistema (fila 4): HDMULIMM68959100
+2026-08-08 22:38:55,309 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 7).
+2026-08-08 22:38:55,341 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=510'>.
+2026-08-08 22:38:55,341 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: MXZLO-MANZANILLO
+2026-08-08 22:38:55,480 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 7 (E/F).
+2026-08-08 22:38:55,606 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:39:00,749 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:39:05,885 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:39:05,919 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:39:05,925 | INFO | sunat_multas.sunat_client | Master del sistema (fila 5): HDMULIMM48914600
+2026-08-08 22:39:06,054 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 6).
+2026-08-08 22:39:06,081 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=578'>.
+2026-08-08 22:39:06,081 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: COBUN-BUENAVENTURA
+2026-08-08 22:39:06,230 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 6 (E/F).
+2026-08-08 22:39:06,357 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:39:11,496 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:39:16,640 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:39:16,667 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:39:16,672 | INFO | sunat_multas.sunat_client | Master del sistema (fila 6): HDMULIMM17111800
+2026-08-08 22:39:16,794 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 2).
+2026-08-08 22:39:16,820 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=595'>.
+2026-08-08 22:39:16,820 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: COBUN-BUENAVENTURA
+2026-08-08 22:39:16,966 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 2 (E/F).
+2026-08-08 22:39:17,092 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:39:22,232 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:39:27,362 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:39:27,395 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:39:27,402 | INFO | sunat_multas.sunat_client | Master del sistema (fila 7): ONEYLIMG11773600
+2026-08-08 22:39:27,525 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 5).
+2026-08-08 22:39:27,554 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=577'>.
+2026-08-08 22:39:27,554 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: COBUN-BUENAVENTURA
+2026-08-08 22:39:27,707 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 5 (E/F).
+2026-08-08 22:39:27,836 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:39:32,972 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:39:38,119 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10557).
+2026-08-08 22:39:38,553 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119250903&anioManifiestoc=2026&numeroManifiestoc=%2010557'>.
+2026-08-08 22:39:38,560 | INFO | sunat_multas.sunat_client | Master del sistema (fila 8): HLCULI3260705222
+2026-08-08 22:39:38,689 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10557, fila Excel 8).
+2026-08-08 22:39:39,133 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119250903&numeroDeDetalle=597'>.
+2026-08-08 22:39:39,134 | INFO | sunat_multas.sunat_client | Puerto Destino de 10557: COBUN-BUENAVENTURA
+2026-08-08 22:39:39,284 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 8 (E/F).
+2026-08-08 22:39:39,409 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:39:44,545 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:39:49,695 | INFO | sunat_multas.sunat_client | Enlace 'Parámetros Búsqueda' clicado.
+2026-08-08 22:39:49,885 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-08 22:39:58,389 | INFO | sunat_multas.sunat_client | Radio 'Número de Manifiesto Consolidado' marcado (tipoBusquedaNumeroManifiestoDesconsolidado).
+2026-08-08 22:39:58,500 | INFO | sunat_multas.sunat_client | Número de Manifiesto Consolidado cargado: 10733
+2026-08-08 22:40:13,145 | INFO | sunat_multas.sunat_client | Botón Consultar trazabilidad presionado.
+2026-08-08 22:40:17,146 | INFO | sunat_multas.sunat_client | Trazabilidad consultada (2/16) para código 10733.
+2026-08-08 22:40:17,285 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10733).
+2026-08-08 22:40:17,719 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=120936090&anioManifiestoc=2026&numeroManifiestoc=%2010733'>.
+2026-08-08 22:40:17,723 | INFO | sunat_multas.sunat_client | Manifiesto 10733: 1 documento(s) hijo(s) en la tabla de detalle.
+2026-08-08 22:40:17,730 | INFO | sunat_multas.sunat_client | Master del sistema (fila 1): OOLU2333017360
+2026-08-08 22:40:17,848 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10733, fila Excel 10).
+2026-08-08 22:40:17,881 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=120936090&numeroDeDetalle=386'>.
+2026-08-08 22:40:17,882 | INFO | sunat_multas.sunat_client | Puerto Destino de 10733: DEHAM-HAMBURG
+2026-08-08 22:40:18,023 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 10 (E/F).
+2026-08-08 22:40:18,142 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:40:23,277 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:40:28,429 | INFO | sunat_multas.sunat_client | Enlace 'Parámetros Búsqueda' clicado.
+2026-08-08 22:40:28,613 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-08 22:40:37,112 | INFO | sunat_multas.sunat_client | Radio 'Número de Manifiesto Consolidado' marcado (tipoBusquedaNumeroManifiestoDesconsolidado).
+2026-08-08 22:40:37,221 | INFO | sunat_multas.sunat_client | Número de Manifiesto Consolidado cargado: 11484
+2026-08-08 22:40:51,845 | INFO | sunat_multas.sunat_client | Botón Consultar trazabilidad presionado.
+2026-08-08 22:40:55,846 | INFO | sunat_multas.sunat_client | Trazabilidad consultada (3/16) para código 11484.
+2026-08-08 22:40:55,973 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (11484).
+2026-08-08 22:40:56,025 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=120877065&anioManifiestoc=2026&numeroManifiestoc=%2011484'>.
+2026-08-08 22:40:56,039 | INFO | sunat_multas.sunat_client | Manifiesto 11484: 5 documento(s) hijo(s) en la tabla de detalle.
+2026-08-08 22:40:56,046 | INFO | sunat_multas.sunat_client | Master del sistema (fila 1): HLCULI3260731973
+2026-08-08 22:40:56,166 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (11484, fila Excel 14).
+2026-08-08 22:40:56,197 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=120877065&numeroDeDetalle=339'>.
+2026-08-08 22:40:56,197 | INFO | sunat_multas.sunat_client | Puerto Destino de 11484: COBUN-BUENAVENTURA
+2026-08-08 22:40:56,341 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 14 (E/F).
+2026-08-08 22:40:56,466 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:41:01,600 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:41:06,731 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (11484).
+2026-08-08 22:41:07,165 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=120877065&anioManifiestoc=2026&numeroManifiestoc=%2011484'>.
+2026-08-08 22:41:07,172 | INFO | sunat_multas.sunat_client | Master del sistema (fila 2): ONEYLIMG12989900
+2026-08-08 22:41:07,298 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (11484, fila Excel 11).
+2026-08-08 22:41:07,331 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=120877065&numeroDeDetalle=331'>.
+2026-08-08 22:41:07,331 | INFO | sunat_multas.sunat_client | Puerto Destino de 11484: COBUN-BUENAVENTURA
+2026-08-08 22:41:07,485 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 11 (E/F).
+2026-08-08 22:41:07,611 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:41:12,744 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:41:17,886 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (11484).
+2026-08-08 22:41:17,917 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=120877065&anioManifiestoc=2026&numeroManifiestoc=%2011484'>.
+2026-08-08 22:41:17,922 | INFO | sunat_multas.sunat_client | Master del sistema (fila 3): ONEYLIMG13200700
+2026-08-08 22:41:18,041 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (11484, fila Excel 12).
+2026-08-08 22:41:18,068 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=120877065&numeroDeDetalle=333'>.
+2026-08-08 22:41:18,068 | INFO | sunat_multas.sunat_client | Puerto Destino de 11484: COBUN-BUENAVENTURA
+2026-08-08 22:41:18,222 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 12 (E/F).
+2026-08-08 22:41:18,356 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:41:23,490 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:41:28,636 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (11484).
+2026-08-08 22:41:28,664 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=120877065&anioManifiestoc=2026&numeroManifiestoc=%2011484'>.
+2026-08-08 22:41:28,670 | INFO | sunat_multas.sunat_client | Master del sistema (fila 4): ONEYLIMG13201800
+2026-08-08 22:41:28,790 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (11484, fila Excel 13).
+2026-08-08 22:41:28,825 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=120877065&numeroDeDetalle=335'>.
+2026-08-08 22:41:28,826 | INFO | sunat_multas.sunat_client | Puerto Destino de 11484: COBUN-BUENAVENTURA
+2026-08-08 22:41:28,972 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 13 (E/F).
+2026-08-08 22:41:29,106 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:41:34,240 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:41:39,386 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (11484).
+2026-08-08 22:41:39,417 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=120877065&anioManifiestoc=2026&numeroManifiestoc=%2011484'>.
+2026-08-08 22:41:39,426 | INFO | sunat_multas.sunat_client | Master del sistema (fila 5): ONEYLIMG13202900
+2026-08-08 22:41:39,547 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (11484, fila Excel 15).
+2026-08-08 22:41:39,575 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=120877065&numeroDeDetalle=338'>.
+2026-08-08 22:41:39,575 | INFO | sunat_multas.sunat_client | Puerto Destino de 11484: COBUN-BUENAVENTURA
+2026-08-08 22:41:39,740 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 15 (E/F).
+2026-08-08 22:41:39,866 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:41:45,003 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:41:50,174 | INFO | sunat_multas.sunat_client | Enlace 'Parámetros Búsqueda' clicado.
+2026-08-08 22:41:50,368 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-08 22:41:58,873 | INFO | sunat_multas.sunat_client | Radio 'Número de Manifiesto Consolidado' marcado (tipoBusquedaNumeroManifiestoDesconsolidado).
+2026-08-08 22:41:58,975 | INFO | sunat_multas.sunat_client | Número de Manifiesto Consolidado cargado: 10737
+2026-08-08 22:42:13,613 | INFO | sunat_multas.sunat_client | Botón Consultar trazabilidad presionado.
+2026-08-08 22:42:17,614 | INFO | sunat_multas.sunat_client | Trazabilidad consultada (4/16) para código 10737.
+2026-08-08 22:42:17,740 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10737).
+2026-08-08 22:42:18,176 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=121094255&anioManifiestoc=2026&numeroManifiestoc=%2010737'>.
+2026-08-08 22:42:18,179 | INFO | sunat_multas.sunat_client | Manifiesto 10737: 1 documento(s) hijo(s) en la tabla de detalle.
+2026-08-08 22:42:18,185 | INFO | sunat_multas.sunat_client | Master del sistema (fila 1): ONEYLIMG12712700
+2026-08-08 22:42:18,316 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10737, fila Excel 16).
+2026-08-08 22:42:18,356 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=121094255&numeroDeDetalle=91'>.
+2026-08-08 22:42:18,356 | INFO | sunat_multas.sunat_client | Puerto Destino de 10737: COCTG-CARTAGENA
+2026-08-08 22:42:18,494 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 16 (E/F).
+2026-08-08 22:42:18,616 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:42:23,751 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:42:28,891 | INFO | sunat_multas.sunat_client | Enlace 'Parámetros Búsqueda' clicado.
+2026-08-08 22:42:29,103 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-08 22:42:37,622 | INFO | sunat_multas.sunat_client | Radio 'Número de Manifiesto Consolidado' marcado (tipoBusquedaNumeroManifiestoDesconsolidado).
+2026-08-08 22:42:37,732 | INFO | sunat_multas.sunat_client | Número de Manifiesto Consolidado cargado: 11099
+2026-08-08 22:42:52,341 | INFO | sunat_multas.sunat_client | Botón Consultar trazabilidad presionado.
+2026-08-08 22:42:56,342 | INFO | sunat_multas.sunat_client | Trazabilidad consultada (5/16) para código 11099.
+2026-08-08 22:42:56,467 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (11099).
+2026-08-08 22:42:56,501 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=117392759&anioManifiestoc=2026&numeroManifiestoc=%2011099'>.
+2026-08-08 22:42:56,505 | INFO | sunat_multas.sunat_client | Manifiesto 11099: 1 documento(s) hijo(s) en la tabla de detalle.
+2026-08-08 22:42:56,510 | INFO | sunat_multas.sunat_client | Master del sistema (fila 1): MAEU274393803
+2026-08-08 22:42:56,642 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (11099, fila Excel 17).
+2026-08-08 22:42:56,677 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=117392759&numeroDeDetalle=237'>.
+2026-08-08 22:42:56,677 | INFO | sunat_multas.sunat_client | Puerto Destino de 11099: GTPRQ-PUERTO QUETZAL
+2026-08-08 22:42:56,819 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 17 (E/F).
+2026-08-08 22:42:56,950 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:43:02,085 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:43:07,229 | INFO | sunat_multas.sunat_client | Enlace 'Parámetros Búsqueda' clicado.
+2026-08-08 22:43:07,409 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-08 22:43:15,885 | INFO | sunat_multas.sunat_client | Radio 'Número de Manifiesto Consolidado' marcado (tipoBusquedaNumeroManifiestoDesconsolidado).
+2026-08-08 22:43:15,993 | INFO | sunat_multas.sunat_client | Número de Manifiesto Consolidado cargado: 10632
+2026-08-08 22:43:30,632 | INFO | sunat_multas.sunat_client | Botón Consultar trazabilidad presionado.
+2026-08-08 22:43:34,632 | INFO | sunat_multas.sunat_client | Trazabilidad consultada (6/16) para código 10632.
+2026-08-08 22:43:34,768 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10632).
+2026-08-08 22:43:34,805 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=117334960&anioManifiestoc=2026&numeroManifiestoc=%2010632'>.
+2026-08-08 22:43:34,809 | INFO | sunat_multas.sunat_client | Manifiesto 10632: 1 documento(s) hijo(s) en la tabla de detalle.
+2026-08-08 22:43:34,814 | INFO | sunat_multas.sunat_client | Master del sistema (fila 1): MAEU274027638
+2026-08-08 22:43:34,946 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10632, fila Excel 18).
+2026-08-08 22:43:34,975 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=117334960&numeroDeDetalle=430'>.
+2026-08-08 22:43:34,975 | INFO | sunat_multas.sunat_client | Puerto Destino de 10632: HNPCR-PUERTO CORTES
+2026-08-08 22:43:35,113 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 18 (E/F).
+2026-08-08 22:43:35,238 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:43:40,381 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:43:45,524 | INFO | sunat_multas.sunat_client | Enlace 'Parámetros Búsqueda' clicado.
+2026-08-08 22:43:45,704 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-08 22:43:54,214 | INFO | sunat_multas.sunat_client | Radio 'Número de Manifiesto Consolidado' marcado (tipoBusquedaNumeroManifiestoDesconsolidado).
+2026-08-08 22:43:54,314 | INFO | sunat_multas.sunat_client | Número de Manifiesto Consolidado cargado: 10935
+2026-08-08 22:44:08,929 | INFO | sunat_multas.sunat_client | Botón Consultar trazabilidad presionado.
+2026-08-08 22:44:12,930 | INFO | sunat_multas.sunat_client | Trazabilidad consultada (7/16) para código 10935.
+2026-08-08 22:44:13,069 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10935).
+2026-08-08 22:44:13,509 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119767536&anioManifiestoc=2026&numeroManifiestoc=%2010935'>.
+2026-08-08 22:44:13,512 | INFO | sunat_multas.sunat_client | Manifiesto 10935: 1 documento(s) hijo(s) en la tabla de detalle.
+2026-08-08 22:44:13,517 | INFO | sunat_multas.sunat_client | Master del sistema (fila 1): MEDURU583601
+2026-08-08 22:44:13,644 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10935, fila Excel 19).
+2026-08-08 22:44:14,083 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119767536&numeroDeDetalle=463'>.
+2026-08-08 22:44:14,083 | INFO | sunat_multas.sunat_client | Puerto Destino de 10935: ESBIO-BILBAO
+2026-08-08 22:44:14,239 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 19 (E/F).
+2026-08-08 22:44:14,365 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:44:19,505 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:44:24,645 | INFO | sunat_multas.sunat_client | Enlace 'Parámetros Búsqueda' clicado.
+2026-08-08 22:44:24,828 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-08 22:44:33,330 | INFO | sunat_multas.sunat_client | Radio 'Número de Manifiesto Consolidado' marcado (tipoBusquedaNumeroManifiestoDesconsolidado).
+2026-08-08 22:44:33,430 | INFO | sunat_multas.sunat_client | Número de Manifiesto Consolidado cargado: 10232
+2026-08-08 22:44:48,053 | INFO | sunat_multas.sunat_client | Botón Consultar trazabilidad presionado.
+2026-08-08 22:44:52,053 | INFO | sunat_multas.sunat_client | Trazabilidad consultada (8/16) para código 10232.
+2026-08-08 22:44:52,189 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10232).
+2026-08-08 22:44:52,226 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=118349007&anioManifiestoc=2026&numeroManifiestoc=%2010232'>.
+2026-08-08 22:44:52,229 | INFO | sunat_multas.sunat_client | Manifiesto 10232: 2 documento(s) hijo(s) en la tabla de detalle.
+2026-08-08 22:44:52,235 | INFO | sunat_multas.sunat_client | Master del sistema (fila 1): ONEYLIMG11167300
+2026-08-08 22:44:52,352 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10232, fila Excel 20).
+2026-08-08 22:44:52,384 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=118349007&numeroDeDetalle=455'>.
+2026-08-08 22:44:52,384 | INFO | sunat_multas.sunat_client | Puerto Destino de 10232: COBUN-BUENAVENTURA
+2026-08-08 22:44:52,529 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 20 (E/F).
+2026-08-08 22:44:52,659 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:44:57,795 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:45:02,928 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10232).
+2026-08-08 22:45:02,965 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=118349007&anioManifiestoc=2026&numeroManifiestoc=%2010232'>.
+2026-08-08 22:45:02,972 | INFO | sunat_multas.sunat_client | Master del sistema (fila 2): ONEYLIMG11284300
+2026-08-08 22:45:03,096 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10232, fila Excel 21).
+2026-08-08 22:45:03,123 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=118349007&numeroDeDetalle=456'>.
+2026-08-08 22:45:03,124 | INFO | sunat_multas.sunat_client | Puerto Destino de 10232: COBUN-BUENAVENTURA
+2026-08-08 22:45:03,269 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 21 (E/F).
+2026-08-08 22:45:03,395 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:45:08,540 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:45:13,690 | INFO | sunat_multas.sunat_client | Enlace 'Parámetros Búsqueda' clicado.
+2026-08-08 22:45:13,867 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-08 22:45:22,363 | INFO | sunat_multas.sunat_client | Radio 'Número de Manifiesto Consolidado' marcado (tipoBusquedaNumeroManifiestoDesconsolidado).
+2026-08-08 22:45:22,463 | INFO | sunat_multas.sunat_client | Número de Manifiesto Consolidado cargado: 10758
+2026-08-08 22:45:37,076 | INFO | sunat_multas.sunat_client | Botón Consultar trazabilidad presionado.
+2026-08-08 22:45:41,076 | INFO | sunat_multas.sunat_client | Trazabilidad consultada (9/16) para código 10758.
+2026-08-08 22:45:41,214 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10758).
+2026-08-08 22:45:41,248 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=117361094&anioManifiestoc=2026&numeroManifiestoc=%2010758'>.
+2026-08-08 22:45:41,255 | INFO | sunat_multas.sunat_client | Manifiesto 10758: 2 documento(s) hijo(s) en la tabla de detalle.
+2026-08-08 22:45:41,262 | INFO | sunat_multas.sunat_client | Master del sistema (fila 1): MAEU274030701
+2026-08-08 22:45:41,378 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10758, fila Excel 22).
+2026-08-08 22:45:41,408 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=117361094&numeroDeDetalle=272'>.
+2026-08-08 22:45:41,408 | INFO | sunat_multas.sunat_client | Puerto Destino de 10758: GTPRQ-PUERTO QUETZAL
+2026-08-08 22:45:41,576 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 22 (E/F).
+2026-08-08 22:45:41,699 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:45:46,842 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:45:51,982 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10758).
+2026-08-08 22:45:52,415 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=117361094&anioManifiestoc=2026&numeroManifiestoc=%2010758'>.
+2026-08-08 22:45:52,421 | INFO | sunat_multas.sunat_client | Master del sistema (fila 2): MAEU274145892
+2026-08-08 22:45:52,540 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10758, fila Excel 23).
+2026-08-08 22:45:52,588 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=117361094&numeroDeDetalle=290'>.
+2026-08-08 22:45:52,588 | INFO | sunat_multas.sunat_client | Puerto Destino de 10758: MXATM-ALTAMIRA
+2026-08-08 22:45:52,757 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 23 (E/F).
+2026-08-08 22:45:52,882 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:45:58,014 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:46:03,165 | INFO | sunat_multas.sunat_client | Enlace 'Parámetros Búsqueda' clicado.
+2026-08-08 22:46:03,354 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-08 22:46:11,863 | INFO | sunat_multas.sunat_client | Radio 'Número de Manifiesto Consolidado' marcado (tipoBusquedaNumeroManifiestoDesconsolidado).
+2026-08-08 22:46:11,975 | INFO | sunat_multas.sunat_client | Número de Manifiesto Consolidado cargado: 11257
+2026-08-08 22:46:26,584 | INFO | sunat_multas.sunat_client | Botón Consultar trazabilidad presionado.
+2026-08-08 22:46:30,584 | INFO | sunat_multas.sunat_client | Trazabilidad consultada (10/16) para código 11257.
+2026-08-08 22:46:30,713 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (11257).
+2026-08-08 22:46:30,748 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=120507945&anioManifiestoc=2026&numeroManifiestoc=%2011257'>.
+2026-08-08 22:46:30,752 | INFO | sunat_multas.sunat_client | Manifiesto 11257: 1 documento(s) hijo(s) en la tabla de detalle.
+2026-08-08 22:46:30,760 | INFO | sunat_multas.sunat_client | Master del sistema (fila 1): HDMULIMM68574300
+2026-08-08 22:46:30,884 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (11257, fila Excel 24).
+2026-08-08 22:46:30,915 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=120507945&numeroDeDetalle=38'>.
+2026-08-08 22:46:30,915 | INFO | sunat_multas.sunat_client | Puerto Destino de 11257: MXZLO-MANZANILLO
+2026-08-08 22:46:31,065 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 24 (E/F).
+2026-08-08 22:46:31,189 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:46:36,348 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:46:41,496 | INFO | sunat_multas.sunat_client | Enlace 'Parámetros Búsqueda' clicado.
+2026-08-08 22:46:41,679 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-08 22:46:50,165 | INFO | sunat_multas.sunat_client | Radio 'Número de Manifiesto Consolidado' marcado (tipoBusquedaNumeroManifiestoDesconsolidado).
+2026-08-08 22:46:50,266 | INFO | sunat_multas.sunat_client | Número de Manifiesto Consolidado cargado: 10893
+2026-08-08 22:47:04,895 | INFO | sunat_multas.sunat_client | Botón Consultar trazabilidad presionado.
+2026-08-08 22:47:08,896 | INFO | sunat_multas.sunat_client | Trazabilidad consultada (11/16) para código 10893.
+2026-08-08 22:47:09,036 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10893).
+2026-08-08 22:47:09,473 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=121422761&anioManifiestoc=2026&numeroManifiestoc=%2010893'>.
+2026-08-08 22:47:09,476 | INFO | sunat_multas.sunat_client | Manifiesto 10893: 6 documento(s) hijo(s) en la tabla de detalle.
+2026-08-08 22:47:09,481 | INFO | sunat_multas.sunat_client | Master del sistema (fila 1): HDMULIMM92454800
+2026-08-08 22:47:09,605 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10893, fila Excel 26).
+2026-08-08 22:47:09,632 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=121422761&numeroDeDetalle=46'>.
+2026-08-08 22:47:09,632 | INFO | sunat_multas.sunat_client | Puerto Destino de 10893: COBUN-BUENAVENTURA
+2026-08-08 22:47:09,780 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 26 (E/F).
+2026-08-08 22:47:09,909 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:47:15,040 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:47:20,172 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10893).
+2026-08-08 22:47:20,206 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=121422761&anioManifiestoc=2026&numeroManifiestoc=%2010893'>.
+2026-08-08 22:47:20,211 | INFO | sunat_multas.sunat_client | Master del sistema (fila 2): ONEYLIMG12106400
+2026-08-08 22:47:20,336 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10893, fila Excel 30).
+2026-08-08 22:47:20,369 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=121422761&numeroDeDetalle=448'>.
+2026-08-08 22:47:20,369 | INFO | sunat_multas.sunat_client | Puerto Destino de 10893: COBUN-BUENAVENTURA
+2026-08-08 22:47:20,514 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 30 (E/F).
+2026-08-08 22:47:20,641 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:47:25,783 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:47:30,915 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10893).
+2026-08-08 22:47:30,946 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=121422761&anioManifiestoc=2026&numeroManifiestoc=%2010893'>.
+2026-08-08 22:47:30,952 | INFO | sunat_multas.sunat_client | Master del sistema (fila 3): ONEYLIMG12149400
+2026-08-08 22:47:31,076 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10893, fila Excel 27).
+2026-08-08 22:47:31,105 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=121422761&numeroDeDetalle=449'>.
+2026-08-08 22:47:31,105 | INFO | sunat_multas.sunat_client | Puerto Destino de 10893: COBUN-BUENAVENTURA
+2026-08-08 22:47:31,256 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 27 (E/F).
+2026-08-08 22:47:31,386 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:47:36,527 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:47:41,659 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10893).
+2026-08-08 22:47:42,093 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=121422761&anioManifiestoc=2026&numeroManifiestoc=%2010893'>.
+2026-08-08 22:47:42,098 | INFO | sunat_multas.sunat_client | Master del sistema (fila 4): ONEYLIMG12541700
+2026-08-08 22:47:42,212 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10893, fila Excel 25).
+2026-08-08 22:47:42,240 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=121422761&numeroDeDetalle=450'>.
+2026-08-08 22:47:42,240 | INFO | sunat_multas.sunat_client | Puerto Destino de 10893: COBUN-BUENAVENTURA
+2026-08-08 22:47:42,402 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 25 (E/F).
+2026-08-08 22:47:42,534 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:47:47,671 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:47:52,803 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10893).
+2026-08-08 22:47:52,835 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=121422761&anioManifiestoc=2026&numeroManifiestoc=%2010893'>.
+2026-08-08 22:47:52,842 | INFO | sunat_multas.sunat_client | Master del sistema (fila 5): ONEYLIMG12543900
+2026-08-08 22:47:52,965 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10893, fila Excel 28).
+2026-08-08 22:47:52,995 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=121422761&numeroDeDetalle=451'>.
+2026-08-08 22:47:52,995 | INFO | sunat_multas.sunat_client | Puerto Destino de 10893: COBUN-BUENAVENTURA
+2026-08-08 22:47:53,137 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 28 (E/F).
+2026-08-08 22:47:53,266 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:47:58,399 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:48:03,532 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10893).
+2026-08-08 22:48:03,568 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=121422761&anioManifiestoc=2026&numeroManifiestoc=%2010893'>.
+2026-08-08 22:48:03,575 | INFO | sunat_multas.sunat_client | Master del sistema (fila 6): ONEYLIMG12544300
+2026-08-08 22:48:03,693 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10893, fila Excel 29).
+2026-08-08 22:48:03,725 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=121422761&numeroDeDetalle=452'>.
+2026-08-08 22:48:03,725 | INFO | sunat_multas.sunat_client | Puerto Destino de 10893: COBUN-BUENAVENTURA
+2026-08-08 22:48:03,856 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 29 (E/F).
+2026-08-08 22:48:03,976 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:48:09,115 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:48:14,264 | INFO | sunat_multas.sunat_client | Enlace 'Parámetros Búsqueda' clicado.
+2026-08-08 22:48:14,445 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-08 22:48:22,938 | INFO | sunat_multas.sunat_client | Radio 'Número de Manifiesto Consolidado' marcado (tipoBusquedaNumeroManifiestoDesconsolidado).
+2026-08-08 22:48:23,039 | INFO | sunat_multas.sunat_client | Número de Manifiesto Consolidado cargado: 10234
+2026-08-08 22:48:37,663 | INFO | sunat_multas.sunat_client | Botón Consultar trazabilidad presionado.
+2026-08-08 22:48:41,664 | INFO | sunat_multas.sunat_client | Trazabilidad consultada (12/16) para código 10234.
+2026-08-08 22:48:41,805 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10234).
+2026-08-08 22:48:41,860 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=118349939&anioManifiestoc=2026&numeroManifiestoc=%2010234'>.
+2026-08-08 22:48:41,870 | INFO | sunat_multas.sunat_client | Manifiesto 10234: 1 documento(s) hijo(s) en la tabla de detalle.
+2026-08-08 22:48:41,879 | INFO | sunat_multas.sunat_client | Master del sistema (fila 1): HLCULI3260629663
+2026-08-08 22:48:41,999 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10234, fila Excel 31).
+2026-08-08 22:48:42,043 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=118349939&numeroDeDetalle=126'>.
+2026-08-08 22:48:42,043 | INFO | sunat_multas.sunat_client | Puerto Destino de 10234: ESVLC-VALENCIA
+2026-08-08 22:48:42,223 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 31 (E/F).
+2026-08-08 22:48:42,352 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:48:47,482 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:48:52,631 | INFO | sunat_multas.sunat_client | Enlace 'Parámetros Búsqueda' clicado.
+2026-08-08 22:48:52,811 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-08 22:49:01,309 | INFO | sunat_multas.sunat_client | Radio 'Número de Manifiesto Consolidado' marcado (tipoBusquedaNumeroManifiestoDesconsolidado).
+2026-08-08 22:49:01,412 | INFO | sunat_multas.sunat_client | Número de Manifiesto Consolidado cargado: 11150
+2026-08-08 22:49:16,031 | INFO | sunat_multas.sunat_client | Botón Consultar trazabilidad presionado.
+2026-08-08 22:49:20,032 | INFO | sunat_multas.sunat_client | Trazabilidad consultada (13/16) para código 11150.
+2026-08-08 22:49:20,159 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (11150).
+2026-08-08 22:49:20,195 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=121855686&anioManifiestoc=2026&numeroManifiestoc=%2011150'>.
+2026-08-08 22:49:20,203 | INFO | sunat_multas.sunat_client | Manifiesto 11150: 1 documento(s) hijo(s) en la tabla de detalle.
+2026-08-08 22:49:20,209 | INFO | sunat_multas.sunat_client | Master del sistema (fila 1): HLCULI3260720985
+2026-08-08 22:49:20,336 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (11150, fila Excel 32).
+2026-08-08 22:49:20,367 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=121855686&numeroDeDetalle=895'>.
+2026-08-08 22:49:20,367 | INFO | sunat_multas.sunat_client | Puerto Destino de 11150: DEHAM-HAMBURG
+2026-08-08 22:49:20,515 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 32 (E/F).
+2026-08-08 22:49:20,643 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:49:25,779 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:49:30,921 | INFO | sunat_multas.sunat_client | Enlace 'Parámetros Búsqueda' clicado.
+2026-08-08 22:49:31,112 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-08 22:49:39,619 | INFO | sunat_multas.sunat_client | Radio 'Número de Manifiesto Consolidado' marcado (tipoBusquedaNumeroManifiestoDesconsolidado).
+2026-08-08 22:49:39,725 | INFO | sunat_multas.sunat_client | Número de Manifiesto Consolidado cargado: 10334
+2026-08-08 22:49:54,366 | INFO | sunat_multas.sunat_client | Botón Consultar trazabilidad presionado.
+2026-08-08 22:49:58,367 | INFO | sunat_multas.sunat_client | Trazabilidad consultada (14/16) para código 10334.
+2026-08-08 22:49:58,492 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10334).
+2026-08-08 22:49:58,528 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119161804&anioManifiestoc=2026&numeroManifiestoc=%2010334'>.
+2026-08-08 22:49:58,531 | INFO | sunat_multas.sunat_client | Manifiesto 10334: 1 documento(s) hijo(s) en la tabla de detalle.
+2026-08-08 22:49:58,536 | INFO | sunat_multas.sunat_client | Master del sistema (fila 1): COSU6506057780
+2026-08-08 22:49:58,655 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10334, fila Excel 33).
+2026-08-08 22:49:58,690 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119161804&numeroDeDetalle=81'>.
+2026-08-08 22:49:58,690 | INFO | sunat_multas.sunat_client | Puerto Destino de 10334: DEHAM-HAMBURG
+2026-08-08 22:49:58,854 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 33 (E/F).
+2026-08-08 22:49:58,981 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:50:04,120 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:50:09,271 | INFO | sunat_multas.sunat_client | Enlace 'Parámetros Búsqueda' clicado.
+2026-08-08 22:50:09,455 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-08 22:50:17,958 | INFO | sunat_multas.sunat_client | Radio 'Número de Manifiesto Consolidado' marcado (tipoBusquedaNumeroManifiestoDesconsolidado).
+2026-08-08 22:50:18,062 | INFO | sunat_multas.sunat_client | Número de Manifiesto Consolidado cargado: 11097
+2026-08-08 22:50:32,729 | INFO | sunat_multas.sunat_client | Botón Consultar trazabilidad presionado.
+2026-08-08 22:50:36,729 | INFO | sunat_multas.sunat_client | Trazabilidad consultada (15/16) para código 11097.
+2026-08-08 22:50:36,860 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (11097).
+2026-08-08 22:50:37,292 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119545459&anioManifiestoc=2026&numeroManifiestoc=%2011097'>.
+2026-08-08 22:50:37,295 | INFO | sunat_multas.sunat_client | Manifiesto 11097: 1 documento(s) hijo(s) en la tabla de detalle.
+2026-08-08 22:50:37,301 | INFO | sunat_multas.sunat_client | Master del sistema (fila 1): HLCULI3260703896
+2026-08-08 22:50:37,417 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (11097, fila Excel 34).
+2026-08-08 22:50:37,448 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119545459&numeroDeDetalle=130'>.
+2026-08-08 22:50:37,448 | INFO | sunat_multas.sunat_client | Puerto Destino de 11097: CLSVE-SAN VICENTE
+2026-08-08 22:50:37,600 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 34 (E/F).
+2026-08-08 22:50:37,738 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:50:42,875 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:50:48,043 | INFO | sunat_multas.sunat_client | Enlace 'Parámetros Búsqueda' clicado.
+2026-08-08 22:50:48,217 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-08 22:50:56,695 | INFO | sunat_multas.sunat_client | Radio 'Número de Manifiesto Consolidado' marcado (tipoBusquedaNumeroManifiestoDesconsolidado).
+2026-08-08 22:50:56,797 | INFO | sunat_multas.sunat_client | Número de Manifiesto Consolidado cargado: 10635
+2026-08-08 22:51:11,414 | INFO | sunat_multas.sunat_client | Botón Consultar trazabilidad presionado.
+2026-08-08 22:51:15,415 | INFO | sunat_multas.sunat_client | Trazabilidad consultada (16/16) para código 10635.
+2026-08-08 22:51:15,554 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10635).
+2026-08-08 22:51:15,986 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=120780685&anioManifiestoc=2026&numeroManifiestoc=%2010635'>.
+2026-08-08 22:51:15,989 | INFO | sunat_multas.sunat_client | Manifiesto 10635: 1 documento(s) hijo(s) en la tabla de detalle.
+2026-08-08 22:51:15,993 | INFO | sunat_multas.sunat_client | Master del sistema (fila 1): COSU6506973630
+2026-08-08 22:51:16,116 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10635, fila Excel 35).
+2026-08-08 22:51:16,144 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=120780685&numeroDeDetalle=30'>.
+2026-08-08 22:51:16,145 | INFO | sunat_multas.sunat_client | Puerto Destino de 10635: ECGYE-GUAYAQUIL
+2026-08-08 22:51:16,292 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 35 (E/F).
+2026-08-08 22:51:16,433 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-08 22:51:21,567 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-08 22:51:26,574 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 5 ms.
+2026-08-08 22:51:26,822 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-08 22:51:27,924 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-08 22:51:30,012 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-08 22:51:32,012 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.

@@ -205,6 +205,21 @@ def read_proceso_destino(workbook_path: Path, tipo: TipoReporte) -> list[str]:
     return values
 
 
+def leer_mapa_master_fila(workbook_path: Path, tipo: TipoReporte) -> dict[str, int]:
+    """Mapea cada MASTER (columna B) a su fila en la hoja destino."""
+    workbook = load_workbook(workbook_path, data_only=True)
+    if tipo.hoja_destino not in workbook.sheetnames:
+        raise ValueError(f"No existe la hoja {tipo.hoja_destino!r} en {workbook_path}")
+    sheet = workbook[tipo.hoja_destino]
+    mapa: dict[str, int] = {}
+    for row in range(2, sheet.max_row + 1):
+        value = sheet.cell(row, 2).value
+        text = str(value).strip() if value is not None else ""
+        if text:
+            mapa[text] = row
+    return mapa
+
+
 def read_proceso_destino_grupos(workbook_path: Path, tipo: TipoReporte) -> list[dict]:
     """Devuelve grupos de códigos consecutivos con su fila de inicio en la hoja destino."""
     workbook = load_workbook(workbook_path, data_only=True)

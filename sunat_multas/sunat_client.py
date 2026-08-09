@@ -18,7 +18,7 @@ except ModuleNotFoundError:
 
 from .config import SunatConfig, SunatSelectors
 from .errors import AuthenticationError, ExtractionError, NavigationError, NoRecordsFound
-from .excel_io import escribir_puerto_destino
+from .excel_io import escribir_puerto_destino, leer_mapa_master_fila
 from .models import Company, ManifestRecord
 from .reportes import TIPOS, TipoReporte
 
@@ -442,6 +442,8 @@ class SunatClient:
     def consultar_trazabilidad(self, company: Company, grupos: list[dict]) -> None:
         if sync_playwright is None:
             raise RuntimeError("Playwright no está instalado. Ejecuta: pip install -r requirements.txt")
+        mapa_master_fila = leer_mapa_master_fila(self.workbook_path, self.tipo)
+        LOGGER.info("Mapa de MASTER a fila cargado: %s entradas.", len(mapa_master_fila))
         with sync_playwright() as playwright:
             browser = playwright.chromium.launch(
                 headless=self.config.headless,
@@ -457,25 +459,31 @@ class SunatClient:
                     codigo = grupo["code"]
                     self._llenar_consulta_trazabilidad(page, codigo)
                     LOGGER.info("Trazabilidad consultada (%s/%s) para código %s.", index, len(grupos), codigo)
-                    self._abrir_detalle_trazabilidad(page, codigo, grupo["start_row"], grupo["count"])
+                    self._abrir_detalle_trazabilidad(page, codigo, grupo["start_row"], grupo["count"], mapa_master_fila)
             finally:
                 self._logout(page)
                 context.close()
                 browser.close()
 
-    def _abrir_detalle_trazabilidad(self, page: Page, codigo: str, start_row: int, count: int) -> None:
-        fila_offset = 0
-        while True:
-            scope = self._abrir_tabla_detalle_consolidado(page, codigo)
-            if scope is None:
-                LOGGER.warning("No se abrió la tabla de detalle del documento (%s).", codigo)
-                return
-            if not self._existe_fila_hijo(scope, fila_offset):
-                return
-            if fila_offset >= count:
-                LOGGER.warning("La tabla de detalle tiene más filas que el grupo en Excel (%s).", codigo)
-            self._procesar_hijo(page, scope, codigo, start_row + fila_offset, fila_offset)
-            fila_offset += 1
+    def _abrir_detalle_trazabilidad(self, page: Page, codigo: str, start_row: int, count: int, mapa_master_fila: dict) -> None:
+        scope = self._abrir_tabla_detalle_consolidado(page, codigo)
+        if scope is None:
+            LOGGER.warning("No se abrió la tabla de detalle del documento (%s).", codigo)
+            return
+        try:
+            total_filas = scope.locator("#tblLista tbody tr").count()
+        except PlaywrightError:
+            total_filas = count
+        LOGGER.info("Manifiesto %s: %s documento(s) hijo(s) en la tabla de detalle.", codigo, total_filas)
+        if total_filas > count:
+            LOGGER.warning("La tabla de detalle tiene más filas que el grupo en Excel (%s).", codigo)
+        for fila_offset in range(total_filas):
+            self._procesar_hijo(page, scope, codigo, fila_offset, mapa_master_fila)
+            if fila_offset < total_filas - 1:
+                scope = self._abrir_tabla_detalle_consolidado(page, codigo)
+                if scope is None:
+                    LOGGER.warning("No se abrió la tabla de detalle para el siguiente hijo (%s).", codigo)
+                    return
 
     def _abrir_tabla_detalle_consolidado(self, page: Page, codigo: str):
         selector = self.tipo.selector_tabla_trazabilidad
@@ -509,21 +517,18 @@ class SunatClient:
             return None
         return scope
 
-    def _existe_fila_hijo(self, scope, fila_offset: int) -> bool:
-        try:
-            fila = scope.locator(f"#tblLista tbody tr:nth-child({fila_offset + 1})").first
-            return fila.count() > 0
-        except PlaywrightError:
-            return False
-
-    def _procesar_hijo(self, page: Page, scope, codigo: str, fila: int, fila_offset: int) -> None:
+    def _procesar_hijo(self, page: Page, scope, codigo: str, fila_offset: int, mapa_master_fila: dict) -> None:
+        fila = self._fila_excel_por_master(scope, fila_offset, mapa_master_fila)
+        if fila is None:
+            LOGGER.warning("No se pudo determinar la fila de Excel para %s (fila %s).", codigo, fila_offset + 1)
+            return
         enlace = scope.locator(f"#tblLista tbody tr:nth-child({fila_offset + 1}) a.link").first
         if enlace.count() == 0:
             LOGGER.warning("No se encontró el enlace del documento hijo en la tabla de detalle (%s).", codigo)
             return
         try:
             enlace.click(timeout=3000, no_wait_after=True)
-            LOGGER.info("Enlace del documento hijo clicado (%s, fila %s).", codigo, fila)
+            LOGGER.info("Enlace del documento hijo clicado (%s, fila Excel %s).", codigo, fila)
         except (PlaywrightError, PlaywrightTimeoutError) as exc:
             LOGGER.warning("No se pudo clicar el enlace del documento hijo (%s): %s", codigo, exc)
             return
@@ -539,6 +544,21 @@ class SunatClient:
             LOGGER.warning("No se pudo escribir el puerto en %s: %s", self.workbook_path, exc)
             return
         self._clic_regresar(page, veces=2)
+
+    def _fila_excel_por_master(self, scope, fila_offset: int, mapa_master_fila: dict) -> int | None:
+        try:
+            celda = scope.locator(
+                f"#tblLista tbody tr:nth-child({fila_offset + 1}) td:nth-child(3)"
+            ).first
+            if celda.count() == 0:
+                return None
+            master_sistema = _clean_text(celda.inner_text(timeout=3000))
+            if not master_sistema:
+                return None
+            LOGGER.info("Master del sistema (fila %s): %s", fila_offset + 1, master_sistema)
+            return mapa_master_fila.get(master_sistema)
+        except PlaywrightError:
+            return None
 
     def _esperar_puerto_destino(self, page: Page, timeout_ms: int) -> str | None:
         deadline = _monotonic_ms() + timeout_ms
@@ -614,6 +634,7 @@ class SunatClient:
         return None
 
     def _llenar_consulta_trazabilidad(self, page: Page, codigo: str) -> None:
+        self._expandir_parametros_busqueda(page)
         self._aplicar_pasos_formulario(page)
         self._seleccionar_radio_numero_manifiesto(page)
         input_numero = self._find_visible_quick(
@@ -632,6 +653,41 @@ class SunatClient:
             sleep(4)
         except (PlaywrightError, PlaywrightTimeoutError) as exc:
             LOGGER.warning("No se pudo presionar Consultar en la trazabilidad: %s", exc)
+
+    def _expandir_parametros_busqueda(self, page: Page) -> None:
+        if self._input_trazabilidad_visible(page):
+            return
+        deadline = _monotonic_ms() + 15000
+        clicado = False
+        while _monotonic_ms() < deadline:
+            for scope in _page_scopes(_active_page(page)):
+                try:
+                    enlace = scope.locator('a[href="#collapseParametros"]').first
+                    if enlace.count() > 0:
+                        enlace.click(timeout=3000)
+                        LOGGER.info("Enlace 'Parámetros Búsqueda' clicado.")
+                        clicado = True
+                        break
+                except (PlaywrightError, PlaywrightTimeoutError):
+                    continue
+            if clicado:
+                break
+            sleep(0.4)
+        if not clicado:
+            LOGGER.warning("No se encontró el enlace 'Parámetros Búsqueda'.")
+        deadline = _monotonic_ms() + 20000
+        while _monotonic_ms() < deadline and not self._input_trazabilidad_visible(page):
+            sleep(0.4)
+
+    def _input_trazabilidad_visible(self, page: Page) -> bool:
+        try:
+            for scope in _page_scopes(_active_page(page)):
+                locator = scope.locator(f"#{self.tipo.selector_input_numero_manifiesto}:visible").first
+                if locator.count() > 0:
+                    return True
+            return False
+        except PlaywrightError:
+            return False
 
     def _seleccionar_radio_numero_manifiesto(self, page: Page) -> None:
         radio_id = self.tipo.selector_radio_numero_manifiesto
