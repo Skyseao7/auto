@@ -34,6 +34,8 @@ class TipoReporte:
     selector_grid_siguiente: str = '[title="Página siguiente"]'
     selector_grid_vacio: str = "div.dojoxGridMasterMessages"
     columnas_extraccion: int = 9
+    columnas_condicion_color: tuple[int, ...] = ()
+    columna_color_destino: int = 0
 
     @property
     def es_expo(self) -> bool:
@@ -156,6 +158,15 @@ EXPO118 = TipoReporte(
         "Condición",
         "Estado del Documento de Transporte Hijo",
     ),
+    mapeo_copia=(
+        (1, 4, False),
+        (2, 3, True),
+        (5, 2, False),
+        (8, 7, False),
+        (9, 8, False),
+    ),
+    columnas_condicion_color=(11, 12),
+    columna_color_destino=9,
 )
 
 EXPO235 = TipoReporte(

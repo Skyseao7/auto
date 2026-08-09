@@ -283,7 +283,44 @@ def copy_manifiestos_to_impo118(workbook, tipo: TipoReporte, source_title: str |
         copied += len(values)
 
     _number_destino_rows(destination, tipo)
+    if tipo.columnas_condicion_color:
+        _aplicar_color_condicion(source, destination, tipo)
     return copied
+
+
+def _aplicar_color_condicion(source, destination, tipo: TipoReporte) -> None:
+    from openpyxl.styles import PatternFill
+
+    verde = PatternFill(start_color="C6EFCE", end_color="C6EFCE", fill_type="solid")
+    rojo = PatternFill(start_color="FFC7CE", end_color="FFC7CE", fill_type="solid")
+    col1, col2 = tipo.columnas_condicion_color
+    dst_col = tipo.columna_color_destino
+    for row in range(2, source.max_row + 1):
+        value1 = source.cell(row, col1).value
+        value2 = source.cell(row, col2).value
+        if value1 is None and value2 is None:
+            continue
+        solo_guiones1 = _es_solo_guiones(value1)
+        solo_guiones2 = _es_solo_guiones(value2)
+        cell = destination.cell(row, dst_col)
+        if solo_guiones1 and solo_guiones2:
+            cell.fill = verde
+        elif _tiene_texto_no_guiones(value1) or _tiene_texto_no_guiones(value2):
+            cell.fill = rojo
+
+
+def _es_solo_guiones(value: object) -> bool:
+    if value is None:
+        return False
+    text = str(value).strip()
+    return text != "" and all(ch == "-" for ch in text)
+
+
+def _tiene_texto_no_guiones(value: object) -> bool:
+    if value is None:
+        return False
+    text = str(value).strip()
+    return text != "" and any(ch != "-" for ch in text)
 
 
 def _number_destino_rows(destination, tipo: TipoReporte) -> None:

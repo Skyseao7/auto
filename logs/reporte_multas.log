@@ -1268,3 +1268,7 @@ Call log:
 2026-08-08 13:34:12,376 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
 2026-08-08 13:34:14,377 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
 2026-08-08 13:34:14,877 | INFO | sunat_multas.cli | Hoja EXPO118-Transmisiones actualizada para SCHRYVER: 34 transmisiones.
+2026-08-08 20:13:24,497 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-08 20:13:24,747 | INFO | sunat_multas.cli | Manifiestos copiados a EXPO118 desde 'EXPO118-Transmisiones' en output\SCHRYVER.xlsx: 170
+2026-08-08 20:24:31,864 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-08 20:24:32,005 | INFO | sunat_multas.cli | Manifiestos copiados a EXPO118 desde 'EXPO118-Transmisiones' en output\SCHRYVER.xlsx: 170
