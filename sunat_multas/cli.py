@@ -33,12 +33,14 @@ from .sunat_client import SunatClient
 
 LOGGER = logging.getLogger(__name__)
 
+REPORTES_EN_ORDEN = ("impo118", "impo235", "expo118", "expo235")
+
 
 def main() -> None:
     args = parse_args()
     config = load_config(args.config)
     configure_logging(config.log_dir)
-    tipo = obtener_tipo(args.reporte)
+    tipos = obtener_tipos(args.reporte)
 
     companies = filter_companies(
         read_companies(config.list_path),
@@ -49,6 +51,17 @@ def main() -> None:
     LOGGER.info("Empresas por procesar: %s", len(companies))
     if not companies:
         raise ValueError("No se encontró ninguna empresa con los filtros indicados.")
+
+    if args.todo:
+        start_date, end_date = resolve_date_range(args)
+        for tipo in tipos:
+            LOGGER.info("Iniciando flujo completo para %s.", tipo.nombre)
+            run_todo(config, companies, start_date, end_date, tipo)
+        return
+
+    if len(tipos) != 1:
+        raise ValueError("--reporte todos solo se puede usar junto con --todo.")
+    tipo = tipos[0]
 
     if args.excel or args.solo_excel:
         run_excel_only(config, companies, args.archivo, args.hoja, tipo)
@@ -82,10 +95,6 @@ def main() -> None:
     if args.detalle:
         run_detalle(config, companies, start_date, end_date, tipo)
         return
-    if args.todo:
-        run_todo(config, companies, start_date, end_date, tipo)
-        return
-
     results: list[CompanyResult] = []
     for company in companies:
         results.append(process_company(config, client, company, start_date, end_date, args.dry_run))
@@ -130,7 +139,10 @@ def run_todo(config, companies, start_date, end_date, tipo) -> None:
     companies_with_data = [company for company in companies if company.ruc in with_data]
     run_excel_only(config, companies_with_data, None, None, tipo)
     for company in companies_with_data:
-        run_detalle(config, [company], start_date, end_date, tipo)
+        if tipo.es_expo:
+            run_trazabilidad(config, [company], tipo)
+        else:
+            run_detalle(config, [company], start_date, end_date, tipo)
 
 
 def run_detalle(config, companies, start_date, end_date, tipo) -> None:
@@ -252,7 +264,7 @@ def run_excel_only(config, companies, archivo, hoja, tipo) -> None:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Automatiza reportes de multas SUNAT por empresa.")
     parser.add_argument("--config", type=Path, default=Path("config.yaml"), help="Ruta del archivo de configuración.")
-    parser.add_argument("--reporte", default="impo118", help="Tipo de reporte: impo118, impo235, expo118, expo235 (por defecto, impo118).")
+    parser.add_argument("--reporte", default="impo118", help="Tipo de reporte: impo118, impo235, expo118, expo235 o todos (por defecto, impo118).")
     parser.add_argument("--desde", help="Fecha inicial de consulta en formato YYYY-MM-DD.")
     parser.add_argument("--hasta", help="Fecha final de consulta en formato YYYY-MM-DD.")
     parser.add_argument("--mes", type=int, help="Mes de la consulta (1 a 12). Si se omite, se solicita al iniciar.")
@@ -260,17 +272,17 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--dry-run", action="store_true", help="Crea/copias libros sin ingresar a SUNAT.")
     parser.add_argument("--solo-login", action="store_true", help="Solo abre SUNAT, llena credenciales y envía login para una empresa.")
     parser.add_argument("--solo-navegar", action="store_true", help="Ingresa y abre Consulta Manifiesto Desconsolidado para verificar la navegación.")
-    parser.add_argument("--solo-excel", action="store_true", help="Alias de --excel: solo copia los manifiestos de la hoja de la empresa a IMPO118 en un Excel existente.")
-    parser.add_argument("--excel", action="store_true", help="Solo procesa Excel: copia los datos base de IMPO118-Transmisiones a IMPO118.")
-    parser.add_argument("--consulta", action="store_true", help="Solo consulta SUNAT y crea/actualiza la hoja IMPO118-Transmisiones.")
-    parser.add_argument("--detalle", action="store_true", help="Recorre cada transmisión en SUNAT y llena el detalle de documentos en IMPO118.")
+    parser.add_argument("--solo-excel", action="store_true", help="Alias de --excel: copia las transmisiones del reporte a su hoja destino.")
+    parser.add_argument("--excel", action="store_true", help="Copia las transmisiones del reporte a su hoja destino.")
+    parser.add_argument("--consulta", action="store_true", help="Consulta SUNAT y crea/actualiza la hoja de transmisiones del reporte.")
+    parser.add_argument("--detalle", action="store_true", help="Recorre cada transmisión y llena el detalle; aplica a reportes IMPO.")
     parser.add_argument("--trazabilidad", action="store_true", help="Consulta la Trazabilidad del Manifiesto de Carga para cada código de la columna PROCESO de la hoja destino.")
-    parser.add_argument("--todo", action="store_true", help="Ejecuta todo el flujo: --consulta + --excel + --detalle.")
+    parser.add_argument("--todo", action="store_true", help="Ejecuta el flujo completo; con --reporte todos usa IMPO118, IMPO235, EXPO118 y EXPO235 en ese orden.")
     parser.add_argument("--cerrar-sesiones", action="store_true", help="Cierra la sesión SUNAT de todas las empresas de la LISTA (login + Salir).")
     parser.add_argument("--archivo", type=Path, help="Ruta de un Excel existente para usar con --excel/--solo-excel.")
     parser.add_argument("--hoja", help="Nombre de la hoja de datos para usar con --excel/--solo-excel (por defecto, la hoja de transmisiones del reporte).")
     parser.add_argument("--pausa-login", type=int, default=20, help="Segundos que mantiene abierta la ventana tras login en modo --solo-login.")
-    parser.add_argument("--item", help="Procesa solo la empresa con este ITEM de la hoja LISTA.")
+    parser.add_argument("--item", help="ITEM o rango de ITEMs a procesar, por ejemplo: 13, 3-5 o 3,5,7-9.")
     parser.add_argument("--ruc", help="Procesa solo la empresa con este RUC de la hoja LISTA.")
     parser.add_argument("--nombre", help="Procesa solo empresas cuyo nombre contenga este texto.")
     return parser.parse_args()
@@ -363,7 +375,8 @@ def prompt_month() -> int:
 def filter_companies(companies, item: str | None, ruc: str | None, name: str | None):
     filtered = companies
     if item:
-        filtered = [company for company in filtered if company.item == item.strip()]
+        selected_items = parse_item_filter(item)
+        filtered = [company for company in filtered if company.item in selected_items]
     if ruc:
         normalized_ruc = ruc.strip()
         filtered = [company for company in filtered if company.ruc == normalized_ruc]
@@ -371,6 +384,36 @@ def filter_companies(companies, item: str | None, ruc: str | None, name: str | N
         normalized_name = name.strip().casefold()
         filtered = [company for company in filtered if normalized_name in company.name.casefold()]
     return filtered
+
+
+def obtener_tipos(nombre: str):
+    key = (nombre or "").strip().lower().replace("-", "").replace("_", "")
+    if key in {"todo", "todos", "all"}:
+        return tuple(obtener_tipo(reporte) for reporte in REPORTES_EN_ORDEN)
+    return (obtener_tipo(nombre),)
+
+
+def parse_item_filter(value: str) -> set[str]:
+    items: set[str] = set()
+    for segment in value.split(","):
+        segment = segment.strip()
+        if not segment:
+            continue
+        if "-" not in segment:
+            if not segment.isdigit():
+                raise ValueError(f"ITEM inválido: {segment!r}. Usa un número o rango como 3-5.")
+            items.add(str(int(segment)))
+            continue
+        start_text, end_text = (part.strip() for part in segment.split("-", maxsplit=1))
+        if not start_text.isdigit() or not end_text.isdigit():
+            raise ValueError(f"Rango de ITEM inválido: {segment!r}. Usa el formato 3-5.")
+        start, end = int(start_text), int(end_text)
+        if start > end:
+            raise ValueError(f"Rango de ITEM inválido: {segment!r}. El inicio no puede ser mayor al final.")
+        items.update(str(item) for item in range(start, end + 1))
+    if not items:
+        raise ValueError("Indica al menos un ITEM válido.")
+    return items
 
 
 
