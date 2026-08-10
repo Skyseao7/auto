@@ -378,11 +378,20 @@ class SunatClient:
         scope = self._find_grid_scope(page)
         if scope is None:
             return []
+        grid_selector = f"#{self.tipo.selector_grid}"
         max_cols = self.tipo.columnas_extraccion
         rows: list[list[str]] = []
         seen_first: set[tuple[str, ...]] = set()
         for _ in range(50):
-            page_rows = self._read_grid_page(scope)
+            row_locator = scope.locator(f"{grid_selector} {self.tipo.selector_grid_filas}")
+            count = row_locator.count()
+            if count == 0:
+                break
+            page_rows: list[list[str]] = []
+            for index in range(count):
+                cells = [_clean_text(cell) for cell in row_locator.nth(index).locator("td").all_inner_texts()]
+                if any(cells):
+                    page_rows.append(cells[:max_cols])
             if not page_rows:
                 break
             first_key = tuple(page_rows[0])
@@ -392,30 +401,8 @@ class SunatClient:
             rows.extend(page_rows)
             if not self._next_grid_page(scope):
                 break
+            sleep(1)
         return rows
-
-    def _read_grid_page(self, scope) -> list[list[str]]:
-        grid_selector = f"#{self.tipo.selector_grid}"
-        try:
-            row_locator = scope.locator(f"{grid_selector} {self.tipo.selector_grid_filas}")
-            count = row_locator.count()
-        except (PlaywrightError, PlaywrightTimeoutError):
-            return []
-        page_rows: list[list[str]] = []
-        for index in range(count):
-            try:
-                cells = [_clean_text(cell) for cell in row_locator.nth(index).locator("td").all_inner_texts()]
-            except (PlaywrightError, PlaywrightTimeoutError):
-                continue
-            if any(cells):
-                page_rows.append(cells[: self.tipo.columnas_extraccion])
-        return page_rows
-
-    def _grid_first_row_key(self, scope) -> tuple[str, ...]:
-        rows = self._read_grid_page(scope)
-        if not rows:
-            return ()
-        return tuple(rows[0])
 
     def _next_grid_page(self, scope) -> bool:
         try:
@@ -423,18 +410,10 @@ class SunatClient:
             if next_button.count() == 0:
                 return False
             classes = (next_button.get_attribute("class") or "") + " " + (next_button.get_attribute("aria-disabled") or "")
-            lowered = classes.lower()
-            if "disable" in lowered or "disabled" in lowered:
+            if "disabled" in classes.lower():
                 return False
-            before = self._grid_first_row_key(scope)
             next_button.click(timeout=3000)
-            deadline = _monotonic_ms() + 10000
-            while _monotonic_ms() < deadline:
-                after = self._grid_first_row_key(scope)
-                if after and after != before:
-                    return True
-                sleep(0.3)
-            return False
+            return True
         except (PlaywrightError, PlaywrightTimeoutError):
             return False
 
@@ -776,10 +755,10 @@ class SunatClient:
             raise NavigationError("No se encontró la grilla de manifiestos para abrir el detalle.")
         remaining = row_index
         for _ in range(100):
-            page_rows = self._read_grid_page(scope)
-            count = len(page_rows)
+            rows = scope.locator("#gridManifiestoCarga .dojoxGridRow")
+            count = rows.count()
             if remaining < count:
-                row = scope.locator(f"#{self.tipo.selector_grid} {self.tipo.selector_grid_filas}").nth(remaining)
+                row = rows.nth(remaining)
                 link = row.locator("a.link").first
                 if link.count() == 0:
                     link = row.locator("td").nth(2).locator("a").first
@@ -791,6 +770,7 @@ class SunatClient:
             if not self._next_grid_page(scope):
                 break
             remaining -= count
+            sleep(1)
         raise NavigationError(f"No se encontró la fila {row_index} en la grilla de manifiestos.")
 
     def _leer_codigo_transmision_detalle(self, page: Page) -> str:
@@ -922,36 +902,12 @@ class SunatClient:
             if next_button.count() == 0:
                 return False
             classes = (next_button.get_attribute("class") or "") + " " + (next_button.get_attribute("aria-disabled") or "")
-            lowered = classes.lower()
-            if "disable" in lowered or "disabled" in lowered:
+            if "disable" in classes.lower():
                 return False
-            before = self._dojo_first_row_key(scope, grid_selector)
             next_button.click(timeout=3000)
-            deadline = _monotonic_ms() + 10000
-            while _monotonic_ms() < deadline:
-                after = self._dojo_first_row_key(scope, grid_selector)
-                if after and after != before:
-                    return True
-                sleep(0.3)
-            return False
+            return True
         except (PlaywrightError, PlaywrightTimeoutError):
             return False
-
-    def _dojo_first_row_key(self, scope, grid_selector: str) -> tuple:
-        try:
-            grid_rows = scope.locator(f"{grid_selector} .dojoxGridRow")
-            count = grid_rows.count()
-            if count == 0:
-                return ()
-            cells = grid_rows.first.locator("td.dojoxGridCell")
-            data = {}
-            for cell_index in range(cells.count()):
-                idx = cells.nth(cell_index).get_attribute("idx")
-                if idx is not None:
-                    data[int(idx)] = _clean_text(cells.nth(cell_index).inner_text())
-            return tuple(sorted(data.items()))
-        except (PlaywrightError, PlaywrightTimeoutError):
-            return ()
 
     def _regresar_a_grilla(self, page: Page, ruc: str, start_date: date, end_date: date) -> None:
         try:
