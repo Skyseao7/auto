@@ -4207,3 +4207,1503 @@ Call log:
 2026-08-10 02:35:03,716 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
 2026-08-10 02:35:05,805 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
 2026-08-10 02:35:07,806 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-10 07:00:19,085 | INFO | sunat_multas.cli | Empresas por procesar: 3
+2026-08-10 07:00:19,085 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-10 07:00:19,086 | INFO | sunat_multas.cli | Iniciando flujo completo para IMPO118.
+2026-08-10 07:00:19,086 | INFO | sunat_multas.cli | Consultando SUNAT para PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-10 07:00:22,860 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-10 07:00:29,653 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-10 07:00:47,767 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-10 07:00:48,018 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-10 07:00:54,985 | INFO | sunat_multas.sunat_client | Formulario de consulta IMPO118 cargado.
+2026-08-10 07:00:59,566 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID (tipoBusquedaFechaNumeracionDesconsolidado).
+2026-08-10 07:00:59,916 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-10 07:01:12,460 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado (tipoBusquedaAgenteCarga).
+2026-08-10 07:01:12,576 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20602733808
+2026-08-10 07:01:27,263 | INFO | sunat_multas.sunat_client | Botón Consultar presionado (intento 1/3): #accion5_label|text=Consultar|button:has-text('Consultar').
+2026-08-10 07:01:30,850 | INFO | sunat_multas.sunat_client | Intento 2/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#accion5_label").first
+    - locator resolved to <span id="accion5_label" dojoattachpoint="containerNode" class="dijitReset dijitInline dijitButtonText">Consultar</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:01:34,449 | INFO | sunat_multas.sunat_client | Intento 3/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#accion5_label").first
+    - locator resolved to <span id="accion5_label" dojoattachpoint="containerNode" class="dijitReset dijitInline dijitButtonText">Consultar</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:01:45,455 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-10 07:01:46,809 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 4
+2026-08-10 07:01:46,818 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 8 ms.
+2026-08-10 07:01:47,127 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-10 07:01:48,229 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-10 07:01:50,315 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-10 07:01:52,316 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-10 07:01:52,953 | INFO | sunat_multas.cli | Hoja IMPO118-Transmisiones actualizada para PRADIVO WORLD COMPANY 1096: 4 transmisiones.
+2026-08-10 07:01:52,953 | INFO | sunat_multas.cli | Consultando SUNAT para EMO LOGISTICS PERU S.A.C. | RUC 20604081964
+2026-08-10 07:01:54,340 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20604081964
+2026-08-10 07:01:55,664 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20604081964 | Usuario EVERAV20 | Clave *********
+2026-08-10 07:02:16,403 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-10 07:02:16,593 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-10 07:02:23,689 | INFO | sunat_multas.sunat_client | Formulario de consulta IMPO118 cargado.
+2026-08-10 07:02:28,249 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID (tipoBusquedaFechaNumeracionDesconsolidado).
+2026-08-10 07:02:28,588 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-10 07:02:41,149 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado (tipoBusquedaAgenteCarga).
+2026-08-10 07:02:41,272 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-10 07:02:55,963 | INFO | sunat_multas.sunat_client | Botón Consultar presionado (intento 1/3): #accion5_label|text=Consultar|button:has-text('Consultar').
+2026-08-10 07:02:59,560 | INFO | sunat_multas.sunat_client | Intento 2/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#accion5_label").first
+    - locator resolved to <span id="accion5_label" dojoattachpoint="containerNode" class="dijitReset dijitInline dijitButtonText">Consultar</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:03:03,168 | INFO | sunat_multas.sunat_client | Intento 3/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#accion5_label").first
+    - locator resolved to <span id="accion5_label" dojoattachpoint="containerNode" class="dijitReset dijitInline dijitButtonText">Consultar</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:03:14,185 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-10 07:03:15,679 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 16
+2026-08-10 07:03:15,682 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 3 ms.
+2026-08-10 07:03:15,944 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-10 07:03:17,044 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-10 07:03:19,139 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-10 07:03:21,140 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-10 07:03:21,885 | INFO | sunat_multas.cli | Hoja IMPO118-Transmisiones actualizada para EMO LOGISTICS PERU S.A.C.: 16 transmisiones.
+2026-08-10 07:03:21,886 | INFO | sunat_multas.cli | Consultando SUNAT para HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C. | RUC 20538424961
+2026-08-10 07:03:23,303 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20538424961
+2026-08-10 07:03:27,359 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20538424961 | Usuario MINHETRU | Clave ************
+2026-08-10 07:03:45,620 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-10 07:03:52,434 | INFO | sunat_multas.sunat_client | Opción del menú activada mediante DOM: Manifiesto de Carga de Ingreso
+2026-08-10 07:03:52,614 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-10 07:03:59,392 | INFO | sunat_multas.sunat_client | Opción del menú activada mediante DOM: Consultas
+2026-08-10 07:04:26,684 | INFO | sunat_multas.sunat_client | Opción del menú activada mediante DOM: Consulta Manifesto Desconsolidado
+2026-08-10 07:04:28,390 | INFO | sunat_multas.sunat_client | Formulario de consulta IMPO118 cargado.
+2026-08-10 07:04:44,898 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado mediante el DOM.
+2026-08-10 07:04:45,261 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-10 07:05:00,775 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado mediante DOM (tipoBusquedaAgenteCarga).
+2026-08-10 07:05:30,926 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 7 ms.
+2026-08-10 07:05:31,238 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-10 07:05:32,331 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-10 07:05:34,419 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-10 07:05:36,420 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-10 07:05:37,059 | ERROR | sunat_multas.cli | Error no controlado consultando HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C.
+Traceback (most recent call last):
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\cli.py", line 119, in run_consulta
+    rows = client.fetch_records(company, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 112, in fetch_records
+    records = self._query_and_extract(page, company.ruc, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 319, in _query_and_extract
+    self._fill_agente_carga_ruc(page, ruc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 1141, in _fill_agente_carga_ruc
+    ruc_input.fill(ruc)
+    ~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 18242, in fill
+    self._sync(
+    ~~~~~~~~~~^
+        self._impl_obj.fill(
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        )
+        ^
+    )
+    ^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_locator.py", line 219, in fill
+    return await self._frame.fill(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 636, in fill
+    await self._fill(**locals_to_params(locals()))
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 648, in _fill
+    await self._channel.send("fill", self._timeout, locals_to_params(locals()))
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#numeroRucAgenteCarga:visible").first
+    - locator resolved to <input disabled value="" type="text" tabindex="-1" autocomplete="off" aria-valuenow="NaN" aria-invalid="false" aria-disabled="true" aria-required="true" id="numeroRucAgenteCarga" aria-valuemin="10000000000" aria-valuemax="99999999999" class="dijitReset dijitInputInner" dojoattachpoint="textbox,focusNode" title="Número de RUC del agente de carga."/>
+    - fill("20538424961")
+  - attempting fill action
+    2 × waiting for element to be visible, enabled and editable
+      - element is not enabled
+    - retrying fill action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and editable
+      - element is not enabled
+    - retrying fill action
+      - waiting 100ms
+    59 × waiting for element to be visible, enabled and editable
+       - element is not enabled
+     - retrying fill action
+       - waiting 500ms
+
+2026-08-10 07:05:37,093 | WARNING | sunat_multas.cli | HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C. | UNKNOWN | Locator.fill: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("#numeroRucAgenteCarga:visible").first
+    - locator resolved to <input disabled value="" type="text" tabindex="-1" autocomplete="off" aria-valuenow="NaN" aria-invalid="false" aria-disabled="true" aria-required="true" id="numeroRucAgenteCarga" aria-valuemin="10000000000" aria-valuemax="99999999999" class="dijitReset dijitInputInner" dojoattachpoint="textbox,focusNode" title="Número de RUC del agente de carga."/>
+    - fill("20538424961")
+  - attempting fill action
+    2 × waiting for element to be visible, enabled and editable
+      - element is not enabled
+    - retrying fill action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and editable
+      - element is not enabled
+    - retrying fill action
+      - waiting 100ms
+    59 × waiting for element to be visible, enabled and editable
+       - element is not enabled
+     - retrying fill action
+       - waiting 500ms
+
+2026-08-10 07:05:37,180 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'IMPO118-Transmisiones' en output\PRADIVO WORLD COMPANY 1096.xlsx: 12
+2026-08-10 07:05:37,285 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO118 desde 'IMPO118-Transmisiones' en output\EMO LOGISTICS PERU S.A.C..xlsx: 48
+2026-08-10 07:05:37,307 | INFO | sunat_multas.cli | Transmisiones por procesar para PRADIVO WORLD COMPANY 1096: 4 de 4.
+2026-08-10 07:05:37,431 | INFO | sunat_multas.cli | Mapa de puertos cargado: 33764 códigos.
+2026-08-10 07:05:38,587 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-10 07:05:39,942 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-10 07:05:58,158 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-10 07:05:58,439 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-10 07:06:03,983 | INFO | sunat_multas.sunat_client | Formulario de consulta IMPO118 cargado.
+2026-08-10 07:06:08,556 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID (tipoBusquedaFechaNumeracionDesconsolidado).
+2026-08-10 07:06:08,921 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-10 07:06:21,469 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado (tipoBusquedaAgenteCarga).
+2026-08-10 07:06:21,586 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20602733808
+2026-08-10 07:06:36,284 | INFO | sunat_multas.sunat_client | Botón Consultar presionado (intento 1/3): #accion5_label|text=Consultar|button:has-text('Consultar').
+2026-08-10 07:06:39,895 | INFO | sunat_multas.sunat_client | Intento 2/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#accion5_label").first
+    - locator resolved to <span id="accion5_label" dojoattachpoint="containerNode" class="dijitReset dijitInline dijitButtonText">Consultar</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:06:43,498 | INFO | sunat_multas.sunat_client | Intento 3/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#accion5_label").first
+    - locator resolved to <span id="accion5_label" dojoattachpoint="containerNode" class="dijitReset dijitInline dijitButtonText">Consultar</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:06:54,517 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-10 07:06:55,852 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 4
+2026-08-10 07:06:55,852 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 32157 (fila grilla 0, 1 documento(s)).
+2026-08-10 07:07:26,763 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 32157.
+2026-08-10 07:07:26,764 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-118-1-2026- 32157; reintentando.
+2026-08-10 07:07:26,786 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:07:28,867 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-118-1-2026-32157.
+2026-08-10 07:07:30,263 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:07:30,468 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-10 07:07:30,514 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 32157 procesada (1 documento(s)).
+2026-08-10 07:07:30,533 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:07:30,987 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 33970 (fila grilla 1, 1 documento(s)).
+2026-08-10 07:08:02,756 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 33970.
+2026-08-10 07:08:02,757 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-118-1-2026- 33970; reintentando.
+2026-08-10 07:08:02,796 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:08:35,174 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 33970.
+2026-08-10 07:08:36,629 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:08:36,919 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 2 contenedor(es).
+2026-08-10 07:08:36,972 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 33970 procesada (1 documento(s)).
+2026-08-10 07:08:36,991 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:08:37,467 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 35652 (fila grilla 2, 1 documento(s)).
+2026-08-10 07:09:09,284 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 35652.
+2026-08-10 07:09:09,284 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-118-1-2026- 35652; reintentando.
+2026-08-10 07:09:09,319 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:09:41,636 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 35652.
+2026-08-10 07:09:43,018 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:09:43,231 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-10 07:09:43,279 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 35652 procesada (1 documento(s)).
+2026-08-10 07:09:43,298 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:09:43,780 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 35925 (fila grilla 3, 1 documento(s)).
+2026-08-10 07:10:15,582 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 35925.
+2026-08-10 07:10:15,583 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-118-1-2026- 35925; reintentando.
+2026-08-10 07:10:15,618 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:10:47,889 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 35925.
+2026-08-10 07:10:49,347 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:10:49,593 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-10 07:10:49,646 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 35925 procesada (1 documento(s)).
+2026-08-10 07:10:49,667 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:10:50,265 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 11 ms.
+2026-08-10 07:10:50,531 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-10 07:10:51,627 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-10 07:10:53,721 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-10 07:10:55,722 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-10 07:10:56,542 | INFO | sunat_multas.cli | Detalle finalizado para PRADIVO WORLD COMPANY 1096. Procesadas: 4.
+2026-08-10 07:10:56,595 | INFO | sunat_multas.cli | Transmisiones por procesar para EMO LOGISTICS PERU S.A.C.: 15 de 15.
+2026-08-10 07:10:56,806 | INFO | sunat_multas.cli | Mapa de puertos cargado: 33764 códigos.
+2026-08-10 07:10:58,049 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20604081964
+2026-08-10 07:10:59,371 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20604081964 | Usuario EVERAV20 | Clave *********
+2026-08-10 07:11:19,925 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-10 07:11:20,118 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-10 07:11:26,858 | INFO | sunat_multas.sunat_client | Formulario de consulta IMPO118 cargado.
+2026-08-10 07:11:31,440 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID (tipoBusquedaFechaNumeracionDesconsolidado).
+2026-08-10 07:11:31,758 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-10 07:11:44,345 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado (tipoBusquedaAgenteCarga).
+2026-08-10 07:11:44,467 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-10 07:11:59,157 | INFO | sunat_multas.sunat_client | Botón Consultar presionado (intento 1/3): #accion5_label|text=Consultar|button:has-text('Consultar').
+2026-08-10 07:12:02,756 | INFO | sunat_multas.sunat_client | Intento 2/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#accion5_label").first
+    - locator resolved to <span id="accion5_label" dojoattachpoint="containerNode" class="dijitReset dijitInline dijitButtonText">Consultar</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:12:06,367 | INFO | sunat_multas.sunat_client | Intento 3/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#accion5_label").first
+    - locator resolved to <span id="accion5_label" dojoattachpoint="containerNode" class="dijitReset dijitInline dijitButtonText">Consultar</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:12:17,376 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-10 07:12:18,826 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 16
+2026-08-10 07:12:18,826 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 30444 (fila grilla 0, 1 documento(s)).
+2026-08-10 07:12:21,434 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-118-1-2026-30444.
+2026-08-10 07:12:22,847 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:12:23,117 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 2 contenedor(es).
+2026-08-10 07:12:23,181 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 30444 procesada (1 documento(s)).
+2026-08-10 07:12:23,195 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:12:23,676 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 31718 (fila grilla 1, 1 documento(s)).
+2026-08-10 07:12:55,578 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 31718.
+2026-08-10 07:12:55,578 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-118-1-2026- 31718; reintentando.
+2026-08-10 07:12:55,604 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:13:27,528 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 31718.
+2026-08-10 07:13:28,966 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:13:29,188 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-10 07:13:29,272 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 31718 procesada (1 documento(s)).
+2026-08-10 07:13:29,289 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:13:29,808 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 31993 (fila grilla 2, 1 documento(s)).
+2026-08-10 07:14:01,624 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 31993.
+2026-08-10 07:14:01,625 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-118-1-2026- 31993; reintentando.
+2026-08-10 07:14:01,661 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:14:33,580 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 31993.
+2026-08-10 07:14:35,018 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:14:35,239 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-10 07:14:35,353 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 31993 procesada (1 documento(s)).
+2026-08-10 07:14:35,370 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:14:35,950 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 32218 (fila grilla 3, 2 documento(s)).
+2026-08-10 07:15:07,260 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 32218.
+2026-08-10 07:15:07,260 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-118-1-2026- 32218; reintentando.
+2026-08-10 07:15:07,295 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:15:39,214 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 32218.
+2026-08-10 07:15:40,819 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 2 documento(s).
+2026-08-10 07:15:41,768 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 8 contenedor(es).
+2026-08-10 07:15:41,884 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 32218 procesada (2 documento(s)).
+2026-08-10 07:15:41,915 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:15:42,419 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 33117 (fila grilla 5, 1 documento(s)).
+2026-08-10 07:16:14,242 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 33117.
+2026-08-10 07:16:14,242 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-118-1-2026- 33117; reintentando.
+2026-08-10 07:16:14,280 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:16:46,194 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 33117.
+2026-08-10 07:16:47,630 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:16:47,852 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-10 07:16:47,928 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 33117 procesada (1 documento(s)).
+2026-08-10 07:16:47,944 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:16:48,557 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 33305 (fila grilla 6, 1 documento(s)).
+2026-08-10 07:17:19,868 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 33305.
+2026-08-10 07:17:19,869 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-118-1-2026- 33305; reintentando.
+2026-08-10 07:17:19,911 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:17:51,838 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 33305.
+2026-08-10 07:17:53,259 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:17:53,470 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-10 07:17:53,545 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 33305 procesada (1 documento(s)).
+2026-08-10 07:17:53,562 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:17:54,191 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 33498 (fila grilla 7, 1 documento(s)).
+2026-08-10 07:18:25,510 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 33498.
+2026-08-10 07:18:25,510 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-118-1-2026- 33498; reintentando.
+2026-08-10 07:18:25,548 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:18:57,465 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 33498.
+2026-08-10 07:18:58,926 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:18:59,167 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-10 07:18:59,246 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 33498 procesada (1 documento(s)).
+2026-08-10 07:18:59,265 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:18:59,730 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 34506 (fila grilla 8, 1 documento(s)).
+2026-08-10 07:19:31,546 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 34506.
+2026-08-10 07:19:31,547 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-118-1-2026- 34506; reintentando.
+2026-08-10 07:19:31,563 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:20:03,755 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 34506.
+2026-08-10 07:20:05,108 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:20:05,413 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 2 contenedor(es).
+2026-08-10 07:20:05,487 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 34506 procesada (1 documento(s)).
+2026-08-10 07:20:05,508 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:20:06,049 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 34891 (fila grilla 9, 1 documento(s)).
+2026-08-10 07:20:08,160 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-118-1-2026-34891.
+2026-08-10 07:20:09,492 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:20:09,813 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 2 contenedor(es).
+2026-08-10 07:20:09,883 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 34891 procesada (1 documento(s)).
+2026-08-10 07:20:09,900 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:20:10,467 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 35017 (fila grilla 10, 1 documento(s)).
+2026-08-10 07:20:41,798 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 35017.
+2026-08-10 07:20:41,799 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-118-1-2026- 35017; reintentando.
+2026-08-10 07:20:41,828 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:21:14,169 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 35017.
+2026-08-10 07:21:15,605 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:21:15,842 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-10 07:21:15,925 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 35017 procesada (1 documento(s)).
+2026-08-10 07:21:15,955 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:21:16,572 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 35264 (fila grilla 11, 1 documento(s)).
+2026-08-10 07:21:47,858 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 35264.
+2026-08-10 07:21:47,859 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-118-1-2026- 35264; reintentando.
+2026-08-10 07:21:47,887 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:22:20,406 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 35264.
+2026-08-10 07:22:21,785 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:22:22,011 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-10 07:22:22,124 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 35264 procesada (1 documento(s)).
+2026-08-10 07:22:22,142 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:22:22,701 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 35486 (fila grilla 12, 1 documento(s)).
+2026-08-10 07:22:54,616 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 35486.
+2026-08-10 07:22:54,617 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-118-1-2026- 35486; reintentando.
+2026-08-10 07:22:54,638 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:23:26,554 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 35486.
+2026-08-10 07:23:27,919 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:23:28,145 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-10 07:23:28,268 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 35486 procesada (1 documento(s)).
+2026-08-10 07:23:28,287 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:23:29,223 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 35686 (fila grilla 13, 1 documento(s)).
+2026-08-10 07:24:00,151 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 35686.
+2026-08-10 07:24:00,152 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-118-1-2026- 35686; reintentando.
+2026-08-10 07:24:00,189 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:24:32,500 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 35686.
+2026-08-10 07:24:33,845 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:24:34,045 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-10 07:24:34,128 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 35686 procesada (1 documento(s)).
+2026-08-10 07:24:34,152 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:24:34,725 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 35866 (fila grilla 14, 1 documento(s)).
+2026-08-10 07:25:06,511 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 35866.
+2026-08-10 07:25:06,512 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-118-1-2026- 35866; reintentando.
+2026-08-10 07:25:06,548 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:25:38,342 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 35866.
+2026-08-10 07:25:39,697 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:25:39,956 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 2 contenedor(es).
+2026-08-10 07:25:40,017 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 35866 procesada (1 documento(s)).
+2026-08-10 07:25:40,033 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:25:40,515 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-118-1-2026- 35938 (fila grilla 15, 1 documento(s)).
+2026-08-10 07:26:12,239 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 35938.
+2026-08-10 07:26:12,240 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-118-1-2026- 35938; reintentando.
+2026-08-10 07:26:12,276 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:26:44,612 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-118-1-2026- 35938.
+2026-08-10 07:26:45,946 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:26:46,174 | INFO | sunat_multas.sunat_client | Listado de contenedores extraído: 1 contenedor(es).
+2026-08-10 07:26:46,290 | INFO | sunat_multas.cli | Transmisión 01-118-1-2026- 35938 procesada (1 documento(s)).
+2026-08-10 07:26:46,308 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:26:46,908 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 8 ms.
+2026-08-10 07:26:47,182 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-10 07:26:48,277 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-10 07:26:50,377 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-10 07:26:52,378 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-10 07:26:53,148 | INFO | sunat_multas.cli | Detalle finalizado para EMO LOGISTICS PERU S.A.C.. Procesadas: 15.
+2026-08-10 07:26:53,148 | INFO | sunat_multas.cli | Iniciando flujo completo para IMPO235.
+2026-08-10 07:26:53,149 | INFO | sunat_multas.cli | Consultando SUNAT para PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-10 07:26:54,830 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-10 07:26:56,161 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-10 07:27:14,412 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-10 07:27:14,674 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-10 07:27:21,745 | INFO | sunat_multas.sunat_client | Formulario de consulta IMPO235 cargado.
+2026-08-10 07:27:26,345 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID (tipoBusquedaFechaNumeracionDesconsolidado).
+2026-08-10 07:27:26,676 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-10 07:27:37,433 | INFO | sunat_multas.sunat_client | Combobox codigoAduana seleccionado: 235-AEREA DEL CALLAO
+2026-08-10 07:27:46,989 | INFO | sunat_multas.sunat_client | Combobox viaTransporte seleccionado: AEREO
+2026-08-10 07:27:59,525 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado (tipoBusquedaAgenteCarga).
+2026-08-10 07:27:59,688 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20602733808
+2026-08-10 07:28:14,383 | INFO | sunat_multas.sunat_client | Botón Consultar presionado (intento 1/3): #accion5_label|text=Consultar|button:has-text('Consultar').
+2026-08-10 07:28:17,992 | INFO | sunat_multas.sunat_client | Intento 2/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#accion5_label").first
+    - locator resolved to <span id="accion5_label" dojoattachpoint="containerNode" class="dijitReset dijitInline dijitButtonText">Consultar</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:28:21,598 | INFO | sunat_multas.sunat_client | Intento 3/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#accion5_label").first
+    - locator resolved to <span id="accion5_label" dojoattachpoint="containerNode" class="dijitReset dijitInline dijitButtonText">Consultar</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:28:32,617 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-10 07:28:32,656 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 9 ms.
+2026-08-10 07:28:32,927 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-10 07:28:34,026 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-10 07:28:36,124 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-10 07:28:38,124 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-10 07:28:38,818 | INFO | sunat_multas.cli | Sin datos para PRADIVO WORLD COMPANY 1096: La consulta no devolvió registros.
+2026-08-10 07:28:38,819 | WARNING | sunat_multas.cli | PRADIVO WORLD COMPANY 1096 | NO_RECORDS | La consulta no devolvió registros.
+2026-08-10 07:28:38,820 | INFO | sunat_multas.cli | Consultando SUNAT para EMO LOGISTICS PERU S.A.C. | RUC 20604081964
+2026-08-10 07:28:40,204 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20604081964
+2026-08-10 07:28:41,527 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20604081964 | Usuario EVERAV20 | Clave *********
+2026-08-10 07:29:02,110 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-10 07:29:02,327 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-10 07:29:09,274 | INFO | sunat_multas.sunat_client | Formulario de consulta IMPO235 cargado.
+2026-08-10 07:29:13,820 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID (tipoBusquedaFechaNumeracionDesconsolidado).
+2026-08-10 07:29:14,144 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-10 07:29:24,851 | INFO | sunat_multas.sunat_client | Combobox codigoAduana seleccionado: 235-AEREA DEL CALLAO
+2026-08-10 07:29:34,445 | INFO | sunat_multas.sunat_client | Combobox viaTransporte seleccionado: AEREO
+2026-08-10 07:29:46,969 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado (tipoBusquedaAgenteCarga).
+2026-08-10 07:29:47,095 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-10 07:30:01,813 | INFO | sunat_multas.sunat_client | Botón Consultar presionado (intento 1/3): #accion5_label|text=Consultar|button:has-text('Consultar').
+2026-08-10 07:30:05,423 | INFO | sunat_multas.sunat_client | Intento 2/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#accion5_label").first
+    - locator resolved to <span id="accion5_label" dojoattachpoint="containerNode" class="dijitReset dijitInline dijitButtonText">Consultar</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:30:09,017 | INFO | sunat_multas.sunat_client | Intento 3/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#accion5_label").first
+    - locator resolved to <span id="accion5_label" dojoattachpoint="containerNode" class="dijitReset dijitInline dijitButtonText">Consultar</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:30:20,028 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-10 07:30:22,588 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 28
+2026-08-10 07:30:22,593 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 4 ms.
+2026-08-10 07:30:22,841 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-10 07:30:23,943 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-10 07:30:26,036 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-10 07:30:28,037 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-10 07:30:28,958 | INFO | sunat_multas.cli | Hoja IMPO235-Transmisiones actualizada para EMO LOGISTICS PERU S.A.C.: 28 transmisiones.
+2026-08-10 07:30:28,958 | INFO | sunat_multas.cli | Consultando SUNAT para HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C. | RUC 20538424961
+2026-08-10 07:30:30,422 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20538424961
+2026-08-10 07:30:31,745 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20538424961 | Usuario MINHETRU | Clave ************
+2026-08-10 07:30:49,849 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-10 07:30:50,117 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-10 07:30:57,449 | INFO | sunat_multas.sunat_client | Formulario de consulta IMPO235 cargado.
+2026-08-10 07:31:02,029 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID (tipoBusquedaFechaNumeracionDesconsolidado).
+2026-08-10 07:31:02,360 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-10 07:31:13,065 | INFO | sunat_multas.sunat_client | Combobox codigoAduana seleccionado: 235-AEREA DEL CALLAO
+2026-08-10 07:31:22,688 | INFO | sunat_multas.sunat_client | Combobox viaTransporte seleccionado: AEREO
+2026-08-10 07:31:35,223 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado (tipoBusquedaAgenteCarga).
+2026-08-10 07:31:35,365 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20538424961
+2026-08-10 07:31:50,081 | INFO | sunat_multas.sunat_client | Botón Consultar presionado (intento 1/3): #accion5_label|text=Consultar|button:has-text('Consultar').
+2026-08-10 07:31:53,674 | INFO | sunat_multas.sunat_client | Intento 2/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#accion5_label").first
+    - locator resolved to <span id="accion5_label" dojoattachpoint="containerNode" class="dijitReset dijitInline dijitButtonText">Consultar</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:31:57,285 | INFO | sunat_multas.sunat_client | Intento 3/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#accion5_label").first
+    - locator resolved to <span id="accion5_label" dojoattachpoint="containerNode" class="dijitReset dijitInline dijitButtonText">Consultar</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:32:08,299 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-10 07:32:08,333 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 8 ms.
+2026-08-10 07:32:08,613 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-10 07:32:09,710 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-10 07:32:11,805 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-10 07:32:13,806 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-10 07:32:14,472 | INFO | sunat_multas.cli | Sin datos para HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C.: La consulta no devolvió registros.
+2026-08-10 07:32:14,474 | WARNING | sunat_multas.cli | HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C. | NO_RECORDS | La consulta no devolvió registros.
+2026-08-10 07:32:14,698 | INFO | sunat_multas.cli | Manifiestos copiados a IMPO235 desde 'IMPO235-Transmisiones' en output\EMO LOGISTICS PERU S.A.C..xlsx: 84
+2026-08-10 07:32:14,804 | INFO | sunat_multas.cli | Transmisiones por procesar para EMO LOGISTICS PERU S.A.C.: 25 de 25.
+2026-08-10 07:32:14,937 | INFO | sunat_multas.cli | Mapa de puertos cargado: 33764 códigos.
+2026-08-10 07:32:16,278 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20604081964
+2026-08-10 07:32:17,540 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20604081964 | Usuario EVERAV20 | Clave *********
+2026-08-10 07:32:38,188 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-10 07:32:38,408 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-10 07:32:45,563 | INFO | sunat_multas.sunat_client | Formulario de consulta IMPO235 cargado.
+2026-08-10 07:32:50,102 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID (tipoBusquedaFechaNumeracionDesconsolidado).
+2026-08-10 07:32:50,422 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-10 07:33:01,126 | INFO | sunat_multas.sunat_client | Combobox codigoAduana seleccionado: 235-AEREA DEL CALLAO
+2026-08-10 07:33:10,724 | INFO | sunat_multas.sunat_client | Combobox viaTransporte seleccionado: AEREO
+2026-08-10 07:33:23,296 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado (tipoBusquedaAgenteCarga).
+2026-08-10 07:33:23,410 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-10 07:33:38,080 | INFO | sunat_multas.sunat_client | Botón Consultar presionado (intento 1/3): #accion5_label|text=Consultar|button:has-text('Consultar').
+2026-08-10 07:33:41,670 | INFO | sunat_multas.sunat_client | Intento 2/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#accion5_label").first
+    - locator resolved to <span id="accion5_label" dojoattachpoint="containerNode" class="dijitReset dijitInline dijitButtonText">Consultar</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:33:45,273 | INFO | sunat_multas.sunat_client | Intento 3/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#accion5_label").first
+    - locator resolved to <span id="accion5_label" dojoattachpoint="containerNode" class="dijitReset dijitInline dijitButtonText">Consultar</span>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:33:56,286 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-10 07:33:58,843 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 28
+2026-08-10 07:33:58,843 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 35677 (fila grilla 0, 1 documento(s)).
+2026-08-10 07:34:29,807 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 35677.
+2026-08-10 07:34:29,808 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-235-4-2026- 35677; reintentando.
+2026-08-10 07:34:29,843 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:35:01,648 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 35677.
+2026-08-10 07:35:03,009 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:35:03,125 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 35677 procesada (1 documento(s)).
+2026-08-10 07:35:03,141 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:35:03,732 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 35837 (fila grilla 1, 1 documento(s)).
+2026-08-10 07:35:35,084 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 35837.
+2026-08-10 07:35:35,084 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-235-4-2026- 35837; reintentando.
+2026-08-10 07:35:35,120 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:36:07,090 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 35837.
+2026-08-10 07:36:08,418 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:36:08,546 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 35837 procesada (1 documento(s)).
+2026-08-10 07:36:08,562 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:36:09,158 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 36329 (fila grilla 2, 1 documento(s)).
+2026-08-10 07:36:40,565 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 36329.
+2026-08-10 07:36:40,566 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-235-4-2026- 36329; reintentando.
+2026-08-10 07:36:40,609 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:37:13,028 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 36329.
+2026-08-10 07:37:14,338 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:37:14,456 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 36329 procesada (1 documento(s)).
+2026-08-10 07:37:14,478 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:37:15,071 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 36374 (fila grilla 3, 1 documento(s)).
+2026-08-10 07:37:46,307 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 36374.
+2026-08-10 07:37:46,308 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-235-4-2026- 36374; reintentando.
+2026-08-10 07:37:46,356 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:38:18,256 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 36374.
+2026-08-10 07:38:19,658 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:38:19,862 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 36374 procesada (1 documento(s)).
+2026-08-10 07:38:19,884 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:38:20,452 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 36573 (fila grilla 4, 1 documento(s)).
+2026-08-10 07:38:51,741 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 36573.
+2026-08-10 07:38:51,742 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-235-4-2026- 36573; reintentando.
+2026-08-10 07:38:51,757 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:39:24,093 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 36573.
+2026-08-10 07:39:25,445 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:39:25,570 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 36573 procesada (1 documento(s)).
+2026-08-10 07:39:25,589 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:39:26,207 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 36618 (fila grilla 5, 2 documento(s)).
+2026-08-10 07:39:57,486 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 36618.
+2026-08-10 07:39:57,487 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-235-4-2026- 36618; reintentando.
+2026-08-10 07:39:57,514 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:40:29,336 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 36618.
+2026-08-10 07:40:31,231 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 4 documento(s).
+2026-08-10 07:40:31,429 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 36618 procesada (2 documento(s)).
+2026-08-10 07:40:31,451 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:40:32,396 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 37229 (fila grilla 7, 1 documento(s)).
+2026-08-10 07:41:03,341 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 37229.
+2026-08-10 07:41:03,342 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-235-4-2026- 37229; reintentando.
+2026-08-10 07:41:03,367 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:41:35,169 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 37229.
+2026-08-10 07:41:36,448 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:41:36,531 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 37229 procesada (1 documento(s)).
+2026-08-10 07:41:36,541 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:41:36,892 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 38078 (fila grilla 8, 2 documento(s)).
+2026-08-10 07:42:08,621 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 38078.
+2026-08-10 07:42:08,621 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-235-4-2026- 38078; reintentando.
+2026-08-10 07:42:08,635 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:42:10,626 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-235-4-2026-38078.
+2026-08-10 07:42:12,213 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 4 documento(s).
+2026-08-10 07:42:12,296 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 38078 procesada (2 documento(s)).
+2026-08-10 07:42:12,308 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:42:13,069 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 38102 (fila grilla 10, 1 documento(s)).
+2026-08-10 07:42:44,076 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 38102.
+2026-08-10 07:42:44,077 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-235-4-2026- 38102; reintentando.
+2026-08-10 07:42:44,093 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:42:45,569 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-235-4-2026-38102.
+2026-08-10 07:42:46,900 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 2 documento(s).
+2026-08-10 07:42:46,973 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 38102 procesada (1 documento(s)).
+2026-08-10 07:42:46,982 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:42:47,670 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 38120 (fila grilla 11, 1 documento(s)).
+2026-08-10 07:43:18,622 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 38120.
+2026-08-10 07:43:18,622 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-235-4-2026- 38120; reintentando.
+2026-08-10 07:43:18,643 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:43:20,428 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-235-4-2026-38120.
+2026-08-10 07:43:21,640 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:43:21,711 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 38120 procesada (1 documento(s)).
+2026-08-10 07:43:21,720 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:43:22,407 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 38242 (fila grilla 12, 1 documento(s)).
+2026-08-10 07:43:53,421 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 38242.
+2026-08-10 07:43:53,422 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-235-4-2026- 38242; reintentando.
+2026-08-10 07:43:53,432 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:44:25,153 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 38242.
+2026-08-10 07:44:26,555 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 3 documento(s).
+2026-08-10 07:44:26,633 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 38242 procesada (1 documento(s)).
+2026-08-10 07:44:26,643 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:44:27,359 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 38614 (fila grilla 13, 1 documento(s)).
+2026-08-10 07:44:28,454 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-235-4-2026-38614.
+2026-08-10 07:44:29,664 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:44:29,746 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 38614 procesada (1 documento(s)).
+2026-08-10 07:44:29,757 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:44:30,446 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 38746 (fila grilla 14, 1 documento(s)).
+2026-08-10 07:44:31,532 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-235-4-2026-38746.
+2026-08-10 07:44:32,754 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:44:32,839 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 38746 procesada (1 documento(s)).
+2026-08-10 07:44:32,847 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:44:33,525 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 38836 (fila grilla 15, 1 documento(s)).
+2026-08-10 07:45:04,524 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 38836.
+2026-08-10 07:45:04,524 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-235-4-2026- 38836; reintentando.
+2026-08-10 07:45:04,532 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:45:06,637 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-235-4-2026-38836.
+2026-08-10 07:45:07,858 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:45:07,930 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 38836 procesada (1 documento(s)).
+2026-08-10 07:45:07,939 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:45:08,623 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 39484 (fila grilla 16, 2 documento(s)).
+2026-08-10 07:45:39,689 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 39484.
+2026-08-10 07:45:39,690 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-235-4-2026- 39484; reintentando.
+2026-08-10 07:45:39,708 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:46:11,394 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 39484.
+2026-08-10 07:46:12,707 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 2 documento(s).
+2026-08-10 07:46:12,779 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 39484 procesada (2 documento(s)).
+2026-08-10 07:46:12,787 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:46:13,482 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 39539 (fila grilla 18, 1 documento(s)).
+2026-08-10 07:46:14,284 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-235-4-2026-39539.
+2026-08-10 07:46:15,509 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:46:15,582 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 39539 procesada (1 documento(s)).
+2026-08-10 07:46:15,590 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:46:16,289 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 39559 (fila grilla 19, 1 documento(s)).
+2026-08-10 07:46:47,309 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 39559.
+2026-08-10 07:46:47,310 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-235-4-2026- 39559; reintentando.
+2026-08-10 07:46:47,334 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:46:49,144 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-235-4-2026-39559.
+2026-08-10 07:46:50,433 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 2 documento(s).
+2026-08-10 07:46:50,507 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 39559 procesada (1 documento(s)).
+2026-08-10 07:46:50,518 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:46:51,205 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 39616 (fila grilla 20, 1 documento(s)).
+2026-08-10 07:46:52,288 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-235-4-2026-39616.
+2026-08-10 07:46:53,596 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 2 documento(s).
+2026-08-10 07:46:53,668 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 39616 procesada (1 documento(s)).
+2026-08-10 07:46:53,676 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:46:54,359 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 39752 (fila grilla 21, 1 documento(s)).
+2026-08-10 07:46:55,556 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-235-4-2026-39752.
+2026-08-10 07:46:56,820 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:46:56,886 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 39752 procesada (1 documento(s)).
+2026-08-10 07:46:56,895 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:46:57,596 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 39894 (fila grilla 22, 1 documento(s)).
+2026-08-10 07:46:58,351 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-235-4-2026-39894.
+2026-08-10 07:46:59,596 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:46:59,668 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 39894 procesada (1 documento(s)).
+2026-08-10 07:46:59,677 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:47:00,363 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 39930 (fila grilla 23, 1 documento(s)).
+2026-08-10 07:47:01,103 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-235-4-2026-39930.
+2026-08-10 07:47:02,344 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:47:02,414 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 39930 procesada (1 documento(s)).
+2026-08-10 07:47:02,426 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:47:03,126 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 41290 (fila grilla 24, 1 documento(s)).
+2026-08-10 07:47:04,217 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-235-4-2026-41290.
+2026-08-10 07:47:05,428 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:47:05,500 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 41290 procesada (1 documento(s)).
+2026-08-10 07:47:05,510 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:47:06,265 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 42134 (fila grilla 25, 1 documento(s)).
+2026-08-10 07:47:38,474 | WARNING | sunat_multas.sunat_client | El detalle no mostró la transmisión esperada 01-235-4-2026- 42134.
+2026-08-10 07:47:38,474 | WARNING | sunat_multas.sunat_client | No se confirmó la apertura de la transmisión 01-235-4-2026- 42134; reintentando.
+2026-08-10 07:47:38,489 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:47:41,521 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-235-4-2026-42134.
+2026-08-10 07:47:42,735 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:47:42,819 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 42134 procesada (1 documento(s)).
+2026-08-10 07:47:42,827 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:47:43,512 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 42139 (fila grilla 26, 1 documento(s)).
+2026-08-10 07:47:45,835 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-235-4-2026-42139.
+2026-08-10 07:47:47,048 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:47:47,122 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 42139 procesada (1 documento(s)).
+2026-08-10 07:47:47,130 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:47:47,812 | INFO | sunat_multas.sunat_client | Procesando transmisión 01-235-4-2026- 43058 (fila grilla 27, 1 documento(s)).
+2026-08-10 07:47:50,342 | INFO | sunat_multas.sunat_client | Transmisión confirmada en el detalle: 01-235-4-2026-43058.
+2026-08-10 07:47:51,981 | INFO | sunat_multas.sunat_client | Listado de documentos extraído: 1 documento(s).
+2026-08-10 07:47:52,052 | INFO | sunat_multas.cli | Transmisión 01-235-4-2026- 43058 procesada (1 documento(s)).
+2026-08-10 07:47:52,062 | INFO | sunat_multas.sunat_client | Usando el botón Regresar del detalle.
+2026-08-10 07:47:52,771 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 2 ms.
+2026-08-10 07:47:52,986 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-10 07:47:54,084 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-10 07:47:56,169 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-10 07:47:58,170 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-10 07:47:58,521 | INFO | sunat_multas.cli | Detalle finalizado para EMO LOGISTICS PERU S.A.C.. Procesadas: 40.
+2026-08-10 07:47:58,521 | INFO | sunat_multas.cli | Iniciando flujo completo para EXPO118.
+2026-08-10 07:47:58,522 | INFO | sunat_multas.cli | Consultando SUNAT para PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-10 07:47:59,205 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-10 07:48:00,382 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-10 07:48:18,121 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Salida
+2026-08-10 07:48:18,280 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-10 07:48:18,571 | INFO | sunat_multas.sunat_client | Formulario de consulta EXPO118 cargado.
+2026-08-10 07:48:23,088 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID (tipoBusquedaFechaTransCons).
+2026-08-10 07:48:23,329 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-10 07:48:23,487 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-10 07:48:35,990 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado (chbRucAgente).
+2026-08-10 07:48:36,094 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20602733808
+2026-08-10 07:48:50,890 | INFO | sunat_multas.sunat_client | Botón Consultar presionado (intento 1/3): #btnBuscar|text=Consultar|button:has-text('Consultar').
+2026-08-10 07:48:54,484 | INFO | sunat_multas.sunat_client | Intento 2/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#btnBuscar").first
+    - locator resolved to <a href="#" id="btnBuscar" class="btn btn-primary">Consultar</a>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:48:58,077 | INFO | sunat_multas.sunat_client | Intento 3/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#btnBuscar").first
+    - locator resolved to <a href="#" id="btnBuscar" class="btn btn-primary">Consultar</a>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:49:09,090 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-10 07:49:09,113 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 4 ms.
+2026-08-10 07:49:09,311 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-10 07:49:10,400 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-10 07:49:12,489 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-10 07:49:14,490 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-10 07:49:14,887 | INFO | sunat_multas.cli | Sin datos para PRADIVO WORLD COMPANY 1096: La consulta no devolvió registros.
+2026-08-10 07:49:14,888 | INFO | sunat_multas.cli | Consultando SUNAT para EMO LOGISTICS PERU S.A.C. | RUC 20604081964
+2026-08-10 07:49:15,564 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20604081964
+2026-08-10 07:49:16,719 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20604081964 | Usuario EVERAV20 | Clave *********
+2026-08-10 07:49:37,222 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Salida
+2026-08-10 07:49:37,355 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-10 07:49:37,670 | INFO | sunat_multas.sunat_client | Formulario de consulta EXPO118 cargado.
+2026-08-10 07:49:42,156 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID (tipoBusquedaFechaTransCons).
+2026-08-10 07:49:42,407 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-10 07:49:42,555 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-10 07:49:55,050 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado (chbRucAgente).
+2026-08-10 07:49:55,154 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-10 07:50:10,336 | INFO | sunat_multas.sunat_client | Botón Consultar presionado (intento 1/3): #btnBuscar|text=Consultar|button:has-text('Consultar').
+2026-08-10 07:50:12,454 | INFO | sunat_multas.sunat_client | Botón Consultar presionado (intento 2/3): #btnBuscar|text=Consultar|button:has-text('Consultar').
+2026-08-10 07:50:14,573 | INFO | sunat_multas.sunat_client | Botón Consultar presionado (intento 3/3): #btnBuscar|text=Consultar|button:has-text('Consultar').
+2026-08-10 07:50:25,588 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-10 07:50:25,651 | INFO | sunat_multas.sunat_client | Manifiestos extraídos del grid: 3
+2026-08-10 07:50:25,654 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 2 ms.
+2026-08-10 07:50:25,848 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-10 07:50:26,948 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-10 07:50:29,034 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-10 07:50:31,035 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-10 07:50:31,462 | INFO | sunat_multas.cli | Hoja EXPO118-Transmisiones actualizada para EMO LOGISTICS PERU S.A.C.: 3 transmisiones.
+2026-08-10 07:50:31,462 | INFO | sunat_multas.cli | Consultando SUNAT para HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C. | RUC 20538424961
+2026-08-10 07:50:32,280 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20538424961
+2026-08-10 07:50:33,432 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20538424961 | Usuario MINHETRU | Clave ************
+2026-08-10 07:50:51,374 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Salida
+2026-08-10 07:50:51,524 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-10 07:50:51,830 | INFO | sunat_multas.sunat_client | Formulario de consulta EXPO118 cargado.
+2026-08-10 07:50:56,356 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID (tipoBusquedaFechaTransCons).
+2026-08-10 07:50:56,596 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-10 07:50:56,745 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-10 07:51:09,250 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado (chbRucAgente).
+2026-08-10 07:51:09,361 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20538424961
+2026-08-10 07:51:24,007 | INFO | sunat_multas.sunat_client | Botón Consultar presionado (intento 1/3): #btnBuscar|text=Consultar|button:has-text('Consultar').
+2026-08-10 07:51:27,597 | INFO | sunat_multas.sunat_client | Intento 2/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#btnBuscar").first
+    - locator resolved to <a href="#" id="btnBuscar" class="btn btn-primary">Consultar</a>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:51:31,187 | INFO | sunat_multas.sunat_client | Intento 3/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#btnBuscar").first
+    - locator resolved to <a href="#" id="btnBuscar" class="btn btn-primary">Consultar</a>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:51:42,206 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-10 07:51:42,230 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 5 ms.
+2026-08-10 07:51:42,417 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-10 07:51:43,509 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-10 07:51:45,593 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-10 07:51:47,594 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-10 07:51:47,940 | INFO | sunat_multas.cli | Sin datos para HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C.: La consulta no devolvió registros.
+2026-08-10 07:51:48,047 | INFO | sunat_multas.cli | Manifiestos copiados a EXPO118 desde 'EXPO118-Transmisiones' en output\EMO LOGISTICS PERU S.A.C..xlsx: 15
+2026-08-10 07:51:48,071 | INFO | sunat_multas.cli | Códigos de trazabilidad para EMO LOGISTICS PERU S.A.C.: 3
+2026-08-10 07:51:48,084 | INFO | sunat_multas.cli | Grupos únicos de trazabilidad para EMO LOGISTICS PERU S.A.C.: 3
+2026-08-10 07:51:48,099 | INFO | sunat_multas.sunat_client | Mapa de MASTER a fila cargado: 3 entradas.
+2026-08-10 07:51:48,772 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20604081964
+2026-08-10 07:51:49,936 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20604081964 | Usuario EVERAV20 | Clave *********
+2026-08-10 07:52:10,373 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Salida
+2026-08-10 07:52:10,502 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-10 07:52:10,837 | INFO | sunat_multas.sunat_client | Formulario de consulta EXPO118 cargado.
+2026-08-10 07:52:11,085 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-10 07:52:19,588 | INFO | sunat_multas.sunat_client | Radio 'Número de Manifiesto Consolidado' marcado (tipoBusquedaNumeroManifiestoDesconsolidado).
+2026-08-10 07:52:19,694 | INFO | sunat_multas.sunat_client | Número de Manifiesto Consolidado cargado: 11481
+2026-08-10 07:52:34,352 | INFO | sunat_multas.sunat_client | Botón Consultar trazabilidad presionado.
+2026-08-10 07:52:38,354 | INFO | sunat_multas.sunat_client | Trazabilidad consultada (1/3) para código 11481.
+2026-08-10 07:52:38,478 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (11481).
+2026-08-10 07:52:38,929 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=121310792&anioManifiestoc=2026&numeroManifiestoc=%2011481'>.
+2026-08-10 07:52:38,931 | INFO | sunat_multas.sunat_client | Manifiesto 11481: 1 documento(s) hijo(s) en la tabla de detalle.
+2026-08-10 07:52:38,936 | INFO | sunat_multas.sunat_client | Master del sistema (fila 1): HLCULI3260641760
+2026-08-10 07:52:39,059 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (11481, fila Excel 2).
+2026-08-10 07:52:39,082 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=121310792&numeroDeDetalle=236'>.
+2026-08-10 07:52:39,082 | INFO | sunat_multas.sunat_client | Puerto Destino de 11481: CLSAI-SAN ANTONIO
+2026-08-10 07:52:39,246 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 2 (E/F).
+2026-08-10 07:52:39,370 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-10 07:52:44,499 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-10 07:52:49,628 | INFO | sunat_multas.sunat_client | Enlace 'Parámetros Búsqueda' clicado.
+2026-08-10 07:52:49,804 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-10 07:52:58,266 | INFO | sunat_multas.sunat_client | Radio 'Número de Manifiesto Consolidado' marcado (tipoBusquedaNumeroManifiestoDesconsolidado).
+2026-08-10 07:52:58,366 | INFO | sunat_multas.sunat_client | Número de Manifiesto Consolidado cargado: 10254
+2026-08-10 07:53:12,981 | INFO | sunat_multas.sunat_client | Botón Consultar trazabilidad presionado.
+2026-08-10 07:53:16,982 | INFO | sunat_multas.sunat_client | Trazabilidad consultada (2/3) para código 10254.
+2026-08-10 07:53:17,107 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (10254).
+2026-08-10 07:53:17,529 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=119573859&anioManifiestoc=2026&numeroManifiestoc=%2010254'>.
+2026-08-10 07:53:17,532 | INFO | sunat_multas.sunat_client | Manifiesto 10254: 1 documento(s) hijo(s) en la tabla de detalle.
+2026-08-10 07:53:17,535 | INFO | sunat_multas.sunat_client | Master del sistema (fila 1): HLCULI3260625311
+2026-08-10 07:53:17,663 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (10254, fila Excel 3).
+2026-08-10 07:53:17,686 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=119573859&numeroDeDetalle=209'>.
+2026-08-10 07:53:17,686 | INFO | sunat_multas.sunat_client | Puerto Destino de 10254: CLSAI-SAN ANTONIO
+2026-08-10 07:53:17,806 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 3 (E/F).
+2026-08-10 07:53:17,929 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-10 07:53:23,054 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-10 07:53:28,192 | INFO | sunat_multas.sunat_client | Enlace 'Parámetros Búsqueda' clicado.
+2026-08-10 07:53:28,360 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 118 (118)
+2026-08-10 07:53:36,837 | INFO | sunat_multas.sunat_client | Radio 'Número de Manifiesto Consolidado' marcado (tipoBusquedaNumeroManifiestoDesconsolidado).
+2026-08-10 07:53:36,941 | INFO | sunat_multas.sunat_client | Número de Manifiesto Consolidado cargado: 11238
+2026-08-10 07:53:51,577 | INFO | sunat_multas.sunat_client | Botón Consultar trazabilidad presionado.
+2026-08-10 07:53:55,578 | INFO | sunat_multas.sunat_client | Trazabilidad consultada (3/3) para código 11238.
+2026-08-10 07:53:55,711 | INFO | sunat_multas.sunat_client | Enlace de detalle del Manifiesto Consolidado clicado (11238).
+2026-08-10 07:53:56,132 | INFO | sunat_multas.sunat_client | Tabla #tblLista localizada en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosManifiesto.htm?action=cargarDatosManifConsolidadoSalida&numeroCorrelativo=121855686&anioManifiestoc=2026&numeroManifiestoc=%2011238'>.
+2026-08-10 07:53:56,134 | INFO | sunat_multas.sunat_client | Manifiesto 11238: 1 documento(s) hijo(s) en la tabla de detalle.
+2026-08-10 07:53:56,139 | INFO | sunat_multas.sunat_client | Master del sistema (fila 1): HLCULI3260722947
+2026-08-10 07:53:56,262 | INFO | sunat_multas.sunat_client | Enlace del documento hijo clicado (11238, fila Excel 4).
+2026-08-10 07:53:56,286 | INFO | sunat_multas.sunat_client | Puerto Destino localizado en <Frame name=iframeApplication url='https://ww1.sunat.gob.pe/cl-ad-itsalidamanifiesto/DatosDocumentoTransporte.htm?action=cargarDatosDocumentoTransporte&numeroCorrelativo=121855686&numeroDeDetalle=973'>.
+2026-08-10 07:53:56,286 | INFO | sunat_multas.sunat_client | Puerto Destino de 11238: USNYC-NEW YORK
+2026-08-10 07:53:56,403 | INFO | sunat_multas.sunat_client | Puerto Destino escrito en EXPO118 fila 4 (E/F).
+2026-08-10 07:53:56,526 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 1).
+2026-08-10 07:54:01,647 | INFO | sunat_multas.sunat_client | Botón Regresar clicado (intento 2).
+2026-08-10 07:54:06,651 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 2 ms.
+2026-08-10 07:54:06,948 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-10 07:54:08,039 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-10 07:54:10,137 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-10 07:54:12,138 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-10 07:54:12,642 | INFO | sunat_multas.cli | Iniciando flujo completo para EXPO235.
+2026-08-10 07:54:12,642 | INFO | sunat_multas.cli | Consultando SUNAT para PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-10 07:54:13,302 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-10 07:54:14,446 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-10 07:54:32,260 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Salida
+2026-08-10 07:54:32,404 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-10 07:54:32,713 | INFO | sunat_multas.sunat_client | Formulario de consulta EXPO235 cargado.
+2026-08-10 07:54:37,196 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID (tipoBusquedaFechaTransCons).
+2026-08-10 07:54:37,435 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-10 07:54:37,628 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 235-AEREA DEL CALLAO (235)
+2026-08-10 07:54:50,118 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado (chbRucAgente).
+2026-08-10 07:54:50,222 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20602733808
+2026-08-10 07:55:04,884 | INFO | sunat_multas.sunat_client | Botón Consultar presionado (intento 1/3): #btnBuscar|text=Consultar|button:has-text('Consultar').
+2026-08-10 07:55:08,473 | INFO | sunat_multas.sunat_client | Intento 2/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#btnBuscar").first
+    - locator resolved to <a href="#" id="btnBuscar" class="btn btn-primary">Consultar</a>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:55:12,070 | INFO | sunat_multas.sunat_client | Intento 3/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#btnBuscar").first
+    - locator resolved to <a href="#" id="btnBuscar" class="btn btn-primary">Consultar</a>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:55:23,076 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-10 07:55:23,105 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 3 ms.
+2026-08-10 07:55:23,290 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-10 07:55:24,376 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-10 07:55:26,465 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-10 07:55:28,466 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-10 07:55:28,824 | INFO | sunat_multas.cli | Sin datos para PRADIVO WORLD COMPANY 1096: La consulta no devolvió registros.
+2026-08-10 07:55:28,825 | INFO | sunat_multas.cli | Consultando SUNAT para EMO LOGISTICS PERU S.A.C. | RUC 20604081964
+2026-08-10 07:55:29,500 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20604081964
+2026-08-10 07:55:30,639 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20604081964 | Usuario EVERAV20 | Clave *********
+2026-08-10 07:55:51,151 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Salida
+2026-08-10 07:55:51,275 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-10 07:55:51,585 | INFO | sunat_multas.sunat_client | Formulario de consulta EXPO235 cargado.
+2026-08-10 07:55:56,062 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID (tipoBusquedaFechaTransCons).
+2026-08-10 07:55:56,305 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-10 07:55:56,500 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 235-AEREA DEL CALLAO (235)
+2026-08-10 07:56:08,970 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado (chbRucAgente).
+2026-08-10 07:56:09,074 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-10 07:56:23,722 | INFO | sunat_multas.sunat_client | Botón Consultar presionado (intento 1/3): #btnBuscar|text=Consultar|button:has-text('Consultar').
+2026-08-10 07:56:25,840 | INFO | sunat_multas.sunat_client | Botón Consultar presionado (intento 2/3): #btnBuscar|text=Consultar|button:has-text('Consultar').
+2026-08-10 07:56:27,958 | INFO | sunat_multas.sunat_client | Botón Consultar presionado (intento 3/3): #btnBuscar|text=Consultar|button:has-text('Consultar').
+2026-08-10 07:56:38,969 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-10 07:56:38,991 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 4 ms.
+2026-08-10 07:56:39,184 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-10 07:56:40,285 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-10 07:56:42,382 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-10 07:56:44,383 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-10 07:56:44,814 | INFO | sunat_multas.cli | Sin datos para EMO LOGISTICS PERU S.A.C.: La consulta no devolvió registros.
+2026-08-10 07:56:44,814 | INFO | sunat_multas.cli | Consultando SUNAT para HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C. | RUC 20538424961
+2026-08-10 07:56:45,463 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20538424961
+2026-08-10 07:56:46,719 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20538424961 | Usuario MINHETRU | Clave ************
+2026-08-10 07:57:04,603 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Salida
+2026-08-10 07:57:04,756 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-10 07:57:05,114 | INFO | sunat_multas.sunat_client | Formulario de consulta EXPO235 cargado.
+2026-08-10 07:57:09,600 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID (tipoBusquedaFechaTransCons).
+2026-08-10 07:57:09,841 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-10 07:57:10,039 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 235-AEREA DEL CALLAO (235)
+2026-08-10 07:57:22,551 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado (chbRucAgente).
+2026-08-10 07:57:22,655 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20538424961
+2026-08-10 07:57:37,314 | INFO | sunat_multas.sunat_client | Botón Consultar presionado (intento 1/3): #btnBuscar|text=Consultar|button:has-text('Consultar').
+2026-08-10 07:57:40,904 | INFO | sunat_multas.sunat_client | Intento 2/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#btnBuscar").first
+    - locator resolved to <a href="#" id="btnBuscar" class="btn btn-primary">Consultar</a>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:57:44,488 | INFO | sunat_multas.sunat_client | Intento 3/3 de Consultar falló: Locator.click: Timeout 1500ms exceeded.
+Call log:
+  - waiting for locator("#btnBuscar").first
+    - locator resolved to <a href="#" id="btnBuscar" class="btn btn-primary">Consultar</a>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    3 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+2026-08-10 07:57:55,504 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-10 07:57:55,531 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 4 ms.
+2026-08-10 07:57:55,717 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-10 07:57:56,802 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-10 07:57:58,894 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-10 07:58:00,895 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-10 07:58:01,190 | INFO | sunat_multas.cli | Sin datos para HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C.: La consulta no devolvió registros.
+2026-08-10 08:03:43,913 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-10 08:03:43,913 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-10 08:03:43,914 | INFO | sunat_multas.cli | Iniciando flujo completo para IMPO118.
+2026-08-10 08:03:43,914 | INFO | sunat_multas.cli | Consultando SUNAT para PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-10 08:03:44,695 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-10 08:03:46,034 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-10 08:03:56,896 | ERROR | asyncio | Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2026-08-10 08:03:56,897 | ERROR | asyncio | Task was destroyed but it is pending!
+task: <Task cancelling name='Task-24' coro=<Locator.wait_for() done, defined at C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_locator.py:743> wait_for=<Future finished result=None> cb=[SyncBase._sync.<locals>.<lambda>() at C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_sync_base.py:111]>
+2026-08-10 08:03:56,897 | ERROR | asyncio | Task was destroyed but it is pending!
+task: <Task cancelling name='Task-25' coro=<Locator.count() running at C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_locator.py:429> wait_for=<Future finished result=None> cb=[SyncBase._sync.<locals>.<lambda>() at C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_sync_base.py:111]>
+2026-08-10 08:03:56,897 | ERROR | asyncio | Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2026-08-10 08:04:22,816 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-10 08:04:22,816 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-10 08:04:22,817 | INFO | sunat_multas.cli | Iniciando flujo completo para IMPO235.
+2026-08-10 08:04:22,817 | INFO | sunat_multas.cli | Consultando SUNAT para PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-10 08:04:23,491 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-10 08:04:24,705 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-10 08:04:42,811 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-10 08:04:43,057 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-10 08:05:33,185 | ERROR | sunat_multas.sunat_client | Opciones de menú visibles: ['OPERACIONES DE COMERCIO EXTERIOR', 'Recursos Impugnatorios Aduaneros', 'Manifiesto de Carga de Ingreso', 'Trámites', 'Trámites', 'Consultas', 'Consulta Trazabilidad Manifiesto Carga', 'Consulta del Manifiesto Desconsolidado Previo', 'Consulta Manifesto Desconsolidado', 'Recursos Impugnatorios Aduaneros', 'Manifiesto de Carga de Ingreso', 'Manifiesto de Carga de Salida', 'Regímenes Especiales', 'Ingreso y Salida de Mercancías', 'Despacho Aduanero de Ingreso', 'Despacho aduanero de salida', 'Destinación Aduanera de Mercancías', 'Trazabilidad y Control de Embarque', 'Avisos Electrónicos', 'Despacho Garantizado', 'Drawback', 'Exporta Fácil', 'Importa Fácil', 'Control Aduanero', 'Documentos Aduaneros', 'Control Aduanero', 'Recaudación', 'Transbordo', 'Tránsito Aduanero']
+2026-08-10 08:05:33,188 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 3 ms.
+2026-08-10 08:05:33,443 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-10 08:05:34,545 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-10 08:05:36,818 | ERROR | sunat_multas.cli | Error no controlado consultando PRADIVO WORLD COMPANY 1096
+Traceback (most recent call last):
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\cli.py", line 119, in run_consulta
+    rows = client.fetch_records(company, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 115, in fetch_records
+    self._logout(page)
+    ~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 1166, in _logout
+    self._logout_os(page)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 1185, in _logout_os
+    page.keyboard.press("Enter")
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 1628, in press
+    self._sync(self._impl_obj.press(key=key, delay=delay))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_input.py", line 38, in press
+    await self._channel.send("keyboardPress", None, locals_to_params(locals()))
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Keyboard.press: Target page, context or browser has been closed
+2026-08-10 08:05:36,835 | WARNING | sunat_multas.cli | PRADIVO WORLD COMPANY 1096 | UNKNOWN | Keyboard.press: Target page, context or browser has been closed
+2026-08-10 08:05:43,708 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-10 08:05:43,708 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-10 08:05:43,708 | INFO | sunat_multas.cli | Iniciando flujo completo para IMPO235.
+2026-08-10 08:05:43,708 | INFO | sunat_multas.cli | Consultando SUNAT para PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-10 08:05:44,726 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-10 08:05:45,954 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-10 08:06:03,886 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-10 08:06:04,067 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-10 08:06:47,134 | ERROR | sunat_multas.sunat_client | Opciones de menú visibles: ['OPERACIONES DE COMERCIO EXTERIOR', 'Recursos Impugnatorios Aduaneros', 'Manifiesto de Carga de Ingreso', 'Trámites', 'Trámites', 'Consultas', 'Consulta Trazabilidad Manifiesto Carga', 'Consulta del Manifiesto Desconsolidado Previo', 'Consulta Manifesto Desconsolidado', 'Recursos Impugnatorios Aduaneros', 'Manifiesto de Carga de Ingreso', 'Manifiesto de Carga de Salida', 'Regímenes Especiales', 'Ingreso y Salida de Mercancías', 'Despacho Aduanero de Ingreso', 'Despacho aduanero de salida', 'Destinación Aduanera de Mercancías', 'Trazabilidad y Control de Embarque', 'Avisos Electrónicos', 'Despacho Garantizado', 'Drawback', 'Exporta Fácil', 'Importa Fácil', 'Control Aduanero', 'Documentos Aduaneros', 'Control Aduanero', 'Recaudación', 'Transbordo', 'Tránsito Aduanero']
+2026-08-10 08:06:47,137 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 2 ms.
+2026-08-10 08:06:47,504 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-10 08:06:48,592 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-10 08:06:50,819 | ERROR | sunat_multas.cli | Error no controlado consultando PRADIVO WORLD COMPANY 1096
+Traceback (most recent call last):
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\cli.py", line 119, in run_consulta
+    rows = client.fetch_records(company, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 115, in fetch_records
+    self._logout(page)
+    ~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 1166, in _logout
+    self._logout_os(page)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 1185, in _logout_os
+    page.keyboard.press("Enter")
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 1628, in press
+    self._sync(self._impl_obj.press(key=key, delay=delay))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_input.py", line 38, in press
+    await self._channel.send("keyboardPress", None, locals_to_params(locals()))
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Keyboard.press: Target page, context or browser has been closed
+2026-08-10 08:06:50,823 | WARNING | sunat_multas.cli | PRADIVO WORLD COMPANY 1096 | UNKNOWN | Keyboard.press: Target page, context or browser has been closed
+2026-08-10 08:07:00,128 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-10 08:07:00,129 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-10 08:07:00,129 | INFO | sunat_multas.cli | Iniciando flujo completo para IMPO235.
+2026-08-10 08:07:00,129 | INFO | sunat_multas.cli | Consultando SUNAT para PRADIVO WORLD COMPANY 1096 | RUC 20602733808
+2026-08-10 08:07:00,930 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20602733808
+2026-08-10 08:07:02,172 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20602733808 | Usuario PRADIVOW | Clave ***********
+2026-08-10 08:07:20,067 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-10 08:07:20,254 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-10 08:07:52,598 | ERROR | sunat_multas.cli | Error no controlado consultando PRADIVO WORLD COMPANY 1096
+Traceback (most recent call last):
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\cli.py", line 119, in run_consulta
+    rows = client.fetch_records(company, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 115, in fetch_records
+    self._logout(page)
+    ~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 1166, in _logout
+    self._logout_os(page)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 1170, in _logout_os
+    boton = self._wait_for_btn_salir(page, timeout_ms=30000)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 1213, in _wait_for_btn_salir
+    boton = self._find_btn_salir(page, verbose=False)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 1195, in _find_btn_salir
+    if locator.count() > 0:
+       ~~~~~~~~~~~~~^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 19153, in count
+    return mapping.from_maybe_impl(self._sync(self._impl_obj.count()))
+                                   ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_locator.py", line 429, in count
+    return await self._frame._query_count(self._selector)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 139, in _query_count
+    return await self._channel.send("queryCount", None, {"selector": selector})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+Exception: Locator.count: Connection closed while reading from the driver
+2026-08-10 08:07:52,610 | WARNING | sunat_multas.cli | PRADIVO WORLD COMPANY 1096 | UNKNOWN | Locator.count: Connection closed while reading from the driver
+2026-08-10 08:09:11,736 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-10 08:09:11,737 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-10 08:09:11,737 | INFO | sunat_multas.cli | Iniciando flujo completo para EXPO235.
+2026-08-10 08:09:11,737 | INFO | sunat_multas.cli | Consultando SUNAT para EMO LOGISTICS PERU S.A.C. | RUC 20604081964
+2026-08-10 08:09:12,453 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20604081964
+2026-08-10 08:09:13,650 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20604081964 | Usuario EVERAV20 | Clave *********
+2026-08-10 08:09:34,136 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Salida
+2026-08-10 08:09:34,269 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-10 08:09:34,550 | INFO | sunat_multas.sunat_client | Formulario de consulta EXPO235 cargado.
+2026-08-10 08:09:39,093 | INFO | sunat_multas.sunat_client | Filtro de fecha seleccionado por ID (tipoBusquedaFechaTransCons).
+2026-08-10 08:09:39,358 | INFO | sunat_multas.sunat_client | Rango mensual cargado: 01/07/2026 a 31/07/2026
+2026-08-10 08:09:39,557 | INFO | sunat_multas.sunat_client | Select selCodigoAduana seleccionado: 235-AEREA DEL CALLAO (235)
+2026-08-10 08:09:52,082 | INFO | sunat_multas.sunat_client | Checkbox RUC del Agente de Carga marcado (chbRucAgente).
+2026-08-10 08:09:52,190 | INFO | sunat_multas.sunat_client | RUC del agente de carga cargado: 20604081964
+2026-08-10 08:10:06,843 | INFO | sunat_multas.sunat_client | Botón Consultar presionado (intento 1/3): #btnBuscar|text=Consultar|button:has-text('Consultar').
+2026-08-10 08:10:08,969 | INFO | sunat_multas.sunat_client | Botón Consultar presionado (intento 2/3): #btnBuscar|text=Consultar|button:has-text('Consultar').
+2026-08-10 08:10:11,097 | INFO | sunat_multas.sunat_client | Botón Consultar presionado (intento 3/3): #btnBuscar|text=Consultar|button:has-text('Consultar').
+2026-08-10 08:10:22,109 | INFO | sunat_multas.sunat_client | La red de SUNAT no quedó inactiva; esperando los resultados directamente.
+2026-08-10 08:10:22,134 | INFO | sunat_multas.sunat_client | Botón Salir localizado en 4 ms.
+2026-08-10 08:10:22,346 | INFO | sunat_multas.sunat_client | Botón Salir clicado (dispatch_event).
+2026-08-10 08:10:23,444 | INFO | sunat_multas.sunat_client | Enter 1 enviado.
+2026-08-10 08:10:25,543 | INFO | sunat_multas.sunat_client | Enter 2 enviado.
+2026-08-10 08:10:27,544 | INFO | sunat_multas.sunat_client | Sesión SUNAT cerrada con Enter.
+2026-08-10 08:10:27,883 | INFO | sunat_multas.cli | Sin datos para EMO LOGISTICS PERU S.A.C.: La consulta no devolvió registros.
+2026-08-10 08:11:10,561 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-10 08:11:10,562 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-10 08:11:10,562 | INFO | sunat_multas.cli | Iniciando flujo completo para IMPO118.
+2026-08-10 08:11:10,562 | INFO | sunat_multas.cli | Consultando SUNAT para HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C. | RUC 20538424961
+2026-08-10 08:11:11,315 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20538424961
+2026-08-10 08:11:12,484 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20538424961 | Usuario MINHETRU | Clave ************
+2026-08-10 08:11:30,441 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-10 08:11:30,639 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-10 08:12:02,947 | ERROR | sunat_multas.cli | Error no controlado consultando HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C.
+Traceback (most recent call last):
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\cli.py", line 119, in run_consulta
+    rows = client.fetch_records(company, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 115, in fetch_records
+    self._logout(page)
+    ~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 1166, in _logout
+    self._logout_os(page)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 1170, in _logout_os
+    boton = self._wait_for_btn_salir(page, timeout_ms=30000)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 1213, in _wait_for_btn_salir
+    boton = self._find_btn_salir(page, verbose=False)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 1195, in _find_btn_salir
+    if locator.count() > 0:
+       ~~~~~~~~~~~~~^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 19153, in count
+    return mapping.from_maybe_impl(self._sync(self._impl_obj.count()))
+                                   ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_locator.py", line 429, in count
+    return await self._frame._query_count(self._selector)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 139, in _query_count
+    return await self._channel.send("queryCount", None, {"selector": selector})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+Exception: Locator.count: Connection closed while reading from the driver
+2026-08-10 08:12:02,953 | WARNING | sunat_multas.cli | HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C. | UNKNOWN | Locator.count: Connection closed while reading from the driver
+2026-08-10 08:12:02,955 | INFO | sunat_multas.cli | Iniciando flujo completo para IMPO235.
+2026-08-10 08:12:02,955 | INFO | sunat_multas.cli | Consultando SUNAT para HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C. | RUC 20538424961
+2026-08-10 08:12:03,798 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20538424961
+2026-08-10 08:12:04,960 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20538424961 | Usuario MINHETRU | Clave ************
+2026-08-10 08:12:06,270 | ERROR | sunat_multas.sunat_client | Opciones de menú visibles: []
+2026-08-10 08:12:37,178 | INFO | sunat_multas.cli | Empresas por procesar: 1
+2026-08-10 08:12:37,178 | INFO | sunat_multas.cli | Consulta mensual seleccionada: 2026-07-01 a 2026-07-31
+2026-08-10 08:12:37,178 | INFO | sunat_multas.cli | Iniciando flujo completo para IMPO118.
+2026-08-10 08:12:37,178 | INFO | sunat_multas.cli | Consultando SUNAT para HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C. | RUC 20538424961
+2026-08-10 08:12:37,860 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20538424961
+2026-08-10 08:12:39,017 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20538424961 | Usuario MINHETRU | Clave ************
+2026-08-10 08:12:56,848 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Manifiesto de Carga de Ingreso
+2026-08-10 08:12:57,048 | INFO | sunat_multas.sunat_client | Expandiendo el nivel del menú: Consultas
+2026-08-10 08:13:14,382 | ERROR | sunat_multas.cli | Error no controlado consultando HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C.
+Traceback (most recent call last):
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\cli.py", line 119, in run_consulta
+    rows = client.fetch_records(company, start_date, end_date)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 115, in fetch_records
+    self._logout(page)
+    ~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 1166, in _logout
+    self._logout_os(page)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 1170, in _logout_os
+    boton = self._wait_for_btn_salir(page, timeout_ms=30000)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 1213, in _wait_for_btn_salir
+    boton = self._find_btn_salir(page, verbose=False)
+  File "C:\Users\Maric\Desktop\auto\sunat_multas\sunat_client.py", line 1195, in _find_btn_salir
+    if locator.count() > 0:
+       ~~~~~~~~~~~~~^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 19153, in count
+    return mapping.from_maybe_impl(self._sync(self._impl_obj.count()))
+                                   ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+           ~~~~~~~~~~~^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_locator.py", line 429, in count
+    return await self._frame._query_count(self._selector)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 139, in _query_count
+    return await self._channel.send("queryCount", None, {"selector": selector})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 76, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 632, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+Exception: Locator.count: Connection closed while reading from the driver
+2026-08-10 08:13:14,389 | WARNING | sunat_multas.cli | HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C. | UNKNOWN | Locator.count: Connection closed while reading from the driver
+2026-08-10 08:13:14,389 | INFO | sunat_multas.cli | Iniciando flujo completo para IMPO235.
+2026-08-10 08:13:14,391 | INFO | sunat_multas.cli | Consultando SUNAT para HBC INTERNATIONAL FREIGHT FORWARDERS S.A.C. | RUC 20538424961
+2026-08-10 08:13:15,163 | INFO | sunat_multas.sunat_client | Abriendo SUNAT para RUC 20538424961
+2026-08-10 08:13:16,328 | INFO | sunat_multas.sunat_client | Credenciales cargadas desde LISTA: RUC 20538424961 | Usuario MINHETRU | Clave ************
+2026-08-10 08:13:58,761 | ERROR | asyncio | Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2026-08-10 08:13:58,762 | ERROR | asyncio | Task was destroyed but it is pending!
+task: <Task cancelling name='Task-126' coro=<Locator.wait_for() done, defined at C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_locator.py:743> wait_for=<Future finished result=None> cb=[SyncBase._sync.<locals>.<lambda>() at C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_sync_base.py:111]>
+2026-08-10 08:13:58,762 | ERROR | asyncio | Task was destroyed but it is pending!
+task: <Task cancelling name='Task-127' coro=<Locator.count() running at C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_locator.py:429> wait_for=<Future finished result=None> cb=[SyncBase._sync.<locals>.<lambda>() at C:\Users\Maric\Desktop\auto\.venv\Lib\site-packages\playwright\_impl\_sync_base.py:111]>
+2026-08-10 08:13:58,763 | ERROR | asyncio | Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
