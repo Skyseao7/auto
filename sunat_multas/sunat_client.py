@@ -324,7 +324,7 @@ class SunatClient:
             LOGGER.info("La red de SUNAT no quedó inactiva; esperando los resultados directamente.")
         rows = self._wait_for_manifest_grid(page)
         if not rows:
-            raise NoRecordsFound("La consulta no devolvió registros.")
+            raise NoRecordsFound(self._no_records_message(page) or "La consulta no devolvió registros.")
         LOGGER.info("Manifiestos extraídos del grid: %s", len(rows))
         return rows
 
@@ -342,6 +342,9 @@ class SunatClient:
         return []
 
     def _grid_has_no_records(self, page: Page) -> bool:
+        return self._no_records_message(page) is not None
+
+    def _no_records_message(self, page: Page) -> str | None:
         pattern = re.compile(r"no existe|sin registros|no se encontraron|no existen registros", re.IGNORECASE)
         for selector in (self.tipo.selector_grid_vacio, self.config.selectors.no_records_selector):
             if not selector:
@@ -350,10 +353,12 @@ class SunatClient:
                 try:
                     node = scope.locator(selector).filter(has_text=pattern).first
                     if node.count() > 0 and node.is_visible():
-                        return True
+                        message = _clean_text(node.inner_text())
+                        if message:
+                            return message
                 except (PlaywrightError, PlaywrightTimeoutError):
                     continue
-        return False
+        return None
 
     def _grid_has_rows(self, page: Page) -> bool:
         scope = self._find_grid_scope(page)

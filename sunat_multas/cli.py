@@ -15,6 +15,7 @@ from .excel_io import (
     append_manifest_sheet,
     cargar_mapa_puertos,
     create_company_workbook,
+    escribir_mensaje_sin_registros,
     escribir_hoja_transmisiones,
     load_procesados,
     process_manifiestos_excel,
@@ -122,6 +123,7 @@ def run_consulta(config, companies, start_date, end_date, tipo) -> set[str]:
             with_data.add(company.ruc)
         except NoRecordsFound as exc:
             LOGGER.info("Sin datos para %s: %s", company.name, exc)
+            escribir_mensaje_sin_registros(output_path, str(exc), tipo)
             if not tipo.es_expo:
                 record_incident(config.log_dir, company, None, IncidentType.NO_RECORDS, str(exc))
         except AuthenticationError as exc:
@@ -316,6 +318,8 @@ def process_company(
     except AuthenticationError as exc:
         return record_incident(config.log_dir, company, output_path, IncidentType.AUTH, str(exc))
     except NoRecordsFound as exc:
+        if output_path is not None:
+            escribir_mensaje_sin_registros(output_path, str(exc), client.tipo)
         return record_incident(config.log_dir, company, output_path, IncidentType.NO_RECORDS, str(exc))
     except (NavigationError, ExtractionError) as exc:
         return record_incident(config.log_dir, company, output_path, IncidentType.SCRAPING, str(exc))

@@ -170,6 +170,18 @@ def escribir_hoja_transmisiones(workbook_path: Path, rows: list[list[str]], tipo
     return len(rows)
 
 
+def escribir_mensaje_sin_registros(workbook_path: Path, mensaje: str, tipo: TipoReporte) -> None:
+    workbook = load_workbook(workbook_path)
+    if tipo.hoja_destino not in workbook.sheetnames:
+        raise ValueError(f"La plantilla no contiene la hoja {tipo.hoja_destino}")
+    sheet = workbook[tipo.hoja_destino]
+    for row in range(2, sheet.max_row + 1):
+        for column in range(1, sheet.max_column + 1):
+            sheet.cell(row, column).value = None
+    sheet.cell(2, 1, mensaje)
+    workbook.save(workbook_path)
+
+
 def append_manifest_sheet(workbook_path: Path, rows: list[list[str]], tipo: TipoReporte) -> int:
     workbook = load_workbook(workbook_path)
     _crear_hoja_transmisiones(workbook, rows, tipo)
